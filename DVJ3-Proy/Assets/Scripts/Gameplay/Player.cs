@@ -5,26 +5,34 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    Animator animator; 
     public int playerNumber;
     public float speed;
-    Vector3 dir;
+    public bool ableToMove;
+    float hor;
+    float ver;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float hor;
-        float ver;
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
-        dir = new Vector3(hor, 0, ver);
-        Vector3 lastPos = transform.position;
-        transform.position += dir.normalized * speed * Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("hit");
+        }
     }
+
     private void FixedUpdate()
     {
+        if (ableToMove && (hor != 0.0f || ver != 0.0f))
+        {
+            transform.forward = new Vector3(hor, 0, ver);
+            transform.position += transform.forward.normalized * speed * Time.deltaTime;
+        }
     }
 }
