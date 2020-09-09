@@ -65,14 +65,14 @@ public class Player : MonoBehaviour
                     grabbedItem = GetClosestAvaiableItem();
                     grabbedItem.transform.parent = swingPivot.transform;
                     grabbedItem.SetAsGrabbed(this);
-                    animator.SetBool("carrying", (true));
+                    animator.SetBool("carrying", true);
                 }
             }
             else if (currentState == State.carrying)
             {
                 currentState = State.idle;
                 grabbedItem.Throw();
-                animator.SetBool("carrying", (false));
+                animator.SetBool("carrying", false);
             }
         }
     }
@@ -91,13 +91,13 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Punch"))
         {
-            Player hitBy = collision.transform.parent.parent.gameObject.GetComponent<Player>();
+            Player hitBy = collision.transform.parent.parent.parent.gameObject.GetComponent<Player>();
             Vector3 dir = transform.position - hitBy.transform.position;
             rb.AddForce(dir.normalized*hitBy.force);
             hp -= (int)(hitBy.force / 2000);
         }
         if (collision.gameObject.CompareTag("Item"))
-        { 
+        {
             Item hitBy = collision.gameObject.GetComponent<Item>();
             if (hitBy.playerGrabbing && hitBy.playerGrabbing!=this)
             {
@@ -191,37 +191,11 @@ public class Player : MonoBehaviour
     }
     IEnumerator Hit()
     {
+        Debug.Log("hit");
+        float animTime = 0.66f;
         currentState = State.punching;
         animator.SetTrigger("hit");
-        bool enabled = false;
-        Quaternion origRot = Quaternion.identity;
-        Quaternion targetRot = Quaternion.Euler(new Vector3(-90, 0, 0));
-        float timeToRise = 0.25f;
-        float timeToDrop = 0.05f;
-        float t = 0.0f;
-
-        while (t<1)
-        {
-            if (!enabled && t > 0.5f)
-            {
-                punch.enabled = true;
-                enabled = true;
-            }
-            t += Time.deltaTime / timeToRise;
-            punchPivot.transform.localRotation = Quaternion.Lerp(origRot,targetRot,t);
-            yield return null;
-        }
-        yield return new WaitForSeconds(0.15f);
-        t = 0.0f;
-        punch.enabled = false;
-        while (t<1)
-        {
-            t += Time.deltaTime / timeToDrop;
-            punchPivot.transform.localRotation = Quaternion.Lerp(targetRot, origRot, t);
-            yield return null;
-        }
-        punch.enabled = false;
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(animTime);
         currentState = State.idle;
     }
 }

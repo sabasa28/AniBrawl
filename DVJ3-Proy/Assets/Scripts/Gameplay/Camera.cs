@@ -9,6 +9,7 @@ public class Camera : MonoBehaviour
     public float baseZoom;
     public float maxZoom;
     
+    [SerializeField]
     List <Transform> players = new List<Transform>();
     float lastDistBetweenPlayers;
     Vector3 stageCenter = new Vector3(-5,15,-5);

@@ -44,14 +44,19 @@ public class Item : MonoBehaviour
         rb.isKinematic = false;
         transform.parent = null;
         rb.AddForce(transform.forward * playerGrabbing.force / weight);
+        rb.AddTorque(-transform.up * playerGrabbing.force / weight);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Player"))
+        if (itemState == State.midAir)
         {
-            playerGrabbing = null;
-            itemState = State.grabable;
+            if (!collision.gameObject.CompareTag("Player"))
+            {
+                playerGrabbing = null;
+                itemState = State.grabable;
+            }
         }
+
     }
 }
