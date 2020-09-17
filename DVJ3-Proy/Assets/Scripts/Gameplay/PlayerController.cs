@@ -180,13 +180,26 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Punch"))
         {
             Vector3 funElevation = new Vector3 (0.0f, 0.35f);
-            PlayerController hitBy = other.transform.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>();
+            PlayerController hitBy = other.transform.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
             Vector3 dir = transform.position - hitBy.transform.position;
             //rb.AddForce(dir.normalized * hitBy.force);
             StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
             hp -= (int)(hitBy.force / 2000);
             //if (hp <= 0) OnDeath(this);
             Debug.Log("le pego, zenioor");
+        }
+        if (other.gameObject.CompareTag("Item"))
+        {
+            Item hitBy = other.gameObject.GetComponent<Item>();
+            if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+            {
+                Vector3 dir;
+                dir = transform.position - hitBy.playerGrabbing.transform.position;
+                Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
+                StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
+                hp -= (int)(hitBy.playerGrabbing.force / 2000 * hitBy.damageMultiplier);
+                //if (hp <= 0) OnDeath(this);
+            }
         }
     }
 
@@ -245,9 +258,11 @@ public class PlayerController : MonoBehaviour
         float timeToRise = 0.333f;
         float timeToDrop = 0.0333f;
         float t = 0.0f;
+        Collider itemColl = grabbedItem.GetComponent<Collider>();
         Rigidbody itemRB = grabbedItem.GetComponent<Rigidbody>();
-        itemRB.isKinematic = false;
-        itemRB.constraints = RigidbodyConstraints.FreezeAll;
+        itemColl.isTrigger = true;
+        //itemRB.isKinematic = true;
+        //itemRB.constraints = RigidbodyConstraints.FreezeAll;
         while (t < 1)
         {
             t += Time.deltaTime / timeToRise;
@@ -262,8 +277,8 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(0.05f);
-        itemRB.isKinematic = true;
-        itemRB.constraints = RigidbodyConstraints.None;
+        //itemRB.isKinematic = true;
+        //itemRB.constraints = RigidbodyConstraints.None;
         currentState = State.carrying;
     }
 
