@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public GameObject punchPivot;
     public GameObject swingPivot;
     public int hp;
+    public Action<Player> OnDeath;
     Animator animator;
     Rigidbody rb;
     float hor;
@@ -64,7 +65,7 @@ public class Player : MonoBehaviour
                     currentState = State.carrying;
                     grabbedItem = GetClosestAvaiableItem();
                     grabbedItem.transform.parent = swingPivot.transform;
-                    grabbedItem.SetAsGrabbed(this);
+                    //grabbedItem.SetAsGrabbed(this);
                     animator.SetBool("carrying", true);
                 }
             }
@@ -82,19 +83,27 @@ public class Player : MonoBehaviour
         if (ableToMove && (hor != 0.0f || ver != 0.0f))
         {
             transform.forward = new Vector3(hor, 0, ver);
-            transform.position += transform.forward.normalized * speed * Time.deltaTime;
+            //rb.MovePosition(transform.position + transform.forward.normalized * speed * Time.fixedDeltaTime);
+            //transform.position += transform.forward.normalized * speed * Time.fixedDeltaTime;
+            transform.position += transform.forward.normalized * speed * Time.fixedDeltaTime;
+            
         }
-        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player"))
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
         if (collision.gameObject.CompareTag("Punch"))
         {
             Player hitBy = collision.transform.parent.parent.parent.gameObject.GetComponent<Player>();
             Vector3 dir = transform.position - hitBy.transform.position;
             rb.AddForce(dir.normalized*hitBy.force);
             hp -= (int)(hitBy.force / 2000);
+            if (hp <= 0) OnDeath(this);
         }
         if (collision.gameObject.CompareTag("Item"))
         {
@@ -115,9 +124,9 @@ public class Player : MonoBehaviour
                 Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
                 rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
                 hp -= (int)(hitBy.playerGrabbing.force / 2000 * hitBy.damageMultiplier);
+                if (hp <= 0) OnDeath(this);
             }
         }
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -191,7 +200,6 @@ public class Player : MonoBehaviour
     }
     IEnumerator Hit()
     {
-        Debug.Log("hit");
         float animTime = 0.66f;
         currentState = State.punching;
         animator.SetTrigger("hit");

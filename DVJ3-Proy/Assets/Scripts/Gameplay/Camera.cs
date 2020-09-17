@@ -19,8 +19,8 @@ public class Camera : MonoBehaviour
     Vector3 maxPos;
     void Start()
     {
-        Player[] activePlayers;
-        activePlayers = FindObjectsOfType<Player>();
+        PlayerController[] activePlayers;
+        activePlayers = FindObjectsOfType<PlayerController>();
         for (int i = 0; i < activePlayers.Length; i++)
         {
             players.Add(activePlayers[i].transform);
