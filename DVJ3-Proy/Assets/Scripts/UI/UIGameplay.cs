@@ -6,12 +6,14 @@ using UnityEngine.UI;
 //hacer singleton
 public class UIGameplay : MonoBehaviour
 {
+    public Slider[] HPSlider;
     public TextMeshProUGUI[] HPText;
     GameplayController gameplayController;
     PlayerController[] player;
     int[] playersHP = { 0, 0, 0, 0 }; //implementar esto despues asi no setea la vida todos los frames
     public GameObject endResultPanel;
     public TextMeshProUGUI winnerPlayerText;
+
     void Start()
     {
         gameplayController = FindObjectOfType<GameplayController>();
@@ -19,8 +21,8 @@ public class UIGameplay : MonoBehaviour
         
         for (int i = 0; i < player.Length; i++)
         {
-            HPText[player[i].playerNumber - 1].gameObject.SetActive(true);
-            HPText[player[i].playerNumber - 1].text="P"+ (player[i].playerNumber - 1)+ " HP: " + player[i].hp;
+            HPSlider[player[i].playerNumber - 1].maxValue = player[i].hp;
+            HPSlider[player[i].playerNumber - 1].value = player[i].hp;
         }
     }
 
@@ -28,9 +30,10 @@ public class UIGameplay : MonoBehaviour
     {
         for (int i = 0; i < player.Length; i++)
         {
-            HPText[player[i].playerNumber - 1].text = "P"+ player[i].playerNumber + " HP: " + player[i].hp;
+            HPSlider[player[i].playerNumber - 1].value = player[i].hp;
         }
     }
+
     public void SetWinner()
     {
         endResultPanel.SetActive(true);

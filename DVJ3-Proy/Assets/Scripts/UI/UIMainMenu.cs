@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
-    public GameObject controls;
-    public GameObject options;
+    [SerializeField] GameObject controls;
+    [SerializeField] GameObject options;
+    [SerializeField] GameObject charSelec;
     public void StartGameplayScene()
     {
         SceneManager.LoadScene(1);
@@ -26,6 +27,14 @@ public class UIMainMenu : MonoBehaviour
     public void HideOptions()
     {
         options.SetActive(false);
+    }
+    public void ShowCharSelec()
+    {
+        charSelec.SetActive(true);
+    }
+    public void HideCharSelec()
+    {
+        charSelec.SetActive(false);
     }
     public void CloseGame()
     {
