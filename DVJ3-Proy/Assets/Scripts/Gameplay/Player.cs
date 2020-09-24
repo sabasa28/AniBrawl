@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     string playerAxisInteract;
     Item grabbedItem;
     public List<Item> itemsInRange = new List<Item>();
+    Vector3 startingPos;
     enum State
     { 
         idle,
@@ -167,6 +168,8 @@ public class Player : MonoBehaviour
         }
         return itemsInRange[closest];
     }
+
+
 
     IEnumerator Swing()
     {

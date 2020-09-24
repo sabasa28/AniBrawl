@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public bool ableToMove;
     public float force;
     public GameObject swingPivot;
+    [SerializeField] GameObject punch;
     public int hp;
+    int startingHp;
     public Action<PlayerController> OnDeath;
     CharacterController cController;
     Animator animator;
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
     float immunityTime;
     [SerializeField]
     bool immune = false;
+    Vector3 startingPos;
 
     enum State
     {
@@ -58,6 +61,8 @@ public class PlayerController : MonoBehaviour
     State currentState;
     void Start()
     {
+        startingHp = hp;
+        startingPos = transform.position;
         rb = GetComponent<Rigidbody>();
         cController = GetComponent<CharacterController>();
         playerAxisX = "HorizontalP" + playerNumber;
@@ -177,29 +182,39 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!immune)
-            if (other.gameObject.CompareTag("Punch"))
+        {
+            if (other.gameObject.CompareTag("Punch") && other.gameObject != punch)
             {
                 Vector3 funElevation = new Vector3(0.0f, 0.35f);
                 PlayerController hitBy = other.transform.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
                 Vector3 dir = transform.position - hitBy.transform.position;
-                //rb.AddForce(dir.normalized * hitBy.force);
                 StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
                 hp -= (int)hitBy.force;
+                if (hp <= 0)
+                {
+                    hp = 0;
+                    OnDeath(this);
+                }
                 StartCoroutine(ImmunityTime());
-                //if (hp <= 0) OnDeath(this);
-                Debug.Log("le pego, zenioor");
             }
-        if (other.gameObject.CompareTag("Item"))
-        {
-            Item hitBy = other.gameObject.GetComponent<Item>();
-            if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+            if (other.gameObject.CompareTag("Item"))
             {
-                Vector3 dir;
-                dir = transform.position - hitBy.playerGrabbing.transform.position;
-                Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-                StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
-                hp -= (int)(hitBy.playerGrabbing.force / 2000 * hitBy.damageMultiplier);
-                //if (hp <= 0) OnDeath(this);
+                Item hitBy = other.gameObject.GetComponent<Item>();
+                if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+                {
+                    Vector3 dir;
+                    dir = transform.position - hitBy.playerGrabbing.transform.position;
+                    Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
+                    StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
+                    hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
+                    if (hp <= 0)
+                    {
+                        hp = 0;
+                        OnDeath(this);
+                    }
+                    Debug.Log("Golpeado a melee TRIGGER");
+                    StartCoroutine(ImmunityTime());
+                }
             }
         }
     }
@@ -215,16 +230,23 @@ public class PlayerController : MonoBehaviour
                     dir = transform.position - hitBy.transform.position;
                     Debug.Log("Golpeado a distancia");
                 }
-                else
+                else //nunca va a entrar aca por que cuando golpea a melee es trigger y esto es en el impact collider que no es trigger, (meter
+                    //trigger a impact collider?)
                 {
+                    return;
                     dir = transform.position - hitBy.playerGrabbing.transform.position;
                     Debug.Log("Golpeado a melee");
                 }
                 Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
                 StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
                 Debug.Log("hit");
-                hp -= (int)(hitBy.playerGrabbing.force / 2000 * hitBy.damageMultiplier);
-                if (hp <= 0) OnDeath(this);
+                hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
+                hitBy.SetAsGrabbable();
+                if (hp <= 0)
+                {
+                    hp = 0;
+                    OnDeath(this);
+                }
                 StartCoroutine(ImmunityTime());
             }
     }
@@ -324,5 +346,12 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+    }
+    public void ResetPlayer()
+    {
+        cController.enabled = false;
+        transform.position = startingPos;
+        cController.enabled = true;
+        hp = startingHp;
     }
 }

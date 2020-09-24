@@ -82,4 +82,11 @@ public class Item : MonoBehaviour
             }
         }
     }
+
+    public void SetAsGrabbable()
+    {
+        gameObject.layer = LayerMask.NameToLayer("Item");
+        playerGrabbing = null;
+        itemState = State.grabbable;
+    }
 }

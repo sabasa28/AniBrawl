@@ -13,6 +13,11 @@ public class UIGameplay : MonoBehaviour
     int[] playersHP = { 0, 0, 0, 0 }; //implementar esto despues asi no setea la vida todos los frames
     public GameObject endResultPanel;
     public TextMeshProUGUI winnerPlayerText;
+    [SerializeField] Sprite roundWonP1;
+    [SerializeField] Sprite roundWonP2;
+    [SerializeField] Image round1;
+    [SerializeField] Image round2;
+    [SerializeField] Image round3;
 
     void Start()
     {
@@ -38,5 +43,26 @@ public class UIGameplay : MonoBehaviour
     {
         endResultPanel.SetActive(true);
         winnerPlayerText.text = "Player " + gameplayController.winnerPlayerNumber;
+    }
+
+    public void SetRoundWinner(int winnerNumber, int round)
+    {
+        Sprite sprToUse; 
+        if (winnerNumber == 1)
+            sprToUse = roundWonP1;
+        else
+            sprToUse = roundWonP2;
+        switch (round)
+        {
+            case 1:
+                round1.sprite = sprToUse;
+                break;
+            case 2:
+                round2.sprite = sprToUse;
+                break;
+            case 3:
+                round3.sprite = sprToUse;
+                break;
+        }
     }
 }

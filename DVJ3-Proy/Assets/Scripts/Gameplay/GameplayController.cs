@@ -7,20 +7,21 @@ public class GameplayController : MonoBehaviour
 {
     UIGameplay uiGameplay;
     [SerializeField]
-    List<Player> players = new List<Player>();
+    List<PlayerController> players = new List<PlayerController>();
     public int winnerPlayerNumber = 0;
+    int currentRound = 1;
     // Start is called before the first frame update
     void Start()
     {
         uiGameplay = FindObjectOfType<UIGameplay>();
-        Player[] allPlayers = FindObjectsOfType<Player>(); ;
+        PlayerController[] allPlayers = FindObjectsOfType<PlayerController>(); ;
         for (int i = 0; i < allPlayers.Length; i++)
         {
             players.Add(allPlayers[i]);
         }
         for (int i = 0; i < players.Count; i++)
         {
-            players[i].OnDeath = OnPlayerDeath;
+            players[i].OnDeath = OnPlayerDead;
         }
     }
 
@@ -40,13 +41,28 @@ public class GameplayController : MonoBehaviour
         }
 #endif
     }
-    void OnPlayerDeath(Player player)
+
+    void OnPlayerDead(PlayerController player)
     {
-        players.Remove(player);
-        if (players.Count <= 1)
+        NewRound(player);
+    }
+
+    void NewRound(PlayerController player)//usar este player para darle mas fuerza
+    {
+        int winnerPlayer;
+        if (player.playerNumber == 1)
+            winnerPlayer = 2;
+        else
+            winnerPlayer = 1;
+        for (int i = 0; i < players.Count; i++)
         {
-            winnerPlayerNumber = players[0].playerNumber;
-            uiGameplay.SetWinner();
-        } 
+            players[i].ResetPlayer();
+        }
+        uiGameplay.SetRoundWinner(winnerPlayer,currentRound);
+        currentRound++;
+    }
+    void OnGameOver(int winner)
+    {
+         
     }
 }
