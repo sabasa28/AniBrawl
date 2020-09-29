@@ -48,6 +48,11 @@ public class PlayerController : MonoBehaviour
     float immunityTime;
     [SerializeField]
     bool immune = false;
+    [SerializeField]
+    string animationPunch;
+    [SerializeField]
+    string animationSwing;
+
     Vector3 startingPos;
 
     enum State

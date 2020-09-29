@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public float translationSpeed;
     public float baseZoom;
     public float maxZoom;
-    
+    [SerializeField]
+    Vector3 minLimit;
+    [SerializeField]
+    Vector3 maxLimit;
     [SerializeField]
     List <Transform> players = new List<Transform>();
     float lastDistBetweenPlayers;
@@ -63,6 +66,11 @@ public class Camera : MonoBehaviour
         float clampedZoom = Mathf.Clamp(zoom,maxZoom,1000);
 
         targetPos = stageCenter + offset - transform.forward * clampedZoom;
+        if (targetPos.x < minLimit.x) targetPos.x = minLimit.x;
+        if (targetPos.z < minLimit.z) targetPos.z = minLimit.z;
+        if (targetPos.x > maxLimit.x) targetPos.x = maxLimit.x;
+        if (targetPos.z > maxLimit.z) targetPos.z = maxLimit.z;
+        
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * translationSpeed);
         
         lastDistBetweenPlayers = distBetweenPlayers;
