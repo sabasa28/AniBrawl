@@ -18,4 +18,12 @@ public class ImpactCollider : MonoBehaviour
             pController.OnItemCollision(hitBy);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Item"))
+        {
+            Item hitBy = other.gameObject.GetComponent<Item>();
+            pController.OnItemCollision(hitBy);
+        }
+    }
 }

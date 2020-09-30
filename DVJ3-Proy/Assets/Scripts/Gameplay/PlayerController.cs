@@ -232,24 +232,25 @@ public class PlayerController : MonoBehaviour
             if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
             {
                 Vector3 dir;
+                Vector3 horizontalDir;
+                bool meleeHit = false;
                 if (hitBy.itemState == Item.State.midAir)
                 {
                     dir = transform.position - hitBy.transform.position;
                     Debug.Log("Golpeado a distancia");
-                    hitBy.GetDamaged();
                 }
-                else //nunca va a entrar aca por que cuando golpea a melee es trigger y esto es en el impact collider que no es trigger, (meter
-                    //trigger a impact collider?)
+                else 
                 {
-                    return;
                     dir = transform.position - hitBy.playerGrabbing.transform.position;
                     Debug.Log("Golpeado a melee");
+                    meleeHit = true;
                 }
-                Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
+                hitBy.GetDamaged();
+                horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
                 pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
                 Debug.Log("hit");
                 hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
-                hitBy.SetAsGrabbable();
+                if (!meleeHit) hitBy.SetAsGrabbable();
                 if (hp <= 0)
                 {
                     hp = 0;
@@ -289,10 +290,9 @@ public class PlayerController : MonoBehaviour
         float timeToDrop = 0.0333f;
         float t = 0.0f;
         Collider itemColl = grabbedItem.GetComponent<Collider>();
-        Rigidbody itemRB = grabbedItem.GetComponent<Rigidbody>();
         itemColl.isTrigger = true;
-        //itemRB.isKinematic = true;
-        //itemRB.constraints = RigidbodyConstraints.FreezeAll;
+        int itemOrigLayer = grabbedItem.gameObject.layer;
+        grabbedItem.gameObject.layer = LayerMask.NameToLayer("ItemColl" + playerNumber);
         while (t < 1)
         {
             t += Time.deltaTime / timeToRise;
@@ -306,9 +306,8 @@ public class PlayerController : MonoBehaviour
             swingPivot.transform.localRotation = Quaternion.Lerp(targetRot, origRot, t);
             yield return null;
         }
+        grabbedItem.gameObject.layer = itemOrigLayer;
         yield return new WaitForSeconds(0.05f);
-        //itemRB.isKinematic = true;
-        //itemRB.constraints = RigidbodyConstraints.None;
         currentState = State.carrying;
     }
 

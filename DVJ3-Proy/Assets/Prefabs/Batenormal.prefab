@@ -133,7 +133,7 @@ MonoBehaviour:
   playerGrabbing: {fileID: 0}
   damageMultiplier: 2
   brokenModel: {fileID: 75658362711307915}
-  avaiableLight: {fileID: 8517666608874034154}
+  visualFeedback: {fileID: 8517666608874034154}
   itemState: 0
 --- !u!95 &994630522490730091
 Animator:

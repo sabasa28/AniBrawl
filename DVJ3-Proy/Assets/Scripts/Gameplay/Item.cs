@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
     public float damageMultiplier;
     bool tangible = false;
     [SerializeField] GameObject brokenModel;
-    [SerializeField] GameObject avaiableLight;
+    [SerializeField] GameObject visualFeedback;
 
     public enum State
     {
@@ -39,12 +39,12 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if (tangible && itemState == State.grabbable && rb.velocity == Vector3.zero)
+        if (tangible && itemState == State.grabbable && rb.velocity == Vector3.zero && rb.isKinematic==false)
         {
             coll.isTrigger = true;
             rb.isKinematic = true;
             tangible = false;
-            avaiableLight.SetActive(true);
+            visualFeedback.SetActive(true);
         }
     }
     public void SetAsGrabbed(PlayerController player)
@@ -54,12 +54,13 @@ public class Item : MonoBehaviour
         rb.isKinematic = true;
         transform.localPosition = positionGrabbed;
         transform.localRotation = rotGrabbed;
-        gameObject.layer = LayerMask.NameToLayer("ItemColl"+player.playerNumber);
-        avaiableLight.SetActive(false);
+        //gameObject.layer = LayerMask.NameToLayer("ItemColl"+player.playerNumber);
+        visualFeedback.SetActive(false);
     }
 
     public void Throw()
     {
+        gameObject.layer = LayerMask.NameToLayer("ItemColl" + playerGrabbing.playerNumber);
         itemState = State.midAir;
         rb.isKinematic = false;
         coll.isTrigger = false;
@@ -104,6 +105,7 @@ public class Item : MonoBehaviour
     }
     void Break()
     {
+        visualFeedback.SetActive(false);
         transform.parent = null;
         coll.enabled = false;
         mr.enabled = false;

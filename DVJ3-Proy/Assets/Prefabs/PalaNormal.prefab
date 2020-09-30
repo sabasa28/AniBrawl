@@ -303,7 +303,7 @@ MonoBehaviour:
   playerGrabbing: {fileID: 0}
   damageMultiplier: 1.5
   brokenModel: {fileID: 3140536027000978942}
-  avaiableLight: {fileID: 1994050424524125861}
+  visualFeedback: {fileID: 1994050424524125861}
   itemState: 0
 --- !u!65 &4311216180579429909
 BoxCollider:

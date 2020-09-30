@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //hacer SINGLETON
 public class GameplayController : MonoBehaviour
@@ -10,9 +11,12 @@ public class GameplayController : MonoBehaviour
     List<PlayerController> players = new List<PlayerController>();
     public int winnerPlayerNumber = 0;
     int currentRound = 1;
-    // Start is called before the first frame update
+    int maxRounds = 3;
+    int player1wins = 0;
+    int player2wins = 0;
     void Start()
     {
+        Time.timeScale = 1.0f;
         uiGameplay = FindObjectOfType<UIGameplay>();
         PlayerController[] allPlayers = FindObjectsOfType<PlayerController>(); ;
         for (int i = 0; i < allPlayers.Length; i++)
@@ -53,24 +57,53 @@ public class GameplayController : MonoBehaviour
     {
         StartCoroutine(NewRound(player));
     }
+
     IEnumerator NewRound(PlayerController player)
     {
         yield return new WaitForSeconds(0.5f);
         int winnerPlayer;
         if (player.playerNumber == 1)
+        {
             winnerPlayer = 2;
+            player2wins++;
+        }
         else
+        {
             winnerPlayer = 1;
+            player1wins++;
+        }
         for (int i = 0; i < players.Count; i++)
         {
             players[i].ResetPlayer();
         }
         uiGameplay.SetRoundWinner(winnerPlayer, currentRound);
         currentRound++;
+        if (currentRound > maxRounds || player1wins > 1 || player2wins > 1)
+        {
+            OnGameOver();
+        }
     }
     
-    void OnGameOver(int winner)
+    void OnGameOver()
     {
-         
+        Time.timeScale = 0.0f;
+        if (player2wins > player1wins)
+            winnerPlayerNumber = 2;
+        else
+            winnerPlayerNumber = 1;
+        uiGameplay.SetWinner();
+        StartCoroutine(EndscreenInput());
+    }
+
+    IEnumerator EndscreenInput()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene(0);
+            }
+            yield return null;
+        }
     }
 }
