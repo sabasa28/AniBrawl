@@ -203,26 +203,26 @@ public class PlayerController : MonoBehaviour
                 }
                 StartCoroutine(ImmunityTime());
             }
-            if (other.gameObject.CompareTag("Item"))
-            {
-                Item hitBy = other.gameObject.GetComponent<Item>();
-                if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
-                {
-                    Vector3 dir;
-                    dir = transform.position - hitBy.playerGrabbing.transform.position;
-                    Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-                    pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
-                    hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
-                    if (hp <= 0)
-                    {
-                        hp = 0;
-                        OnDeath(this);
-                    }
-                    Debug.Log("Golpeado a melee TRIGGER");
-                    hitBy.GetDamaged();
-                    StartCoroutine(ImmunityTime());
-                }
-            }
+            //if (other.gameObject.CompareTag("Item"))
+            //{
+            //    Item hitBy = other.gameObject.GetComponent<Item>();
+            //    if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+            //    {
+            //        Vector3 dir;
+            //        dir = transform.position - hitBy.playerGrabbing.transform.position;
+            //        Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
+            //        pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
+            //        hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
+            //        if (hp <= 0)
+            //        {
+            //            hp = 0;
+            //            OnDeath(this);
+            //        }
+            //        Debug.Log("Golpeado a melee TRIGGER");
+            //        hitBy.GetDamaged();
+            //        StartCoroutine(ImmunityTime());
+            //    }
+            //}
         }
     }
 

@@ -10,6 +10,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField]
     List<PlayerController> players = new List<PlayerController>();
     public int winnerPlayerNumber = 0;
+    [SerializeField] int forceWinByDeath;
     int currentRound = 1;
     int maxRounds = 3;
     int player1wins = 0;
@@ -76,6 +77,7 @@ public class GameplayController : MonoBehaviour
         {
             players[i].ResetPlayer();
         }
+        player.force += forceWinByDeath;
         uiGameplay.SetRoundWinner(winnerPlayer, currentRound);
         currentRound++;
         if (currentRound > maxRounds || player1wins > 1 || player2wins > 1)

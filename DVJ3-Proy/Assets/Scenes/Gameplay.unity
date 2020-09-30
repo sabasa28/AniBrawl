@@ -943,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   winnerPlayerNumber: 0
+  forceWinByDeath: 10
 --- !u!4 &159043313
 Transform:
   m_ObjectHideFlags: 0

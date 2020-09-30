@@ -287,7 +287,7 @@ MonoBehaviour:
   playerNumber: 1
   speed: 10
   ableToMove: 1
-  force: 20
+  force: 15
   swingPivot: {fileID: 1790833718150095541}
   punch: {fileID: 1790833717065111704}
   hp: 100
