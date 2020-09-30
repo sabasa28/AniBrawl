@@ -291,6 +291,7 @@ MonoBehaviour:
   swingPivot: {fileID: 1790833718150095541}
   punch: {fileID: 1790833717065111704}
   hp: 100
+  rotSpeed: 15
   itemsInRange: []
   velocity: {x: 0, y: 0, z: 0}
   momentum: {x: 0, y: 0, z: 0}

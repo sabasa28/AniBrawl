@@ -16,7 +16,7 @@ public class UIFadeOut : MonoBehaviour
     {
         float t = 0;
         float timeToBlink = 1f;
-        int blinkTimesBeforeFade = 3;
+        int blinkTimesBeforeFade = 2;
         Color visibleCol = new Color(1, 1, 1, 1);
         Color invisibleCol = new Color(1, 1, 1, 0);
 

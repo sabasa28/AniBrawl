@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     Rigidbody rb;
     Vector3 dir;
+    Vector3 rot;
+    [SerializeField]float rotSpeed;
     string playerAxisX;
     string playerAxisY;
     string playerAxisHit;
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.CheckSphere(transform.position, distOnGround, groundLayer);
         hor = Input.GetAxis(playerAxisX);
         ver = Input.GetAxis(playerAxisY);
+        rot = new Vector3(Input.GetAxis(playerAxisX), 0, Input.GetAxis(playerAxisY));
         dir = new Vector3(hor, 0, ver);
         if (Input.GetButtonDown(playerAxisHit) && currentState != State.punching)
         {
@@ -136,17 +139,15 @@ public class PlayerController : MonoBehaviour
         if (currentGravity > 0)
         {
             velocity += (new Vector3(0.0f, -currentGravity));
-            //ableToMove = false;
+            //ableToMove 
         }
         cController.Move(velocity * Time.fixedDeltaTime);
-        //else if(!ableToMove)
-        //{
-        //    ableToMove = true;
-        //}
         if (ableToMove && dir != Vector3.zero)
         {
-            transform.forward = dir.normalized; //poner axis raw y un lerp en la rotacion en vez de esta wea y mover hacia dir en vez de forward
-            cController.Move(transform.forward * speed * Time.fixedDeltaTime);
+            Debug.Log(dir);
+            cController.Move(Vector3.ClampMagnitude(dir,1) * speed * Time.fixedDeltaTime);
+            if (rot != Vector3.zero) transform.forward = dir.normalized;
+            // transform.forward = Vector3.Lerp(transform.forward,rot,Time.deltaTime * rotSpeed).normalized; //poner axis raw y un lerp en la rotacion en vez de esta wea y mover hacia dir en vez de forward
         }
         momentum = Vector3.zero;
     }

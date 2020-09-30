@@ -9603,6 +9603,7 @@ MonoBehaviour:
   swingPivot: {fileID: 860579099}
   punch: {fileID: 1442403504}
   hp: 100
+  rotSpeed: 0
   itemsInRange: []
   velocity: {x: 0, y: 0, z: 0}
   momentum: {x: 0, y: 0, z: 0}
@@ -10480,7 +10481,7 @@ PrefabInstance:
     - target: {fileID: 1790833717213683480, guid: d27cbd1549f405547b95a1ea6a7a1825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 1790833717213683480, guid: d27cbd1549f405547b95a1ea6a7a1825,
         type: 3}
@@ -10490,7 +10491,7 @@ PrefabInstance:
     - target: {fileID: 1790833717213683480, guid: d27cbd1549f405547b95a1ea6a7a1825,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.75
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 1790833717213683480, guid: d27cbd1549f405547b95a1ea6a7a1825,
         type: 3}
@@ -10537,6 +10538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1790833717213683485, guid: d27cbd1549f405547b95a1ea6a7a1825,
+        type: 3}
+      propertyPath: rotSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d27cbd1549f405547b95a1ea6a7a1825, type: 3}
 --- !u!33 &1815453206530345397
@@ -10562,6 +10568,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2219036621072887992, guid: b740baf810a7fc440a8ca917ca1a11d8,
+        type: 3}
+      propertyPath: rotSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2219036621072887994, guid: b740baf810a7fc440a8ca917ca1a11d8,
         type: 3}
       propertyPath: m_Name
@@ -10570,7 +10581,7 @@ PrefabInstance:
     - target: {fileID: 2219036621072887998, guid: b740baf810a7fc440a8ca917ca1a11d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.51
+      value: 3.7900002
       objectReference: {fileID: 0}
     - target: {fileID: 2219036621072887998, guid: b740baf810a7fc440a8ca917ca1a11d8,
         type: 3}
@@ -10580,7 +10591,7 @@ PrefabInstance:
     - target: {fileID: 2219036621072887998, guid: b740baf810a7fc440a8ca917ca1a11d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.98
+      value: -0.6700001
       objectReference: {fileID: 0}
     - target: {fileID: 2219036621072887998, guid: b740baf810a7fc440a8ca917ca1a11d8,
         type: 3}
