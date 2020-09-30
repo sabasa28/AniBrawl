@@ -27,6 +27,13 @@ public class GameplayController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(Time.timeScale == 0)
+                Time.timeScale = 1;
+            else
+                Time.timeScale = 0;
+        }
 #if UNITY_EDITOR
         float speed1 = 1.0f;
         float speed2 = 0.3f;
@@ -44,11 +51,11 @@ public class GameplayController : MonoBehaviour
 
     void OnPlayerDead(PlayerController player)
     {
-        NewRound(player);
+        StartCoroutine(NewRound(player));
     }
-
-    void NewRound(PlayerController player)//usar este player para darle mas fuerza
+    IEnumerator NewRound(PlayerController player)
     {
+        yield return new WaitForSeconds(0.5f);
         int winnerPlayer;
         if (player.playerNumber == 1)
             winnerPlayer = 2;
@@ -58,9 +65,10 @@ public class GameplayController : MonoBehaviour
         {
             players[i].ResetPlayer();
         }
-        uiGameplay.SetRoundWinner(winnerPlayer,currentRound);
+        uiGameplay.SetRoundWinner(winnerPlayer, currentRound);
         currentRound++;
     }
+    
     void OnGameOver(int winner)
     {
          

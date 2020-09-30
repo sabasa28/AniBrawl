@@ -7,13 +7,16 @@ public class Item : MonoBehaviour
     public Vector3 rotationGrabbed;
     public Vector3 positionGrabbed;
     public float weight;
+    public int durability;
     Quaternion rotGrabbed;
     Rigidbody rb;
     Collider coll;
+    MeshRenderer mr;
     float toRBPhysics = 100;
     public PlayerController playerGrabbing;
     public float damageMultiplier;
     bool tangible = false;
+    [SerializeField] GameObject brokenModel;
 
     public enum State
     {
@@ -27,8 +30,9 @@ public class Item : MonoBehaviour
     void Start()
     {
         itemState = State.grabbable;
-        rb = GetComponentInChildren<Rigidbody>();
-        coll = GetComponentInChildren<Collider>();
+        rb = GetComponent<Rigidbody>();
+        coll = GetComponent<Collider>();
+        mr = GetComponent<MeshRenderer>();
         rotGrabbed = Quaternion.Euler(rotationGrabbed);
     }
 
@@ -40,7 +44,6 @@ public class Item : MonoBehaviour
             rb.isKinematic = true;
             tangible = false;
         }
-
     }
     public void SetAsGrabbed(PlayerController player)
     {
@@ -88,5 +91,22 @@ public class Item : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Item");
         playerGrabbing = null;
         itemState = State.grabbable;
+    }
+
+    public void GetDamaged()
+    {
+        durability--;
+        if (durability <= 0)
+        {
+            Break();
+        }
+    }
+    void Break()
+    {
+        transform.parent = null;
+        coll.enabled = false;
+        mr.enabled = false;
+        rb.isKinematic = true;
+        brokenModel.gameObject.SetActive(true);
     }
 }

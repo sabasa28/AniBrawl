@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     string animationPunch;
     [SerializeField]
     string animationSwing;
+    Coroutine pushedCor;
 
     Vector3 startingPos;
 
@@ -193,7 +194,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 funElevation = new Vector3(0.0f, 0.35f);
                 PlayerController hitBy = other.transform.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
                 Vector3 dir = transform.position - hitBy.transform.position;
-                StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
+                pushedCor = StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
                 hp -= (int)hitBy.force;
                 if (hp <= 0)
                 {
@@ -210,7 +211,7 @@ public class PlayerController : MonoBehaviour
                     Vector3 dir;
                     dir = transform.position - hitBy.playerGrabbing.transform.position;
                     Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-                    StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
+                    pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
                     hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
                     if (hp <= 0)
                     {
@@ -218,6 +219,7 @@ public class PlayerController : MonoBehaviour
                         OnDeath(this);
                     }
                     Debug.Log("Golpeado a melee TRIGGER");
+                    hitBy.GetDamaged();
                     StartCoroutine(ImmunityTime());
                 }
             }
@@ -234,6 +236,7 @@ public class PlayerController : MonoBehaviour
                 {
                     dir = transform.position - hitBy.transform.position;
                     Debug.Log("Golpeado a distancia");
+                    hitBy.GetDamaged();
                 }
                 else //nunca va a entrar aca por que cuando golpea a melee es trigger y esto es en el impact collider que no es trigger, (meter
                     //trigger a impact collider?)
@@ -243,7 +246,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Golpeado a melee");
                 }
                 Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-                StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
+                pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
                 Debug.Log("hit");
                 hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
                 hitBy.SetAsGrabbable();
@@ -272,7 +275,6 @@ public class PlayerController : MonoBehaviour
     {
         currentState = State.punching;
         animator.SetTrigger("hit");
-        Debug.Log(punchTime);
         yield return new WaitForSeconds(punchTime);
         currentState = State.idle;
     }
@@ -358,5 +360,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startingPos;
         cController.enabled = true;
         hp = startingHp;
+        momentum = Vector3.zero;
+        if (pushedCor != null) StopCoroutine(pushedCor);
     }
 }
