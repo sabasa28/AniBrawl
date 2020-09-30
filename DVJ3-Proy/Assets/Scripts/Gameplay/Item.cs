@@ -17,6 +17,7 @@ public class Item : MonoBehaviour
     public float damageMultiplier;
     bool tangible = false;
     [SerializeField] GameObject brokenModel;
+    [SerializeField] GameObject avaiableLight;
 
     public enum State
     {
@@ -43,6 +44,7 @@ public class Item : MonoBehaviour
             coll.isTrigger = true;
             rb.isKinematic = true;
             tangible = false;
+            avaiableLight.SetActive(true);
         }
     }
     public void SetAsGrabbed(PlayerController player)
@@ -53,6 +55,7 @@ public class Item : MonoBehaviour
         transform.localPosition = positionGrabbed;
         transform.localRotation = rotGrabbed;
         gameObject.layer = LayerMask.NameToLayer("ItemColl"+player.playerNumber);
+        avaiableLight.SetActive(false);
     }
 
     public void Throw()
@@ -69,7 +72,7 @@ public class Item : MonoBehaviour
         }
         else
         {
-            rb.AddTorque(-transform.up * playerGrabbing.force / weight); //TEMPORAL, AUTOMATIZAR O LOGRAR UN PIVOT EN OBJETOS QUE NO ESTEN EN IDENTITY (O QUE TE PASEN LOS OBJETOS CON EL PIVOT CORRECTAMENTE)
+            rb.AddTorque(-transform.up * playerGrabbing.force * damageMultiplier / weight); //TEMPORAL, AUTOMATIZAR O LOGRAR UN PIVOT EN OBJETOS QUE NO ESTEN EN IDENTITY (O QUE TE PASEN LOS OBJETOS CON EL PIVOT CORRECTAMENTE)
         }
     }
 
@@ -79,9 +82,7 @@ public class Item : MonoBehaviour
         {
             if (!collision.gameObject.CompareTag("Player"))
             {
-                gameObject.layer = LayerMask.NameToLayer("Item");
-                playerGrabbing = null;
-                itemState = State.grabbable;
+                SetAsGrabbable();
             }
         }
     }
