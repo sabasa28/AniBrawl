@@ -299,7 +299,7 @@ MonoBehaviour:
   rotationGrabbed: {x: 0, y: 0, z: 90}
   positionGrabbed: {x: 0, y: 2.2, z: 0}
   weight: 1
-  durability: 5
+  durability: 3
   playerGrabbing: {fileID: 0}
   damageMultiplier: 1.5
   brokenModel: {fileID: 3140536027000978942}
