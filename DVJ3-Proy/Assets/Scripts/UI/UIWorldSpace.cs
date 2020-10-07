@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class UIWorldSpace : MonoBehaviour
 {
-    Transform cam;
-    void Start()
-    {
-        cam = Camera.main.transform;
-    }
-
+    [SerializeField] Transform cam;
+    
     // Update is called once per frame
     void LateUpdate()
     {

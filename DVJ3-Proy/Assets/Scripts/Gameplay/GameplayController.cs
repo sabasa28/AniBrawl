@@ -15,6 +15,7 @@ public class GameplayController : MonoBehaviour
     int maxRounds = 3;
     int player1wins = 0;
     int player2wins = 0;
+    bool paused = false;
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -34,10 +35,18 @@ public class GameplayController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if(Time.timeScale == 0)
+            if (paused)
+            {
+                paused = false;
                 Time.timeScale = 1;
+                uiGameplay.SetPauseActiveState(paused);
+            }
             else
+            {
+                paused = true;
                 Time.timeScale = 0;
+                uiGameplay.SetPauseActiveState(paused);
+            }
         }
 #if UNITY_EDITOR
         float speed1 = 1.0f;

@@ -13,6 +13,7 @@ public class UIGameplay : MonoBehaviour
     int[] playersHP = { 0, 0, 0, 0 }; //implementar esto despues asi no setea la vida todos los frames
     public GameObject endResultPanel;
     public TextMeshProUGUI winnerPlayerText;
+    [SerializeField] GameObject pausePanel;
     [SerializeField] Sprite roundWonP1;
     [SerializeField] Sprite roundWonP2;
     [SerializeField] Image round1;
@@ -23,7 +24,7 @@ public class UIGameplay : MonoBehaviour
     {
         gameplayController = FindObjectOfType<GameplayController>();
         player = FindObjectsOfType<PlayerController>();
-        
+        pausePanel.SetActive(false);
         for (int i = 0; i < player.Length; i++)
         {
             HPSlider[player[i].playerNumber - 1].maxValue = player[i].hp;
@@ -47,7 +48,7 @@ public class UIGameplay : MonoBehaviour
 
     public void SetRoundWinner(int winnerNumber, int round)
     {
-        Sprite sprToUse; 
+        Sprite sprToUse;
         if (winnerNumber == 1)
             sprToUse = roundWonP1;
         else
@@ -64,5 +65,10 @@ public class UIGameplay : MonoBehaviour
                 round3.sprite = sprToUse;
                 break;
         }
+    }
+
+    public void SetPauseActiveState(bool activeState)
+    { 
+        pausePanel.SetActive(activeState);
     }
 }
