@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviourSingleton<GameManager>
 {
-    // Start is called before the first frame update
+    public enum GameState
+    { 
+        inMenus,
+        playing,
+    }
+    GameplayController gc;
+
+    public GameState gameState; // ver si esto es necesario
     void Start()
     {
-        
+        gameState = GameState.inMenus;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetGameplayController(GameplayController newGc)
     {
-        
+        gc = newGc;
+    }
+
+    public void StartGamePlay()
+    {
+        gameState = GameState.playing;
+        gc.OnGameplaySceneStart();
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BrokenItem : MonoBehaviour
 {
-    [SerializeField] GameObject bottomPiece;
-    [SerializeField] GameObject topPiece;
+    [SerializeField] GameObject bottomPiece = null;
+    [SerializeField] GameObject topPiece = null;
     Rigidbody bottomPieceRb;
     Rigidbody topPieceRb;
     Collider bottomPieceCol;
     Collider topPieceCol;
-    [SerializeField] float forceToSeparate;
+    [SerializeField] float forceToSeparate = 0.0f;
 
     private void OnEnable()
     {

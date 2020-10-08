@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GrabbingZone : MonoBehaviour
 {
-    [SerializeField]
-    PlayerController player;
+    public PlayerController player;
     private void FixedUpdate()
     {
         transform.position = player.transform.position;

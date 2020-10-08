@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,28 +8,44 @@ using UnityEngine.SceneManagement;
 public class GameplayController : MonoBehaviour
 {
     UIGameplay uiGameplay;
-    [SerializeField]
-    List<PlayerController> players = new List<PlayerController>();
     public int winnerPlayerNumber = 0;
-    [SerializeField] int forceWinByDeath;
+    [SerializeField] List<PlayerController> players = new List<PlayerController>();
+    [SerializeField] int forceWinByDeath = 0;
+    [SerializeField] Vector3 p1StartPos = Vector3.zero;
+    [SerializeField] Vector3 p2StartPos = Vector3.zero;
+    [SerializeField] GrabbingZone[] grabbingZones = null;
+    [SerializeField] CameraController cameraController = null;
+    public bool introDisplayed = false;
+    [Serializable]
+    public struct PlayerVars
+    {
+        public float force;
+        public float speed;
+        public float rotSpeed;
+        public int HP;
+    }
+    public PlayerVars commonPlayerVars;
+
+
     int currentRound = 1;
     int maxRounds = 3;
     int player1wins = 0;
     int player2wins = 0;
     bool paused = false;
+
+    [SerializeField] PlayerController[] models = null;
+
     void Start()
     {
         Time.timeScale = 1.0f;
         uiGameplay = FindObjectOfType<UIGameplay>();
-        PlayerController[] allPlayers = FindObjectsOfType<PlayerController>(); ;
-        for (int i = 0; i < allPlayers.Length; i++)
+        GameManager.Get().SetGameplayController(this);
+#if UNITY_EDITOR
+        if (Time.time < 2)
         {
-            players.Add(allPlayers[i]);
+            OnGameplaySceneStart();
         }
-        for (int i = 0; i < players.Count; i++)
-        {
-            players[i].OnDeath = OnPlayerDead;
-        }
+#endif
     }
 
     private void Update()
@@ -97,12 +114,15 @@ public class GameplayController : MonoBehaviour
     
     void OnGameOver()
     {
-        Time.timeScale = 0.0f;
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].ableToMove = false;
+        }
         if (player2wins > player1wins)
             winnerPlayerNumber = 2;
         else
             winnerPlayerNumber = 1;
-        uiGameplay.SetWinner();
+        uiGameplay.SetWinner(winnerPlayerNumber);
         StartCoroutine(EndscreenInput());
     }
 
@@ -115,6 +135,45 @@ public class GameplayController : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
             yield return null;
+        }
+    }
+    public void OnGameplaySceneStart()//pasar por parametro que modelo tiene que usar cada uno
+    {
+        Debug.Log("a");
+        SetGameplay();
+        StartCoroutine(DisplayIntroAndPlay());
+    }
+    void SetGameplay()
+    {
+        PlayerController P1 = Instantiate(models[0], p1StartPos, Quaternion.identity); // se puede hacer un for
+        P1.playerNumber = 1;
+        grabbingZones[0].player = P1;
+        players.Add(P1);
+        PlayerController P2 = Instantiate(models[1], p2StartPos, Quaternion.identity);
+        P2.playerNumber = 2;
+        grabbingZones[1].player = P2;
+        players.Add(P2);
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].force = commonPlayerVars.force;
+            players[i].speed = commonPlayerVars.speed;
+            players[i].rotSpeed = commonPlayerVars.rotSpeed;
+            players[i].hp = commonPlayerVars.HP;
+            players[i].OnDeath = OnPlayerDead;
+            players[i].ableToMove = false;
+            players[i].UpdateUI = uiGameplay.UpdateHealthBars;
+        }
+        uiGameplay.SetPlayers(players.ToArray());
+        cameraController.OnGameplayStart(players);
+    }
+
+    IEnumerator DisplayIntroAndPlay()
+    {
+        uiGameplay.DisplayIntro();
+        yield return new WaitUntil(()=>introDisplayed);
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].ableToMove = true;
         }
     }
 }

@@ -10,16 +10,15 @@ public class PlayerController : MonoBehaviour
     public bool ableToMove;
     public float force;
     public GameObject swingPivot;
-    [SerializeField] GameObject punch;
+    [SerializeField] GameObject punch = null;
     public int hp;
     int startingHp;
     public Action<PlayerController> OnDeath;
     CharacterController cController;
     Animator animator;
-    Rigidbody rb;
     Vector3 dir;
     Vector3 rot;
-    [SerializeField]float rotSpeed;
+    public float rotSpeed;
     string playerAxisX;
     string playerAxisY;
     string playerAxisHit;
@@ -28,50 +27,38 @@ public class PlayerController : MonoBehaviour
     public List<Item> itemsInRange = new List<Item>();
     float distOnGround = 0.3f;
     [Header("Physics")]
-    [SerializeField]
-    Vector3 velocity;
-    [SerializeField]
-    Vector3 momentum;
-    [SerializeField]
-    float drag;
+    [SerializeField] Vector3 velocity = Vector3.zero;
+    [SerializeField] Vector3 momentum = Vector3.zero;
+    [SerializeField] float drag = 0;
     [Header("Gravity related")]
-    [SerializeField]
-    bool isGrounded;
-    [SerializeField]
-    float baseGravity;
-    [SerializeField]
-    float gravityAcceleration;
-    [SerializeField]
-    float currentGravity;
+    [SerializeField] bool isGrounded = false;
+    [SerializeField] float baseGravity = 0;
+    [SerializeField] float gravityAcceleration = 0;
+    [SerializeField] float currentGravity = 0;
     LayerMask groundLayer;
     float punchTime;
     float swingTime;
-    [SerializeField]
-    float immunityTime;
-    [SerializeField]
-    bool immune = false;
-    [SerializeField]
-    string animationPunch;
-    [SerializeField]
-    string animationSwing;
+    [SerializeField] float immunityTime = 0;
+    [SerializeField] bool immune = false;
+    [SerializeField] string animationPunch;
+    [SerializeField] string animationSwing;
     Coroutine pushedCor;
+    public Action UpdateUI;
 
     Vector3 startingPos;
 
-    enum State
+    public enum State
     {
         idle,
         walking,
         punching,
         carrying
     }
-    [SerializeField]
-    State currentState;
+    public State currentState;
     void Start()
     {
         startingHp = hp;
         startingPos = transform.position;
-        rb = GetComponent<Rigidbody>();
         cController = GetComponent<CharacterController>();
         playerAxisX = "HorizontalP" + playerNumber;
         playerAxisY = "VerticalP" + playerNumber;
@@ -202,6 +189,7 @@ public class PlayerController : MonoBehaviour
                     hp = 0;
                     OnDeath(this);
                 }
+                UpdateUI();
                 StartCoroutine(ImmunityTime());
             }
             //if (other.gameObject.CompareTag("Item"))
@@ -257,6 +245,7 @@ public class PlayerController : MonoBehaviour
                     hp = 0;
                     OnDeath(this);
                 }
+                UpdateUI();
                 StartCoroutine(ImmunityTime());
             }
     }
@@ -363,6 +352,7 @@ public class PlayerController : MonoBehaviour
         hp = startingHp;
         momentum = Vector3.zero;
         if (pushedCor != null) StopCoroutine(pushedCor);
+        UpdateUI();
     }
 
     public void CheckItemBreak()

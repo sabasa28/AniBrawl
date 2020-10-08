@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIMainMenu : MonoBehaviour
 {
-    [SerializeField] GameObject main;
-    [SerializeField] GameObject controls;
-    [SerializeField] GameObject options;
-    [SerializeField] GameObject charSelec;
-    [SerializeField] GameObject loadingScreen;
-    [SerializeField] float minTimeToLoad;
-    [SerializeField] Image generalBackground;
-    [SerializeField] GameObject[] characterSelectedP1;
-    [SerializeField] GameObject[] characterSelectedP2;
+    [SerializeField] GameObject main = null;
+    [SerializeField] GameObject controls = null;
+    [SerializeField] GameObject options = null;
+    [SerializeField] GameObject charSelec = null;
+    [SerializeField] GameObject loadingScreen = null;
+    [SerializeField] float minTimeToLoad = 0;
+    [SerializeField] Image generalBackground = null;
+    [SerializeField] GameObject[] characterSelectedP1 = null;
+    [SerializeField] GameObject[] characterSelectedP2 = null;
+    [SerializeField] TextMeshProUGUI versionText = null;
     int chosenCharP1;
     int chosenCharP2;
 
     private void Start()
     {
+        versionText.text = "v" + Application.version;
         chosenCharP1 = 0;
         chosenCharP2 = 0;
         characterSelectedP1[chosenCharP1].SetActive(true);
@@ -29,6 +32,7 @@ public class UIMainMenu : MonoBehaviour
     public void StartGameplayScene()
     {
         StartCoroutine(UnloadMenu());
+        GameManager.Get().StartGamePlay();
     }
     public void ShowControls()
     {
@@ -98,34 +102,32 @@ public class UIMainMenu : MonoBehaviour
         float loadingProgress;
         float timeLoading = 0;
         yield return null;
-
-        AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-        ao.allowSceneActivation = false;
-        
-        while (!ao.isDone)
-        {
-            timeLoading += Time.deltaTime;
-            loadingProgress = ao.progress + 0.1f;
-            loadingProgress = loadingProgress * timeLoading / minTimeToLoad;
-
-            // Loading completed
-            if (loadingProgress >= 1)
+        if (!SceneManager.GetSceneByBuildIndex(1).isLoaded)
+        { 
+            AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            ao.allowSceneActivation = false;
+            
+            while (!ao.isDone)
             {
-                loadingScreen.SetActive(false);
-                ao.allowSceneActivation = true;
+                timeLoading += Time.deltaTime;
+                loadingProgress = ao.progress + 0.1f;
+                loadingProgress = loadingProgress * timeLoading / minTimeToLoad;
 
+                // Loading completed
+                if (loadingProgress >= 1)
+                {
+                    loadingScreen.SetActive(false);
+                    ao.allowSceneActivation = true;
+
+                }
+                yield return null;
             }
-
-            yield return null;
         }
-        Debug.Log(SceneManager.GetSceneByBuildIndex(1).isLoaded);
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
     }
 
     IEnumerator UnloadMenu()
     {
-        Debug.Log(SceneManager.GetActiveScene());
-        Debug.Log(SceneManager.sceneCount);
         charSelec.SetActive(false);
         float t = 0;
         float fadeInTime = 3.0f;

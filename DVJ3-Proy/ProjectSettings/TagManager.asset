@@ -8,6 +8,8 @@ TagManager:
   - GrabZone
   - Item
   - Wall
+  - Fire
+  - GameplayCamera
   layers:
   - Default
   - TransparentFX

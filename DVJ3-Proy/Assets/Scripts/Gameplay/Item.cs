@@ -16,8 +16,8 @@ public class Item : MonoBehaviour
     public PlayerController playerGrabbing;
     public float damageMultiplier;
     bool tangible = false;
-    [SerializeField] GameObject brokenModel;
-    [SerializeField] GameObject visualFeedback;
+    [SerializeField] GameObject brokenModel = null;
+    [SerializeField] GameObject visualFeedback = null;
 
     public enum State
     {

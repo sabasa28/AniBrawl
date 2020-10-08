@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class UIWorldSpace : MonoBehaviour
 {
-    [SerializeField] Transform cam;
-    
-    // Update is called once per frame
+    Transform cam;
+
+    private void Start()
+    {
+        cam = GameObject.FindGameObjectWithTag("GameplayCamera").transform;
+    }
     void LateUpdate()
     {
         transform.LookAt(transform.position + cam.forward);
