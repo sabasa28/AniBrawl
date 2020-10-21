@@ -113,20 +113,20 @@ public class UIGameplay : MonoBehaviour
 
         for (int i = 0; i < introText.Length; i++)
         {
+            float timeInText = 0.5f;
             float t = 0.0f;
             Color visibleCol = new Color (introText[i].color.r, introText[i].color.g, introText[i].color.b, 1);
             Color notVisibleCol = new Color (introText[i].color.r, introText[i].color.g, introText[i].color.b, 0);
             while (t < 1)
             {
-                t += Time.deltaTime;
+                t += Time.deltaTime / timeInText;
                 introText[i].color = Color.Lerp(notVisibleCol,visibleCol,t);
                 yield return null;
             }
-            yield return new WaitForSeconds(0.5f);
             t = 0.0f;
             while (t < 1)
             {
-                t += Time.deltaTime *2;
+                t += Time.deltaTime / timeInText;
                 introText[i].color = Color.Lerp(visibleCol, notVisibleCol, t);
                 yield return null;
             }

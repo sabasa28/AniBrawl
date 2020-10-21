@@ -10,11 +10,12 @@ public class GameplayController : MonoBehaviour
     UIGameplay uiGameplay;
     public int winnerPlayerNumber = 0;
     [SerializeField] List<PlayerController> players = new List<PlayerController>();
-    [SerializeField] int forceWinByDeath = 0;
+    public int forceWinByDeath = 0;
     [SerializeField] Vector3 p1StartPos = Vector3.zero;
     [SerializeField] Vector3 p2StartPos = Vector3.zero;
     [SerializeField] GrabbingZone[] grabbingZones = null;
     [SerializeField] CameraController cameraController = null;
+    [SerializeField] PostProcessManager ppManager = null;
     public bool introDisplayed = false;
     [Serializable]
     public struct PlayerVars
@@ -139,12 +140,12 @@ public class GameplayController : MonoBehaviour
     }
     public void OnGameplaySceneStart()//pasar por parametro que modelo tiene que usar cada uno
     {
-        Debug.Log("a");
         SetGameplay();
         StartCoroutine(DisplayIntroAndPlay());
     }
     void SetGameplay()
     {
+        ppManager.StartRemovingCAberration();
         PlayerController P1 = Instantiate(models[0], p1StartPos, Quaternion.identity); // se puede hacer un for
         P1.playerNumber = 1;
         grabbingZones[0].player = P1;

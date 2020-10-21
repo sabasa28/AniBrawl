@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject swingPivot;
     [SerializeField] GameObject punch = null;
     public int hp;
-    int startingHp;
+    public int startingHp;
     public Action<PlayerController> OnDeath;
     CharacterController cController;
     Animator animator;
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         currentState = State.idle;
         groundLayer = LayerMask.GetMask("Ground");
         currentGravity = baseGravity;
-        GetAnimationTimes();
+        GetAnimationTimes(); //se reemplaza por animation events
     }
 
     void Update()
@@ -328,7 +328,7 @@ public class PlayerController : MonoBehaviour
         }
         return itemsInRange[closest];
     }
-    void GetAnimationTimes()
+    void GetAnimationTimes() // esto se reemplaza por animation events
     {
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
         for (int i = 0; i < clips.Length; i++)

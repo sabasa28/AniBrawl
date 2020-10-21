@@ -116,13 +116,12 @@ public class UIMainMenu : MonoBehaviour
                 // Loading completed
                 if (loadingProgress >= 1)
                 {
-                    loadingScreen.SetActive(false);
                     ao.allowSceneActivation = true;
-
                 }
                 yield return null;
             }
         }
+        loadingScreen.SetActive(false);
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
     }
 

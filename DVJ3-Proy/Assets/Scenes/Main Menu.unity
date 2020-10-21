@@ -5172,7 +5172,7 @@ MonoBehaviour:
   options: {fileID: 0}
   charSelec: {fileID: 1944703798}
   loadingScreen: {fileID: 1361679443}
-  minTimeToLoad: 5
+  minTimeToLoad: 2.5
   generalBackground: {fileID: 833784712}
   characterSelectedP1:
   - {fileID: 984683021}
