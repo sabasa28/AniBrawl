@@ -18,6 +18,16 @@ public class Item : MonoBehaviour
     bool tangible = false;
     [SerializeField] GameObject brokenModel = null;
     [SerializeField] GameObject visualFeedback = null;
+    public enum DirToThrow
+    {
+        forward,
+        backwards,
+        right,
+        left,
+        up,
+        down
+    }
+    public DirToThrow dirToThrow;
 
     public enum State
     {
@@ -66,7 +76,7 @@ public class Item : MonoBehaviour
         coll.isTrigger = false;
         tangible = true;
         transform.parent = null;
-        rb.AddForce(transform.forward * playerGrabbing.force * toRBPhysics / weight);
+        rb.AddForce(GetCurrentRelativeForward() * playerGrabbing.force * toRBPhysics / weight);
         if (rotationGrabbed == Vector3.zero)
         {
             rb.AddTorque(transform.right * playerGrabbing.force / weight);
@@ -103,6 +113,28 @@ public class Item : MonoBehaviour
             Break();
         }
     }
+
+    Vector3 GetCurrentRelativeForward()
+    {
+        switch (dirToThrow)
+        {
+            case DirToThrow.forward:
+                return transform.forward;
+            case DirToThrow.backwards:
+                return -transform.forward;
+            case DirToThrow.right:
+                return transform.right;
+            case DirToThrow.left:
+                return -transform.right;
+            case DirToThrow.up:
+                return transform.up;
+            case DirToThrow.down:
+                return -transform.up;
+            default:
+                return transform.forward;
+        }
+    }
+
     void Break()
     {
         visualFeedback.SetActive(false);

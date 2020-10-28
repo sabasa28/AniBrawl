@@ -17,6 +17,8 @@ public class GameplayController : MonoBehaviour
     [SerializeField] CameraController cameraController = null;
     [SerializeField] PostProcessManager ppManager = null;
     public bool introDisplayed = false;
+    [SerializeField] TesterTool tester;
+
     [Serializable]
     public struct PlayerVars
     {
@@ -41,12 +43,9 @@ public class GameplayController : MonoBehaviour
         Time.timeScale = 1.0f;
         uiGameplay = FindObjectOfType<UIGameplay>();
         GameManager.Get().SetGameplayController(this);
-#if UNITY_EDITOR
-        if (Time.time < 2)
-        {
+
+        if (SceneManager.sceneCount < 2)
             OnGameplaySceneStart();
-        }
-#endif
     }
 
     private void Update()
@@ -166,6 +165,7 @@ public class GameplayController : MonoBehaviour
         }
         uiGameplay.SetPlayers(players.ToArray());
         cameraController.OnGameplayStart(players);
+        //tester.gameObject.SetActive(true);
     }
 
     IEnumerator DisplayIntroAndPlay()
