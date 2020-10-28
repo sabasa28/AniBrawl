@@ -14,8 +14,6 @@ public class TesterTool : MonoBehaviour
     [SerializeField] TextMeshProUGUI currentHPP1Text = null;
     [SerializeField] TextMeshProUGUI currentHPP2Text = null;
     [SerializeField] GameplayController gpController = null;
-    [SerializeField] Slider hpBarP1 = null;
-    [SerializeField] Slider hpBarP2 = null;
 
     int p1 = -1;
     int p2 = -1;
@@ -97,8 +95,6 @@ public class TesterTool : MonoBehaviour
             players[i].hp = players[i].startingHp;
             players[i].UpdateUI();
         }
-        hpBarP1.maxValue = players[p1].startingHp + change;
-        hpBarP2.maxValue = players[p2].startingHp + change;
         MaxHPText.text = "MaxHP "+ players[p1].startingHp.ToString();
     }
 

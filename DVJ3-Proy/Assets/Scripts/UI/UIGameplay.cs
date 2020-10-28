@@ -8,7 +8,7 @@ using UnityEngine.UI;
 //hacer singleton
 public class UIGameplay : MonoBehaviour
 {
-    public Slider[] HPSlider;
+    public Image[] HPBar;
     GameplayController gameplayController;
     PlayerController[] players;
     int[] playersHP = { 0, 0, 0, 0 }; //implementar esto despues asi no setea la vida todos los frames
@@ -36,21 +36,20 @@ public class UIGameplay : MonoBehaviour
     {
         for (int i = 0; i < players.Length; i++)
         {
-            HPSlider[players[i].playerNumber - 1].value = players[i].hp;
+            HPBar[players[i].playerNumber - 1].fillAmount = (float)players[i].hp / players[i].startingHp;
         }
     }
 
-    public void SetPlayers(PlayerController[] players)
+    public void SetPlayers(PlayerController[] playersToSet)
     {
-        this.players = players;
-        for (int i = 0; i < this.players.Length; i++)
+        this.players = playersToSet;
+        for (int i = 0; i < players.Length; i++)
         {
-            if (HPSlider[this.players[i].playerNumber - 1])
+            if (HPBar[players[i].playerNumber - 1])
             {
-                HPSlider[this.players[i].playerNumber - 1].maxValue = this.players[i].hp;
-                HPSlider[this.players[i].playerNumber - 1].value = this.players[i].hp;
+                HPBar[players[i].playerNumber - 1].fillAmount = players[i].hp / players[i].startingHp;
             }
-            uiPlayerWS.Add(players[i].GetComponentInChildren<UIPlayerWS>());
+            uiPlayerWS.Add(playersToSet[i].GetComponentInChildren<UIPlayerWS>());
         }
     }
 

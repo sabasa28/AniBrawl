@@ -55,9 +55,13 @@ public class PlayerController : MonoBehaviour
         carrying
     }
     public State currentState;
+
+    private void Awake()
+    {
+        startingHp = hp;   
+    }
     void Start()
     {
-        startingHp = hp;
         startingPos = transform.position;
         cController = GetComponent<CharacterController>();
         playerAxisX = "HorizontalP" + playerNumber;
