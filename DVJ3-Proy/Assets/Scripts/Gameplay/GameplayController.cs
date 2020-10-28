@@ -17,7 +17,9 @@ public class GameplayController : MonoBehaviour
     [SerializeField] CameraController cameraController = null;
     [SerializeField] PostProcessManager ppManager = null;
     public bool introDisplayed = false;
-    [SerializeField] TesterTool tester;
+    [SerializeField] TesterTool tester = null;
+    [SerializeField] GameObject testerActivatedText = null;
+    static bool activateTester = false;
 
     [Serializable]
     public struct PlayerVars
@@ -38,6 +40,9 @@ public class GameplayController : MonoBehaviour
 
     [SerializeField] PlayerController[] models = null;
 
+    string cheat ="AEZAKMI";
+    int cheatPos = 0;
+
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -50,6 +55,17 @@ public class GameplayController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Get().gameState==GameManager.GameState.inMenus && !activateTester && (Input.inputString == cheat[cheatPos].ToString() || Input.inputString == (cheat[cheatPos].ToString().ToLower())))
+        {
+            Debug.Log(cheat[cheatPos]);
+            cheatPos++;
+            if (cheatPos >= cheat.Length)
+            {
+                cheatPos = 0;
+                testerActivatedText.SetActive(true);
+                activateTester = true;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (paused)
@@ -133,6 +149,7 @@ public class GameplayController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 SceneManager.LoadScene(0);
+                GameManager.Get().gameState = GameManager.GameState.inMenus;
             }
             yield return null;
         }
@@ -165,7 +182,7 @@ public class GameplayController : MonoBehaviour
         }
         uiGameplay.SetPlayers(players.ToArray());
         cameraController.OnGameplayStart(players);
-        //tester.gameObject.SetActive(true);
+        if (activateTester) tester.gameObject.SetActive(true);
     }
 
     IEnumerator DisplayIntroAndPlay()

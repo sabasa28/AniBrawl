@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     Coroutine pushedCor;
     public Action UpdateUI;
 
+
     Vector3 startingPos;
 
     public enum State
@@ -77,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         float hor;
         float ver;
         isGrounded = Physics.CheckSphere(transform.position, distOnGround, groundLayer);
