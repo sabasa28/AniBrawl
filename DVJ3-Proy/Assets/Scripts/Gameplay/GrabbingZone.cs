@@ -7,7 +7,7 @@ public class GrabbingZone : MonoBehaviour
     public PlayerController player;
     private void FixedUpdate()
     {
-        transform.position = player.transform.position;
+        if (player) transform.position = player.transform.position;
     }
     
     private void OnTriggerEnter(Collider other)

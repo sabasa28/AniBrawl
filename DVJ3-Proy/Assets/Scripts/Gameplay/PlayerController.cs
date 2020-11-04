@@ -35,13 +35,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float baseGravity = 0;
     [SerializeField] float gravityAcceleration = 0;
     [SerializeField] float currentGravity = 0;
+    [Space]
     LayerMask groundLayer;
     float punchTime;
     float swingTime;
     [SerializeField] float immunityTime = 0;
     [SerializeField] bool immune = false;
-    [SerializeField] string animationPunch;
-    [SerializeField] string animationSwing;
     Coroutine pushedCor;
     public Action UpdateUI;
 
@@ -77,8 +76,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {    
         float hor;
         float ver;
         isGrounded = Physics.CheckSphere(transform.position, distOnGround, groundLayer);
@@ -97,7 +95,6 @@ public class PlayerController : MonoBehaviour
         {
             if (currentState == State.idle)
             {
-                Debug.Log("AA");
                 Item closestAvaiableItem = GetClosestAvaiableItem();
                 if (closestAvaiableItem)
                 {
@@ -138,8 +135,10 @@ public class PlayerController : MonoBehaviour
         cController.Move(velocity * Time.fixedDeltaTime);
         if (ableToMove && dir != Vector3.zero)
         {
-            cController.Move(Vector3.ClampMagnitude(dir,1) * speed * Time.fixedDeltaTime);
+            cController.Move(Vector3.ClampMagnitude(dir, 1) * speed * Time.fixedDeltaTime);
             if (rot != Vector3.zero) transform.forward = dir.normalized;
+            if (dir.magnitude >= 1.0f) animator.SetBool("walking", true);
+            else animator.SetBool("walking",false);
             // transform.forward = Vector3.Lerp(transform.forward,rot,Time.deltaTime * rotSpeed).normalized; //poner axis raw y un lerp en la rotacion en vez de esta wea y mover hacia dir en vez de forward
         }
         momentum = Vector3.zero;
@@ -149,36 +148,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, distOnGround);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log(collision.gameObject.name);
-        //if (collision.gameObject.CompareTag("Item"))
-        //{
-        //    Item hitBy = collision.gameObject.GetComponent<Item>();
-        //    Debug.Log("Pego: " + hitBy.gameObject.name + " Agarrado por " + hitBy.playerGrabbing);
-        //    Debug.Log("Le pego a: " + this);
-        //    Debug.Log(hitBy.playerGrabbing != this);
-        //    if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
-        //    {
-        //        Debug.Log(collision.gameObject.name);
-        //        Vector3 dir;
-        //        if (hitBy.itemState == Item.State.midAir)
-        //        {
-        //            dir = transform.position - hitBy.transform.position;
-        //            Debug.Log("Golpeado a distancia");
-        //        }
-        //        else
-        //        {
-        //            dir = transform.position - hitBy.playerGrabbing.transform.position;
-        //            Debug.Log("Golpeado a melee");
-        //        }
-        //        Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-        //        StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
-        //        hp -= (int)(hitBy.playerGrabbing.force / 2000 * hitBy.damageMultiplier);
-        //        if (hp <= 0) OnDeath(this);
-        //    }
-        //}
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (!immune)
@@ -186,7 +155,7 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.CompareTag("Punch") && other.gameObject != punch)
             {
                 Vector3 funElevation = new Vector3(0.0f, 0.35f);
-                PlayerController hitBy = other.transform.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
+                PlayerController hitBy = other.transform.parent.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
                 Vector3 dir = transform.position - hitBy.transform.position;
                 pushedCor = StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
                 hp -= (int)hitBy.force;
@@ -198,26 +167,6 @@ public class PlayerController : MonoBehaviour
                 UpdateUI();
                 StartCoroutine(ImmunityTime());
             }
-            //if (other.gameObject.CompareTag("Item"))
-            //{
-            //    Item hitBy = other.gameObject.GetComponent<Item>();
-            //    if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
-            //    {
-            //        Vector3 dir;
-            //        dir = transform.position - hitBy.playerGrabbing.transform.position;
-            //        Vector3 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-            //        pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
-            //        hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
-            //        if (hp <= 0)
-            //        {
-            //            hp = 0;
-            //            OnDeath(this);
-            //        }
-            //        Debug.Log("Golpeado a melee TRIGGER");
-            //        hitBy.GetDamaged();
-            //        StartCoroutine(ImmunityTime());
-            //    }
-            //}
         }
     }
 
@@ -278,8 +227,19 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Swing()
     {
+        int itemOrigLayer = grabbedItem.gameObject.layer;
+
         currentState = State.punching;
         animator.SetTrigger("hit");
+        
+        grabbedItem.gameObject.layer = LayerMask.NameToLayer("ItemColl" + playerNumber);
+
+        yield return new WaitForSeconds(swingTime);
+ 
+        grabbedItem.gameObject.layer = itemOrigLayer;
+        currentState = State.carrying;
+        CheckItemBreak();
+        /*
         Quaternion origRot = Quaternion.identity;
         Quaternion targetRot = Quaternion.Euler(new Vector3(90, 0, 0));
         float timeToRise = 0.333f;
@@ -303,9 +263,7 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         grabbedItem.gameObject.layer = itemOrigLayer;
-        yield return new WaitForSeconds(0.05f);
-        currentState = State.carrying;
-        CheckItemBreak();
+        yield return new WaitForSeconds(0.05f);*/
     }
 
     IEnumerator ImmunityTime()
@@ -341,10 +299,10 @@ public class PlayerController : MonoBehaviour
         {
             switch (clips[i].name)
             {
-                case "punch":
+                case "Punching":
                     punchTime = clips[i].length;
                     break;
-                case "swing":
+                case "Swing":
                     swingTime = clips[i].length;
                     break;
             }
@@ -363,11 +321,9 @@ public class PlayerController : MonoBehaviour
 
     public void CheckItemBreak()
     {
-        Debug.Log("entro");
         if (grabbedItem.transform.parent == swingPivot.transform)
             return;
         currentState = State.idle;
         animator.SetBool("carrying", false);
-        Debug.Log("salio");
     }
 }

@@ -220,15 +220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30425f0cc8e20ae49816706bdeaa9888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationGrabbed: {x: -90, y: 0, z: 0}
-  positionGrabbed: {x: 0, y: 1.6, z: 0.5}
+  rotationGrabbed: {x: 0, y: -90, z: 0}
+  positionGrabbed: {x: -1.35, y: -0.38, z: 0}
   weight: 1
   durability: 2
   playerGrabbing: {fileID: 0}
   damageMultiplier: 1.1
   brokenModel: {fileID: 2051917754900956453}
   visualFeedback: {fileID: 2454995374044888123}
-  dirToThrow: 5
+  dirToThrow: 2
   itemState: 0
 --- !u!54 &4160123391604808705
 Rigidbody:

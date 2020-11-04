@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: Walking
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -33,7 +33,74 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Huesos
+        weight: 1
+      - path: Huesos/Brazo
+        weight: 1
+      - path: Huesos/Brazo/joint2
+        weight: 1
+      - path: Huesos/joint5
+        weight: 1
+      - path: Huesos/joint5/joint6
+        weight: 1
+      - path: Huesos/peirna_izq
+        weight: 1
+      - path: Huesos/peirna_izq/joint4
+        weight: 1
+      - path: Huesos/pierna_der
+        weight: 1
+      - path: Huesos/pierna_der/joint4 1
+        weight: 1
+      - path: Pato2
+        weight: 1
+      - path: Pato2/alas
+        weight: 1
+      - path: Pato2/alas/pCylinder2
+        weight: 1
+      - path: Pato2/alas/pCylinder3
+        weight: 1
+      - path: Pato2/patasPosta
+        weight: 1
+      - path: Pato2/patasPosta/polySurface16
+        weight: 1
+      - path: Pato2/patasPosta/polySurface17
+        weight: 1
+      - path: Pato2/pCube8
+        weight: 1
+      - path: Pato2/pCube9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:
     lODScreenPercentages: []

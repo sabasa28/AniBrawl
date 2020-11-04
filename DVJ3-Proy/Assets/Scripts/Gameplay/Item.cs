@@ -76,7 +76,7 @@ public class Item : MonoBehaviour
         coll.isTrigger = false;
         tangible = true;
         transform.parent = null;
-        rb.AddForce(GetCurrentRelativeForward() * playerGrabbing.force * toRBPhysics / weight);
+        rb.AddForce(playerGrabbing.transform.forward * playerGrabbing.force * toRBPhysics / weight);
         if (rotationGrabbed == Vector3.zero)
         {
             rb.AddTorque(transform.right * playerGrabbing.force / weight);
@@ -110,10 +110,11 @@ public class Item : MonoBehaviour
         durability--;
         if (durability <= 0)
         {
-            Break();
+            GetBroken();
         }
     }
 
+    /* ESTO SE USABA PARA TENER EL FORWARD DEL OBJETO PERO YA NO, PUEDE QUE LO NECESITE PARA EL TORQUE, NOT SURE
     Vector3 GetCurrentRelativeForward()
     {
         switch (dirToThrow)
@@ -134,8 +135,9 @@ public class Item : MonoBehaviour
                 return transform.forward;
         }
     }
+    */
 
-    void Break()
+    void GetBroken()
     {
         visualFeedback.SetActive(false);
         transform.parent = null;
