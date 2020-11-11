@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         currentState = State.idle;
         groundLayer = LayerMask.GetMask("Ground");
         currentGravity = baseGravity;
-        GetAnimationTimes(); //se reemplaza por animation events
+        GetAnimationTimes(); //se reemplaza por animation events mmmm o no
     }
 
     void Update()
@@ -239,31 +239,6 @@ public class PlayerController : MonoBehaviour
         grabbedItem.gameObject.layer = itemOrigLayer;
         currentState = State.carrying;
         CheckItemBreak();
-        /*
-        Quaternion origRot = Quaternion.identity;
-        Quaternion targetRot = Quaternion.Euler(new Vector3(90, 0, 0));
-        float timeToRise = 0.333f;
-        float timeToDrop = 0.0333f;
-        float t = 0.0f;
-        Collider itemColl = grabbedItem.GetComponent<Collider>();
-        itemColl.isTrigger = true;
-        int itemOrigLayer = grabbedItem.gameObject.layer;
-        grabbedItem.gameObject.layer = LayerMask.NameToLayer("ItemColl" + playerNumber);
-        while (t < 1)
-        {
-            t += Time.deltaTime / timeToRise;
-            swingPivot.transform.localRotation = Quaternion.Lerp(origRot, targetRot, t);
-            yield return null;
-        }
-        t = 0.0f;
-        while (t < 1)
-        {
-            t += Time.deltaTime / timeToDrop;
-            swingPivot.transform.localRotation = Quaternion.Lerp(targetRot, origRot, t);
-            yield return null;
-        }
-        grabbedItem.gameObject.layer = itemOrigLayer;
-        yield return new WaitForSeconds(0.05f);*/
     }
 
     IEnumerator ImmunityTime()
