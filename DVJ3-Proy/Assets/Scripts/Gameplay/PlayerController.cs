@@ -137,9 +137,12 @@ public class PlayerController : MonoBehaviour
         {
             cController.Move(Vector3.ClampMagnitude(dir, 1) * speed * Time.fixedDeltaTime);
             if (rot != Vector3.zero) transform.forward = dir.normalized;
-            if (dir.magnitude >= 1.0f) animator.SetBool("walking", true);
-            else animator.SetBool("walking",false);
+            animator.SetFloat("walkingSpeed", dir.magnitude);
             // transform.forward = Vector3.Lerp(transform.forward,rot,Time.deltaTime * rotSpeed).normalized; //poner axis raw y un lerp en la rotacion en vez de esta wea y mover hacia dir en vez de forward
+        }
+        else
+        {
+            animator.SetFloat("walkingSpeed", 0);
         }
         momentum = Vector3.zero;
     }
@@ -267,7 +270,7 @@ public class PlayerController : MonoBehaviour
         }
         return itemsInRange[closest];
     }
-    void GetAnimationTimes() // esto se reemplaza por animation events
+    void GetAnimationTimes() // esto se reemplaza por animation events o tal vez no :S
     {
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
         for (int i = 0; i < clips.Length; i++)
