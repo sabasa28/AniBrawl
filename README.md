@@ -40,11 +40,6 @@ This game was also possible thanks to the support of these professors:
 - **Eugenio Taboada**
 
 
-## Acknowledgements
-
-
-
-
 ## Links
 
 Download it from itch.io: <a href="https://anibrawl.itch.io/anibrawl">AniBrawl</a>
