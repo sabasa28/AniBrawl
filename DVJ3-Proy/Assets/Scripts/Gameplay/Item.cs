@@ -18,16 +18,15 @@ public class Item : MonoBehaviour
     bool tangible = false;
     [SerializeField] GameObject brokenModel = null;
     [SerializeField] GameObject visualFeedback = null;
-    public enum DirToThrow
+    Transform itemsHolder = null;
+    public enum DirWhenThrown
     {
-        forward,
-        backwards,
-        right,
-        left,
-        up,
-        down
+        forwardUp,
+        forwardDown,
+        backwardsUp,
+        backwardsDown,
     }
-    public DirToThrow dirToThrow;
+    public DirWhenThrown dirToThrow;
 
     public enum State
     {
@@ -40,6 +39,7 @@ public class Item : MonoBehaviour
 
     void Start()
     {
+        itemsHolder = transform.parent;
         itemState = State.grabbable;
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
@@ -75,16 +75,16 @@ public class Item : MonoBehaviour
         rb.isKinematic = false;
         coll.isTrigger = false;
         tangible = true;
-        transform.parent = null;
+        transform.parent = itemsHolder;
         rb.AddForce(playerGrabbing.transform.forward * playerGrabbing.force * toRBPhysics / weight);
-        if (rotationGrabbed == Vector3.zero)
-        {
-            rb.AddTorque(transform.right * playerGrabbing.force / weight);
-        }
-        else
-        {
-            rb.AddTorque(-transform.up * playerGrabbing.force * damageMultiplier / weight); //TEMPORAL, AUTOMATIZAR O LOGRAR UN PIVOT EN OBJETOS QUE NO ESTEN EN IDENTITY (O QUE TE PASEN LOS OBJETOS CON EL PIVOT CORRECTAMENTE)
-        }
+        //if (rotationGrabbed == Vector3.zero)
+        //{
+            rb.AddTorque(GetTorqueDir() * playerGrabbing.force / weight);
+        //}
+        //else
+        //{
+        //    rb.AddTorque(-transform.up * playerGrabbing.force * damageMultiplier / weight); //TEMPORAL, AUTOMATIZAR O LOGRAR UN PIVOT EN OBJETOS QUE NO ESTEN EN IDENTITY (O QUE TE PASEN LOS OBJETOS CON EL PIVOT CORRECTAMENTE)
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -114,33 +114,28 @@ public class Item : MonoBehaviour
         }
     }
 
-    /* ESTO SE USABA PARA TENER EL FORWARD DEL OBJETO PERO YA NO, PUEDE QUE LO NECESITE PARA EL TORQUE, NOT SURE
-    Vector3 GetCurrentRelativeForward()
+    Vector3 GetTorqueDir()
     {
         switch (dirToThrow)
         {
-            case DirToThrow.forward:
-                return transform.forward;
-            case DirToThrow.backwards:
-                return -transform.forward;
-            case DirToThrow.right:
-                return transform.right;
-            case DirToThrow.left:
-                return -transform.right;
-            case DirToThrow.up:
+            case DirWhenThrown.forwardUp:
+                return -transform.up;
+            case DirWhenThrown.forwardDown:
                 return transform.up;
-            case DirToThrow.down:
+            case DirWhenThrown.backwardsUp:
+                return transform.up;
+            case DirWhenThrown.backwardsDown:
                 return -transform.up;
             default:
-                return transform.forward;
+                return -transform.up;
         }
     }
-    */
+    
 
     void GetBroken()
     {
         visualFeedback.SetActive(false);
-        transform.parent = null;
+        transform.parent = itemsHolder;
         coll.enabled = false;
         mr.enabled = false;
         rb.isKinematic = true;
