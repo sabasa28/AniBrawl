@@ -42,9 +42,9 @@ This game was also possible thanks to the support of these professors:
 
 ## Acknowledgements
 
-Otras personas a las que quieran agradecerles, sino sacar este título
+
 
 
 ## Links
 
-Download it from itch.io: <a href="https://anibrawl.itch.io/anibrawl">Image Campus</a>
+Download it from itch.io: <a href="https://anibrawl.itch.io/anibrawl">AniBrawl</a>
