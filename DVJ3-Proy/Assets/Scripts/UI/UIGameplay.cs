@@ -15,11 +15,8 @@ public class UIGameplay : MonoBehaviour
     public GameObject endResultPanel;
     public TextMeshProUGUI winnerPlayerText;
     [SerializeField] GameObject pausePanel = null;
-    [SerializeField] Sprite roundWonP1 = null;
-    [SerializeField] Sprite roundWonP2 = null;
-    [SerializeField] Image round1 = null;
-    [SerializeField] Image round2 = null;
-    [SerializeField] Image round3 = null;
+    [SerializeField] GameObject[] P1Points = null;
+    [SerializeField] GameObject[] P2Points = null;
     [SerializeField] GameObject introPanel = null;
     [SerializeField] TextMeshProUGUI[] introText = null;
     [SerializeField] GameObject[] uiPlayer = null;
@@ -60,24 +57,23 @@ public class UIGameplay : MonoBehaviour
         winnerPlayerText.text = "Player " + winnerPlayerNum;
     }
 
-    public void SetRoundWinner(int winnerNumber, int round)
+    public void SetRoundWinner(int winnerNumber)
     {
-        Sprite sprToUse;
         if (winnerNumber == 1)
-            sprToUse = roundWonP1;
+            AddRoundWinIndicator(P1Points);
         else
-            sprToUse = roundWonP2;
-        switch (round)
+            AddRoundWinIndicator(P2Points);
+    }
+
+    void AddRoundWinIndicator(GameObject[] rounds)
+    {
+        for (int i = 0; i < rounds.Length; i++)
         {
-            case 1:
-                round1.sprite = sprToUse;
+            if (!rounds[i].activeInHierarchy)
+            {
+                rounds[i].SetActive(true);
                 break;
-            case 2:
-                round2.sprite = sprToUse;
-                break;
-            case 3:
-                round3.sprite = sprToUse;
-                break;
+            }
         }
     }
 
@@ -91,9 +87,6 @@ public class UIGameplay : MonoBehaviour
         {
             uiPlayer[i].SetActive(activeState);
         }
-        round1.gameObject.SetActive(activeState);
-        round2.gameObject.SetActive(activeState);
-        round3.gameObject.SetActive(activeState);
     }
 
     public void DisplayIntro()

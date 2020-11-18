@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool immune = false;
     Coroutine pushedCor;
     public Action UpdateUI;
-
+    public int modelIndex = 0;
+    [SerializeField] GameObject[] availableModels = null;
 
     Vector3 startingPos;
 
@@ -62,6 +63,11 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, Quaternion.identity ,transform);
+        PlayerGFX model = modelGo.GetComponent<PlayerGFX>();
+        GetComponentInChildren<ImpactCollider>().gameObject.layer = LayerMask.NameToLayer("ImpactColl" + playerNumber);
+        swingPivot = model.swingPivot;
+        punch = model.punch;
         startingPos = transform.position;
         cController = GetComponent<CharacterController>();
         playerAxisX = "HorizontalP" + playerNumber;

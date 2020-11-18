@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         gc = newGc;
     }
 
+    public void SetLevel(int lvlNum)
+    {
+        if (gc)
+        {
+            gc.SetLevel(lvlNum);
+        }
+    }
+
     public void StartGamePlay(int[] playerChar)
     {
         gameState = GameState.playing;

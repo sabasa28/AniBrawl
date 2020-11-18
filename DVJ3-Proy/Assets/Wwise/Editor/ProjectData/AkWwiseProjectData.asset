@@ -448,5 +448,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /DVJ3-Proy_WwiseProject
+  - /DVJ3-Proy_WwiseProject/SoundBanks
+  - /DVJ3-Proy_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

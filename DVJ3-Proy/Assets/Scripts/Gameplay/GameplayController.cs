@@ -11,8 +11,7 @@ public class GameplayController : MonoBehaviour
     public int winnerPlayerNumber = 0;
     [SerializeField] List<PlayerController> players = new List<PlayerController>();
     public int forceWinByDeath = 0;
-    [SerializeField] Vector3 p1StartPos = Vector3.zero;
-    [SerializeField] Vector3 p2StartPos = Vector3.zero;
+    [SerializeField] Transform[] spawner = null;
     [SerializeField] GrabbingZone[] grabbingZones = null;
     [SerializeField] CameraController cameraController = null;
     [SerializeField] PostProcessManager ppManager = null;
@@ -20,6 +19,8 @@ public class GameplayController : MonoBehaviour
     [SerializeField] TesterTool tester = null;
     [SerializeField] GameObject testerActivatedText = null;
     static bool activateTester = false;
+    [SerializeField] GameObject[] level = null;
+    int activeLevel = -1;
 
     [Serializable]
     public struct PlayerVars
@@ -31,14 +32,12 @@ public class GameplayController : MonoBehaviour
     }
     public PlayerVars commonPlayerVars;
 
-
-    int currentRound = 1;
-    int maxRounds = 3;
+    int maxRounds = 5;
     int player1wins = 0;
     int player2wins = 0;
     bool paused = false;
 
-    [SerializeField] PlayerController[] models = null;
+    [SerializeField] PlayerController playerPrefab = null;
 
     string cheat ="AEZAKMI";
     int cheatPos = 0;
@@ -120,9 +119,8 @@ public class GameplayController : MonoBehaviour
             players[i].ResetPlayer();
         }
         player.force += forceWinByDeath;
-        uiGameplay.SetRoundWinner(winnerPlayer, currentRound);
-        currentRound++;
-        if (currentRound > maxRounds || player1wins > 1 || player2wins > 1)
+        uiGameplay.SetRoundWinner(winnerPlayer);
+        if (player1wins > maxRounds/2 || player2wins > maxRounds / 2)
         {
             OnGameOver();
         }
@@ -156,19 +154,21 @@ public class GameplayController : MonoBehaviour
     }
     public void OnGameplaySceneStart(int[] playerCharacter)//pasar por parametro que modelo tiene que usar cada uno
     {
-        SetGameplay();
+        SetGameplay(playerCharacter);
         StartCoroutine(DisplayIntroAndPlay());
     }
-    void SetGameplay()
+    void SetGameplay(int[] playerCharacter)
     {
         ppManager.StartRemovingCAberration();
-        PlayerController P1 = Instantiate(models[0], p1StartPos, Quaternion.identity); // se puede hacer un for
+        PlayerController P1 = Instantiate(playerPrefab, spawner[0].position, Quaternion.identity); // se puede hacer un for
         P1.playerNumber = 1;
+        P1.modelIndex = playerCharacter[0];
         grabbingZones[0].player = P1;
         players.Add(P1);
-        PlayerController P2 = Instantiate(models[1], p2StartPos, Quaternion.identity);
+        PlayerController P2 = Instantiate(playerPrefab, spawner[1].position, Quaternion.identity);
         P2.playerNumber = 2;
         grabbingZones[1].player = P2;
+        P2.modelIndex = playerCharacter[1];
         players.Add(P2);
         for (int i = 0; i < players.Count; i++)
         {
@@ -192,6 +192,16 @@ public class GameplayController : MonoBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             players[i].ableToMove = true;
+        }
+    }
+
+    public void SetLevel(int levelNum)
+    {
+        if (levelNum >= level.Length) return;
+        activeLevel = levelNum;
+        for (int i = 0; i < level.Length; i++)
+        {
+            level[i].SetActive(i == activeLevel);
         }
     }
 }

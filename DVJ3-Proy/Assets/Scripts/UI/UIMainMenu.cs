@@ -10,7 +10,7 @@ public class UIMainMenu : MonoBehaviour
 {
     [SerializeField] GameObject main = null;
     [SerializeField] GameObject controls = null;
-    [SerializeField] GameObject options = null;
+    [SerializeField] GameObject stageSelec = null;
     [SerializeField] GameObject charSelec = null;
     [SerializeField] GameObject loadingScreen = null;
     [SerializeField] float minTimeToLoad = 0;
@@ -18,6 +18,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] Image[] characterImage = null;
     [SerializeField] TextMeshProUGUI[] characterName = null;
     [SerializeField] TextMeshProUGUI versionText = null;
+    int levelSelected = -1;
 
     public enum Character
     { 
@@ -58,15 +59,21 @@ public class UIMainMenu : MonoBehaviour
         controls.SetActive(false);
         main.SetActive(true);
     }
-    public void ShowOptions()
+    public void ShowStageSelec()
     {
         main.SetActive(false);
-        options.SetActive(true);
+        stageSelec.SetActive(true);
     }
-    public void HideOptions()
+    public void HideStageSelec()
     {
-        options.SetActive(false);
+        stageSelec.SetActive(false);
         main.SetActive(true);
+    }
+    public void ChangeStage(int stageNum)
+    {
+        if (levelSelected == stageNum) return;
+        levelSelected = stageNum;
+        GameManager.Get().SetLevel(levelSelected);
     }
     public void ShowCharSelec()
     {
