@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{323904E6-123A-4412-84AC-9FF25C6828FE}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{323904E6-123A-4412-84AC-9FF25C6828FE}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{323904E6-123A-4412-84AC-9FF25C6828FE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Inicio_game" ID="{C5C416F8-BFEB-4387-ACA1-4FCF69219687}"/>
+				<Event Name="Inicia_menu" ID="{E001042A-7C38-4A93-8BDF-1ABA94E24E82}"/>
+				<Event Name="Hover_ui" ID="{350F009B-7A2F-4ECB-8D8E-8908C2E0134D}"/>
+				<Event Name="Click_ui" ID="{F6F92541-2D0A-469B-87A1-16B4BFD7F945}"/>
+				<Event Name="Inicia_controls" ID="{38E3B492-ABD1-4DF9-8CA5-918DEC1950CE}"/>
+				<Event Name="Inicia_options" ID="{80186BFD-D53C-4394-A9C3-44228476998F}"/>
+				<Event Name="Player_select" ID="{ACE01CB5-5853-4D28-95EF-083F2D1FFE43}"/>
+				<Event Name="Pasos_duck" ID="{94600B0C-93ED-4939-A4E2-81641397FFA5}">
+					<ChildrenList>
+						<Action Name="" ID="{AAB8DF1A-1E11-4A90-9FC4-234158F7712D}" ShortID="49340761">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pasos_duck" ID="{BF2000FA-403E-49DA-BED1-09979887BC83}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pasos_frog" ID="{FCECDC0A-00EA-43A8-9382-F847E9DBBDD2}">
+					<ChildrenList>
+						<Action Name="" ID="{D6FFC30A-856B-4134-8964-C1A484090D16}" ShortID="767384053">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pasos_frog" ID="{5A7B1365-CE73-4B2D-BBAD-1C81AC74CE6F}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Exit_game" ID="{6F71E1DE-A213-4687-9F77-4A64EB76F825}"/>
+				<Event Name="Play_salto" ID="{11F03513-9E3D-42BB-A5D0-2F48FB25BBEE}"/>
+				<Event Name="Play_fight" ID="{3BF40A61-5BAD-406F-9D51-B794B0FF6625}">
+					<ChildrenList>
+						<Action Name="" ID="{BBED7DA8-5D21-44E5-AA6A-D278636FB1D7}" ShortID="456157183"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pick" ID="{331BE671-4A1C-4F50-BA57-F80BBD814B3B}">
+					<ChildrenList>
+						<Action Name="" ID="{3B8F44B2-40D1-4E91-B8DE-55149327EA09}" ShortID="680092298"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Throw" ID="{09A6F262-49B2-405A-9DDB-BAF24477CF8E}">
+					<ChildrenList>
+						<Action Name="" ID="{A12D4F37-8D30-48A7-A2BD-32689CDC2566}" ShortID="601108736"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Hit_player" ID="{ED2A4FB3-0CF2-464B-9B17-13CE7038B25A}"/>
+				<Event Name="Hit_floor" ID="{9CBE1148-7E75-4290-80E2-2BED6AA57487}"/>
+				<Event Name="Recieve_duck" ID="{1470FA1F-D091-48DD-A28B-B398620D496E}"/>
+				<Event Name="Recieve_frog" ID="{302FBF40-B342-4339-AB7D-81810E10FC27}"/>
+				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}"/>
+				<Event Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}"/>
+				<Event Name="End_round" ID="{F9071F2E-E596-494F-83DC-BA2FA0FA47B9}"/>
+				<Event Name="Start_round" ID="{D9C373DC-B5FB-4B18-AFD9-D465E88F2091}"/>
+				<Event Name="End_fight" ID="{3D8ADCC9-C617-400E-8A6A-8A40FC5C3066}"/>
+				<Event Name="Play_crowd" ID="{392A56CE-6EC9-410A-906D-7F2325D6DE1D}"/>
+				<Event Name="Mute" ID="{B3844B76-7E49-45EA-9F0B-1DD638AF6F72}"/>
+				<Event Name="Unmute" ID="{3B36037E-3C0D-42BA-9BC0-6A649AF9DE62}"/>
+				<Event Name="Return_menu" ID="{33AEFA13-70C7-417A-B48E-86D46FBB6A0F}"/>
+				<Event Name="Play_amb" ID="{E9CB2640-EB51-4CF7-A3E8-95E6CE8DD684}">
+					<ChildrenList>
+						<Action Name="" ID="{FBA16294-A364-4303-B4CC-DDCC8B207BBC}" ShortID="828551543">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_bosque" ID="{E1B125B9-0714-46D2-90E6-EF64B5324BE7}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

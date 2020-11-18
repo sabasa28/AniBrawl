@@ -49,8 +49,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b53140baedce75439889ea842fa98cbc
     GuidInternal: 
-    m_lastTime: -8585964998005707549
-    List: []
+    m_lastTime: -8585960499540392800
+    List:
+    - name: Main
+      guid: 6f1ea1b9d0c1e04e9d56b58ce5dbba7b
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -59,8 +68,344 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585964998007576347
-    List: []
+    m_lastTime: -8585960499540422759
+    List:
+    - name: Click_ui
+      guid: 4125f9f60a2d9b4687a116b4bfd7f945
+      id: 1098020724
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Click_ui
+        ObjectType: 3
+      Path: Default Work Unit\Click_ui
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: End_fight
+      guid: c9dc8a3d17c60e408a6a8a40fc5c3066
+      id: 1738683615
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: End_fight
+        ObjectType: 3
+      Path: Default Work Unit\End_fight
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: End_round
+      guid: 2e1f07f996e54f4983dcba2fa0fa47b9
+      id: 2199963005
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: End_round
+        ObjectType: 3
+      Path: Default Work Unit\End_round
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Exit_game
+      guid: dee1716f13a287469f774a64eb76f825
+      id: 3049547158
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Exit_game
+        ObjectType: 3
+      Path: Default Work Unit\Exit_game
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hit_floor
+      guid: 4811be9c757e904280e22bed6aa57487
+      id: 956648679
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hit_floor
+        ObjectType: 3
+      Path: Default Work Unit\Hit_floor
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hit_player
+      guid: b34f2aedf20c4b469b1713ce7038b25a
+      id: 441302456
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hit_player
+        ObjectType: 3
+      Path: Default Work Unit\Hit_player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hover_ui
+      guid: 9b000f352f7acb4e8d8e8908c2e0134d
+      id: 3424433926
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hover_ui
+        ObjectType: 3
+      Path: Default Work Unit\Hover_ui
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Inicia_controls
+      guid: 92b4e338d1abf94d8ca5918dec1950ce
+      id: 1332134995
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicia_controls
+        ObjectType: 3
+      Path: Default Work Unit\Inicia_controls
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Inicia_menu
+      guid: 2a0401e0387c934a8bdf1aba94e24e82
+      id: 928907744
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicia_menu
+        ObjectType: 3
+      Path: Default Work Unit\Inicia_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Inicia_options
+      guid: fd6b18803cd59443a9c344228476998f
+      id: 943918601
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicia_options
+        ObjectType: 3
+      Path: Default Work Unit\Inicia_options
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Inicio_game
+      guid: f816c4c5ebbf8743aca14fcf69219687
+      id: 1373024549
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicio_game
+        ObjectType: 3
+      Path: Default Work Unit\Inicio_game
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Mute
+      guid: 764b84b3497eea459f0b1dd638af6f72
+      id: 2974103762
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Mute
+        ObjectType: 3
+      Path: Default Work Unit\Mute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pasos_duck
+      guid: 0c0b6094ed933949a4e281641397ffa5
+      id: 1870231131
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pasos_duck
+        ObjectType: 3
+      Path: Default Work Unit\Pasos_duck
+      maxAttenuation: 0
+      maxDuration: 1191142
+      minDuration: 1191142
+    - name: Pasos_frog
+      guid: 0adcecfcea00a8439382f847e9dbbdd2
+      id: 1420553778
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pasos_frog
+        ObjectType: 3
+      Path: Default Work Unit\Pasos_frog
+      maxAttenuation: 0
+      maxDuration: 2162716
+      minDuration: 2162716
+    - name: Pause_in
+      guid: 08ea3db20abe1640894859433758bf49
+      id: 3437014341
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pause_in
+        ObjectType: 3
+      Path: Default Work Unit\Pause_in
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pause_out
+      guid: cddc164c52dcbc4ea869b9612edeec81
+      id: 3648253772
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pause_out
+        ObjectType: 3
+      Path: Default Work Unit\Pause_out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pick
+      guid: 71e61b331c4a504fba57f80bbd814b3b
+      id: 2162635622
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pick
+        ObjectType: 3
+      Path: Default Work Unit\Pick
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_amb
+      guid: 4026cbe951ebf74ca3e895e6ce8dd684
+      id: 2959533290
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_amb
+        ObjectType: 3
+      Path: Default Work Unit\Play_amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_crowd
+      guid: ce562a39c96e0a41906d7f2325d6de1d
+      id: 639442169
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_crowd
+        ObjectType: 3
+      Path: Default Work Unit\Play_crowd
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_fight
+      guid: 610af43bad5b6f409d51b794b0ff6625
+      id: 860858016
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_fight
+        ObjectType: 3
+      Path: Default Work Unit\Play_fight
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_salto
+      guid: 1335f0113d9ebb42a5d02f48fb25bbee
+      id: 2695653357
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_salto
+        ObjectType: 3
+      Path: Default Work Unit\Play_salto
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_select
+      guid: b51ce0ac5358284d95ef083f2d1ffe43
+      id: 282749073
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_select
+        ObjectType: 3
+      Path: Default Work Unit\Player_select
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Recieve_duck
+      guid: 1ffa701491d0dd48a28bb398620d496e
+      id: 1411634684
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Recieve_duck
+        ObjectType: 3
+      Path: Default Work Unit\Recieve_duck
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Recieve_frog
+      guid: 40bf2f3042b33943ab7d81810e10fc27
+      id: 554954233
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Recieve_frog
+        ObjectType: 3
+      Path: Default Work Unit\Recieve_frog
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Return_menu
+      guid: 13faae33c7707a41b48e86d46fbb6a0f
+      id: 3197718051
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Return_menu
+        ObjectType: 3
+      Path: Default Work Unit\Return_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Start_round
+      guid: dc73c3d9fbb5184bafd9d465e88f2091
+      id: 3967148226
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start_round
+        ObjectType: 3
+      Path: Default Work Unit\Start_round
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Throw
+      guid: 62f2a609b2495a409ddbbaf24477cf8e
+      id: 745179803
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Throw
+        ObjectType: 3
+      Path: Default Work Unit\Throw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Unmute
+      guid: 7e03363b0d3cba429bc06a649af9de62
+      id: 2156697475
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Unmute
+        ObjectType: 3
+      Path: Default Work Unit\Unmute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -101,6 +446,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585964998005427701
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /DVJ3-Proy_WwiseProject
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

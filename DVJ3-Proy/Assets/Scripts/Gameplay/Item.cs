@@ -79,7 +79,7 @@ public class Item : MonoBehaviour
         rb.AddForce(playerGrabbing.transform.forward * playerGrabbing.force * toRBPhysics / weight);
         //if (rotationGrabbed == Vector3.zero)
         //{
-            rb.AddTorque(GetTorqueDir() * playerGrabbing.force / weight);
+            rb.AddTorque(playerGrabbing.transform.forward * playerGrabbing.force / weight);
         //}
         //else
         //{

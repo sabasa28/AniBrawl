@@ -50,7 +50,7 @@ public class GameplayController : MonoBehaviour
         GameManager.Get().SetGameplayController(this);
 
         if (SceneManager.sceneCount < 2)
-            OnGameplaySceneStart();
+            OnGameplaySceneStart(new int[] {0, 0});
     }
 
     private void Update()
@@ -154,7 +154,7 @@ public class GameplayController : MonoBehaviour
             yield return null;
         }
     }
-    public void OnGameplaySceneStart()//pasar por parametro que modelo tiene que usar cada uno
+    public void OnGameplaySceneStart(int[] playerCharacter)//pasar por parametro que modelo tiene que usar cada uno
     {
         SetGameplay();
         StartCoroutine(DisplayIntroAndPlay());

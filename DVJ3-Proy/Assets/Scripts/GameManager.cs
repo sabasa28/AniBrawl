@@ -22,9 +22,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         gc = newGc;
     }
 
-    public void StartGamePlay()
+    public void StartGamePlay(int[] playerChar)
     {
         gameState = GameState.playing;
-        gc.OnGameplaySceneStart();
+        gc.OnGameplaySceneStart(playerChar);
     }
 }

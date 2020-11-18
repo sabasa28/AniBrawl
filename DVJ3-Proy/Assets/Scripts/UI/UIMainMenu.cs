@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class UIMainMenu : MonoBehaviour
 {
@@ -14,28 +15,41 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] GameObject loadingScreen = null;
     [SerializeField] float minTimeToLoad = 0;
     [SerializeField] Image generalBackground = null;
-    [SerializeField] GameObject[] characterSelectedP1 = null;
-    [SerializeField] GameObject[] characterSelectedP2 = null;
+    [SerializeField] Image[] characterImage = null;
+    [SerializeField] TextMeshProUGUI[] characterName = null;
     [SerializeField] TextMeshProUGUI versionText = null;
-    int chosenCharP1;
-    int chosenCharP2;
+
+    public enum Character
+    { 
+        frog,
+        duck
+    }
+    
+    [Serializable]
+    public class CharacterDisplay
+    {
+        public Sprite displayableImg;
+        public string name;
+        public Character characterSelected;
+    }
+    public CharacterDisplay[] charactersToDisplay;
+    int[] chosenChar = {0 , 0};
 
     private void Start()
     {
         versionText.text = "v" + Application.version;
-        chosenCharP1 = 0;
-        chosenCharP2 = 0;
-        characterSelectedP1[chosenCharP1].SetActive(true);
-        characterSelectedP2[chosenCharP2].SetActive(true);
+        UpdateCharacterDisplayed(0);
+        UpdateCharacterDisplayed(1);
         StartCoroutine(Preload(1));
     }
     public void StartGameplayScene()
     {
         StartCoroutine(UnloadMenu());
-        GameManager.Get().StartGamePlay();
+        GameManager.Get().StartGamePlay(chosenChar);
     }
     public void ShowControls()
     {
+        //AkSoundEngine.PostEvent("Click_ui", gameObject);
         main.SetActive(false);
         controls.SetActive(true);
     }
@@ -68,33 +82,32 @@ public class UIMainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void PrevCharacterP1()
+
+    public void NextCharacter(int playerNum)
     {
-        characterSelectedP1[chosenCharP1].SetActive(false);
-        chosenCharP1--;
-        if (chosenCharP1 < 0) chosenCharP1 = characterSelectedP1.Length - 1;
-        characterSelectedP1[chosenCharP1].SetActive(true);
+        ChangeCharacter(playerNum, 1);
     }
-    public void NextCharacterP1()
+    public void PrevCharacter(int playerNum)
     {
-        characterSelectedP1[chosenCharP1].SetActive(false);
-        chosenCharP1++;
-        if (chosenCharP1 > characterSelectedP1.Length-1) chosenCharP1 = 0;
-        characterSelectedP1[chosenCharP1].SetActive(true);
+        ChangeCharacter(playerNum, -1);
     }
-    public void PrevCharacterP2()
+    void ChangeCharacter(int playerNum, int toAdd)
     {
-        characterSelectedP2[chosenCharP2].SetActive(false);
-        chosenCharP2--;
-        if (chosenCharP2 < 0) chosenCharP2 = characterSelectedP2.Length - 1;
-        characterSelectedP2[chosenCharP2].SetActive(true);
+        chosenChar[playerNum]+= toAdd;
+        if (chosenChar[playerNum] >= charactersToDisplay.Length)
+        {
+            chosenChar[playerNum] = 0;
+        }
+        UpdateCharacterDisplayed(playerNum);
     }
-    public void NextCharacterP2()
+
+    void UpdateCharacterDisplayed(int playerNum)
     {
-        characterSelectedP2[chosenCharP2].SetActive(false);
-        chosenCharP2++;
-        if (chosenCharP2 > characterSelectedP2.Length - 1) chosenCharP2 = 0;
-        characterSelectedP2[chosenCharP2].SetActive(true);
+        if (chosenChar.Length > playerNum)
+        {
+            characterImage[playerNum].sprite = charactersToDisplay[chosenChar[playerNum]].displayableImg;
+            characterName[playerNum].text = charactersToDisplay[chosenChar[playerNum]].name;
+        }
     }
 
     IEnumerator Preload(int scene)

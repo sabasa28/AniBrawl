@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1420553778	Pasos_frog			\Default Work Unit\Pasos_frog	
+	1870231131	Pasos_duck			\Default Work Unit\Pasos_duck	
+	2959533290	Play_amb			\Default Work Unit\Play_amb	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	389662960	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\New Sound SFX\Wwise Silence	
+	615074324	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\New Sound SFX\Wwise Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	14640781	Pasos_duck-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_duck\Pasos_duck-003		53696
+	60517405	Pasos_duck-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_duck\Pasos_duck-001		69516
+	119786416	Pasos_frog-003_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_frog\Pasos_frog-003_01		92416
+	219183506	Amb_random-008	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-008		455432
+	562611697	Amb_random-010	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-010		1124260
+	713421893	Amb_random-007	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\Amb_random-007		569276
+	730963272	Amb_random-009	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-009		569276
+	743310020	Amb_random-006	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\Amb_random-006		1437324
+	765914910	Pasos_frog-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_frog\Pasos_frog-001		82720
+	771194761	Pasos_frog-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_frog\Pasos_frog-002		96156
+	876107825	Amb_bosque_loop	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_bosque_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_bosque_loop		6703264
+
