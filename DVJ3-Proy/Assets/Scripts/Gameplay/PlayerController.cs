@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public Action UpdateUI;
     public int modelIndex = 0;
     [SerializeField] GameObject[] availableModels = null;
+    [SerializeField] Sprite[] availableSprites = null;
+    [SerializeField] Image worldspaceImg = null;
 
     Vector3 startingPos;
 
@@ -66,6 +69,7 @@ public class PlayerController : MonoBehaviour
         GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, Quaternion.identity ,transform);
         PlayerGFX model = modelGo.GetComponent<PlayerGFX>();
         GetComponentInChildren<ImpactCollider>().gameObject.layer = LayerMask.NameToLayer("ImpactColl" + playerNumber);
+        worldspaceImg.sprite = availableSprites[playerNumber-1];
         swingPivot = model.swingPivot;
         punch = model.punch;
         startingPos = transform.position;

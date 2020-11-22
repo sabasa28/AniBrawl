@@ -50,7 +50,7 @@ public class UIMainMenu : MonoBehaviour
     }
     public void ShowControls()
     {
-        //AkSoundEngine.PostEvent("Click_ui", gameObject);
+        //AkSoundEngine.PostEvent("Play_amb", gameObject); //test
         main.SetActive(false);
         controls.SetActive(true);
     }

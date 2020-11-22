@@ -1,7 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
+	860858016	Play_fight			\Default Work Unit\Play_fight	
+	1373024549	Inicio_game			\Default Work Unit\Inicio_game	
 	1420553778	Pasos_frog			\Default Work Unit\Pasos_frog	
 	1870231131	Pasos_duck			\Default Work Unit\Pasos_duck	
 	2959533290	Play_amb			\Default Work Unit\Play_amb	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4197210578	Estados			\Default Work Unit\Estados	
+
+State	ID	Name	State Group			Notes
+	675784008	Batalla	Estados			
+	748895195	None	Estados			
+	845003552	Fin_de_batalla	Estados			
+	956887760	Creditos	Estados			
+	2607556080	Menu	Estados			
+	2658298240	Inicio	Estados			
+	3092587489	Pausa	Estados			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	109915412	Creditos	Estados	\Interactive Music Hierarchy\Default Work Unit\Pelea_granero		
+	549956601	Inicio	Estados	\Interactive Music Hierarchy\Default Work Unit\Pelea_granero		
+	799989351	Menu	Estados	\Interactive Music Hierarchy\Default Work Unit\Pelea_granero		
+	831153207	Pausa	Estados	\Interactive Music Hierarchy\Default Work Unit\Pelea_granero		
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	389662960	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\New Sound SFX\Wwise Silence	
@@ -12,7 +32,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	60517405	Pasos_duck-001	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Pasos_duck-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_duck\Pasos_duck-001		69516
 	119786416	Pasos_frog-003_01	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Pasos_frog-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Pasos_frog\Pasos_frog-003_01		92416
 	219183506	Amb_random-008	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Amb_random-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-008		455432
+	287724760	Pelea de granero	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Pelea de granero_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Pelea_granero\Pelea_granero\Pelea de granero_01\Pelea de granero		11037664
 	562611697	Amb_random-010	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Amb_random-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-010		1124260
+	657065678	Fin de batalla	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Fin de batalla_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Pelea_granero\Fin de pelea\Fin de batalla\Fin de batalla		10281664
+	692360340	Victoria_granja	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Victoria_granja_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Pelea_granero\Fin de pelea\Victoria_granja\Victoria_granja		3620300
 	713421893	Amb_random-007	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Amb_random-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\Amb_random-007		569276
 	730963272	Amb_random-009	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Amb_random-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\Amb_random\Amb_random-009		569276
 	743310020	Amb_random-006	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Amb_random-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Amb_bosque\pajaros\Amb_random-006		1437324

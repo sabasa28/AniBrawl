@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 24a86856603a574dad45eabb40bb6037
     GuidInternal: 
-    m_lastTime: -8585964998006918190
+    m_lastTime: -8585958899191497722
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d2592da4be17ac4a88c17b9395af6e67
     GuidInternal: 
-    m_lastTime: -8585964998007052283
+    m_lastTime: -8585958899195098250
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b53140baedce75439889ea842fa98cbc
     GuidInternal: 
-    m_lastTime: -8585960499540392800
+    m_lastTime: -8585958894612579668
     List:
     - name: Main
       guid: 6f1ea1b9d0c1e04e9d56b58ce5dbba7b
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585960499540422759
+    m_lastTime: -8585958899195975896
     List:
     - name: Click_ui
       guid: 4125f9f60a2d9b4687a116b4bfd7f945
@@ -414,7 +414,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a0030ec17f13774e999335c9960dbbc0
     GuidInternal: 
-    m_lastTime: -8585964998005567637
+    m_lastTime: -8585958899195965923
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -424,8 +424,63 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a74c2bfad3b5e341957e13912887cd9f
     GuidInternal: 
-    m_lastTime: -8585964998006758063
-    List: []
+    m_lastTime: -8585958899191507848
+    List:
+    - name: Estados
+      guid: d6fd6c5670a4b54a863afddf0772fbbd
+      id: 4197210578
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Estados
+        ObjectType: 9
+      Path: Default Work Unit\Estados
+      values:
+      - name: Batalla
+        guid: 48a9610a175ddd4090be28d010383af9
+        id: 675784008
+        PathAndIcons:
+        - ElementName: Batalla
+          ObjectType: 8
+      - name: Creditos
+        guid: cb52c8bc2d620a428e302b6e01dc89c6
+        id: 956887760
+        PathAndIcons:
+        - ElementName: Creditos
+          ObjectType: 8
+      - name: Fin_de_batalla
+        guid: 987941c1f0c7904194afa6f447407e8f
+        id: 845003552
+        PathAndIcons:
+        - ElementName: Fin_de_batalla
+          ObjectType: 8
+      - name: Inicio
+        guid: 201e943f5b829b4db70f6849aed9b753
+        id: 2658298240
+        PathAndIcons:
+        - ElementName: Inicio
+          ObjectType: 8
+      - name: Menu
+        guid: d01e2ece607c72419980f476cfb51aec
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: b4763836a82bac4799bffe3ba47f5083
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Pausa
+        guid: 3bc03c6f9f29304580459d1edc97886b
+        id: 3092587489
+        PathAndIcons:
+        - ElementName: Pausa
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -434,7 +489,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e77b405c1692dc4a849d21942f991daf
     GuidInternal: 
-    m_lastTime: -8585964998004748095
+    m_lastTime: -8585958899191497722
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -444,10 +499,12 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d5358de84e54cc4f8a38bc035ed2dae0
     GuidInternal: 
-    m_lastTime: -8585964998005427701
+    m_lastTime: -8585958899191497722
     List: []
   ExpandedItems:
   - /DVJ3-Proy_WwiseProject
+  - /DVJ3-Proy_WwiseProject/Events
+  - /DVJ3-Proy_WwiseProject/Events/Default Work Unit
   - /DVJ3-Proy_WwiseProject/SoundBanks
   - /DVJ3-Proy_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

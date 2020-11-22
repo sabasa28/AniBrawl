@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2538960927860727598}
   - component: {fileID: 2538960927860727597}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +102,11 @@ MonoBehaviour:
   availableModels:
   - {fileID: 2770859752774303485, guid: 76489b261caf5994e9b9a72bd78526be, type: 3}
   - {fileID: 9064068538818232281, guid: fd96cc3262a307f469647e485cd812f2, type: 3}
+  - {fileID: 7767375221035005714, guid: 6dc47abf6229ecf4fb02a565be8603cd, type: 3}
+  availableSprites:
+  - {fileID: 21300000, guid: 59653529d2a02914bb7f2294dcbf5634, type: 3}
+  - {fileID: 21300000, guid: 6c01b87830dbca249b9792c4a51b1bae, type: 3}
+  worldspaceImg: {fileID: 2538960928230817891}
   currentState: 0
 --- !u!1 &2538960928230817889
 GameObject:

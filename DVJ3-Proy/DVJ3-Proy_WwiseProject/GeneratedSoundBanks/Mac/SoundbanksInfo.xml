@@ -11,19 +11,25 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1201458697">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2251145174">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1686524211">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2528397586">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" DurationType="Infinite">
+					<ActionSetState>
+						<ActionSetStateEntry Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1870231131" Name="Pasos_duck" ObjectPath="\Events\Default Work Unit\Pasos_duck" DurationType="OneShot" DurationMin="1.191142" DurationMax="1.191142"/>
 				<Event Id="1420553778" Name="Pasos_frog" ObjectPath="\Events\Default Work Unit\Pasos_frog" DurationType="OneShot" DurationMin="2.162716" DurationMax="2.162716"/>
 				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Play_amb" DurationType="Infinite"/>
+				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="14640781" Language="SFX">
@@ -42,9 +48,21 @@
 					<ShortName>Amb_random-008.wav</ShortName>
 					<Path>SFX\Amb_random-008_10C4C929.wem</Path>
 				</File>
+				<File Id="287724760" Language="SFX">
+					<ShortName>Pelea de granero.wav</ShortName>
+					<Path>SFX\Pelea de granero_D79FB2B7.wem</Path>
+				</File>
 				<File Id="562611697" Language="SFX">
 					<ShortName>Amb_random-010.wav</ShortName>
 					<Path>SFX\Amb_random-010_10C4C929.wem</Path>
+				</File>
+				<File Id="657065678" Language="SFX">
+					<ShortName>Fin de batalla.wav</ShortName>
+					<Path>SFX\Fin de batalla_D79FB2B7.wem</Path>
+				</File>
+				<File Id="692360340" Language="SFX">
+					<ShortName>Victoria_granja.wav</ShortName>
+					<Path>SFX\Victoria_granja_D79FB2B7.wem</Path>
 				</File>
 				<File Id="713421893" Language="SFX">
 					<ShortName>Amb_random-007.wav</ShortName>
@@ -71,6 +89,22 @@
 					<Path>SFX\Amb_bosque_loop_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="4197210578" Name="Estados" ObjectPath="\States\Default Work Unit\Estados">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+						<State Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu"/>
+						<State Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos"/>
+						<State Id="2658298240" Name="Inicio" ObjectPath="\States\Default Work Unit\Estados\Inicio"/>
+						<State Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
+						<State Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

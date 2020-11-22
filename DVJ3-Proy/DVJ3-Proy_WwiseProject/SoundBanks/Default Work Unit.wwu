@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Main" ID="{6D608114-05CD-4586-9E7D-05495B059769}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{688552C3-DE35-46A5-8570-43B944EC7768}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

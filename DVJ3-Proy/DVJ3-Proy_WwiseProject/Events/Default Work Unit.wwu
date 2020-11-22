@@ -3,7 +3,27 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{323904E6-123A-4412-84AC-9FF25C6828FE}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Inicio_game" ID="{C5C416F8-BFEB-4387-ACA1-4FCF69219687}"/>
+				<Event Name="Inicio_game" ID="{C5C416F8-BFEB-4387-ACA1-4FCF69219687}">
+					<ChildrenList>
+						<Action Name="" ID="{8A1691A2-B77C-48FE-9F45-C320785E8EE1}" ShortID="810899045">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{823833A2-2F62-4480-8161-AC35E3A40A7D}" ShortID="674960177">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Inicia_menu" ID="{E001042A-7C38-4A93-8BDF-1ABA94E24E82}"/>
 				<Event Name="Hover_ui" ID="{350F009B-7A2F-4ECB-8D8E-8908C2E0134D}"/>
 				<Event Name="Click_ui" ID="{F6F92541-2D0A-469B-87A1-16B4BFD7F945}"/>
@@ -36,7 +56,13 @@
 				<Event Name="Play_salto" ID="{11F03513-9E3D-42BB-A5D0-2F48FB25BBEE}"/>
 				<Event Name="Play_fight" ID="{3BF40A61-5BAD-406F-9D51-B794B0FF6625}">
 					<ChildrenList>
-						<Action Name="" ID="{BBED7DA8-5D21-44E5-AA6A-D278636FB1D7}" ShortID="456157183"/>
+						<Action Name="" ID="{2F6EB793-0CA3-4285-AB5D-4BA76FA70880}" ShortID="35350197">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Pick" ID="{331BE671-4A1C-4F50-BA57-F80BBD814B3B}">
@@ -53,11 +79,44 @@
 				<Event Name="Hit_floor" ID="{9CBE1148-7E75-4290-80E2-2BED6AA57487}"/>
 				<Event Name="Recieve_duck" ID="{1470FA1F-D091-48DD-A28B-B398620D496E}"/>
 				<Event Name="Recieve_frog" ID="{302FBF40-B342-4339-AB7D-81810E10FC27}"/>
-				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}"/>
+				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}">
+					<ChildrenList>
+						<Action Name="" ID="{047AB399-810B-4FE9-A1C7-F7620845A8EF}" ShortID="76893001">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}"/>
 				<Event Name="End_round" ID="{F9071F2E-E596-494F-83DC-BA2FA0FA47B9}"/>
 				<Event Name="Start_round" ID="{D9C373DC-B5FB-4B18-AFD9-D465E88F2091}"/>
-				<Event Name="End_fight" ID="{3D8ADCC9-C617-400E-8A6A-8A40FC5C3066}"/>
+				<Event Name="End_fight" ID="{3D8ADCC9-C617-400E-8A6A-8A40FC5C3066}">
+					<ChildrenList>
+						<Action Name="" ID="{A0595C34-B71E-42AA-B937-512C7CF9B18B}" ShortID="528862510">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{957F559E-D746-44A6-8F6B-5D16E644A7D1}" ShortID="593565465">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fin de pelea" ID="{90197921-623C-4F6E-887E-693FFB197647}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_crowd" ID="{392A56CE-6EC9-410A-906D-7F2325D6DE1D}"/>
 				<Event Name="Mute" ID="{B3844B76-7E49-45EA-9F0B-1DD638AF6F72}"/>
 				<Event Name="Unmute" ID="{3B36037E-3C0D-42BA-9BC0-6A649AF9DE62}"/>
