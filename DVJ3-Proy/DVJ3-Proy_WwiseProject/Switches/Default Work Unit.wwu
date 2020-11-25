@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5C407BE7-9216-4ADC-849D-21942F991DAF}" SchemaVersion="97">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{5C407BE7-9216-4ADC-849D-21942F991DAF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5C407BE7-9216-4ADC-849D-21942F991DAF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Arma_selector" ID="{EA51E4B0-0E84-473F-ADFB-B3C3548B6DB2}">
+					<ChildrenList>
+						<Switch Name="Balde" ID="{78F8B7EF-EDA3-479F-96BE-766EA3F7941D}"/>
+						<Switch Name="Bate" ID="{6A88B1BD-2F2A-4A3B-A23E-C9DB1D8AB1BD}"/>
+						<Switch Name="Cactus" ID="{817F04F3-D907-486A-B9A9-7154E254BA03}"/>
+						<Switch Name="Guadana" ID="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}"/>
+						<Switch Name="Oz" ID="{36CD1517-5346-4062-9D39-B982415886E1}"/>
+						<Switch Name="Pala" ID="{17FAF918-8D0F-45CE-B4B5-0BC467B2421B}"/>
+						<Switch Name="Punch" ID="{05790DBF-AD35-4FA1-9B06-C68C42897C5C}"/>
+						<Switch Name="Rama" ID="{188BFD1D-C797-4505-B227-FB36ADCA2A25}"/>
+						<Switch Name="Rast_met" ID="{F083C469-4AFB-422A-94B2-E318D27ABC46}"/>
+						<Switch Name="Rast_plast" ID="{CC24EDF9-6F86-4240-B48C-D21D99988495}"/>
+						<Switch Name="Regadera" ID="{9B468365-FCB2-4039-902A-B347B2599F88}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

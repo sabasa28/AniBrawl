@@ -11,42 +11,55 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="184933819">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2808795471">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1797059593">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1049824561">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1098020724" Name="Click_ui" ObjectPath="\Events\Default Work Unit\Click_ui" DurationType="OneShot" DurationMin="1.409546" DurationMax="1.409546"/>
-				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.703855" DurationMax="0.703855"/>
-				<Event Id="441302456" Name="Hit_player" ObjectPath="\Events\Default Work Unit\Hit_player" DurationType="OneShot" DurationMin="1.448521" DurationMax="1.756858"/>
+				<Event Id="1098020724" Name="Click_ui" ObjectPath="\Events\Default Work Unit\Click_ui" DurationType="OneShot" DurationMin="1.315344" DurationMax="1.315344"/>
+				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.589740" DurationMax="0.589740"/>
+				<Event Id="956648679" Name="Hit_floor" ObjectPath="\Events\Default Work Unit\Hit_floor" DurationType="OneShot" DurationMin="0.183337" DurationMax="1.756858"/>
+				<Event Id="441302456" Name="Hit_player" ObjectPath="\Events\Default Work Unit\Hit_player" DurationType="OneShot" DurationMin="0.498821" DurationMax="1.756858"/>
 				<Event Id="3424433926" Name="Hover_ui" ObjectPath="\Events\Default Work Unit\Hover_ui" DurationType="OneShot" DurationMin="0.706145" DurationMax="0.706145"/>
-				<Event Id="928907744" Name="Inicia_menu" ObjectPath="\Events\Default Work Unit\Inicia_menu" DurationType="OneShot" DurationMin="2.357143" DurationMax="2.357143"/>
+				<Event Id="928907744" Name="Inicia_menu" ObjectPath="\Events\Default Work Unit\Inicia_menu" DurationType="OneShot" DurationMin="1.342426" DurationMax="1.342426"/>
 				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" DurationType="Infinite">
 					<ActionSetState>
 						<ActionSetStateEntry Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1870231131" Name="Pasos_duck" ObjectPath="\Events\Default Work Unit\Pasos_duck" DurationType="OneShot" DurationMin="1.191142" DurationMax="1.191142"/>
+				<Event Id="1870231131" Name="Pasos_duck" ObjectPath="\Events\Default Work Unit\Pasos_duck" DurationType="OneShot" DurationMin="1.191142" DurationMax="18.000000"/>
 				<Event Id="1420553778" Name="Pasos_frog" ObjectPath="\Events\Default Work Unit\Pasos_frog" DurationType="OneShot" DurationMin="2.162716" DurationMax="2.162716"/>
-				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.390478" DurationMax="0.697169"/>
+				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.390478" DurationMax="0.653898"/>
 				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Play_amb" DurationType="Infinite"/>
 				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite"/>
+				<Event Id="2397106107" Name="Play_salto_duck" ObjectPath="\Events\Default Work Unit\Play_salto_duck" DurationType="OneShot" DurationMin="0.465669" DurationMax="0.465669"/>
+				<Event Id="1988902290" Name="Play_salto_frog" ObjectPath="\Events\Default Work Unit\Play_salto_frog" DurationType="OneShot" DurationMin="0.217937" DurationMax="0.217937"/>
 				<Event Id="282749073" Name="Player_select" ObjectPath="\Events\Default Work Unit\Player_select" DurationType="OneShot" DurationMin="0.494535" DurationMax="0.494535"/>
+				<Event Id="1411634684" Name="Recieve_duck" ObjectPath="\Events\Default Work Unit\Recieve_duck" DurationType="OneShot" DurationMin="0.498821" DurationMax="1.528279"/>
+				<Event Id="554954233" Name="Recieve_frog" ObjectPath="\Events\Default Work Unit\Recieve_frog" DurationType="OneShot" DurationMin="0.168149" DurationMax="0.488544"/>
 				<Event Id="745179803" Name="Throw" ObjectPath="\Events\Default Work Unit\Throw" DurationType="OneShot" DurationMin="0.050952" DurationMax="0.070726"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="4694457" Language="SFX">
 					<ShortName>sfx_grab_1-001.wav</ShortName>
-					<Path>SFX\sfx_grab_1-001_69CA1DD5.wem</Path>
+					<Path>SFX\sfx_grab_1-001_0067426C.wem</Path>
+				</File>
+				<File Id="8788778" Language="SFX">
+					<ShortName>Recieve_duck-002.wav</ShortName>
+					<Path>SFX\Recieve_duck-002_10C4C929.wem</Path>
 				</File>
 				<File Id="14640781" Language="SFX">
 					<ShortName>Pasos_duck-003.wav</ShortName>
 					<Path>SFX\Pasos_duck-003_10C4C929.wem</Path>
+				</File>
+				<File Id="18438146" Language="SFX">
+					<ShortName>Recieve_duck-003.wav</ShortName>
+					<Path>SFX\Recieve_duck-003_10C4C929.wem</Path>
 				</File>
 				<File Id="22228747" Language="SFX">
 					<ShortName>sfx_rama_3.wav</ShortName>
@@ -70,7 +83,7 @@
 				</File>
 				<File Id="69213025" Language="SFX">
 					<ShortName>Clik_exit.wav</ShortName>
-					<Path>SFX\Clik_exit_10C4C929.wem</Path>
+					<Path>SFX\Clik_exit_47A5DC89.wem</Path>
 				</File>
 				<File Id="111804297" Language="SFX">
 					<ShortName>sfx_pala_03.wav</ShortName>
@@ -92,13 +105,25 @@
 					<ShortName>sfx_regadera_3.wav</ShortName>
 					<Path>SFX\sfx_regadera_3_771A66C9.wem</Path>
 				</File>
+				<File Id="138927013" Language="SFX">
+					<ShortName>inicia_menu2.wav</ShortName>
+					<Path>SFX\inicia_menu2_10C4C929.wem</Path>
+				</File>
 				<File Id="150970931" Language="SFX">
 					<ShortName>sfx_cactus_1.wav</ShortName>
 					<Path>SFX\sfx_cactus_1_AB7ADEA3.wem</Path>
 				</File>
+				<File Id="154204994" Language="SFX">
+					<ShortName>Recieve_duck-004.wav</ShortName>
+					<Path>SFX\Recieve_duck-004_39524D17.wem</Path>
+				</File>
+				<File Id="168623129" Language="SFX">
+					<ShortName>Recieve_frog-001.wav</ShortName>
+					<Path>SFX\Recieve_frog-001_6498CF62.wem</Path>
+				</File>
 				<File Id="178409436" Language="SFX">
 					<ShortName>hovermouse.wav</ShortName>
-					<Path>SFX\hovermouse_10C4C929.wem</Path>
+					<Path>SFX\hovermouse_8B7B03D4.wem</Path>
 				</File>
 				<File Id="200678232" Language="SFX">
 					<ShortName>sfx_hit_4.wav</ShortName>
@@ -111,10 +136,6 @@
 				<File Id="219183506" Language="SFX">
 					<ShortName>Amb_random-008.wav</ShortName>
 					<Path>SFX\Amb_random-008_10C4C929.wem</Path>
-				</File>
-				<File Id="223126871" Language="SFX">
-					<ShortName>inicia_menu.wav</ShortName>
-					<Path>SFX\inicia_menu_10C4C929.wem</Path>
 				</File>
 				<File Id="230164706" Language="SFX">
 					<ShortName>sfx_whoosh_110.wav</ShortName>
@@ -140,13 +161,25 @@
 					<ShortName>Pelea de granero.wav</ShortName>
 					<Path>SFX\Pelea de granero_D79FB2B7.wem</Path>
 				</File>
+				<File Id="305649421" Language="SFX">
+					<ShortName>Pasos_frog_talk-001.wav</ShortName>
+					<Path>SFX\Pasos_frog_talk-001_10C4C929.wem</Path>
+				</File>
+				<File Id="309688148" Language="SFX">
+					<ShortName>walk_duck-002.wav</ShortName>
+					<Path>SFX\walk_duck-002_10C4C929.wem</Path>
+				</File>
 				<File Id="335799120" Language="SFX">
 					<ShortName>Click_ui.wav</ShortName>
-					<Path>SFX\Click_ui_10C4C929.wem</Path>
+					<Path>SFX\Click_ui_5926E117.wem</Path>
 				</File>
 				<File Id="347619649" Language="SFX">
 					<ShortName>sfx_hit_3.wav</ShortName>
 					<Path>SFX\sfx_hit_3_8F0134E0.wem</Path>
+				</File>
+				<File Id="358698009" Language="SFX">
+					<ShortName>Pasos_frog_talk-003.wav</ShortName>
+					<Path>SFX\Pasos_frog_talk-003_10C4C929.wem</Path>
 				</File>
 				<File Id="379985502" Language="SFX">
 					<ShortName>sfx_rastmet_12.wav</ShortName>
@@ -175,6 +208,10 @@
 				<File Id="493954556" Language="SFX">
 					<ShortName>sfx_rama_1.wav</ShortName>
 					<Path>SFX\sfx_rama_1_10C4C929.wem</Path>
+				</File>
+				<File Id="500647901" Language="SFX">
+					<ShortName>Recieve_frog-002.wav</ShortName>
+					<Path>SFX\Recieve_frog-002_CF9B1E57.wem</Path>
 				</File>
 				<File Id="514235917" Language="SFX">
 					<ShortName>sfx_grab_1 (2).wav</ShortName>
@@ -216,6 +253,10 @@
 					<ShortName>sfx_grab_2.wav</ShortName>
 					<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
 				</File>
+				<File Id="671726831" Language="SFX">
+					<ShortName>Recieve_duck-001.wav</ShortName>
+					<Path>SFX\Recieve_duck-001_10C4C929.wem</Path>
+				</File>
 				<File Id="683782887" Language="SFX">
 					<ShortName>sfx_rama_5.wav</ShortName>
 					<Path>SFX\sfx_rama_5_10C4C929.wem</Path>
@@ -252,13 +293,33 @@
 					<ShortName>Pasos_frog-002.wav</ShortName>
 					<Path>SFX\Pasos_frog-002_10C4C929.wem</Path>
 				</File>
+				<File Id="776475720" Language="SFX">
+					<ShortName>Recieve_frog-004.wav</ShortName>
+					<Path>SFX\Recieve_frog-004_7766AE48.wem</Path>
+				</File>
 				<File Id="809594907" Language="SFX">
 					<ShortName>sfx_whoosh_111.wav</ShortName>
 					<Path>SFX\sfx_whoosh_111_10C4C929.wem</Path>
 				</File>
+				<File Id="810715951" Language="SFX">
+					<ShortName>jump_frog.wav</ShortName>
+					<Path>SFX\jump_frog_10C4C929.wem</Path>
+				</File>
+				<File Id="812749690" Language="SFX">
+					<ShortName>Pasos_frog_talk-002.wav</ShortName>
+					<Path>SFX\Pasos_frog_talk-002_10C4C929.wem</Path>
+				</File>
+				<File Id="828927273" Language="SFX">
+					<ShortName>walk_duck-001.wav</ShortName>
+					<Path>SFX\walk_duck-001_10C4C929.wem</Path>
+				</File>
 				<File Id="828972344" Language="SFX">
 					<ShortName>sfx_regadera_5.wav</ShortName>
 					<Path>SFX\sfx_regadera_5_25020FD2.wem</Path>
+				</File>
+				<File Id="851261987" Language="SFX">
+					<ShortName>jump_duck.wav</ShortName>
+					<Path>SFX\jump_duck_10C4C929.wem</Path>
 				</File>
 				<File Id="876065015" Language="SFX">
 					<ShortName>sfx_rastmet_11.wav</ShortName>
@@ -296,6 +357,10 @@
 					<ShortName>sfx_guadana_2.wav</ShortName>
 					<Path>SFX\sfx_guadana_2_EEBE2455.wem</Path>
 				</File>
+				<File Id="1059471286" Language="SFX">
+					<ShortName>Recieve_frog-003.wav</ShortName>
+					<Path>SFX\Recieve_frog-003_5BB299F5.wem</Path>
+				</File>
 				<File Id="1061033831" Language="SFX">
 					<ShortName>sfx_regadera_2.wav</ShortName>
 					<Path>SFX\sfx_regadera_2_BC5FF30D.wem</Path>
@@ -321,6 +386,23 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2862302146" Name="Arma_selector" ObjectPath="\Switches\Default Work Unit\Arma_selector">
+					<Switches>
+						<Switch Id="3529631935" Name="Balde" ObjectPath="\Switches\Default Work Unit\Arma_selector\Balde"/>
+						<Switch Id="1375321527" Name="Bate" ObjectPath="\Switches\Default Work Unit\Arma_selector\Bate"/>
+						<Switch Id="1127558284" Name="Cactus" ObjectPath="\Switches\Default Work Unit\Arma_selector\Cactus"/>
+						<Switch Id="3723314964" Name="Guadana" ObjectPath="\Switches\Default Work Unit\Arma_selector\Guadana"/>
+						<Switch Id="1651971882" Name="Oz" ObjectPath="\Switches\Default Work Unit\Arma_selector\Oz"/>
+						<Switch Id="1912251209" Name="Pala" ObjectPath="\Switches\Default Work Unit\Arma_selector\Pala"/>
+						<Switch Id="645565787" Name="Punch" ObjectPath="\Switches\Default Work Unit\Arma_selector\Punch"/>
+						<Switch Id="2110514332" Name="Rama" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rama"/>
+						<Switch Id="1575522544" Name="Rast_met" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_met"/>
+						<Switch Id="650333658" Name="Rast_plast" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_plast"/>
+						<Switch Id="3310464400" Name="Regadera" ObjectPath="\Switches\Default Work Unit\Arma_selector\Regadera"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

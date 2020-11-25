@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 //hacer singleton
 public class UIGameplay : MonoBehaviour
@@ -81,12 +81,20 @@ public class UIGameplay : MonoBehaviour
     { 
         pausePanel.SetActive(activeState);
     }
+    
     void SetGameplayUIActiveState(bool activeState)
     {
         for (int i = 0; i < uiPlayer.Length; i++)
         {
             uiPlayer[i].SetActive(activeState);
         }
+    }
+
+    public void LoadMenuScene()
+    {
+        Time.timeScale = 1.0f;
+        AkSoundEngine.PostEvent("Click_ui", gameObject);
+        SceneManager.LoadScene(0);
     }
 
     public void DisplayIntro()

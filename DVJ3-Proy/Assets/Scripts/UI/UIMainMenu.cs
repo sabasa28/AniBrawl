@@ -148,9 +148,9 @@ public class UIMainMenu : MonoBehaviour
         characterName[playerNum].text = charactersToDisplay[chosenChar[playerNum]].name;
     }
 
-    void OnHoverButton()
+    public void OnHoverButton()
     { 
-        
+        AkSoundEngine.PostEvent("Hover_ui", gameObject);
     }
 
     IEnumerator ScrollCredits()

@@ -164,10 +164,10 @@
 						<Effect Name="Extreme_Limiting_1" ID="{8F08A8A7-3313-4E5D-9EBD-2B1B564DE411}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 							<PropertyList>
 								<Property Name="LookAhead" Type="Real32" Value="0.001"/>
-								<Property Name="OutputGain" Type="Real32" Value="6"/>
+								<Property Name="OutputGain" Type="Real32" Value="4.4"/>
 								<Property Name="Ratio" Type="Real32" Value="50"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.02"/>
-								<Property Name="Threshold" Type="Real32" Value="-40"/>
+								<Property Name="Threshold" Type="Real32" Value="-1"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Extreme_Limiting_2" ID="{D53DEA92-7F8A-4332-AC66-892C4DF69455}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">

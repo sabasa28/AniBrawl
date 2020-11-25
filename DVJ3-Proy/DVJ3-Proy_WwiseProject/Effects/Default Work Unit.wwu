@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6A78BFC3-C04B-4794-98BA-E01517C798D6}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{6A78BFC3-C04B-4794-98BA-E01517C798D6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6A78BFC3-C04B-4794-98BA-E01517C798D6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="MUSIC_COMP" ID="{A1D62F02-F0E3-4358-84C2-49B7B2FD8387}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.71"/>
+						<Property Name="OutputGain" Type="Real32" Value="1.1"/>
+						<Property Name="Ratio" Type="Real32" Value="50"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.34"/>
+						<Property Name="Threshold" Type="Real32" Value="-29.4"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Gain" ID="{D0922AD8-4E26-4194-9CF7-231395CA52BD}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="4"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

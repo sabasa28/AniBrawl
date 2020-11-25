@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 24a86856603a574dad45eabb40bb6037
     GuidInternal: 
-    m_lastTime: -8585958899191497722
+    m_lastTime: -8585953638545677300
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d2592da4be17ac4a88c17b9395af6e67
     GuidInternal: 
-    m_lastTime: -8585958899195098250
+    m_lastTime: -8585953638550404658
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b53140baedce75439889ea842fa98cbc
     GuidInternal: 
-    m_lastTime: -8585958894612579668
+    m_lastTime: -8585953638545697247
     List:
     - name: Main
       guid: 6f1ea1b9d0c1e04e9d56b58ce5dbba7b
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585957912465951552
+    m_lastTime: -8585952934606878424
     List:
     - name: Click_ui
       guid: 4125f9f60a2d9b4687a116b4bfd7f945
@@ -80,8 +80,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Click_ui
       maxAttenuation: 0
-      maxDuration: 1409546
-      minDuration: 1409546
+      maxDuration: 1315344
+      minDuration: 1315344
     - name: End_fight
       guid: c9dc8a3d17c60e408a6a8a40fc5c3066
       id: 1738683615
@@ -116,8 +116,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Exit_game
       maxAttenuation: 0
-      maxDuration: 703855
-      minDuration: 703855
+      maxDuration: 589740
+      minDuration: 589740
     - name: Hit_floor
       guid: 4811be9c757e904280e22bed6aa57487
       id: 956648679
@@ -128,8 +128,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Hit_floor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1756858
+      minDuration: 183337
     - name: Hit_player
       guid: b34f2aedf20c4b469b1713ce7038b25a
       id: 441302456
@@ -141,7 +141,7 @@ MonoBehaviour:
       Path: Default Work Unit\Hit_player
       maxAttenuation: 0
       maxDuration: 1756858
-      minDuration: 1448521
+      minDuration: 498821
     - name: Hover_ui
       guid: 9b000f352f7acb4e8d8e8908c2e0134d
       id: 3424433926
@@ -176,8 +176,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Inicia_menu
       maxAttenuation: 0
-      maxDuration: 2357143
-      minDuration: 2357143
+      maxDuration: 1342426
+      minDuration: 1342426
     - name: Inicia_options
       guid: fd6b18803cd59443a9c344228476998f
       id: 943918601
@@ -224,7 +224,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Pasos_duck
       maxAttenuation: 0
-      maxDuration: 1191142
+      maxDuration: 18000000
       minDuration: 1191142
     - name: Pasos_frog
       guid: 0adcecfcea00a8439382f847e9dbbdd2
@@ -272,7 +272,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Pick
       maxAttenuation: 0
-      maxDuration: 697169
+      maxDuration: 653898
       minDuration: 390478
     - name: Play_amb
       guid: 4026cbe951ebf74ca3e895e6ce8dd684
@@ -310,18 +310,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_salto
+    - name: Play_salto_duck
       guid: 1335f0113d9ebb42a5d02f48fb25bbee
-      id: 2695653357
+      id: 2397106107
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_salto
+      - ElementName: Play_salto_duck
         ObjectType: 3
-      Path: Default Work Unit\Play_salto
+      Path: Default Work Unit\Play_salto_duck
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 465669
+      minDuration: 465669
+    - name: Play_salto_frog
+      guid: 91a7517f46137542bc63cdd9cc449982
+      id: 1988902290
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_salto_frog
+        ObjectType: 3
+      Path: Default Work Unit\Play_salto_frog
+      maxAttenuation: 0
+      maxDuration: 217937
+      minDuration: 217937
     - name: Player_select
       guid: b51ce0ac5358284d95ef083f2d1ffe43
       id: 282749073
@@ -344,8 +356,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Recieve_duck
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1528279
+      minDuration: 498821
     - name: Recieve_frog
       guid: 40bf2f3042b33943ab7d81810e10fc27
       id: 554954233
@@ -356,8 +368,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Recieve_frog
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 488544
+      minDuration: 168149
     - name: Return_menu
       guid: 13faae33c7707a41b48e86d46fbb6a0f
       id: 3197718051
@@ -367,6 +379,138 @@ MonoBehaviour:
       - ElementName: Return_menu
         ObjectType: 3
       Path: Default Work Unit\Return_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Balde
+      guid: dcb0baee5b4b5a4293d8f6c3e0fdce34
+      id: 232150066
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Balde
+        ObjectType: 3
+      Path: Default Work Unit\Set_Balde
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Bate
+      guid: bb1a4de87bcd324dab0bb37979a74216
+      id: 2939166804
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Bate
+        ObjectType: 3
+      Path: Default Work Unit\Set_Bate
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Cactus
+      guid: f8ea0004c1893344bd157781614e0bf3
+      id: 2116282691
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Cactus
+        ObjectType: 3
+      Path: Default Work Unit\Set_Cactus
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Guadana
+      guid: 7abf6d04e323b94c92f236d10fda0725
+      id: 3888508765
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Guadana
+        ObjectType: 3
+      Path: Default Work Unit\Set_Guadana
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Oz
+      guid: 47270ff415166f45b8d351a555035146
+      id: 4202024297
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Oz
+        ObjectType: 3
+      Path: Default Work Unit\Set_Oz
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Pala
+      guid: 19afc4c2ec185b4ba8807412390e0664
+      id: 1017520694
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Pala
+        ObjectType: 3
+      Path: Default Work Unit\Set_Pala
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Punch
+      guid: 3b3e5425bc81114781c7a28664ae8ad7
+      id: 2055270902
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Punch
+        ObjectType: 3
+      Path: Default Work Unit\Set_Punch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Rama
+      guid: d0acfb414021b44e81035baabc57d0ac
+      id: 1719112455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Rama
+        ObjectType: 3
+      Path: Default Work Unit\Set_Rama
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Rast_met
+      guid: 6a852918513d4a429cde9e1aa8bc10e4
+      id: 4029754571
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Rast_met
+        ObjectType: 3
+      Path: Default Work Unit\Set_Rast_met
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Rast_plast
+      guid: 6e25e0e1f39adc4ea0792ec7ad9ddd8e
+      id: 807057965
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Rast_plast
+        ObjectType: 3
+      Path: Default Work Unit\Set_Rast_plast
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Regadera
+      guid: 3ec83de9add32a40bfc0174b04d24e47
+      id: 517226979
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Set_Regadera
+        ObjectType: 3
+      Path: Default Work Unit\Set_Regadera
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -426,7 +570,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a0030ec17f13774e999335c9960dbbc0
     GuidInternal: 
-    m_lastTime: -8585958899195965923
+    m_lastTime: -8585953638553536290
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -436,7 +580,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a74c2bfad3b5e341957e13912887cd9f
     GuidInternal: 
-    m_lastTime: -8585958899191507848
+    m_lastTime: -8585953638545687272
     List:
     - name: Estados
       guid: d6fd6c5670a4b54a863afddf0772fbbd
@@ -501,8 +645,87 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e77b405c1692dc4a849d21942f991daf
     GuidInternal: 
-    m_lastTime: -8585958899191497722
-    List: []
+    m_lastTime: -8585953516470322581
+    List:
+    - name: Arma_selector
+      guid: b0e451ea840e3f47adfbb3c3548b6db2
+      id: 2862302146
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Arma_selector
+        ObjectType: 11
+      Path: Default Work Unit\Arma_selector
+      values:
+      - name: Balde
+        guid: efb7f878a3ed9f4796be766ea3f7941d
+        id: 3529631935
+        PathAndIcons:
+        - ElementName: Balde
+          ObjectType: 10
+      - name: Bate
+        guid: bdb1886a2a2f3b4aa23ec9db1d8ab1bd
+        id: 1375321527
+        PathAndIcons:
+        - ElementName: Bate
+          ObjectType: 10
+      - name: Cactus
+        guid: f3047f8107d96a48b9a97154e254ba03
+        id: 1127558284
+        PathAndIcons:
+        - ElementName: Cactus
+          ObjectType: 10
+      - name: Guadana
+        guid: 1d170529231a6c4f8c14909f4fe7ce00
+        id: 3723314964
+        PathAndIcons:
+        - ElementName: Guadana
+          ObjectType: 10
+      - name: Oz
+        guid: 1715cd36465362409d39b982415886e1
+        id: 1651971882
+        PathAndIcons:
+        - ElementName: Oz
+          ObjectType: 10
+      - name: Pala
+        guid: 18f9fa170f8dce45b4b50bc467b2421b
+        id: 1912251209
+        PathAndIcons:
+        - ElementName: Pala
+          ObjectType: 10
+      - name: Punch
+        guid: bf0d790535ada14f9b06c68c42897c5c
+        id: 645565787
+        PathAndIcons:
+        - ElementName: Punch
+          ObjectType: 10
+      - name: Rama
+        guid: 1dfd8b1897c70545b227fb36adca2a25
+        id: 2110514332
+        PathAndIcons:
+        - ElementName: Rama
+          ObjectType: 10
+      - name: Rast_met
+        guid: 69c483f0fb4a2a4294b2e318d27abc46
+        id: 1575522544
+        PathAndIcons:
+        - ElementName: Rast_met
+          ObjectType: 10
+      - name: Rast_plast
+        guid: f9ed24cc866f4042b48cd21d99988495
+        id: 650333658
+        PathAndIcons:
+        - ElementName: Rast_plast
+          ObjectType: 10
+      - name: Regadera
+        guid: 6583469bb2fc3940902ab347b2599f88
+        id: 3310464400
+        PathAndIcons:
+        - ElementName: Regadera
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -511,7 +734,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d5358de84e54cc4f8a38bc035ed2dae0
     GuidInternal: 
-    m_lastTime: -8585958899191497722
+    m_lastTime: -8585953638545687272
     List: []
   ExpandedItems:
   - /DVJ3-Proy_WwiseProject

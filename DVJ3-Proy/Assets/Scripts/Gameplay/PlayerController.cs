@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Sprite[] availableSprites = null;
     [SerializeField] Image worldspaceImg = null;
 
+    string damageRecieveSound;
     Vector3 startingPos;
 
     public enum State
@@ -68,6 +69,8 @@ public class PlayerController : MonoBehaviour
     {
         GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, Quaternion.identity ,transform);
         PlayerGFX model = modelGo.GetComponent<PlayerGFX>();
+        if (modelIndex <= 1) damageRecieveSound = "Recieve_duck";
+        else damageRecieveSound = "Recieve_frog";
         GetComponentInChildren<ImpactCollider>().gameObject.layer = LayerMask.NameToLayer("ImpactColl" + playerNumber);
         worldspaceImg.sprite = availableSprites[playerNumber-1];
         swingPivot = model.swingPivot;
@@ -180,7 +183,7 @@ public class PlayerController : MonoBehaviour
                     OnDeath(this);
                 }
                 UpdateUI();
-                AkSoundEngine.PostEvent("Hit_player", gameObject);
+                AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
                 StartCoroutine(ImmunityTime());
             }
         }
@@ -217,7 +220,7 @@ public class PlayerController : MonoBehaviour
                     OnDeath(this);
                 }
                 UpdateUI();
-                AkSoundEngine.PostEvent("Hit_player", gameObject);
+                AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
                 StartCoroutine(ImmunityTime());
             }
     }
