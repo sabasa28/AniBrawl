@@ -13,11 +13,19 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CLICK_UI = 1098020724U;
+        static const AkUniqueID EXIT_GAME = 3049547158U;
+        static const AkUniqueID HIT_PLAYER = 441302456U;
+        static const AkUniqueID HOVER_UI = 3424433926U;
+        static const AkUniqueID INICIA_MENU = 928907744U;
         static const AkUniqueID INICIO_GAME = 1373024549U;
         static const AkUniqueID PASOS_DUCK = 1870231131U;
         static const AkUniqueID PASOS_FROG = 1420553778U;
+        static const AkUniqueID PICK = 2162635622U;
         static const AkUniqueID PLAY_AMB = 2959533290U;
         static const AkUniqueID PLAY_FIGHT = 860858016U;
+        static const AkUniqueID PLAYER_SELECT = 282749073U;
+        static const AkUniqueID THROW = 745179803U;
     } // namespace EVENTS
 
     namespace STATES

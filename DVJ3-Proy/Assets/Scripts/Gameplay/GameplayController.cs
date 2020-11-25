@@ -137,6 +137,7 @@ public class GameplayController : MonoBehaviour
         else
             winnerPlayerNumber = 1;
         uiGameplay.SetWinner(winnerPlayerNumber);
+        AkSoundEngine.SetState("Estados", "Fin_de_batalla");
         StartCoroutine(EndscreenInput());
     }
 
@@ -159,6 +160,7 @@ public class GameplayController : MonoBehaviour
     }
     void SetGameplay(int[] playerCharacter)
     {
+        AkSoundEngine.SetState("Estados", "Batalla");
         ppManager.StartRemovingCAberration();
         PlayerController P1 = Instantiate(playerPrefab, spawner[0].position, Quaternion.identity); // se puede hacer un for
         P1.playerNumber = 1;
@@ -193,6 +195,7 @@ public class GameplayController : MonoBehaviour
         {
             players[i].ableToMove = true;
         }
+        AkSoundEngine.PostEvent("Play_fight", gameObject);
     }
 
     public void SetLevel(int levelNum)

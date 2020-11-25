@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1822a48fb00594198d897a7248c4ce, type: 3}
+  m_Name: 0A61A948-5D17-40DD-90BE-28D010383AF9
+  m_EditorClassIdentifier: 
+  objectName: Batalla
+  id: 675784008
+  guid: 0A61A948-5D17-40DD-90BE-28D010383AF9
+  WwiseStateGroupReference: {fileID: 11400000, guid: d0d1166593bfd4049a6724dd737c435f,
+    type: 2}

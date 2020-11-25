@@ -33,7 +33,7 @@ public class Item : MonoBehaviour
         grabbed,
         grabbable,
         midAir,
-        inCd //despues setear un cd con una coroutine cuando choca contra algo para que no se pueda agarrar por un seg o algo asi
+        broken //despues setear un cd con una coroutine cuando choca contra algo para que no se pueda agarrar por un seg o algo asi
     }
     public State itemState;
 
@@ -59,6 +59,9 @@ public class Item : MonoBehaviour
     }
     public void SetAsGrabbed(PlayerController player)
     {
+        coll.isTrigger = true;
+        rb.isKinematic = true;
+        tangible = false;
         itemState = State.grabbed;
         playerGrabbing = player;
         rb.isKinematic = true;
@@ -139,6 +142,7 @@ public class Item : MonoBehaviour
         coll.enabled = false;
         mr.enabled = false;
         rb.isKinematic = true;
+        itemState = State.broken;
         brokenModel.gameObject.SetActive(true);
     }
 }

@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
                     grabbedItem.transform.parent = swingPivot.transform;
                     grabbedItem.SetAsGrabbed(this);
                     animator.SetBool("carrying", true);
+                    AkSoundEngine.PostEvent("Pick", gameObject);
                 }
             }
             else if (currentState == State.carrying)
@@ -120,6 +121,7 @@ public class PlayerController : MonoBehaviour
                 currentState = State.idle;
                 grabbedItem.Throw();
                 animator.SetBool("carrying", false);
+                AkSoundEngine.PostEvent("Throw", gameObject);
             }
         }
     }
@@ -178,6 +180,7 @@ public class PlayerController : MonoBehaviour
                     OnDeath(this);
                 }
                 UpdateUI();
+                AkSoundEngine.PostEvent("Hit_player", gameObject);
                 StartCoroutine(ImmunityTime());
             }
         }
@@ -214,6 +217,7 @@ public class PlayerController : MonoBehaviour
                     OnDeath(this);
                 }
                 UpdateUI();
+                AkSoundEngine.PostEvent("Hit_player", gameObject);
                 StartCoroutine(ImmunityTime());
             }
     }

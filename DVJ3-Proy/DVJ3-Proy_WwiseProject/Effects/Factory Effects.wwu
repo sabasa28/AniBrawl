@@ -42,12 +42,13 @@
 								<Property Name="Threshold" Type="Real32" Value="-30"/>
 							</PropertyList>
 						</Effect>
-						<Effect Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+						<Effect Name="Anibra_weapons" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="AttackTime" Type="Real32" Value="0.04"/>
-								<Property Name="Ratio" Type="Real32" Value="12"/>
-								<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
-								<Property Name="Threshold" Type="Real32" Value="-6"/>
+								<Property Name="AttackTime" Type="Real32" Value="0.39"/>
+								<Property Name="OutputGain" Type="Real32" Value="7.6"/>
+								<Property Name="Ratio" Type="Real32" Value="28.9"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="0.57"/>
+								<Property Name="Threshold" Type="Real32" Value="-26.9"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -100,8 +101,8 @@
 					<ChildrenList>
 						<Effect Name="Light_Expander" ID="{C7E71A3B-745F-47B0-8F31-276DD413F83C}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="1.5"/>
-								<Property Name="Threshold" Type="Real32" Value="0"/>
+								<Property Name="Ratio" Type="Real32" Value="9.8"/>
+								<Property Name="Threshold" Type="Real32" Value="-31.4"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Noise_Gate_Fast_Attack" ID="{747A6B61-E953-474C-8227-672C884DA616}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
@@ -1509,6 +1510,7 @@
 									<PropertyList>
 										<Property Name="DecayTime" Type="Real32" Value="1"/>
 										<Property Name="Density" Type="Real32" Value="50"/>
+										<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-18"/>
 										<Property Name="ERPattern" Type="int32" Value="29"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="210"/>
@@ -1521,7 +1523,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="5.05"/>
 										<Property Name="PreDelay" Type="Real32" Value="145"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-37"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-21"/>
 										<Property Name="RoomSize" Type="Real32" Value="73"/>
 										<Property Name="StereoWidth" Type="Real32" Value="28"/>
 									</PropertyList>
@@ -1609,9 +1611,11 @@
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="10"/>
 								<Property Name="DryLevel" Type="Real32" Value="0"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="0.3"/>
 								<Property Name="ModDepth" Type="Real32" Value="80"/>
-								<Property Name="ModFrequency" Type="Real32" Value="2"/>
+								<Property Name="ModFrequency" Type="Real32" Value="1.76"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="OutputLevel" Type="Real32" Value="1"/>
 							</PropertyList>
 						</Effect>
 						<Folder Name="Static Comb Filtering" ID="{6044FF31-2237-4EC5-B94F-9C0C25CFAC44}" ShortID="504290141">
