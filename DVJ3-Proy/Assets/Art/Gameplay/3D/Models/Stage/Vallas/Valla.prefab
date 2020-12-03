@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5003858116751131915}
   - component: {fileID: 7901118243770350657}
   - component: {fileID: 6666403936408770773}
+  - component: {fileID: 689507648626451786}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &689507648626451786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307527070855337520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 1.7, z: 0.90000004}
+  m_Center: {x: -0.049999952, y: 0.85, z: 0.35}
 --- !u!1 &5065039866490089193
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5548841837883896915}
   m_Layer: 0
-  m_Name: Vallas
+  m_Name: Valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

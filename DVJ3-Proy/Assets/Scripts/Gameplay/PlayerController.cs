@@ -209,6 +209,7 @@ public class PlayerController : MonoBehaviour
                     meleeHit = true;
                 }
                 hitBy.GetDamaged();
+                if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
                 horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
                 pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
                 Debug.Log("hit");
@@ -224,6 +225,12 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(ImmunityTime());
             }
     }
+
+    public void RemoveItemFromAvailable(Item item)
+    {
+        itemsInRange.Remove(item);
+    }
+
     IEnumerator Pushed(Vector3 initImpulse)
     {
         Vector3 impulse = initImpulse;
@@ -287,7 +294,7 @@ public class PlayerController : MonoBehaviour
         }
         return itemsInRange[closest];
     }
-    void GetAnimationTimes() // esto se reemplaza por animation events o tal vez no :S
+    void GetAnimationTimes() 
     {
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
         for (int i = 0; i < clips.Length; i++)

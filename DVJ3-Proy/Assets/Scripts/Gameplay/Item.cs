@@ -113,7 +113,7 @@ public class Item : MonoBehaviour
         durability--;
         if (durability <= 0)
         {
-            GetBroken();
+            BreakItem();
         }
     }
 
@@ -135,8 +135,9 @@ public class Item : MonoBehaviour
     }
     
 
-    void GetBroken()
+    void BreakItem()
     {
+        playerGrabbing.RemoveItemFromAvailable(this);
         visualFeedback.SetActive(false);
         transform.parent = itemsHolder;
         coll.enabled = false;

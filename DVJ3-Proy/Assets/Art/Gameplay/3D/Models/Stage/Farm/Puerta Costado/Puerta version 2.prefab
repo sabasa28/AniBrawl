@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2283755501086135220}
+  - component: {fileID: 4698393220681240389}
   m_Layer: 0
   m_Name: Puerta version 2
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4698393220681240389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511616470866790670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5006657, y: 4.1779385, z: 3.0743356}
+  m_Center: {x: 0.20303059, y: 2.0022798, z: 0.20778298}
 --- !u!1 &7599715294441271767
 GameObject:
   m_ObjectHideFlags: 0

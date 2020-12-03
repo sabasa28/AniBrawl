@@ -24,7 +24,7 @@ public class BrokenItem : MonoBehaviour
         StartCoroutine(SetNotTangible());
     }
 
-    IEnumerator SetNotTangible()
+    IEnumerator SetNotTangible() //descartar
     {
         yield return new WaitForSeconds(0.5f);
         while (bottomPieceRb.velocity != Vector3.zero || topPieceRb.velocity != Vector3.zero)
