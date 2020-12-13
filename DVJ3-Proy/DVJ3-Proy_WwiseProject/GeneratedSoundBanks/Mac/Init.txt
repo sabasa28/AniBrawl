@@ -1,7 +1,12 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	3449838839	Escenarios			\Default Work Unit\Escenarios	
 	4197210578	Estados			\Default Work Unit\Estados	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Escenarios			
+	1641284458	Bosque	Escenarios			
+	1767728952	Granja	Escenarios			
+	2607556080	Menu	Escenarios			
 	675784008	Batalla	Estados			
 	748895195	None	Estados			
 	845003552	Fin_de_batalla	Estados			

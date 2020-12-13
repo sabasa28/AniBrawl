@@ -34,17 +34,64 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Inicia_creditos" ID="{89012B57-98FB-4943-B704-7480E618B9B3}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_controls" ID="{38E3B492-ABD1-4DF9-8CA5-918DEC1950CE}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}"/>
+						<CurrentStateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Menu" ID="{B4BC3029-275D-47A9-B01C-49F61B699625}"/>
 						<CurrentSwitchRef Name="Guadana" ID="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Prueba estados" ID="{6B016F63-87DA-433A-AF1F-8F77A9CBA9F6}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Inicio_game" ID="{C5C416F8-BFEB-4387-ACA1-4FCF69219687}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_granja" ID="{7A3B209B-56AC-488B-9BC1-5FECC5DB9BD9}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_menu" ID="{E001042A-7C38-4A93-8BDF-1ABA94E24E82}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_controls" ID="{38E3B492-ABD1-4DF9-8CA5-918DEC1950CE}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_creditos" ID="{89012B57-98FB-4943-B704-7480E618B9B3}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_fight" ID="{3BF40A61-5BAD-406F-9D51-B794B0FF6625}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Inicia_bosque" ID="{110142E8-32FD-4394-9B1D-9FFAFADB8E59}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
+						<CurrentStateRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Balde" ID="{78F8B7EF-EDA3-479F-96BE-766EA3F7941D}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

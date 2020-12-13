@@ -14,6 +14,14 @@
 						<State Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Escenarios" ID="{80373777-8EDB-4FA7-AEFF-019147D8518A}">
+					<ChildrenList>
+						<State Name="None" ID="{FC7977CE-958B-4BEA-856C-EC72F34112F7}"/>
+						<State Name="Bosque" ID="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}"/>
+						<State Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}"/>
+						<State Name="Granja" ID="{AE0B33FE-C236-452B-88F6-DE6D6722BB00}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

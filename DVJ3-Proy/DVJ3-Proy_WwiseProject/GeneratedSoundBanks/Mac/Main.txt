@@ -1,6 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
 	282749073	Player_select			\Default Work Unit\Player_select	
-	476536025	Inicia_stage			\Default Work Unit\Inicia_stage	
 	554954233	Recieve_frog			\Default Work Unit\Recieve_frog	
 	639442169	Play_crowd			\Default Work Unit\Play_crowd	
 	745179803	Throw			\Default Work Unit\Throw	
@@ -17,20 +16,20 @@ Event	ID	Name			Wwise Object Path	Notes
 	1988902290	Play_salto_frog			\Default Work Unit\Play_salto_frog	
 	2156697475	Unmute			\Default Work Unit\Unmute	
 	2162635622	Pick			\Default Work Unit\Pick	
+	2292915610	Inicia_bosque			\Default Work Unit\Inicia_bosque	
 	2397106107	Play_salto_duck			\Default Work Unit\Play_salto_duck	
-	2959533290	Play_amb			\Default Work Unit\Play_amb	
 	2974103762	Mute			\Default Work Unit\Mute	
 	3049547158	Exit_game			\Default Work Unit\Exit_game	
 	3197718051	Return_menu			\Default Work Unit\Return_menu	
 	3424433926	Hover_ui			\Default Work Unit\Hover_ui	
 	3437014341	Pause_in			\Default Work Unit\Pause_in	
+	3448054824	Inicia_granja			\Default Work Unit\Inicia_granja	
 	3648253772	Pause_out			\Default Work Unit\Pause_out	
 	3972774391	Weapon_hit			\Default Work Unit\Weapon_hit	
 	4126746240	Inicia_creditos			\Default Work Unit\Inicia_creditos	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	2862302146	Arma_selector			\Default Work Unit\Arma_selector	
-	3441103852	Escenario			\Default Work Unit\Escenario	
 
 Switch	ID	Name	Switch Group			Notes
 	645565787	Punch	Arma_selector			
@@ -44,14 +43,16 @@ Switch	ID	Name	Switch Group			Notes
 	3310464400	Regadera	Arma_selector			
 	3529631935	Balde	Arma_selector			
 	3723314964	Guadana	Arma_selector			
-	1641284458	Bosque	Escenario			
-	1767728952	Granja	Escenario			
-	2607556080	Menu	Escenario			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	3449838839	Escenarios			\Default Work Unit\Escenarios	
 	4197210578	Estados			\Default Work Unit\Estados	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Escenarios			
+	1641284458	Bosque	Escenarios			
+	1767728952	Granja	Escenarios			
+	2607556080	Menu	Escenarios			
 	675784008	Batalla	Estados			
 	748895195	None	Estados			
 	845003552	Fin_de_batalla	Estados			
@@ -190,7 +191,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1012422412	walk_duck-001	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\walk_duck-001_7ED10882.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\walk_duck-001		41508
 	1012928397	farm_amb-004	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\farm_amb-004_E2DBB469.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\animales\farm_amb-004		175758
 	1015971685	04_Menu	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\04_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\03_Menu\04_Menu		380939
-	1033605920	Pelea de granja 2	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Pelea de granja 2_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Pelea_granero\Pelea de granja 2\Pelea de granja 2		1161967
+	1033605920	Pelea de granja 2	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Pelea de granja 2_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Pelea_granero\Pelea de granja 2\Pelea de granja 2		1186692
 	1059471286	Recieve_frog-003	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Recieve_frog-003_5BB299F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_frog\Recieve_frog-003		72448
 	1061033831	sfx_regadera_2	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\sfx_regadera_2_BC5FF30D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_2		136500
 	1073255104	Select_personaje	C:\Users\acer10\Desktop\Facultad\Image Campus\Segundo aNIo\Desarrollo de VJ 3\DVJ3\DVJ3-Proy\DVJ3-Proy_WwiseProject\.cache\Mac\SFX\Select_personaje_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\Select_personaje		14100

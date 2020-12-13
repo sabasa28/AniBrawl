@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3128290571">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1815169277">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -29,7 +29,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1592501113">
+		<SoundBank Id="3161908922" Language="SFX" Hash="302894005">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -42,21 +42,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1738683615" Name="End_fight" ObjectPath="\Events\Default Work Unit\End_fight" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="657065678" Language="SFX">
-							<ShortName>Fin de batalla.wav</ShortName>
-							<Path>SFX\Fin de batalla_179463A7.wem</Path>
-						</File>
-						<File Id="692360340" Language="SFX">
-							<ShortName>Victoria_granja.wav</ShortName>
-							<Path>SFX\Victoria_granja_179463A7.wem</Path>
-						</File>
-						<File Id="758307942" Language="SFX">
-							<ShortName>crowd - copia.wav</ShortName>
-							<Path>SFX\crowd - copia_179463A7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
+				<Event Id="1738683615" Name="End_fight" ObjectPath="\Events\Default Work Unit\End_fight" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
 					<ActionSetState>
 						<ActionSetStateEntry Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
 					</ActionSetState>
@@ -77,6 +63,12 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2292915610" Name="Inicia_bosque" ObjectPath="\Events\Default Work Unit\Inicia_bosque" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+						<ActionSetStateEntry Id="1641284458" Name="Bosque" ObjectPath="\States\Default Work Unit\Escenarios\Bosque"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1332134995" Name="Inicia_controls" ObjectPath="\Events\Default Work Unit\Inicia_controls" DurationType="OneShot" DurationMin="3.705565" DurationMax="3.705565">
 					<IncludedMemoryFiles>
 						<File Id="651536663" Language="SFX">
@@ -92,8 +84,11 @@
 							<Path>SFX\mapa_F79DE569.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3448054824" Name="Inicia_granja" ObjectPath="\Events\Default Work Unit\Inicia_granja" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
 					<ActionSetState>
-						<ActionSetStateEntry Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos"/>
+						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+						<ActionSetStateEntry Id="1767728952" Name="Granja" ObjectPath="\States\Default Work Unit\Escenarios\Granja"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="928907744" Name="Inicia_menu" ObjectPath="\Events\Default Work Unit\Inicia_menu" DurationType="Infinite">
@@ -199,35 +194,8 @@
 							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{E4EEC127-2763-4870-AF5E-E5EB50F7954A}</DefaultSwitchValue>
 					<SwitchContainers>
-						<SwitchContainer SwitchValue="{18C4D98D-ED10-487D-988F-7DD8BB36F284}">
-							<Media>
-								<File Id="216005068"/>
-								<File Id="454771366"/>
-								<File Id="1012928397"/>
-								<File Id="906127461"/>
-								<File Id="466738841"/>
-								<File Id="994417837"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{DA697B29-5AB9-4042-BDA0-F22713B3271C}">
-							<Media>
-								<File Id="219183506"/>
-								<File Id="730963272"/>
-								<File Id="562611697"/>
-								<File Id="743310020"/>
-								<File Id="713421893"/>
-								<File Id="713421893"/>
-								<File Id="743310020"/>
-								<File Id="876107825"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{B4BC3029-275D-47A9-B01C-49F61B699625}">
-							<Media>
-								<File Id="105275312"/>
-								<File Id="960583685"/>
-							</Media>
-						</SwitchContainer>
 						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
 							<Media>
 								<File Id="665288200"/>
@@ -255,6 +223,34 @@
 								<File Id="379943163"/>
 							</Media>
 						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AE0B33FE-C236-452B-88F6-DE6D6722BB00}">
+							<Media>
+								<File Id="216005068"/>
+								<File Id="454771366"/>
+								<File Id="1012928397"/>
+								<File Id="906127461"/>
+								<File Id="466738841"/>
+								<File Id="994417837"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}">
+							<Media>
+								<File Id="219183506"/>
+								<File Id="730963272"/>
+								<File Id="562611697"/>
+								<File Id="743310020"/>
+								<File Id="713421893"/>
+								<File Id="713421893"/>
+								<File Id="743310020"/>
+								<File Id="876107825"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}">
+							<Media>
+								<File Id="105275312"/>
+								<File Id="960583685"/>
+							</Media>
+						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu"/>
@@ -265,12 +261,163 @@
 						<ActionSetStateEntry Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="476536025" Name="Inicia_stage" ObjectPath="\Events\Default Work Unit\Inicia_stage" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
-					<ActionSetState>
-						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105275312" Language="SFX">
+							<ShortName>arboles viento.wav</ShortName>
+							<Path>SFX\arboles viento_835714D9.wem</Path>
+						</File>
+						<File Id="216005068" Language="SFX">
+							<ShortName>farm_amb-001.wav</ShortName>
+							<Path>SFX\farm_amb-001_835714D9.wem</Path>
+						</File>
+						<File Id="219183506" Language="SFX">
+							<ShortName>Amb_random-008.wav</ShortName>
+							<Path>SFX\Amb_random-008_835714D9.wem</Path>
+						</File>
+						<File Id="226024866" Language="SFX">
+							<ShortName>02_Menu.wav</ShortName>
+							<Path>SFX\02_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="264037589" Language="SFX">
+							<ShortName>05_Menu.wav</ShortName>
+							<Path>SFX\05_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="372930892" Language="SFX">
+							<ShortName>03_Menu.wav</ShortName>
+							<Path>SFX\03_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="379943163" Language="SFX">
+							<ShortName>01_Menu.wav</ShortName>
+							<Path>SFX\01_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="454771366" Language="SFX">
+							<ShortName>farm_amb-003.wav</ShortName>
+							<Path>SFX\farm_amb-003_D86D9B96.wem</Path>
+						</File>
+						<File Id="466738841" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_939974F9.wem</Path>
+						</File>
+						<File Id="562611697" Language="SFX">
+							<ShortName>Amb_random-010.wav</ShortName>
+							<Path>SFX\Amb_random-010_835714D9.wem</Path>
+						</File>
+						<File Id="657065678" Language="SFX">
+							<ShortName>Fin de batalla.wav</ShortName>
+							<Path>SFX\Fin de batalla_179463A7.wem</Path>
+						</File>
+						<File Id="665288200" Language="SFX">
+							<ShortName>Pelea de granja 1.wav</ShortName>
+							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
+						</File>
+						<File Id="692360340" Language="SFX">
+							<ShortName>Victoria_granja.wav</ShortName>
+							<Path>SFX\Victoria_granja_179463A7.wem</Path>
+						</File>
+						<File Id="713421893" Language="SFX">
+							<ShortName>Amb_random-007.wav</ShortName>
+							<Path>SFX\Amb_random-007_835714D9.wem</Path>
+						</File>
+						<File Id="730963272" Language="SFX">
+							<ShortName>Amb_random-009.wav</ShortName>
+							<Path>SFX\Amb_random-009_835714D9.wem</Path>
+						</File>
+						<File Id="743310020" Language="SFX">
+							<ShortName>Amb_random-006.wav</ShortName>
+							<Path>SFX\Amb_random-006_835714D9.wem</Path>
+						</File>
+						<File Id="758307942" Language="SFX">
+							<ShortName>crowd - copia.wav</ShortName>
+							<Path>SFX\crowd - copia_179463A7.wem</Path>
+						</File>
+						<File Id="876107825" Language="SFX">
+							<ShortName>Amb_bosque_loop.wav</ShortName>
+							<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
+						</File>
+						<File Id="906127461" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_01472649.wem</Path>
+						</File>
+						<File Id="960583685" Language="SFX">
+							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
+							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
+						</File>
+						<File Id="994417837" Language="SFX">
+							<ShortName>Farm Barn Exterior.wav</ShortName>
+							<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+						</File>
+						<File Id="1012928397" Language="SFX">
+							<ShortName>farm_amb-004.wav</ShortName>
+							<Path>SFX\farm_amb-004_E2DBB469.wem</Path>
+						</File>
+						<File Id="1015971685" Language="SFX">
+							<ShortName>04_Menu.wav</ShortName>
+							<Path>SFX\04_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="1033605920" Language="SFX">
+							<ShortName>Pelea de granja 2.wav</ShortName>
+							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{E4EEC127-2763-4870-AF5E-E5EB50F7954A}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
+							<Media>
+								<File Id="665288200"/>
+								<File Id="1033605920"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
+							<Media>
+								<File Id="657065678"/>
+								<File Id="692360340"/>
+								<File Id="657065678"/>
+								<File Id="758307942"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}">
+							<Media>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="372930892"/>
+								<File Id="1015971685"/>
+								<File Id="372930892"/>
+								<File Id="226024866"/>
+								<File Id="379943163"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AE0B33FE-C236-452B-88F6-DE6D6722BB00}">
+							<Media>
+								<File Id="216005068"/>
+								<File Id="454771366"/>
+								<File Id="1012928397"/>
+								<File Id="906127461"/>
+								<File Id="466738841"/>
+								<File Id="994417837"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}">
+							<Media>
+								<File Id="219183506"/>
+								<File Id="730963272"/>
+								<File Id="562611697"/>
+								<File Id="743310020"/>
+								<File Id="713421893"/>
+								<File Id="713421893"/>
+								<File Id="743310020"/>
+								<File Id="876107825"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}">
+							<Media>
+								<File Id="105275312"/>
+								<File Id="960583685"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
 					</ActionSetState>
@@ -365,97 +512,6 @@
 							<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Play_amb" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="105275312" Language="SFX">
-							<ShortName>arboles viento.wav</ShortName>
-							<Path>SFX\arboles viento_835714D9.wem</Path>
-						</File>
-						<File Id="216005068" Language="SFX">
-							<ShortName>farm_amb-001.wav</ShortName>
-							<Path>SFX\farm_amb-001_835714D9.wem</Path>
-						</File>
-						<File Id="219183506" Language="SFX">
-							<ShortName>Amb_random-008.wav</ShortName>
-							<Path>SFX\Amb_random-008_835714D9.wem</Path>
-						</File>
-						<File Id="454771366" Language="SFX">
-							<ShortName>farm_amb-003.wav</ShortName>
-							<Path>SFX\farm_amb-003_D86D9B96.wem</Path>
-						</File>
-						<File Id="466738841" Language="SFX">
-							<ShortName>Barn_test.wav</ShortName>
-							<Path>SFX\Barn_test_939974F9.wem</Path>
-						</File>
-						<File Id="562611697" Language="SFX">
-							<ShortName>Amb_random-010.wav</ShortName>
-							<Path>SFX\Amb_random-010_835714D9.wem</Path>
-						</File>
-						<File Id="713421893" Language="SFX">
-							<ShortName>Amb_random-007.wav</ShortName>
-							<Path>SFX\Amb_random-007_835714D9.wem</Path>
-						</File>
-						<File Id="730963272" Language="SFX">
-							<ShortName>Amb_random-009.wav</ShortName>
-							<Path>SFX\Amb_random-009_835714D9.wem</Path>
-						</File>
-						<File Id="743310020" Language="SFX">
-							<ShortName>Amb_random-006.wav</ShortName>
-							<Path>SFX\Amb_random-006_835714D9.wem</Path>
-						</File>
-						<File Id="876107825" Language="SFX">
-							<ShortName>Amb_bosque_loop.wav</ShortName>
-							<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
-						</File>
-						<File Id="906127461" Language="SFX">
-							<ShortName>Barn_test.wav</ShortName>
-							<Path>SFX\Barn_test_01472649.wem</Path>
-						</File>
-						<File Id="960583685" Language="SFX">
-							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
-							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
-						</File>
-						<File Id="994417837" Language="SFX">
-							<ShortName>Farm Barn Exterior.wav</ShortName>
-							<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
-						</File>
-						<File Id="1012928397" Language="SFX">
-							<ShortName>farm_amb-004.wav</ShortName>
-							<Path>SFX\farm_amb-004_E2DBB469.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<DefaultSwitchValue>{B4BC3029-275D-47A9-B01C-49F61B699625}</DefaultSwitchValue>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{18C4D98D-ED10-487D-988F-7DD8BB36F284}">
-							<Media>
-								<File Id="216005068"/>
-								<File Id="454771366"/>
-								<File Id="1012928397"/>
-								<File Id="906127461"/>
-								<File Id="466738841"/>
-								<File Id="994417837"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{DA697B29-5AB9-4042-BDA0-F22713B3271C}">
-							<Media>
-								<File Id="219183506"/>
-								<File Id="730963272"/>
-								<File Id="562611697"/>
-								<File Id="743310020"/>
-								<File Id="713421893"/>
-								<File Id="713421893"/>
-								<File Id="743310020"/>
-								<File Id="876107825"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{B4BC3029-275D-47A9-B01C-49F61B699625}">
-							<Media>
-								<File Id="105275312"/>
-								<File Id="960583685"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
 				</Event>
 				<Event Id="639442169" Name="Play_crowd" ObjectPath="\Events\Default Work Unit\Play_crowd" DurationType="OneShot" DurationMin="20.839819" DurationMax="20.839819">
 					<IncludedMemoryFiles>
@@ -1312,7 +1368,10 @@
 				<StateGroup Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla">
 					<States/>
 				</StateGroup>
-				<StateGroup Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos">
+				<StateGroup Id="1641284458" Name="Bosque" ObjectPath="\States\Default Work Unit\Escenarios\Bosque">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1767728952" Name="Granja" ObjectPath="\States\Default Work Unit\Escenarios\Granja">
 					<States/>
 				</StateGroup>
 				<StateGroup Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu">
@@ -1320,6 +1379,14 @@
 				</StateGroup>
 				<StateGroup Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa">
 					<States/>
+				</StateGroup>
+				<StateGroup Id="3449838839" Name="Escenarios" ObjectPath="\States\Default Work Unit\Escenarios">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Escenarios\None"/>
+						<State Id="1641284458" Name="Bosque" ObjectPath="\States\Default Work Unit\Escenarios\Bosque"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Escenarios\Menu"/>
+						<State Id="1767728952" Name="Granja" ObjectPath="\States\Default Work Unit\Escenarios\Granja"/>
+					</States>
 				</StateGroup>
 				<StateGroup Id="4197210578" Name="Estados" ObjectPath="\States\Default Work Unit\Estados">
 					<States>
@@ -1347,13 +1414,6 @@
 						<Switch Id="1575522544" Name="Rast_met" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_met"/>
 						<Switch Id="650333658" Name="Rast_plast" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_plast"/>
 						<Switch Id="3310464400" Name="Regadera" ObjectPath="\Switches\Default Work Unit\Arma_selector\Regadera"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3441103852" Name="Escenario" ObjectPath="\Switches\Default Work Unit\Escenario">
-					<Switches>
-						<Switch Id="1767728952" Name="Granja" ObjectPath="\Switches\Default Work Unit\Escenario\Granja"/>
-						<Switch Id="1641284458" Name="Bosque" ObjectPath="\Switches\Default Work Unit\Escenario\Bosque"/>
-						<Switch Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\Escenario\Menu"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

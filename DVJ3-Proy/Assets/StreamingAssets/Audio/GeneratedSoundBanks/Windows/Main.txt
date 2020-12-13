@@ -1,0 +1,198 @@
+Event	ID	Name			Wwise Object Path	Notes
+	282749073	Player_select			\Default Work Unit\Player_select	
+	554954233	Recieve_frog			\Default Work Unit\Recieve_frog	
+	639442169	Play_crowd			\Default Work Unit\Play_crowd	
+	745179803	Throw			\Default Work Unit\Throw	
+	860858016	Play_fight			\Default Work Unit\Play_fight	
+	928907744	Inicia_menu			\Default Work Unit\Inicia_menu	
+	943918601	Inicia_options			\Default Work Unit\Inicia_options	
+	1098020724	Click_ui			\Default Work Unit\Click_ui	
+	1332134995	Inicia_controls			\Default Work Unit\Inicia_controls	
+	1373024549	Inicio_game			\Default Work Unit\Inicio_game	
+	1411634684	Recieve_duck			\Default Work Unit\Recieve_duck	
+	1420553778	Pasos_frog			\Default Work Unit\Pasos_frog	
+	1738683615	End_fight			\Default Work Unit\End_fight	
+	1870231131	Pasos_duck			\Default Work Unit\Pasos_duck	
+	1988902290	Play_salto_frog			\Default Work Unit\Play_salto_frog	
+	2156697475	Unmute			\Default Work Unit\Unmute	
+	2162635622	Pick			\Default Work Unit\Pick	
+	2292915610	Inicia_bosque			\Default Work Unit\Inicia_bosque	
+	2397106107	Play_salto_duck			\Default Work Unit\Play_salto_duck	
+	2974103762	Mute			\Default Work Unit\Mute	
+	3049547158	Exit_game			\Default Work Unit\Exit_game	
+	3197718051	Return_menu			\Default Work Unit\Return_menu	
+	3424433926	Hover_ui			\Default Work Unit\Hover_ui	
+	3437014341	Pause_in			\Default Work Unit\Pause_in	
+	3448054824	Inicia_granja			\Default Work Unit\Inicia_granja	
+	3648253772	Pause_out			\Default Work Unit\Pause_out	
+	3972774391	Weapon_hit			\Default Work Unit\Weapon_hit	
+	4126746240	Inicia_creditos			\Default Work Unit\Inicia_creditos	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2862302146	Arma_selector			\Default Work Unit\Arma_selector	
+
+Switch	ID	Name	Switch Group			Notes
+	645565787	Punch	Arma_selector			
+	650333658	Rast_plast	Arma_selector			
+	1127558284	Cactus	Arma_selector			
+	1375321527	Bate	Arma_selector			
+	1575522544	Rast_met	Arma_selector			
+	1651971882	Oz	Arma_selector			
+	1912251209	Pala	Arma_selector			
+	2110514332	Rama	Arma_selector			
+	3310464400	Regadera	Arma_selector			
+	3529631935	Balde	Arma_selector			
+	3723314964	Guadana	Arma_selector			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3449838839	Escenarios			\Default Work Unit\Escenarios	
+	4197210578	Estados			\Default Work Unit\Estados	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Escenarios			
+	1641284458	Bosque	Escenarios			
+	1767728952	Granja	Escenarios			
+	2607556080	Menu	Escenarios			
+	675784008	Batalla	Estados			
+	748895195	None	Estados			
+	845003552	Fin_de_batalla	Estados			
+	956887760	Creditos	Estados			
+	2607556080	Menu	Estados			
+	2658298240	Inicio	Estados			
+	3092587489	Pausa	Estados			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	109915412	Creditos	Estados	\Interactive Music Hierarchy\Default Work Unit\Musica		
+	217181342	Pausa	Estados	\Interactive Music Hierarchy\Default Work Unit\Musica\Pelea_granero		
+	311907688	Pausa	Estados	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+	549956601	Inicio	Estados	\Interactive Music Hierarchy\Default Work Unit\Musica		
+	831153207	Pausa	Estados	\Interactive Music Hierarchy\Default Work Unit\Musica		
+	1003001708	Creditos	Estados	\Interactive Music Hierarchy\Default Work Unit\Musica\Menu		
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	3837303311	MAster_COMP	Wwise Compressor			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	63261777	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\New Sound SFX_02\Wwise Silence	
+	194266080	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\New Sound SFX_02\Wwise Silence	
+	250687386	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\New Sound SFX_01\Wwise Silence	
+	342886154	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\New Sound SFX\Wwise Silence	
+	389662960	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\pajaros\New Sound SFX\Wwise Silence	
+	419195781	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\animales\New Sound SFX\Wwise Silence	
+	615074324	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\Amb_random\New Sound SFX\Wwise Silence	
+	629561375	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\barn\New Sound SFX_01\Wwise Silence	
+	733203521	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\barn\New Sound SFX\Wwise Silence	
+	749276079	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\New Sound SFX_01\Wwise Silence	
+	864278957	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\New Sound SFX\Wwise Silence	
+	944854880	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\animales\New Sound SFX_01\Wwise Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	4694457	sfx_grab_1-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_grab_1-001_0067426C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pick\sfx_grab_1-001		70720
+	8788778	Recieve_duck-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_duck-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_duck\Recieve_duck-002		88056
+	14640781	Pasos_duck-003_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-003_976B4F8E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\Pasos_duck\Pasos_duck-003_01		40080
+	18438146	Recieve_duck-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_duck-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_duck\Recieve_duck-003		106320
+	22228747	sfx_rama_3	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rama_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rama\sfx_rama_3		109256
+	23080013	sfx_rastplastt_08	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastplastt_08_3FA78333.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_plastico\sfx_rastplastt_08		79808
+	37178360	sfx_guadana_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_guadana_1_4FB67330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\Oz\sfx_guadana_1		205112
+	59236057	Pasos_frog-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-002_7E176CFC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog\Pasos_frog-002		38728
+	60517405	Pasos_duck-001_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-001_A2B556E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\Pasos_duck\Pasos_duck-001_01		48176
+	61333154	sfx_rastmet_5	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastmet_5_5E09FE5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_metalico\sfx_rastmet_5		103160
+	69213025	Clik_exit	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Clik_exit_FA6A89D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\Clik_exit		13280
+	80653923	Creditos	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\mapa_F79DE569.wem		\Actor-Mixer Hierarchy\Default Work Unit\extras de musica\Creditos		56696
+	105275312	arboles viento	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\arboles viento_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Menu_amb\arboles viento		2720440
+	111804297	sfx_pala_03	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_pala_03_A382D609.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\pala\sfx_pala_03		94324
+	117746009	sfx_pala_4	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_pala_4_A0798E52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\pala\sfx_pala_4		53456
+	119786416	Pasos_frog-003_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog\Pasos_frog-003_01		92416
+	126528663	sfx_guadana_03	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_guadana_03_8DFE84AE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\guadana\sfx_guadana_03		253248
+	134421624	sfx_regadera_3	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_3_771A66C9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_3		96464
+	138927013	inicia_menu2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\inicia_menu2_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\inicia_menu2		50413
+	148408425	Pasos_duck-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-001_ECDF2814.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\Pasos_duck\Pasos_duck-001		38164
+	150970931	sfx_cactus_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_cactus_1_AB7ADEA3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\cactus\sfx_cactus_1		38408
+	154204994	Recieve_duck-004	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_duck-004_39524D17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_duck\Recieve_duck-004		269652
+	168623129	Recieve_frog-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_frog-001_6498CF62.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_frog\Recieve_frog-001		86244
+	178409436	hovermouse	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\hovermouse_24370524.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\hovermouse		20258
+	200678232	sfx_hit_4	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_hit_4_7713F3F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\punch\sfx_hit_4		46624
+	207326859	sfx_regadera_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_1_2F127C54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_1		119416
+	216005068	farm_amb-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\farm_amb-001_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\farm_amb-001		845731
+	219183506	Amb_random-008	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-008_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\Amb_random\Amb_random-008		53154
+	226024866	02_Menu	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\02_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\03_Menu\02_Menu		414748
+	230164706	sfx_whoosh_110	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_whoosh_110_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\arroja\sfx_whoosh_110		10732
+	236581530	sfx_rastplastt_11	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastplastt_11_2B5D1ACB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_plastico\sfx_rastplastt_11		130192
+	247197488	sfx_whoosh_108	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_whoosh_108_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\arroja\sfx_whoosh_108		9052
+	253341458	sfx_rastplastt_07	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastplastt_07_7473D318.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_plastico\sfx_rastplastt_07		125004
+	263033695	tune_gallo	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\tune_gallo_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\321_fight\tune_gallo		401332
+	264037589	05_Menu	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\05_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\01_Menu\05_Menu		419448
+	282627336	walk_duck-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\walk_duck-002_F4484CD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\walk_duck-002		41024
+	305649421	Pasos_frog_talk-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog_talk-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\Pasos_frog_talk-001		85980
+	309688148	walk_duck-002_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\walk_duck-002_41B365CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\walk_duck-002_01		30388
+	335799120	Click_ui	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Click_ui_B5E74C47.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\Click_ui		32983
+	347619649	sfx_hit_3	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_hit_3_8F0134E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\punch\sfx_hit_3		49672
+	358698009	Pasos_frog_talk-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog_talk-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\Pasos_frog_talk-003		75240
+	372930892	03_Menu	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\03_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\02_Menu\03_Menu		279342
+	379943163	01_Menu	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\01_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\01_Menu\01_Menu		369364
+	379985502	sfx_rastmet_12	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastmet_12_D6E317A4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_metalico\sfx_rastmet_12		124420
+	414046758	sfx_whoosh_109	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_whoosh_109_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\arroja\sfx_whoosh_109		9604
+	441226983	sfx_pala_07	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_pala_07_7C054A4A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\pala\sfx_pala_07		71672
+	444550990	sfx_regadera_5	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_5_9BEFC8C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_5		119756
+	454771366	farm_amb-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\farm_amb-003_D86D9B96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\animales\farm_amb-003		108372
+	466738841	Barn_test_02	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Barn_test_939974F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\barn\Barn_test_02		119949
+	474171986	sfx_grab_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_grab_1_32D138D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pick\sfx_grab_1		81572
+	483299258	sfx_rama_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rama_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rama\sfx_rama_2		97428
+	493954556	sfx_rama_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rama_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rama\sfx_rama_1		99908
+	500647901	Recieve_frog-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_frog-002_CF9B1E57.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_frog\Recieve_frog-002		29724
+	514235917	sfx_grab_1 (2)	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_grab_1 (2)_A8AA7D1A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pick\sfx_grab_1 (2)		115412
+	532797474	sfx_bate_3-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_bate_3-001_0E21EBAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\bate\sfx_bate_3-001		115868
+	549763350	sfx_rastplastt_03	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastplastt_03_DF630D00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_plastico\sfx_rastplastt_03		93680
+	562611697	Amb_random-010	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-010_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\Amb_random\Amb_random-010		147724
+	595120389	sfx_hit_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_hit_1_A207F14D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\punch\sfx_hit_1		32404
+	603927543	sfx_cactus_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_cactus_2_7BD343FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\cactus\sfx_cactus_2		55508
+	608540775	tune_gallo_3	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\tune_gallo_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\321_fight\tune_gallo_3		375460
+	613037995	sfx_bate_2-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_bate_2-001_0EF2FFBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\bate\sfx_bate_2-001		91100
+	651536663	Controls	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\mapa_33779FEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\extras de musica\Controls		75419
+	657065678	Fin de batalla	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Fin de batalla_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Fin de pelea\Fin de batalla\Fin de batalla		1478501
+	658457319	sfx_grab_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_grab_2_6E24754A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pick\sfx_grab_2		68944
+	665288200	Pelea de granja 1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pelea de granja 1_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Pelea_granero\Pelea de granja 1\Pelea de granja 1		473960
+	671726831	Recieve_duck-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_duck-001_4D0E7FBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_duck\Recieve_duck-001		50236
+	683782887	sfx_rama_5	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rama_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rama\sfx_rama_5		78440
+	692360340	Victoria_granja	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Victoria_granja_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Fin de pelea\Victoria_granja\Victoria_granja		734667
+	702034421	sfx_rama_4	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rama_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rama\sfx_rama_4		60684
+	713421893	Amb_random-007	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-007_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\pajaros\Amb_random-007		77771
+	730790305	sfx_regadera_4	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_4_327CF06B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_4		128840
+	730963272	Amb_random-009	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-009_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\Amb_random\Amb_random-009		67657
+	743310020	Amb_random-006	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_random-006_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\pajaros\Amb_random-006		185034
+	758307942	crowd - copia	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\crowd - copia_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Fin de pelea\Victoria_granja\crowd - copia		578295
+	771194761	Pasos_frog-002_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-002_BEB17E5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog\Pasos_frog-002_01		59960
+	776475720	Recieve_frog-004	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_frog-004_7766AE48.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_frog\Recieve_frog-004		83240
+	792234434	Pasos_frog-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog-001_4776ADC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog\Pasos_frog-001		35872
+	809594907	sfx_whoosh_111	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_whoosh_111_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\arroja\sfx_whoosh_111		12540
+	810715951	jump_frog	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\jump_frog_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\jump_frog		38508
+	812749690	Pasos_frog_talk-002	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_frog_talk-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_frog\Pasos_frog_talk\Pasos_frog_talk-002		56448
+	828927273	walk_duck-001_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\walk_duck-001_00DB3C8C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\walk_duck-001_01		19260
+	828972344	sfx_regadera_5	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_5_25020FD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\regadera\sfx_regadera_5		150196
+	833910238	Pasos_duck-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pasos_duck-003_D9A4EDA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\Pasos_duck\Pasos_duck-003		32568
+	851261987	jump_duck	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\jump_duck_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\jump_duck		82208
+	875904796	crowd	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\crowd_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\crowd		578295
+	876065015	sfx_rastmet_11	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_rastmet_11_46F49B85.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\rast_metalico\sfx_rastmet_11		82264
+	876107825	Amb_bosque_loop	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Amb_bosque_loop_179463A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_bosque\Amb_bosque_loop		853060
+	905061693	sfx_guadana_1	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_guadana_1_5CBA3840.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\guadana\sfx_guadana_1		208812
+	906127461	Barn_test_01	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Barn_test_01472649.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\barn\Barn_test_01		229936
+	915837611	sfx_cactus_3	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_cactus_3_C3EA1345.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\cactus\sfx_cactus_3		45176
+	935131799	sfx_bate_4-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_bate_4-001_815B3F7F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\bate\sfx_bate_4-001		54488
+	938457295	sfx_hit_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_hit_2_570452FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\punch\sfx_hit_2		41328
+	939387135	sfx_pala_02	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_pala_02_6FA4F7B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\pala\sfx_pala_02		157284
+	940399666	tune_gallo_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\tune_gallo_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\321_fight\tune_gallo_2		455672
+	960583685	grave_amb_iniciamenu o pausa	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Menu_amb\grave_amb_iniciamenu o pausa		760680
+	970034130	sfx_guadana_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_guadana_2_EEBE2455.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\guadana\sfx_guadana_2		232632
+	994417837	Farm Barn Exterior	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Farm Barn Exterior_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\Farm Barn Exterior		5065824
+	1012422412	walk_duck-001	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\walk_duck-001_7ED10882.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Pasos_duck\pasos_duck_talk\walk_duck-001		41508
+	1012928397	farm_amb-004	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\farm_amb-004_E2DBB469.wem		\Actor-Mixer Hierarchy\Default Work Unit\Escenarios\Escenario\Amb_granja\animales\farm_amb-004		175758
+	1015971685	04_Menu	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\04_Menu_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Menu\03_Menu\04_Menu		380939
+	1033605920	Pelea de granja 2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Pelea de granja 2_179463A7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Pelea_granero\Pelea de granja 2\Pelea de granja 2		1186692
+	1059471286	Recieve_frog-003	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Recieve_frog-003_5BB299F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main\Main\Recieve_frog\Recieve_frog-003		72448
+	1061033831	sfx_regadera_2	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\sfx_regadera_2_BC5FF30D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Armas\balde\sfx_regadera_2		136500
+	1073255104	Select_personaje	C:\Users\Hogar\Desktop\Image Campus\aniBrawl\Proyecto\Anibrawl_proyect_sound\DVJ3-Proy_WwiseProject\.cache\Windows\SFX\Select_personaje_835714D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\ui\Select_personaje		14100
+

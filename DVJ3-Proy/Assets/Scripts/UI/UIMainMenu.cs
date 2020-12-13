@@ -22,7 +22,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] Image[] characterImage = null;
     [SerializeField] TextMeshProUGUI[] characterName = null;
     [SerializeField] TextMeshProUGUI versionText = null;
-    int levelSelected = -1;
+    int levelSelected = 1;
     Coroutine creditsCoroutine = null;
 
     public enum Character
@@ -221,6 +221,5 @@ public class UIMainMenu : MonoBehaviour
             yield return null;
         }
         ao.allowSceneActivation = true;
-        AkSoundEngine.PostEvent("Inicia_stage", gameObject);
     }
 }

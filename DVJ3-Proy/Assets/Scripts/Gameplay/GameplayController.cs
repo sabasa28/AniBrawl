@@ -20,7 +20,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField] GameObject testerActivatedText = null;
     static bool activateTester = false;
     [SerializeField] GameObject[] level = null;
-    int activeLevel = -1;
+    int activeLevel = 1;
 
     [Serializable]
     public struct PlayerVars
@@ -153,13 +153,25 @@ public class GameplayController : MonoBehaviour
             yield return null;
         }
     }
-    public void OnGameplaySceneStart(int[] playerCharacter)//pasar por parametro que modelo tiene que usar cada uno
+    public void OnGameplaySceneStart(int[] playerCharacter)
     {
         SetGameplay(playerCharacter);
         StartCoroutine(DisplayIntroAndPlay());
     }
     void SetGameplay(int[] playerCharacter)
     {
+        switch (activeLevel)
+        {
+            case 0:
+                AkSoundEngine.PostEvent("Inicia_bosque", gameObject);
+                break;
+            case 1:
+                AkSoundEngine.PostEvent("Inicia_granja", gameObject);
+                break;
+            default:
+                AkSoundEngine.PostEvent("Inicia_granja", gameObject);
+                break;
+        }
         ppManager.StartRemovingCAberration();
         PlayerController P1 = Instantiate(playerPrefab, spawner[0].position, Quaternion.identity); // se puede hacer un for
         P1.playerNumber = 1;

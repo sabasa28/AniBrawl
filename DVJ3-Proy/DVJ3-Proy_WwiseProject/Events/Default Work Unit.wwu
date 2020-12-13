@@ -15,6 +15,30 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{2D01623E-D60B-4683-A091-3C2F3DC55ECA}" ShortID="540497429">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{FC7977CE-958B-4BEA-856C-EC72F34112F7}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{80A66DA9-800E-4AAE-83F2-60FAE00A1AC3}" ShortID="312821554">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{85E0728A-8080-473C-B502-E2865E07688D}" ShortID="946143116">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Inicia_menu" ID="{E001042A-7C38-4A93-8BDF-1ABA94E24E82}">
@@ -26,10 +50,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{85E0728A-8080-473C-B502-E2865E07688D}" ShortID="946143116">
+						<Action Name="" ID="{943CC0AE-5CA7-4739-A15D-9B29EEC1602D}" ShortID="22327747">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -43,10 +70,27 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{BAF1D98C-0586-4CB7-8889-09A3EE478CF4}" ShortID="402705460">
+						<Action Name="" ID="{6A11278C-3B85-495D-835A-6999E54329D0}" ShortID="524888491">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9423CF4F-CBD1-40C7-B51E-215AD1054103}" ShortID="515178807">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CA740FC2-9E9B-4086-8A13-14BB922A760D}" ShortID="209751469">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -204,8 +248,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}"/>
-				<Event Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}"/>
+				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}">
+					<ChildrenList>
+						<Action Name="" ID="{CE23D5E3-BDFD-4C2E-9AB3-3843CB7B31AB}" ShortID="600774420">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}">
+					<ChildrenList>
+						<Action Name="" ID="{FA716501-B88B-4915-8289-86656332D690}" ShortID="1060087585">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="End_fight" ID="{3D8ADCC9-C617-400E-8A6A-8A40FC5C3066}">
 					<ChildrenList>
 						<Action Name="" ID="{A0595C34-B71E-42AA-B937-512C7CF9B18B}" ShortID="528862510">
@@ -215,13 +285,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{957F559E-D746-44A6-8F6B-5D16E644A7D1}" ShortID="593565465">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Fin de pelea" ID="{90197921-623C-4F6E-887E-693FFB197647}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -290,14 +353,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_amb" ID="{E9CB2640-EB51-4CF7-A3E8-95E6CE8DD684}">
-					<ChildrenList>
-						<Action Name="" ID="{FBA16294-A364-4303-B4CC-DDCC8B207BBC}" ShortID="828551543">
+						<Action Name="" ID="{17FBC3F2-B577-4E04-9240-573AD3553BD0}" ShortID="175601655">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+									<ObjectRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -327,16 +389,6 @@
 				</Event>
 				<Event Name="Inicia_creditos" ID="{89012B57-98FB-4943-B704-7480E618B9B3}">
 					<ChildrenList>
-						<Action Name="" ID="{9CA6361A-CE95-46FD-B65D-BABA30D5403B}" ShortID="387316940">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{8C3FDE84-55AE-4ABC-920D-AE69532D70B1}" ShortID="853858438">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -368,9 +420,43 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Inicia_stage" ID="{110142E8-32FD-4394-9B1D-9FFAFADB8E59}">
+				<Event Name="Inicia_bosque" ID="{110142E8-32FD-4394-9B1D-9FFAFADB8E59}">
 					<ChildrenList>
 						<Action Name="" ID="{B55F5593-AC2C-452E-95C1-37EF04910D11}" ShortID="833080523">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bosque" ID="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C2DF47F-8684-477C-A490-FD6053D37998}" ShortID="256628281">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="None" ID="{363876B4-2BA8-47AC-99BF-FE3BA47F5083}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Inicia_granja" ID="{7A3B209B-56AC-488B-9BC1-5FECC5DB9BD9}">
+					<ChildrenList>
+						<Action Name="" ID="{65535339-C4E7-488D-A7C3-9E734335634D}" ShortID="54738789">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Granja" ID="{AE0B33FE-C236-452B-88F6-DE6D6722BB00}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F8D09519-6F63-449F-8BB1-18CF89528071}" ShortID="532451256">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>

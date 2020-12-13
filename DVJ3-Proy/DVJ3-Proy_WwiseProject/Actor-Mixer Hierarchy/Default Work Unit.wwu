@@ -2990,13 +2990,13 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2D598428-A0CB-419F-8509-7F9024628F5D}"/>
 								</Reference>
 								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="Menu" ID="{B4BC3029-275D-47A9-B01C-49F61B699625}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="Bosque" ID="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="Escenario" ID="{BB80EDA3-AF71-4225-8249-EE33B06FB089}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="Escenarios" ID="{80373777-8EDB-4FA7-AEFF-019147D8518A}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3781,19 +3781,19 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Menu" ID="{B4BC3029-275D-47A9-B01C-49F61B699625}"/>
-										<ItemList>
-											<ItemRef Name="Menu_amb" ID="{389D6A11-C3A6-4B91-95EF-33479C2ABDB5}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Bosque" ID="{DA697B29-5AB9-4042-BDA0-F22713B3271C}"/>
+										<SwitchRef Name="Bosque" ID="{E4EEC127-2763-4870-AF5E-E5EB50F7954A}"/>
 										<ItemList>
 											<ItemRef Name="Amb_bosque" ID="{E1B125B9-0714-46D2-90E6-EF64B5324BE7}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Granja" ID="{18C4D98D-ED10-487D-988F-7DD8BB36F284}"/>
+										<SwitchRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}"/>
+										<ItemList>
+											<ItemRef Name="Menu_amb" ID="{389D6A11-C3A6-4B91-95EF-33479C2ABDB5}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Granja" ID="{AE0B33FE-C236-452B-88F6-DE6D6722BB00}"/>
 										<ItemList>
 											<ItemRef Name="Amb_granja" ID="{E51AA0FA-8A27-4287-BD4E-7C26E8316B16}"/>
 										</ItemList>

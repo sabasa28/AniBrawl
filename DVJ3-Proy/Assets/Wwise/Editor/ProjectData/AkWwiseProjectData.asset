@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585940542007982968
+    m_lastTime: -8585937902481525833
     List:
     - name: Click_ui
       guid: 4125f9f60a2d9b4687a116b4bfd7f945
@@ -92,8 +92,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\End_fight
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Exit_game
       guid: dee1716f13a287469f774a64eb76f825
       id: 3049547158
@@ -118,6 +118,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 706145
       minDuration: 706145
+    - name: Inicia_bosque
+      guid: e8420111fd3294439b1d9ffafadb8e59
+      id: 2292915610
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicia_bosque
+        ObjectType: 3
+      Path: Default Work Unit\Inicia_bosque
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Inicia_controls
       guid: 92b4e338d1abf94d8ca5918dec1950ce
       id: 1332134995
@@ -142,6 +154,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2714542
       minDuration: 2714542
+    - name: Inicia_granja
+      guid: 9b203b7aac568b489bc15fecc5db9bd9
+      id: 3448054824
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Inicia_granja
+        ObjectType: 3
+      Path: Default Work Unit\Inicia_granja
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Inicia_menu
       guid: 2a0401e0387c934a8bdf1aba94e24e82
       id: 928907744
@@ -166,18 +190,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Inicia_stage
-      guid: e8420111fd3294439b1d9ffafadb8e59
-      id: 476536025
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Inicia_stage
-        ObjectType: 3
-      Path: Default Work Unit\Inicia_stage
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Inicio_game
       guid: f816c4c5ebbf8743aca14fcf69219687
       id: 1373024549
@@ -188,8 +200,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Inicio_game
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Mute
       guid: 764b84b3497eea459f0b1dd638af6f72
       id: 2974103762
@@ -262,18 +274,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 653898
       minDuration: 390478
-    - name: Play_amb
-      guid: 4026cbe951ebf74ca3e895e6ce8dd684
-      id: 2959533290
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_amb
-        ObjectType: 3
-      Path: Default Work Unit\Play_amb
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_crowd
       guid: ce562a39c96e0a41906d7f2325d6de1d
       id: 639442169
@@ -424,8 +424,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a74c2bfad3b5e341957e13912887cd9f
     GuidInternal: 
-    m_lastTime: -8585940655703048622
+    m_lastTime: -8585937911558353350
     List:
+    - name: Escenarios
+      guid: 77373780db8ea74faeff019147d8518a
+      id: 3449838839
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Escenarios
+        ObjectType: 9
+      Path: Default Work Unit\Escenarios
+      values:
+      - name: Bosque
+        guid: 27c1eee463277048af5ee5eb50f7954a
+        id: 1641284458
+        PathAndIcons:
+        - ElementName: Bosque
+          ObjectType: 8
+      - name: Granja
+        guid: fe330bae36c22b4588f6de6d6722bb00
+        id: 1767728952
+        PathAndIcons:
+        - ElementName: Granja
+          ObjectType: 8
+      - name: Menu
+        guid: c715582ae1ea8c48823e8cd545ef79f5
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: ce7779fc8b95ea4b856cec72f34112f7
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Estados
       guid: d6fd6c5670a4b54a863afddf0772fbbd
       id: 4197210578
@@ -489,7 +526,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e77b405c1692dc4a849d21942f991daf
     GuidInternal: 
-    m_lastTime: -8585951759562175713
+    m_lastTime: -8585937911558472977
     List:
     - name: Arma_selector
       guid: b0e451ea840e3f47adfbb3c3548b6db2
@@ -570,37 +607,6 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: Escenario
-      guid: a3ed80bb71af25428249ee33b06fb089
-      id: 3441103852
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Escenario
-        ObjectType: 11
-      Path: Default Work Unit\Escenario
-      values:
-      - name: Bosque
-        guid: 297b69dab95a4240bda0f22713b3271c
-        id: 1641284458
-        PathAndIcons:
-        - ElementName: Bosque
-          ObjectType: 10
-      - name: Granja
-        guid: 8dd9c41810ed7d48988f7dd8bb36f284
-        id: 1767728952
-        PathAndIcons:
-        - ElementName: Granja
-          ObjectType: 10
-      - name: Menu
-        guid: 2930bcb45d27a947b01c49f61b699625
-        id: 2607556080
-        PathAndIcons:
-        - ElementName: Menu
-          ObjectType: 10
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -623,6 +629,5 @@ MonoBehaviour:
   - /DVJ3-Proy_WwiseProject/Switches
   - /DVJ3-Proy_WwiseProject/Switches/Default Work Unit
   - /DVJ3-Proy_WwiseProject/Switches/Default Work Unit/Arma_selector
-  - /DVJ3-Proy_WwiseProject/Switches/Default Work Unit/Escenario
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

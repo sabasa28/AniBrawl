@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-4</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -26,7 +26,7 @@
 								<Property Name="Tempo" Type="Real64" Value="140"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -101,9 +101,9 @@
 										</MusicCue>
 									</CueList>
 								</MusicSegment>
-								<MusicSegment Name="Pelea de granja 2" ID="{8AC26AE1-DC9D-4664-8106-8035B7796E13}" ShortID="136210537">
+								<MusicSegment Name="Pelea de granja 2" ID="{6DB68D64-E0D5-4EC6-9CD9-AE0E9BD1A1B5}" ShortID="970153884">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="43285.7142857143"/>
+										<Property Name="EndPosition" Type="Real64" Value="42857.1428571429"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -114,14 +114,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Pelea de granja 2" ID="{2F262D62-680B-46A0-8276-F9FB8CED9037}" ShortID="345248552">
+										<MusicTrack Name="Pelea de granja 2" ID="{C52208CE-C321-4542-B42B-43D934CB677A}" ShortID="214119460">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Pelea de granja 2" ID="{E7FA37FE-81AC-4EE2-B894-9A0DF1F81F29}">
+												<AudioFileSource Name="Pelea de granja 2" ID="{F0591B82-0706-4F7A-9B76-1ECD96163A8B}">
 													<Language>SFX</Language>
 													<AudioFile>Pelea de granja 2.wav</AudioFile>
 													<MediaIDList>
@@ -130,7 +130,7 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{C003F8EC-454D-46E9-8D33-B0B9F9662AD0}">
+												<MusicTransition Name="Root" ID="{0BB2694C-CD1D-4671-9CF7-072FFFC1FA46}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -138,15 +138,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{3CDD0A5A-8692-4C2E-952A-11FDA7A39F40}">
+												<MusicTrackSequence Name="" ID="{54A70ABB-B54E-4407-B192-7B4D3AF0DBF4}">
 													<ClipList>
-														<MusicClip Name="Pelea de granja 2" ID="{DE9FFEFE-CB35-4323-BB59-9EE247FCCDBC}">
+														<MusicClip Name="Pelea de granja 2" ID="{51B334E3-0D3E-417B-B523-EA1B55BBF272}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="42857.1428571429"/>
-																<Property Name="FadeInDuration" Type="Real64" Value="33.2483652887067"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Pelea de granja 2" ID="{E7FA37FE-81AC-4EE2-B894-9A0DF1F81F29}"/>
+															<AudioSourceRef Name="Pelea de granja 2" ID="{F0591B82-0706-4F7A-9B76-1ECD96163A8B}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -154,8 +154,8 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{A31418AD-0D44-452B-9B5B-231FB6C13A8E}"/>
-										<MusicCue Name="Exit Cue" ID="{7F9E0853-6A7A-4FCE-A9A5-F27C556F4D59}">
+										<MusicCue Name="Entry Cue" ID="{32EBBD86-9048-4C85-89FA-453460AEB374}"/>
+										<MusicCue Name="Exit Cue" ID="{D521B20D-DBE5-42DE-9209-082F8BA24AC8}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
 												<Property Name="TimeMs" Type="Real64" Value="42857.1428571429"/>
@@ -218,6 +218,7 @@
 								<MusicPlaylistItem Name="" ID="{FC491315-E9E6-4CB3-8342-C12787596928}" ShortID="118948591">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlayMode" Type="int16" Value="1"/>
 									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{85E23080-7B73-4C15-B22C-D5A261901CA4}" ShortID="560934955">
@@ -226,12 +227,18 @@
 											</PropertyList>
 											<SegmentRef Name="Pelea de granja 1" ID="{E8CD4B4A-D288-414F-9C73-7A0E65856C88}"/>
 										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{CDE3C73B-4013-4420-A104-44F4D9CF7B9B}" ShortID="372080944">
+										<MusicPlaylistItem Name="" ID="{360D0F2D-2812-45E7-912A-C8D1D32E3FE4}" ShortID="516478930">
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
-											<SegmentRef Name="Pelea de granja 2" ID="{8AC26AE1-DC9D-4664-8106-8035B7796E13}"/>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{2395DF2B-C21E-4313-8EDB-12B609F41B91}" ShortID="180321826">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Pelea de granja 2" ID="{6DB68D64-E0D5-4EC6-9CD9-AE0E9BD1A1B5}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
@@ -1866,6 +1873,14 @@
 						<Entry>
 							<Path>
 								<PathElementRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Menu" ID="{97EC1556-1A60-4681-8CFE-67154ABD92DE}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Menu" ID="{97EC1556-1A60-4681-8CFE-67154ABD92DE}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}" Platform="Linked"/>

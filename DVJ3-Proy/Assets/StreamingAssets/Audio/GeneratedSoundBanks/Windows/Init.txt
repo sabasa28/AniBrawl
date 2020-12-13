@@ -1,0 +1,31 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3449838839	Escenarios			\Default Work Unit\Escenarios	
+	4197210578	Estados			\Default Work Unit\Estados	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Escenarios			
+	1641284458	Bosque	Escenarios			
+	1767728952	Granja	Escenarios			
+	2607556080	Menu	Escenarios			
+	675784008	Batalla	Estados			
+	748895195	None	Estados			
+	845003552	Fin_de_batalla	Estados			
+	956887760	Creditos	Estados			
+	2607556080	Menu	Estados			
+	2658298240	Inicio	Estados			
+	3092587489	Pausa	Estados			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	311907688	Pausa	Estados	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	3837303311	MAster_COMP	Wwise Compressor			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

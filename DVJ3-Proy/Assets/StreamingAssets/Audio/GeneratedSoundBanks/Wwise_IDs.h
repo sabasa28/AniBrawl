@@ -17,11 +17,12 @@ namespace AK
         static const AkUniqueID END_FIGHT = 1738683615U;
         static const AkUniqueID EXIT_GAME = 3049547158U;
         static const AkUniqueID HOVER_UI = 3424433926U;
+        static const AkUniqueID INICIA_BOSQUE = 2292915610U;
         static const AkUniqueID INICIA_CONTROLS = 1332134995U;
         static const AkUniqueID INICIA_CREDITOS = 4126746240U;
+        static const AkUniqueID INICIA_GRANJA = 3448054824U;
         static const AkUniqueID INICIA_MENU = 928907744U;
         static const AkUniqueID INICIA_OPTIONS = 943918601U;
-        static const AkUniqueID INICIA_STAGE = 476536025U;
         static const AkUniqueID INICIO_GAME = 1373024549U;
         static const AkUniqueID MUTE = 2974103762U;
         static const AkUniqueID PASOS_DUCK = 1870231131U;
@@ -29,7 +30,6 @@ namespace AK
         static const AkUniqueID PAUSE_IN = 3437014341U;
         static const AkUniqueID PAUSE_OUT = 3648253772U;
         static const AkUniqueID PICK = 2162635622U;
-        static const AkUniqueID PLAY_AMB = 2959533290U;
         static const AkUniqueID PLAY_CROWD = 639442169U;
         static const AkUniqueID PLAY_FIGHT = 860858016U;
         static const AkUniqueID PLAY_SALTO_DUCK = 2397106107U;
@@ -45,6 +45,19 @@ namespace AK
 
     namespace STATES
     {
+        namespace ESCENARIOS
+        {
+            static const AkUniqueID GROUP = 3449838839U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOSQUE = 1641284458U;
+                static const AkUniqueID GRANJA = 1767728952U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ESCENARIOS
+
         namespace ESTADOS
         {
             static const AkUniqueID GROUP = 4197210578U;
@@ -84,18 +97,6 @@ namespace AK
                 static const AkUniqueID REGADERA = 3310464400U;
             } // namespace SWITCH
         } // namespace ARMA_SELECTOR
-
-        namespace ESCENARIO
-        {
-            static const AkUniqueID GROUP = 3441103852U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID BOSQUE = 1641284458U;
-                static const AkUniqueID GRANJA = 1767728952U;
-                static const AkUniqueID MENU = 2607556080U;
-            } // namespace SWITCH
-        } // namespace ESCENARIO
 
     } // namespace SWITCHES
 
