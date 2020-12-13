@@ -17,6 +17,11 @@ public class ImpactCollider : MonoBehaviour
             Item hitBy = collision.gameObject.GetComponent<Item>();
             pController.OnItemCollision(hitBy);
         }
+        if (collision.gameObject.CompareTag("StaticObstacle"))
+        {
+            StaticObstacle hitBy = collision.gameObject.GetComponent<StaticObstacle>();
+            pController.OnStaticObstacleCollision(hitBy);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

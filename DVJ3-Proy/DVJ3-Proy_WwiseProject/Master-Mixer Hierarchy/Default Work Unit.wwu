@@ -8,7 +8,50 @@
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{CF633BD1-6099-4AE8-85C0-C18C835D3BCE}" WorkUnitID="{F74D9A55-8E04-49C2-85AA-97E0994A9D09}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="MAster_COMP" ID="{48E8F269-F899-400E-A11A-D0F652E8AB57}" WorkUnitID="{6A78BFC3-C04B-4794-98BA-E01517C798D6}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
 					</ReferenceList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Estados" ID="{566CFDD6-A470-4AB5-863A-FDDF0772FBBD}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}"/>
+								<CustomState Name="" ID="{E0A5843C-9BAA-446C-B706-3371D731D3DE}" ShortID="167618509"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
+								<CustomState Name="" ID="{51E682D9-61DA-49EE-85E0-9016A207E5E1}" ShortID="1028358196"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
+								<CustomState Name="" ID="{F0516753-6A07-418B-A1EB-E922AE757CC1}" ShortID="919618731"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}"/>
+								<CustomState Name="" ID="{66CFFF21-2547-4061-A86A-9E921DA7EE7F}" ShortID="66940144"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
+								<CustomState Name="" ID="{121490D2-FCC0-4A71-B9BD-A41A843F7554}" ShortID="311907688">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="-68"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Inicio" ID="{3F941E20-825B-4D9B-B70F-6849AED9B753}"/>
+								<CustomState Name="" ID="{9BFA1AE6-E09B-412B-8135-441A41140A6B}" ShortID="234341321"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

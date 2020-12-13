@@ -137,7 +137,7 @@ public class GameplayController : MonoBehaviour
         else
             winnerPlayerNumber = 1;
         uiGameplay.SetWinner(winnerPlayerNumber);
-        AkSoundEngine.SetState("Estados", "Fin_de_batalla");
+        AkSoundEngine.PostEvent("End_fight", gameObject);
         StartCoroutine(EndscreenInput());
     }
 
@@ -147,7 +147,7 @@ public class GameplayController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 GameManager.Get().gameState = GameManager.GameState.inMenus;
             }
             yield return null;
@@ -160,7 +160,6 @@ public class GameplayController : MonoBehaviour
     }
     void SetGameplay(int[] playerCharacter)
     {
-        AkSoundEngine.SetState("Estados", "Batalla");
         ppManager.StartRemovingCAberration();
         PlayerController P1 = Instantiate(playerPrefab, spawner[0].position, Quaternion.identity); // se puede hacer un for
         P1.playerNumber = 1;

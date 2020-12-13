@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1857066265765506393}
   - component: {fileID: 3183680509141416233}
   m_Layer: 0
-  m_Name: RanaRig 1
+  m_Name: BlueFrogGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingPivot: {fileID: 7188722019855222103}
   punch: {fileID: 1493699763574680942}
+  stepsSound: Pasos_frog
 --- !u!1 &2536158099529438709
 GameObject:
   m_ObjectHideFlags: 0

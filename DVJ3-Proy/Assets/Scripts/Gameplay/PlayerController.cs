@@ -69,8 +69,14 @@ public class PlayerController : MonoBehaviour
     {
         GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, Quaternion.identity ,transform);
         PlayerGFX model = modelGo.GetComponent<PlayerGFX>();
-        if (modelIndex <= 1) damageRecieveSound = "Recieve_duck";
-        else damageRecieveSound = "Recieve_frog";
+        if (modelIndex <= 1)
+        {
+            damageRecieveSound = "Recieve_duck";
+        }
+        else
+        {
+            damageRecieveSound = "Recieve_frog";
+        }
         GetComponentInChildren<ImpactCollider>().gameObject.layer = LayerMask.NameToLayer("ImpactColl" + playerNumber);
         worldspaceImg.sprite = availableSprites[playerNumber-1];
         swingPivot = model.swingPivot;
@@ -86,6 +92,7 @@ public class PlayerController : MonoBehaviour
         groundLayer = LayerMask.GetMask("Ground");
         currentGravity = baseGravity;
         GetAnimationTimes(); //se reemplaza por animation events mmmm o no
+        AkSoundEngine.SetSwitch("Arma_selector", "Punch", gameObject);
     }
 
     void Update()
@@ -170,7 +177,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!immune)
         {
-            if (other.gameObject.CompareTag("Punch") && other.gameObject != punch)
+            if (other.CompareTag("Punch") && other.gameObject != punch)
             {
                 Vector3 funElevation = new Vector3(0.0f, 0.35f);
                 PlayerController hitBy = other.transform.parent.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
@@ -184,9 +191,27 @@ public class PlayerController : MonoBehaviour
                 }
                 UpdateUI();
                 AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+                AkSoundEngine.PostEvent("Weapon_hit", gameObject);
                 StartCoroutine(ImmunityTime());
             }
         }
+    }
+
+    public void OnStaticObstacleCollision(StaticObstacle hitBy)
+    {
+        Vector3 funElevation = new Vector3(0.0f, 1f);
+        Vector3 dir = transform.position - hitBy.transform.position;
+        pushedCor = StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.pushForce));
+        hp -= (int)hitBy.damage;
+        if (hp <= 0)
+        {
+            hp = 0;
+            OnDeath(this);
+        }
+        UpdateUI();
+        AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+        AkSoundEngine.PostEvent("Weapon_hit", gameObject);
+        StartCoroutine(ImmunityTime());
     }
 
     public void OnItemCollision(Item hitBy)
@@ -222,6 +247,7 @@ public class PlayerController : MonoBehaviour
                 }
                 UpdateUI();
                 AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+                hitBy.itemHitSound();
                 StartCoroutine(ImmunityTime());
             }
     }

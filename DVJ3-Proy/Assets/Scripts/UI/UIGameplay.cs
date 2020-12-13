@@ -94,7 +94,7 @@ public class UIGameplay : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         AkSoundEngine.PostEvent("Click_ui", gameObject);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void DisplayIntro()

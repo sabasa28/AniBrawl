@@ -17,6 +17,20 @@
 						<Property Name="FullBandGain" Type="Real32" Value="4"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="MAster_COMP" ID="{48E8F269-F899-400E-A11A-D0F652E8AB57}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="2"/>
+						<Property Name="Ratio" Type="Real32" Value="17.2"/>
+						<Property Name="Threshold" Type="Real32" Value="-19.8"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Master_exp" ID="{6A211E7E-3138-4342-9943-67F45295DEC4}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="2.3"/>
+						<Property Name="Ratio" Type="Real32" Value="12.6"/>
+						<Property Name="Threshold" Type="Real32" Value="-51.2"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

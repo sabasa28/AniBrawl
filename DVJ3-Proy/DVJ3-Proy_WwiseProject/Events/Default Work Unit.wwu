@@ -5,30 +5,13 @@
 			<ChildrenList>
 				<Event Name="Inicio_game" ID="{C5C416F8-BFEB-4387-ACA1-4FCF69219687}">
 					<ChildrenList>
-						<Action Name="" ID="{8A1691A2-B77C-48FE-9F45-C320785E8EE1}" ShortID="810899045">
+						<Action Name="" ID="{A3356FC3-3B6D-4FBD-8A49-CBE35206FFE8}" ShortID="898900896">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{3E19115C-68AF-4287-BD64-5BD18813ED98}" ShortID="641711266">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{823833A2-2F62-4480-8161-AC35E3A40A7D}" ShortID="674960177">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+									<ObjectRef Name="None" ID="{363876B4-2BA8-47AC-99BF-FE3BA47F5083}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -40,6 +23,30 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="inicia_menu2" ID="{2A89763B-8040-471D-AF28-BFB596C93A76}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{85E0728A-8080-473C-B502-E2865E07688D}" ShortID="946143116">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D33B1259-E8B6-4405-90C3-2F3E69E76F5A}" ShortID="806380653">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BAF1D98C-0586-4CB7-8889-09A3EE478CF4}" ShortID="402705460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -67,8 +74,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Inicia_controls" ID="{38E3B492-ABD1-4DF9-8CA5-918DEC1950CE}"/>
-				<Event Name="Inicia_options" ID="{80186BFD-D53C-4394-A9C3-44228476998F}"/>
+				<Event Name="Inicia_controls" ID="{38E3B492-ABD1-4DF9-8CA5-918DEC1950CE}">
+					<ChildrenList>
+						<Action Name="" ID="{2F408F3B-6716-4349-BD26-7749A0C6272D}" ShortID="556969396">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Controls" ID="{0C1ADB83-35EE-47D0-BE91-5D299480D655}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Inicia_options" ID="{80186BFD-D53C-4394-A9C3-44228476998F}">
+					<ChildrenList>
+						<Action Name="" ID="{1235D9BD-D606-4027-B562-C97B022D3C40}" ShortID="1006739777">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Player_select" ID="{ACE01CB5-5853-4D28-95EF-083F2D1FFE43}">
 					<ChildrenList>
 						<Action Name="" ID="{92C3F3E9-4765-4848-B494-7C01700A478A}" ShortID="749967445">
@@ -96,7 +126,7 @@
 						<Action Name="" ID="{D6FFC30A-856B-4134-8964-C1A484090D16}" ShortID="767384053">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Pasos_frog" ID="{5A7B1365-CE73-4B2D-BBAD-1C81AC74CE6F}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+									<ObjectRef Name="Pasos_frog" ID="{B7AFBE24-45FA-4331-9BF5-CD021BC4C326}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -126,14 +156,13 @@
 				</Event>
 				<Event Name="Play_fight" ID="{3BF40A61-5BAD-406F-9D51-B794B0FF6625}">
 					<ChildrenList>
-						<Action Name="" ID="{EB34430E-239E-4A28-A6B0-6858E04659EE}" ShortID="458806291">
+						<Action Name="" ID="{0FEDE121-63AA-4884-9F60-C633F8EADB6C}" ShortID="766855055">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+									<ObjectRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -144,10 +173,10 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{2F6EB793-0CA3-4285-AB5D-4BA76FA70880}" ShortID="35350197">
+						<Action Name="" ID="{47A40201-A78D-4A33-BBD9-79F582DBE425}" ShortID="920461422">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Pelea_granero" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
+									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -175,74 +204,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Hit_player" ID="{ED2A4FB3-0CF2-464B-9B17-13CE7038B25A}">
-					<ChildrenList>
-						<Action Name="" ID="{ED08242A-0952-49B2-86DD-54839DD6DB23}" ShortID="276670097">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Armas" ID="{7CAD5949-A40E-4392-9662-B7A2C9C3527B}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{4F7808BD-89BF-4C0E-A0C2-5E25A32ACA00}" ShortID="129841985">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Recieve_duck" ID="{286D7F0B-F954-47C8-A889-8AAC1E88B898}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Hit_floor" ID="{9CBE1148-7E75-4290-80E2-2BED6AA57487}">
-					<ChildrenList>
-						<Action Name="" ID="{827A254C-8D2E-4565-96DB-8B03AFEB5156}" ShortID="347428783">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Armas" ID="{7CAD5949-A40E-4392-9662-B7A2C9C3527B}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Recieve_duck" ID="{1470FA1F-D091-48DD-A28B-B398620D496E}">
-					<ChildrenList>
-						<Action Name="" ID="{175B4BEE-2D3C-494D-A24D-EFE715A1788B}" ShortID="982774029">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Recieve_duck" ID="{286D7F0B-F954-47C8-A889-8AAC1E88B898}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Recieve_frog" ID="{302FBF40-B342-4339-AB7D-81810E10FC27}">
-					<ChildrenList>
-						<Action Name="" ID="{D426FB3C-0697-4B0C-B9D7-E29976B73158}" ShortID="883095823">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Recieve_frog" ID="{07E0985C-6F78-4C03-9A30-6C0AB6A2C820}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}">
-					<ChildrenList>
-						<Action Name="" ID="{047AB399-810B-4FE9-A1C7-F7620845A8EF}" ShortID="76893001">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="Pause_in" ID="{B23DEA08-BE0A-4016-8948-59433758BF49}"/>
 				<Event Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}"/>
-				<Event Name="End_round" ID="{F9071F2E-E596-494F-83DC-BA2FA0FA47B9}"/>
-				<Event Name="Start_round" ID="{D9C373DC-B5FB-4B18-AFD9-D465E88F2091}"/>
 				<Event Name="End_fight" ID="{3D8ADCC9-C617-400E-8A6A-8A40FC5C3066}">
 					<ChildrenList>
 						<Action Name="" ID="{A0595C34-B71E-42AA-B937-512C7CF9B18B}" ShortID="528862510">
@@ -264,28 +227,90 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_crowd" ID="{392A56CE-6EC9-410A-906D-7F2325D6DE1D}"/>
-				<Event Name="Mute" ID="{B3844B76-7E49-45EA-9F0B-1DD638AF6F72}"/>
-				<Event Name="Unmute" ID="{3B36037E-3C0D-42BA-9BC0-6A649AF9DE62}"/>
-				<Event Name="Return_menu" ID="{33AEFA13-70C7-417A-B48E-86D46FBB6A0F}"/>
-				<Event Name="Play_amb" ID="{E9CB2640-EB51-4CF7-A3E8-95E6CE8DD684}">
+				<Event Name="Play_crowd" ID="{392A56CE-6EC9-410A-906D-7F2325D6DE1D}">
 					<ChildrenList>
-						<Action Name="" ID="{FBA16294-A364-4303-B4CC-DDCC8B207BBC}" ShortID="828551543">
+						<Action Name="" ID="{932E068F-A0B6-4E97-8807-75785B318A68}" ShortID="386021861">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Amb_bosque" ID="{E1B125B9-0714-46D2-90E6-EF64B5324BE7}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+									<ObjectRef Name="crowd" ID="{3407433F-ECA8-4553-8DAB-0B8C5407F1FB}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Switch_weapon" ID="{BDDE8731-4F27-44DE-91E2-3226303C7E3E}">
+				<Event Name="Mute" ID="{B3844B76-7E49-45EA-9F0B-1DD638AF6F72}">
 					<ChildrenList>
-						<Action Name="" ID="{E0BF9A2C-D7F5-4046-9BBF-6ADB6A702C3E}" ShortID="641815500">
+						<Action Name="" ID="{0C844F97-39A6-4D4C-BB78-9CBEF3737509}" ShortID="602108016">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList/>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute" ID="{3B36037E-3C0D-42BA-9BC0-6A649AF9DE62}">
+					<ChildrenList>
+						<Action Name="" ID="{12038354-FBF1-4E73-B12E-49B6CD06147B}" ShortID="691840216">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Return_menu" ID="{33AEFA13-70C7-417A-B48E-86D46FBB6A0F}">
+					<ChildrenList>
+						<Action Name="" ID="{26E241DA-147E-49D1-93F7-FA7E24FDFACC}" ShortID="892849487">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mute" ID="{B3844B76-7E49-45EA-9F0B-1DD638AF6F72}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5FD74C47-C577-45A2-895E-BBB146BCEE8D}" ShortID="421222040">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_amb" ID="{E9CB2640-EB51-4CF7-A3E8-95E6CE8DD684}">
+					<ChildrenList>
+						<Action Name="" ID="{FBA16294-A364-4303-B4CC-DDCC8B207BBC}" ShortID="828551543">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escenario" ID="{4F461CE4-8ED2-45DB-A960-30D3EE2F7D93}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Weapon_hit" ID="{BDDE8731-4F27-44DE-91E2-3226303C7E3E}">
+					<ChildrenList>
+						<Action Name="" ID="{3E68749F-2CF3-4E75-8F84-2D500C31FA1D}" ShortID="918764745">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Armas" ID="{7CAD5949-A40E-4392-9662-B7A2C9C3527B}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -300,155 +325,58 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_Balde" ID="{EEBAB0DC-4B5B-425A-93D8-F6C3E0FDCE34}">
+				<Event Name="Inicia_creditos" ID="{89012B57-98FB-4943-B704-7480E618B9B3}">
 					<ChildrenList>
-						<Action Name="" ID="{2BEB1B1B-2CAD-406E-85D4-F9C7173067FA}" ShortID="902294763">
+						<Action Name="" ID="{9CA6361A-CE95-46FD-B65D-BABA30D5403B}" ShortID="387316940">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Balde" ID="{78F8B7EF-EDA3-479F-96BE-766EA3F7941D}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8C3FDE84-55AE-4ABC-920D-AE69532D70B1}" ShortID="853858438">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Creditos" ID="{12D62684-8F10-448F-9B87-7C49555BD62A}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_Bate" ID="{E84D1ABB-CD7B-4D32-AB0B-B37979A74216}">
+				<Event Name="Recieve_frog" ID="{09D25878-E030-43F4-B48A-832375D8D570}">
 					<ChildrenList>
-						<Action Name="" ID="{FCD3ED37-6124-4441-AD0E-F309373507B9}" ShortID="394047736">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
+						<Action Name="" ID="{0332E243-7074-4477-A348-8152BB9E5473}" ShortID="460324475">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Bate" ID="{6A88B1BD-2F2A-4A3B-A23E-C9DB1D8AB1BD}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="Recieve_frog" ID="{07E0985C-6F78-4C03-9A30-6C0AB6A2C820}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_Cactus" ID="{0400EAF8-89C1-4433-BD15-7781614E0BF3}">
+				<Event Name="Recieve_duck" ID="{A584A1FE-B72B-4DCF-BF6A-2B44A619D455}">
 					<ChildrenList>
-						<Action Name="" ID="{EEFC31CF-A3B5-4389-B950-108150F483A5}" ShortID="250459165">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
+						<Action Name="" ID="{3F10CC15-2140-433B-BC5F-E57EC7B76A7A}" ShortID="822066126">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Cactus" ID="{817F04F3-D907-486A-B9A9-7154E254BA03}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="Recieve_duck" ID="{286D7F0B-F954-47C8-A889-8AAC1E88B898}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_Guadana" ID="{046DBF7A-23E3-4CB9-92F2-36D10FDA0725}">
+				<Event Name="Inicia_stage" ID="{110142E8-32FD-4394-9B1D-9FFAFADB8E59}">
 					<ChildrenList>
-						<Action Name="" ID="{5191FE7B-5A32-4D50-BFA4-5938257F233B}" ShortID="431345562">
+						<Action Name="" ID="{B55F5593-AC2C-452E-95C1-37EF04910D11}" ShortID="833080523">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Guadana" ID="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Oz" ID="{F40F2747-1615-456F-B8D3-51A555035146}">
-					<ChildrenList>
-						<Action Name="" ID="{30788A49-E168-41CA-A1C5-1F59E41B5F73}" ShortID="357024899">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Oz" ID="{36CD1517-5346-4062-9D39-B982415886E1}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Pala" ID="{C2C4AF19-18EC-4B5B-A880-7412390E0664}">
-					<ChildrenList>
-						<Action Name="" ID="{B1CEA3BC-5284-42BF-B4BF-D2546DB2B3F4}" ShortID="949857775">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pala" ID="{17FAF918-8D0F-45CE-B4B5-0BC467B2421B}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Punch" ID="{25543E3B-81BC-4711-81C7-A28664AE8AD7}">
-					<ChildrenList>
-						<Action Name="" ID="{E376575E-D5A9-4CEA-9890-4E8E5BBD957F}" ShortID="466742130">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Punch" ID="{05790DBF-AD35-4FA1-9B06-C68C42897C5C}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Rama" ID="{41FBACD0-2140-4EB4-8103-5BAABC57D0AC}">
-					<ChildrenList>
-						<Action Name="" ID="{79A1877F-E777-4E2F-97CB-DB551E8B7828}" ShortID="284300172">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rama" ID="{188BFD1D-C797-4505-B227-FB36ADCA2A25}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Rast_met" ID="{1829856A-3D51-424A-9CDE-9E1AA8BC10E4}">
-					<ChildrenList>
-						<Action Name="" ID="{BC93FB37-E8EE-443F-8D07-B40AFB34F271}" ShortID="423002375">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rast_met" ID="{F083C469-4AFB-422A-94B2-E318D27ABC46}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Rast_plast" ID="{E1E0256E-9AF3-4EDC-A079-2EC7AD9DDD8E}">
-					<ChildrenList>
-						<Action Name="" ID="{0A0D3A83-CFE9-4956-ADF7-3DC1425D01E8}" ShortID="837118220">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rast_plast" ID="{CC24EDF9-6F86-4240-B48C-D21D99988495}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Regadera" ID="{E93DC83E-D3AD-402A-BFC0-174B04D24E47}">
-					<ChildrenList>
-						<Action Name="" ID="{BAA4729C-D4E7-487A-AD3A-F07E1C18430A}" ShortID="947037152">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Regadera" ID="{9B468365-FCB2-4039-902A-B347B2599F88}" WorkUnitID="{5C407BE7-9216-4ADC-849D-21942F991DAF}"/>
+									<ObjectRef Name="None" ID="{363876B4-2BA8-47AC-99BF-FE3BA47F5083}" WorkUnitID="{FA2B4CA7-B5D3-41E3-957E-13912887CD9F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

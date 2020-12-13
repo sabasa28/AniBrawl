@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Fire
   - GameplayCamera
+  - StaticObstacle
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - PostProcess
   - BrokenObj
   - IgnoreObj
-  - 
+  - StaticObstacle
   - 
   - 
   - 

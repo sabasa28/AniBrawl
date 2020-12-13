@@ -12,10 +12,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     GameplayController gc;
 
     public GameState gameState; // ver si esto es necesario
-    void Start()
-    {
-        gameState = GameState.inMenus;
-    }
 
     public void SetGameplayController(GameplayController newGc)
     {

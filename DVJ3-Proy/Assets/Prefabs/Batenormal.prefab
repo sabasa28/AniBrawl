@@ -134,6 +134,7 @@ MonoBehaviour:
   damageMultiplier: 2
   brokenModel: {fileID: 75658362711307915}
   visualFeedback: {fileID: 8517666608874034154}
+  itemKind: 1
   dirToThrow: 0
   itemState: 0
 --- !u!114 &994630522490730090

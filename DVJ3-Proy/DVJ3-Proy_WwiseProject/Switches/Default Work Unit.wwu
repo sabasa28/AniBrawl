@@ -18,6 +18,13 @@
 						<Switch Name="Regadera" ID="{9B468365-FCB2-4039-902A-B347B2599F88}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Escenario" ID="{BB80EDA3-AF71-4225-8249-EE33B06FB089}">
+					<ChildrenList>
+						<Switch Name="Granja" ID="{18C4D98D-ED10-487D-988F-7DD8BB36F284}"/>
+						<Switch Name="Bosque" ID="{DA697B29-5AB9-4042-BDA0-F22713B3271C}"/>
+						<Switch Name="Menu" ID="{B4BC3029-275D-47A9-B01C-49F61B699625}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -47,7 +47,7 @@ public class UIMainMenu : MonoBehaviour
         versionText.text = "v" + Application.version;
         UpdateCharacterDisplayed(0);
         UpdateCharacterDisplayed(1);
-        StartCoroutine(Preload(1));
+        StartCoroutine(Preload(2));
     }
     public void StartGameplayScene()
     {
@@ -58,6 +58,7 @@ public class UIMainMenu : MonoBehaviour
     public void ShowControls()
     {
         AkSoundEngine.PostEvent("Click_ui", gameObject);
+        AkSoundEngine.PostEvent("Inicia_controls", gameObject);
         main.SetActive(false);
         controls.SetActive(true);
     }
@@ -101,6 +102,7 @@ public class UIMainMenu : MonoBehaviour
     public void ShowCredits()
     {
         AkSoundEngine.PostEvent("Click_ui", gameObject);
+        AkSoundEngine.PostEvent("Inicia_creditos", gameObject);
         main.SetActive(false);
         creditsScreen.SetActive(true);
         creditsCoroutine = StartCoroutine(ScrollCredits());
@@ -175,7 +177,7 @@ public class UIMainMenu : MonoBehaviour
         float loadingProgress;
         float timeLoading = 0;
         yield return null;
-        if (!SceneManager.GetSceneByBuildIndex(1).isLoaded)
+        if (!SceneManager.GetSceneByBuildIndex(scene).isLoaded)
         { 
             AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             ao.allowSceneActivation = false;
@@ -195,31 +197,8 @@ public class UIMainMenu : MonoBehaviour
             }
         }
         loadingScreen.SetActive(false);
-        AkSoundEngine.SetState("Estados", "Menu");
         AkSoundEngine.PostEvent("Inicia_menu", gameObject);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
-
-        //AkSoundEngine.PostEvent("Inicia_game", gameObject);
-        //AkSoundEngine.PostEvent("Inicia_controls", gameObject);
-        //AkSoundEngine.PostEvent("Inicia_options", gameObject);
-        //AkSoundEngine.PostEvent("Pause_in", gameObject);
-        //AkSoundEngine.PostEvent("Pause_out", gameObject);
-        //AkSoundEngine.PostEvent("Play_crowd", gameObject);
-        //AkSoundEngine.PostEvent("End_fight", gameObject);
-        //AkSoundEngine.PostEvent("End_round", gameObject);
-        //AkSoundEngine.PostEvent("Hit_floor", gameObject);
-        //AkSoundEngine.PostEvent("Mute", gameObject);
-        //AkSoundEngine.PostEvent("Pasos_duck", gameObject);
-        //AkSoundEngine.PostEvent("Pasos_frog", gameObject);
-        //AkSoundEngine.PostEvent("Pause_in", gameObject);
-        //AkSoundEngine.PostEvent("Pause_out", gameObject);
-        //AkSoundEngine.PostEvent("Play_crowd", gameObject);
-        //AkSoundEngine.PostEvent("Recieve_duck", gameObject);
-        //AkSoundEngine.PostEvent("Recieve_frog", gameObject);
-        //AkSoundEngine.PostEvent("Return_menu", gameObject);
-        //AkSoundEngine.PostEvent("Start_round", gameObject);
-        //AkSoundEngine.PostEvent("Switch_weapon", gameObject);
-        //AkSoundEngine.PostEvent("Unmute", gameObject);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(2));
     }
 
     IEnumerator UnloadMenu()
@@ -235,12 +214,13 @@ public class UIMainMenu : MonoBehaviour
             generalBackground.color = Color.Lerp(backgroundVisible, backgroundNotVisible, t);
             yield return null;
         }
-        AsyncOperation ao = SceneManager.UnloadSceneAsync(0);
+        AsyncOperation ao = SceneManager.UnloadSceneAsync(1);
         ao.allowSceneActivation = false;
         while (!ao.isDone)
         {
             yield return null;
         }
         ao.allowSceneActivation = true;
+        AkSoundEngine.PostEvent("Inicia_stage", gameObject);
     }
 }

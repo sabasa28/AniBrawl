@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingPivot: {fileID: 4569061384754176367}
   punch: {fileID: 9141901932271134968}
+  stepsSound: Pasos_duck
 --- !u!1 &9141901932271134968
 GameObject:
   m_ObjectHideFlags: 0

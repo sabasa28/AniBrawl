@@ -19,6 +19,18 @@ public class Item : MonoBehaviour
     [SerializeField] GameObject brokenModel = null;
     [SerializeField] GameObject visualFeedback = null;
     Transform itemsHolder = null;
+    public enum ItemKind
+    { 
+        pala,
+        bate,
+        rama,
+        maceta,
+        regadera,
+        rastrillo,
+        herradura
+    }
+    public ItemKind itemKind;
+    string itemSwitchName;
     public enum DirWhenThrown
     {
         forwardUp,
@@ -45,6 +57,33 @@ public class Item : MonoBehaviour
         coll = GetComponent<Collider>();
         mr = GetComponent<MeshRenderer>();
         rotGrabbed = Quaternion.Euler(rotationGrabbed);
+        switch (itemKind)
+        {
+            case ItemKind.pala:
+                AkSoundEngine.SetSwitch("Arma_selector", "Pala", gameObject);
+                break;
+            case ItemKind.bate:
+                AkSoundEngine.SetSwitch("Arma_selector", "Bate", gameObject);
+                break;
+            case ItemKind.rama:
+                AkSoundEngine.SetSwitch("Arma_selector", "Rama", gameObject);
+                break;
+            case ItemKind.maceta:
+                AkSoundEngine.SetSwitch("Arma_selector", "Cactus", gameObject);
+                break;
+            case ItemKind.regadera:
+                AkSoundEngine.SetSwitch("Arma_selector", "Regadera", gameObject);
+                break;
+            case ItemKind.rastrillo:
+                AkSoundEngine.SetSwitch("Arma_selector", "Rast_plast", gameObject);
+                break;
+            case ItemKind.herradura:
+                AkSoundEngine.SetSwitch("Arma_selector", "Rast_met", gameObject);
+                break;
+            default:
+                AkSoundEngine.SetSwitch("Arma_selector", "Pala", gameObject);
+                break;
+        }
     }
 
     private void Update()
@@ -69,6 +108,7 @@ public class Item : MonoBehaviour
         transform.localRotation = rotGrabbed;
         //gameObject.layer = LayerMask.NameToLayer("ItemColl"+player.playerNumber);
         visualFeedback.SetActive(false);
+        //AkSoundEngine.PostEvent(itemSwitchName, gameObject);
     }
 
     public void Throw()
@@ -145,5 +185,10 @@ public class Item : MonoBehaviour
         rb.isKinematic = true;
         itemState = State.broken;
         brokenModel.gameObject.SetActive(true);
+    }
+
+    public void itemHitSound()
+    { 
+        AkSoundEngine.PostEvent("Weapon_hit", gameObject);
     }
 }

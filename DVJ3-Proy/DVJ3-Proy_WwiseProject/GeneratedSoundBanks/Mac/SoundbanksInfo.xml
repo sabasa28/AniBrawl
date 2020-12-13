@@ -11,38 +11,878 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1981965365">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3128290571">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<StateGroups>
+				<StateGroup Id="4197210578" Name="Estados" ObjectPath="\States\Default Work Unit\Estados">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+						<State Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu"/>
+						<State Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos"/>
+						<State Id="2658298240" Name="Inicio" ObjectPath="\States\Default Work Unit\Estados\Inicio"/>
+						<State Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
+						<State Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1049824561">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1592501113">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1098020724" Name="Click_ui" ObjectPath="\Events\Default Work Unit\Click_ui" DurationType="OneShot" DurationMin="1.315344" DurationMax="1.315344"/>
-				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.589740" DurationMax="0.589740"/>
-				<Event Id="956648679" Name="Hit_floor" ObjectPath="\Events\Default Work Unit\Hit_floor" DurationType="OneShot" DurationMin="0.183337" DurationMax="1.756858"/>
-				<Event Id="441302456" Name="Hit_player" ObjectPath="\Events\Default Work Unit\Hit_player" DurationType="OneShot" DurationMin="0.498821" DurationMax="1.756858"/>
-				<Event Id="3424433926" Name="Hover_ui" ObjectPath="\Events\Default Work Unit\Hover_ui" DurationType="OneShot" DurationMin="0.706145" DurationMax="0.706145"/>
-				<Event Id="928907744" Name="Inicia_menu" ObjectPath="\Events\Default Work Unit\Inicia_menu" DurationType="OneShot" DurationMin="1.342426" DurationMax="1.342426"/>
-				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" DurationType="Infinite">
+				<Event Id="1098020724" Name="Click_ui" ObjectPath="\Events\Default Work Unit\Click_ui" DurationType="OneShot" DurationMin="1.315344" DurationMax="1.315344">
+					<IncludedMemoryFiles>
+						<File Id="335799120" Language="SFX">
+							<ShortName>Click_ui.wav</ShortName>
+							<Path>SFX\Click_ui_B5E74C47.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1738683615" Name="End_fight" ObjectPath="\Events\Default Work Unit\End_fight" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="657065678" Language="SFX">
+							<ShortName>Fin de batalla.wav</ShortName>
+							<Path>SFX\Fin de batalla_179463A7.wem</Path>
+						</File>
+						<File Id="692360340" Language="SFX">
+							<ShortName>Victoria_granja.wav</ShortName>
+							<Path>SFX\Victoria_granja_179463A7.wem</Path>
+						</File>
+						<File Id="758307942" Language="SFX">
+							<ShortName>crowd - copia.wav</ShortName>
+							<Path>SFX\crowd - copia_179463A7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.589740" DurationMax="0.589740">
+					<IncludedMemoryFiles>
+						<File Id="69213025" Language="SFX">
+							<ShortName>Clik_exit.wav</ShortName>
+							<Path>SFX\Clik_exit_FA6A89D9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3424433926" Name="Hover_ui" ObjectPath="\Events\Default Work Unit\Hover_ui" DurationType="OneShot" DurationMin="0.706145" DurationMax="0.706145">
+					<IncludedMemoryFiles>
+						<File Id="178409436" Language="SFX">
+							<ShortName>hovermouse.wav</ShortName>
+							<Path>SFX\hovermouse_24370524.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1332134995" Name="Inicia_controls" ObjectPath="\Events\Default Work Unit\Inicia_controls" DurationType="OneShot" DurationMin="3.705565" DurationMax="3.705565">
+					<IncludedMemoryFiles>
+						<File Id="651536663" Language="SFX">
+							<ShortName>mapa.wav</ShortName>
+							<Path>SFX\mapa_33779FEF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4126746240" Name="Inicia_creditos" ObjectPath="\Events\Default Work Unit\Inicia_creditos" DurationType="OneShot" DurationMin="2.714542" DurationMax="2.714542">
+					<IncludedMemoryFiles>
+						<File Id="80653923" Language="SFX">
+							<ShortName>mapa.wav</ShortName>
+							<Path>SFX\mapa_F79DE569.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="928907744" Name="Inicia_menu" ObjectPath="\Events\Default Work Unit\Inicia_menu" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105275312" Language="SFX">
+							<ShortName>arboles viento.wav</ShortName>
+							<Path>SFX\arboles viento_835714D9.wem</Path>
+						</File>
+						<File Id="138927013" Language="SFX">
+							<ShortName>inicia_menu2.wav</ShortName>
+							<Path>SFX\inicia_menu2_835714D9.wem</Path>
+						</File>
+						<File Id="216005068" Language="SFX">
+							<ShortName>farm_amb-001.wav</ShortName>
+							<Path>SFX\farm_amb-001_835714D9.wem</Path>
+						</File>
+						<File Id="219183506" Language="SFX">
+							<ShortName>Amb_random-008.wav</ShortName>
+							<Path>SFX\Amb_random-008_835714D9.wem</Path>
+						</File>
+						<File Id="226024866" Language="SFX">
+							<ShortName>02_Menu.wav</ShortName>
+							<Path>SFX\02_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="264037589" Language="SFX">
+							<ShortName>05_Menu.wav</ShortName>
+							<Path>SFX\05_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="372930892" Language="SFX">
+							<ShortName>03_Menu.wav</ShortName>
+							<Path>SFX\03_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="379943163" Language="SFX">
+							<ShortName>01_Menu.wav</ShortName>
+							<Path>SFX\01_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="454771366" Language="SFX">
+							<ShortName>farm_amb-003.wav</ShortName>
+							<Path>SFX\farm_amb-003_D86D9B96.wem</Path>
+						</File>
+						<File Id="466738841" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_939974F9.wem</Path>
+						</File>
+						<File Id="562611697" Language="SFX">
+							<ShortName>Amb_random-010.wav</ShortName>
+							<Path>SFX\Amb_random-010_835714D9.wem</Path>
+						</File>
+						<File Id="657065678" Language="SFX">
+							<ShortName>Fin de batalla.wav</ShortName>
+							<Path>SFX\Fin de batalla_179463A7.wem</Path>
+						</File>
+						<File Id="665288200" Language="SFX">
+							<ShortName>Pelea de granja 1.wav</ShortName>
+							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
+						</File>
+						<File Id="692360340" Language="SFX">
+							<ShortName>Victoria_granja.wav</ShortName>
+							<Path>SFX\Victoria_granja_179463A7.wem</Path>
+						</File>
+						<File Id="713421893" Language="SFX">
+							<ShortName>Amb_random-007.wav</ShortName>
+							<Path>SFX\Amb_random-007_835714D9.wem</Path>
+						</File>
+						<File Id="730963272" Language="SFX">
+							<ShortName>Amb_random-009.wav</ShortName>
+							<Path>SFX\Amb_random-009_835714D9.wem</Path>
+						</File>
+						<File Id="743310020" Language="SFX">
+							<ShortName>Amb_random-006.wav</ShortName>
+							<Path>SFX\Amb_random-006_835714D9.wem</Path>
+						</File>
+						<File Id="758307942" Language="SFX">
+							<ShortName>crowd - copia.wav</ShortName>
+							<Path>SFX\crowd - copia_179463A7.wem</Path>
+						</File>
+						<File Id="876107825" Language="SFX">
+							<ShortName>Amb_bosque_loop.wav</ShortName>
+							<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
+						</File>
+						<File Id="906127461" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_01472649.wem</Path>
+						</File>
+						<File Id="960583685" Language="SFX">
+							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
+							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
+						</File>
+						<File Id="994417837" Language="SFX">
+							<ShortName>Farm Barn Exterior.wav</ShortName>
+							<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+						</File>
+						<File Id="1012928397" Language="SFX">
+							<ShortName>farm_amb-004.wav</ShortName>
+							<Path>SFX\farm_amb-004_E2DBB469.wem</Path>
+						</File>
+						<File Id="1015971685" Language="SFX">
+							<ShortName>04_Menu.wav</ShortName>
+							<Path>SFX\04_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="1033605920" Language="SFX">
+							<ShortName>Pelea de granja 2.wav</ShortName>
+							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{18C4D98D-ED10-487D-988F-7DD8BB36F284}">
+							<Media>
+								<File Id="216005068"/>
+								<File Id="454771366"/>
+								<File Id="1012928397"/>
+								<File Id="906127461"/>
+								<File Id="466738841"/>
+								<File Id="994417837"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{DA697B29-5AB9-4042-BDA0-F22713B3271C}">
+							<Media>
+								<File Id="219183506"/>
+								<File Id="730963272"/>
+								<File Id="562611697"/>
+								<File Id="743310020"/>
+								<File Id="713421893"/>
+								<File Id="713421893"/>
+								<File Id="743310020"/>
+								<File Id="876107825"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B4BC3029-275D-47A9-B01C-49F61B699625}">
+							<Media>
+								<File Id="105275312"/>
+								<File Id="960583685"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
+							<Media>
+								<File Id="665288200"/>
+								<File Id="1033605920"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
+							<Media>
+								<File Id="657065678"/>
+								<File Id="692360340"/>
+								<File Id="657065678"/>
+								<File Id="758307942"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}">
+							<Media>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="372930892"/>
+								<File Id="1015971685"/>
+								<File Id="372930892"/>
+								<File Id="226024866"/>
+								<File Id="379943163"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="943918601" Name="Inicia_options" ObjectPath="\Events\Default Work Unit\Inicia_options" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="476536025" Name="Inicia_stage" ObjectPath="\Events\Default Work Unit\Inicia_stage" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1373024549" Name="Inicio_game" ObjectPath="\Events\Default Work Unit\Inicio_game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2974103762" Name="Mute" ObjectPath="\Events\Default Work Unit\Mute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1870231131" Name="Pasos_duck" ObjectPath="\Events\Default Work Unit\Pasos_duck" DurationType="OneShot" DurationMin="0.160397" DurationMax="18.000000">
+					<IncludedMemoryFiles>
+						<File Id="14640781" Language="SFX">
+							<ShortName>Pasos_duck-003.wav</ShortName>
+							<Path>SFX\Pasos_duck-003_976B4F8E.wem</Path>
+						</File>
+						<File Id="60517405" Language="SFX">
+							<ShortName>Pasos_duck-001.wav</ShortName>
+							<Path>SFX\Pasos_duck-001_A2B556E8.wem</Path>
+						</File>
+						<File Id="148408425" Language="SFX">
+							<ShortName>Pasos_duck-001.wav</ShortName>
+							<Path>SFX\Pasos_duck-001_ECDF2814.wem</Path>
+						</File>
+						<File Id="282627336" Language="SFX">
+							<ShortName>walk_duck-002.wav</ShortName>
+							<Path>SFX\walk_duck-002_F4484CD0.wem</Path>
+						</File>
+						<File Id="309688148" Language="SFX">
+							<ShortName>walk_duck-002.wav</ShortName>
+							<Path>SFX\walk_duck-002_41B365CC.wem</Path>
+						</File>
+						<File Id="828927273" Language="SFX">
+							<ShortName>walk_duck-001.wav</ShortName>
+							<Path>SFX\walk_duck-001_00DB3C8C.wem</Path>
+						</File>
+						<File Id="833910238" Language="SFX">
+							<ShortName>Pasos_duck-003.wav</ShortName>
+							<Path>SFX\Pasos_duck-003_D9A4EDA0.wem</Path>
+						</File>
+						<File Id="1012422412" Language="SFX">
+							<ShortName>walk_duck-001.wav</ShortName>
+							<Path>SFX\walk_duck-001_7ED10882.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1420553778" Name="Pasos_frog" ObjectPath="\Events\Default Work Unit\Pasos_frog" DurationType="OneShot" DurationMin="0.319637" DurationMax="18.000000">
+					<IncludedMemoryFiles>
+						<File Id="59236057" Language="SFX">
+							<ShortName>Pasos_frog-002.wav</ShortName>
+							<Path>SFX\Pasos_frog-002_7E176CFC.wem</Path>
+						</File>
+						<File Id="119786416" Language="SFX">
+							<ShortName>Pasos_frog-003.wav</ShortName>
+							<Path>SFX\Pasos_frog-003_10C4C929.wem</Path>
+						</File>
+						<File Id="305649421" Language="SFX">
+							<ShortName>Pasos_frog_talk-001.wav</ShortName>
+							<Path>SFX\Pasos_frog_talk-001_10C4C929.wem</Path>
+						</File>
+						<File Id="358698009" Language="SFX">
+							<ShortName>Pasos_frog_talk-003.wav</ShortName>
+							<Path>SFX\Pasos_frog_talk-003_10C4C929.wem</Path>
+						</File>
+						<File Id="771194761" Language="SFX">
+							<ShortName>Pasos_frog-002.wav</ShortName>
+							<Path>SFX\Pasos_frog-002_BEB17E5F.wem</Path>
+						</File>
+						<File Id="792234434" Language="SFX">
+							<ShortName>Pasos_frog-001.wav</ShortName>
+							<Path>SFX\Pasos_frog-001_4776ADC0.wem</Path>
+						</File>
+						<File Id="812749690" Language="SFX">
+							<ShortName>Pasos_frog_talk-002.wav</ShortName>
+							<Path>SFX\Pasos_frog_talk-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3437014341" Name="Pause_in" ObjectPath="\Events\Default Work Unit\Pause_in" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3648253772" Name="Pause_out" ObjectPath="\Events\Default Work Unit\Pause_out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.390478" DurationMax="0.653898">
+					<IncludedMemoryFiles>
+						<File Id="4694457" Language="SFX">
+							<ShortName>sfx_grab_1-001.wav</ShortName>
+							<Path>SFX\sfx_grab_1-001_0067426C.wem</Path>
+						</File>
+						<File Id="474171986" Language="SFX">
+							<ShortName>sfx_grab_1.wav</ShortName>
+							<Path>SFX\sfx_grab_1_32D138D0.wem</Path>
+						</File>
+						<File Id="514235917" Language="SFX">
+							<ShortName>sfx_grab_1 (2).wav</ShortName>
+							<Path>SFX\sfx_grab_1 (2)_A8AA7D1A.wem</Path>
+						</File>
+						<File Id="658457319" Language="SFX">
+							<ShortName>sfx_grab_2.wav</ShortName>
+							<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Play_amb" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105275312" Language="SFX">
+							<ShortName>arboles viento.wav</ShortName>
+							<Path>SFX\arboles viento_835714D9.wem</Path>
+						</File>
+						<File Id="216005068" Language="SFX">
+							<ShortName>farm_amb-001.wav</ShortName>
+							<Path>SFX\farm_amb-001_835714D9.wem</Path>
+						</File>
+						<File Id="219183506" Language="SFX">
+							<ShortName>Amb_random-008.wav</ShortName>
+							<Path>SFX\Amb_random-008_835714D9.wem</Path>
+						</File>
+						<File Id="454771366" Language="SFX">
+							<ShortName>farm_amb-003.wav</ShortName>
+							<Path>SFX\farm_amb-003_D86D9B96.wem</Path>
+						</File>
+						<File Id="466738841" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_939974F9.wem</Path>
+						</File>
+						<File Id="562611697" Language="SFX">
+							<ShortName>Amb_random-010.wav</ShortName>
+							<Path>SFX\Amb_random-010_835714D9.wem</Path>
+						</File>
+						<File Id="713421893" Language="SFX">
+							<ShortName>Amb_random-007.wav</ShortName>
+							<Path>SFX\Amb_random-007_835714D9.wem</Path>
+						</File>
+						<File Id="730963272" Language="SFX">
+							<ShortName>Amb_random-009.wav</ShortName>
+							<Path>SFX\Amb_random-009_835714D9.wem</Path>
+						</File>
+						<File Id="743310020" Language="SFX">
+							<ShortName>Amb_random-006.wav</ShortName>
+							<Path>SFX\Amb_random-006_835714D9.wem</Path>
+						</File>
+						<File Id="876107825" Language="SFX">
+							<ShortName>Amb_bosque_loop.wav</ShortName>
+							<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
+						</File>
+						<File Id="906127461" Language="SFX">
+							<ShortName>Barn_test.wav</ShortName>
+							<Path>SFX\Barn_test_01472649.wem</Path>
+						</File>
+						<File Id="960583685" Language="SFX">
+							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
+							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
+						</File>
+						<File Id="994417837" Language="SFX">
+							<ShortName>Farm Barn Exterior.wav</ShortName>
+							<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+						</File>
+						<File Id="1012928397" Language="SFX">
+							<ShortName>farm_amb-004.wav</ShortName>
+							<Path>SFX\farm_amb-004_E2DBB469.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{B4BC3029-275D-47A9-B01C-49F61B699625}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{18C4D98D-ED10-487D-988F-7DD8BB36F284}">
+							<Media>
+								<File Id="216005068"/>
+								<File Id="454771366"/>
+								<File Id="1012928397"/>
+								<File Id="906127461"/>
+								<File Id="466738841"/>
+								<File Id="994417837"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{DA697B29-5AB9-4042-BDA0-F22713B3271C}">
+							<Media>
+								<File Id="219183506"/>
+								<File Id="730963272"/>
+								<File Id="562611697"/>
+								<File Id="743310020"/>
+								<File Id="713421893"/>
+								<File Id="713421893"/>
+								<File Id="743310020"/>
+								<File Id="876107825"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B4BC3029-275D-47A9-B01C-49F61B699625}">
+							<Media>
+								<File Id="105275312"/>
+								<File Id="960583685"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="639442169" Name="Play_crowd" ObjectPath="\Events\Default Work Unit\Play_crowd" DurationType="OneShot" DurationMin="20.839819" DurationMax="20.839819">
+					<IncludedMemoryFiles>
+						<File Id="875904796" Language="SFX">
+							<ShortName>crowd.wav</ShortName>
+							<Path>SFX\crowd_835714D9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="226024866" Language="SFX">
+							<ShortName>02_Menu.wav</ShortName>
+							<Path>SFX\02_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="263033695" Language="SFX">
+							<ShortName>tune_gallo.wav</ShortName>
+							<Path>SFX\tune_gallo_10C4C929.wem</Path>
+						</File>
+						<File Id="264037589" Language="SFX">
+							<ShortName>05_Menu.wav</ShortName>
+							<Path>SFX\05_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="372930892" Language="SFX">
+							<ShortName>03_Menu.wav</ShortName>
+							<Path>SFX\03_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="379943163" Language="SFX">
+							<ShortName>01_Menu.wav</ShortName>
+							<Path>SFX\01_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="608540775" Language="SFX">
+							<ShortName>tune_gallo_3.wav</ShortName>
+							<Path>SFX\tune_gallo_3_10C4C929.wem</Path>
+						</File>
+						<File Id="657065678" Language="SFX">
+							<ShortName>Fin de batalla.wav</ShortName>
+							<Path>SFX\Fin de batalla_179463A7.wem</Path>
+						</File>
+						<File Id="665288200" Language="SFX">
+							<ShortName>Pelea de granja 1.wav</ShortName>
+							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
+						</File>
+						<File Id="692360340" Language="SFX">
+							<ShortName>Victoria_granja.wav</ShortName>
+							<Path>SFX\Victoria_granja_179463A7.wem</Path>
+						</File>
+						<File Id="758307942" Language="SFX">
+							<ShortName>crowd - copia.wav</ShortName>
+							<Path>SFX\crowd - copia_179463A7.wem</Path>
+						</File>
+						<File Id="940399666" Language="SFX">
+							<ShortName>tune_gallo_2.wav</ShortName>
+							<Path>SFX\tune_gallo_2_10C4C929.wem</Path>
+						</File>
+						<File Id="1015971685" Language="SFX">
+							<ShortName>04_Menu.wav</ShortName>
+							<Path>SFX\04_Menu_179463A7.wem</Path>
+						</File>
+						<File Id="1033605920" Language="SFX">
+							<ShortName>Pelea de granja 2.wav</ShortName>
+							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
+							<Media>
+								<File Id="665288200"/>
+								<File Id="1033605920"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
+							<Media>
+								<File Id="657065678"/>
+								<File Id="692360340"/>
+								<File Id="657065678"/>
+								<File Id="758307942"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}">
+							<Media>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="379943163"/>
+								<File Id="264037589"/>
+								<File Id="372930892"/>
+								<File Id="1015971685"/>
+								<File Id="372930892"/>
+								<File Id="226024866"/>
+								<File Id="379943163"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1870231131" Name="Pasos_duck" ObjectPath="\Events\Default Work Unit\Pasos_duck" DurationType="OneShot" DurationMin="1.191142" DurationMax="18.000000"/>
-				<Event Id="1420553778" Name="Pasos_frog" ObjectPath="\Events\Default Work Unit\Pasos_frog" DurationType="OneShot" DurationMin="2.162716" DurationMax="2.162716"/>
-				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.390478" DurationMax="0.653898"/>
-				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Play_amb" DurationType="Infinite"/>
-				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite"/>
-				<Event Id="2397106107" Name="Play_salto_duck" ObjectPath="\Events\Default Work Unit\Play_salto_duck" DurationType="OneShot" DurationMin="0.465669" DurationMax="0.465669"/>
-				<Event Id="1988902290" Name="Play_salto_frog" ObjectPath="\Events\Default Work Unit\Play_salto_frog" DurationType="OneShot" DurationMin="0.217937" DurationMax="0.217937"/>
-				<Event Id="282749073" Name="Player_select" ObjectPath="\Events\Default Work Unit\Player_select" DurationType="OneShot" DurationMin="0.494535" DurationMax="0.494535"/>
-				<Event Id="1411634684" Name="Recieve_duck" ObjectPath="\Events\Default Work Unit\Recieve_duck" DurationType="OneShot" DurationMin="0.498821" DurationMax="1.528279"/>
-				<Event Id="554954233" Name="Recieve_frog" ObjectPath="\Events\Default Work Unit\Recieve_frog" DurationType="OneShot" DurationMin="0.168149" DurationMax="0.488544"/>
-				<Event Id="745179803" Name="Throw" ObjectPath="\Events\Default Work Unit\Throw" DurationType="OneShot" DurationMin="0.050952" DurationMax="0.070726"/>
+				<Event Id="2397106107" Name="Play_salto_duck" ObjectPath="\Events\Default Work Unit\Play_salto_duck" DurationType="OneShot" DurationMin="0.465669" DurationMax="0.465669">
+					<IncludedMemoryFiles>
+						<File Id="851261987" Language="SFX">
+							<ShortName>jump_duck.wav</ShortName>
+							<Path>SFX\jump_duck_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1988902290" Name="Play_salto_frog" ObjectPath="\Events\Default Work Unit\Play_salto_frog" DurationType="OneShot" DurationMin="0.217937" DurationMax="0.217937">
+					<IncludedMemoryFiles>
+						<File Id="810715951" Language="SFX">
+							<ShortName>jump_frog.wav</ShortName>
+							<Path>SFX\jump_frog_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="282749073" Name="Player_select" ObjectPath="\Events\Default Work Unit\Player_select" DurationType="OneShot" DurationMin="0.494535" DurationMax="0.494535">
+					<IncludedMemoryFiles>
+						<File Id="1073255104" Language="SFX">
+							<ShortName>Select_personaje.wav</ShortName>
+							<Path>SFX\Select_personaje_835714D9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1411634684" Name="Recieve_duck" ObjectPath="\Events\Default Work Unit\Recieve_duck" DurationType="OneShot" DurationMin="0.284412" DurationMax="1.528279">
+					<IncludedMemoryFiles>
+						<File Id="8788778" Language="SFX">
+							<ShortName>Recieve_duck-002.wav</ShortName>
+							<Path>SFX\Recieve_duck-002_10C4C929.wem</Path>
+						</File>
+						<File Id="18438146" Language="SFX">
+							<ShortName>Recieve_duck-003.wav</ShortName>
+							<Path>SFX\Recieve_duck-003_10C4C929.wem</Path>
+						</File>
+						<File Id="154204994" Language="SFX">
+							<ShortName>Recieve_duck-004.wav</ShortName>
+							<Path>SFX\Recieve_duck-004_39524D17.wem</Path>
+						</File>
+						<File Id="671726831" Language="SFX">
+							<ShortName>Recieve_duck-001.wav</ShortName>
+							<Path>SFX\Recieve_duck-001_4D0E7FBE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="554954233" Name="Recieve_frog" ObjectPath="\Events\Default Work Unit\Recieve_frog" DurationType="OneShot" DurationMin="0.168149" DurationMax="0.488544">
+					<IncludedMemoryFiles>
+						<File Id="168623129" Language="SFX">
+							<ShortName>Recieve_frog-001.wav</ShortName>
+							<Path>SFX\Recieve_frog-001_6498CF62.wem</Path>
+						</File>
+						<File Id="500647901" Language="SFX">
+							<ShortName>Recieve_frog-002.wav</ShortName>
+							<Path>SFX\Recieve_frog-002_CF9B1E57.wem</Path>
+						</File>
+						<File Id="776475720" Language="SFX">
+							<ShortName>Recieve_frog-004.wav</ShortName>
+							<Path>SFX\Recieve_frog-004_7766AE48.wem</Path>
+						</File>
+						<File Id="1059471286" Language="SFX">
+							<ShortName>Recieve_frog-003.wav</ShortName>
+							<Path>SFX\Recieve_frog-003_5BB299F5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3197718051" Name="Return_menu" ObjectPath="\Events\Default Work Unit\Return_menu" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="2974103762" Name="Mute" ObjectPath="\Events\Default Work Unit\Mute"/>
+					</ActionPostEvent>
+					<ActionSetState>
+						<ActionSetStateEntry Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="745179803" Name="Throw" ObjectPath="\Events\Default Work Unit\Throw" DurationType="OneShot" DurationMin="0.050952" DurationMax="0.070726">
+					<IncludedMemoryFiles>
+						<File Id="230164706" Language="SFX">
+							<ShortName>sfx_whoosh_110.wav</ShortName>
+							<Path>SFX\sfx_whoosh_110_10C4C929.wem</Path>
+						</File>
+						<File Id="247197488" Language="SFX">
+							<ShortName>sfx_whoosh_108.wav</ShortName>
+							<Path>SFX\sfx_whoosh_108_10C4C929.wem</Path>
+						</File>
+						<File Id="414046758" Language="SFX">
+							<ShortName>sfx_whoosh_109.wav</ShortName>
+							<Path>SFX\sfx_whoosh_109_10C4C929.wem</Path>
+						</File>
+						<File Id="809594907" Language="SFX">
+							<ShortName>sfx_whoosh_111.wav</ShortName>
+							<Path>SFX\sfx_whoosh_111_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2156697475" Name="Unmute" ObjectPath="\Events\Default Work Unit\Unmute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3972774391" Name="Weapon_hit" ObjectPath="\Events\Default Work Unit\Weapon_hit" DurationType="OneShot" DurationMin="0.183337" DurationMax="1.756858">
+					<IncludedMemoryFiles>
+						<File Id="22228747" Language="SFX">
+							<ShortName>sfx_rama_3.wav</ShortName>
+							<Path>SFX\sfx_rama_3_10C4C929.wem</Path>
+						</File>
+						<File Id="23080013" Language="SFX">
+							<ShortName>sfx_rastplastt_08.wav</ShortName>
+							<Path>SFX\sfx_rastplastt_08_3FA78333.wem</Path>
+						</File>
+						<File Id="37178360" Language="SFX">
+							<ShortName>sfx_guadana_1.wav</ShortName>
+							<Path>SFX\sfx_guadana_1_4FB67330.wem</Path>
+						</File>
+						<File Id="61333154" Language="SFX">
+							<ShortName>sfx_rastmet_5.wav</ShortName>
+							<Path>SFX\sfx_rastmet_5_5E09FE5D.wem</Path>
+						</File>
+						<File Id="111804297" Language="SFX">
+							<ShortName>sfx_pala_03.wav</ShortName>
+							<Path>SFX\sfx_pala_03_A382D609.wem</Path>
+						</File>
+						<File Id="117746009" Language="SFX">
+							<ShortName>sfx_pala_4.wav</ShortName>
+							<Path>SFX\sfx_pala_4_A0798E52.wem</Path>
+						</File>
+						<File Id="126528663" Language="SFX">
+							<ShortName>sfx_guadana_03.wav</ShortName>
+							<Path>SFX\sfx_guadana_03_8DFE84AE.wem</Path>
+						</File>
+						<File Id="134421624" Language="SFX">
+							<ShortName>sfx_regadera_3.wav</ShortName>
+							<Path>SFX\sfx_regadera_3_771A66C9.wem</Path>
+						</File>
+						<File Id="150970931" Language="SFX">
+							<ShortName>sfx_cactus_1.wav</ShortName>
+							<Path>SFX\sfx_cactus_1_AB7ADEA3.wem</Path>
+						</File>
+						<File Id="200678232" Language="SFX">
+							<ShortName>sfx_hit_4.wav</ShortName>
+							<Path>SFX\sfx_hit_4_7713F3F2.wem</Path>
+						</File>
+						<File Id="207326859" Language="SFX">
+							<ShortName>sfx_regadera_1.wav</ShortName>
+							<Path>SFX\sfx_regadera_1_2F127C54.wem</Path>
+						</File>
+						<File Id="236581530" Language="SFX">
+							<ShortName>sfx_rastplastt_11.wav</ShortName>
+							<Path>SFX\sfx_rastplastt_11_2B5D1ACB.wem</Path>
+						</File>
+						<File Id="253341458" Language="SFX">
+							<ShortName>sfx_rastplastt_07.wav</ShortName>
+							<Path>SFX\sfx_rastplastt_07_7473D318.wem</Path>
+						</File>
+						<File Id="347619649" Language="SFX">
+							<ShortName>sfx_hit_3.wav</ShortName>
+							<Path>SFX\sfx_hit_3_8F0134E0.wem</Path>
+						</File>
+						<File Id="379985502" Language="SFX">
+							<ShortName>sfx_rastmet_12.wav</ShortName>
+							<Path>SFX\sfx_rastmet_12_D6E317A4.wem</Path>
+						</File>
+						<File Id="441226983" Language="SFX">
+							<ShortName>sfx_pala_07.wav</ShortName>
+							<Path>SFX\sfx_pala_07_7C054A4A.wem</Path>
+						</File>
+						<File Id="444550990" Language="SFX">
+							<ShortName>sfx_regadera_5.wav</ShortName>
+							<Path>SFX\sfx_regadera_5_9BEFC8C4.wem</Path>
+						</File>
+						<File Id="483299258" Language="SFX">
+							<ShortName>sfx_rama_2.wav</ShortName>
+							<Path>SFX\sfx_rama_2_10C4C929.wem</Path>
+						</File>
+						<File Id="493954556" Language="SFX">
+							<ShortName>sfx_rama_1.wav</ShortName>
+							<Path>SFX\sfx_rama_1_10C4C929.wem</Path>
+						</File>
+						<File Id="532797474" Language="SFX">
+							<ShortName>sfx_bate_3-001.wav</ShortName>
+							<Path>SFX\sfx_bate_3-001_0E21EBAB.wem</Path>
+						</File>
+						<File Id="549763350" Language="SFX">
+							<ShortName>sfx_rastplastt_03.wav</ShortName>
+							<Path>SFX\sfx_rastplastt_03_DF630D00.wem</Path>
+						</File>
+						<File Id="595120389" Language="SFX">
+							<ShortName>sfx_hit_1.wav</ShortName>
+							<Path>SFX\sfx_hit_1_A207F14D.wem</Path>
+						</File>
+						<File Id="603927543" Language="SFX">
+							<ShortName>sfx_cactus_2.wav</ShortName>
+							<Path>SFX\sfx_cactus_2_7BD343FD.wem</Path>
+						</File>
+						<File Id="613037995" Language="SFX">
+							<ShortName>sfx_bate_2-001.wav</ShortName>
+							<Path>SFX\sfx_bate_2-001_0EF2FFBB.wem</Path>
+						</File>
+						<File Id="683782887" Language="SFX">
+							<ShortName>sfx_rama_5.wav</ShortName>
+							<Path>SFX\sfx_rama_5_10C4C929.wem</Path>
+						</File>
+						<File Id="702034421" Language="SFX">
+							<ShortName>sfx_rama_4.wav</ShortName>
+							<Path>SFX\sfx_rama_4_10C4C929.wem</Path>
+						</File>
+						<File Id="730790305" Language="SFX">
+							<ShortName>sfx_regadera_4.wav</ShortName>
+							<Path>SFX\sfx_regadera_4_327CF06B.wem</Path>
+						</File>
+						<File Id="828972344" Language="SFX">
+							<ShortName>sfx_regadera_5.wav</ShortName>
+							<Path>SFX\sfx_regadera_5_25020FD2.wem</Path>
+						</File>
+						<File Id="876065015" Language="SFX">
+							<ShortName>sfx_rastmet_11.wav</ShortName>
+							<Path>SFX\sfx_rastmet_11_46F49B85.wem</Path>
+						</File>
+						<File Id="905061693" Language="SFX">
+							<ShortName>sfx_guadana_1.wav</ShortName>
+							<Path>SFX\sfx_guadana_1_5CBA3840.wem</Path>
+						</File>
+						<File Id="915837611" Language="SFX">
+							<ShortName>sfx_cactus_3.wav</ShortName>
+							<Path>SFX\sfx_cactus_3_C3EA1345.wem</Path>
+						</File>
+						<File Id="935131799" Language="SFX">
+							<ShortName>sfx_bate_4-001.wav</ShortName>
+							<Path>SFX\sfx_bate_4-001_815B3F7F.wem</Path>
+						</File>
+						<File Id="938457295" Language="SFX">
+							<ShortName>sfx_hit_2.wav</ShortName>
+							<Path>SFX\sfx_hit_2_570452FA.wem</Path>
+						</File>
+						<File Id="939387135" Language="SFX">
+							<ShortName>sfx_pala_02.wav</ShortName>
+							<Path>SFX\sfx_pala_02_6FA4F7B5.wem</Path>
+						</File>
+						<File Id="970034130" Language="SFX">
+							<ShortName>sfx_guadana_2.wav</ShortName>
+							<Path>SFX\sfx_guadana_2_EEBE2455.wem</Path>
+						</File>
+						<File Id="1061033831" Language="SFX">
+							<ShortName>sfx_regadera_2.wav</ShortName>
+							<Path>SFX\sfx_regadera_2_BC5FF30D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{05790DBF-AD35-4FA1-9B06-C68C42897C5C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{78F8B7EF-EDA3-479F-96BE-766EA3F7941D}">
+							<Media>
+								<File Id="207326859"/>
+								<File Id="1061033831"/>
+								<File Id="134421624"/>
+								<File Id="730790305"/>
+								<File Id="444550990"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6A88B1BD-2F2A-4A3B-A23E-C9DB1D8AB1BD}">
+							<Media>
+								<File Id="532797474"/>
+								<File Id="935131799"/>
+								<File Id="613037995"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{817F04F3-D907-486A-B9A9-7154E254BA03}">
+							<Media>
+								<File Id="150970931"/>
+								<File Id="603927543"/>
+								<File Id="915837611"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}">
+							<Media>
+								<File Id="905061693"/>
+								<File Id="970034130"/>
+								<File Id="126528663"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{36CD1517-5346-4062-9D39-B982415886E1}">
+							<Media>
+								<File Id="37178360"/>
+								<File Id="970034130"/>
+								<File Id="126528663"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{17FAF918-8D0F-45CE-B4B5-0BC467B2421B}">
+							<Media>
+								<File Id="939387135"/>
+								<File Id="111804297"/>
+								<File Id="117746009"/>
+								<File Id="441226983"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{05790DBF-AD35-4FA1-9B06-C68C42897C5C}">
+							<Media>
+								<File Id="595120389"/>
+								<File Id="938457295"/>
+								<File Id="347619649"/>
+								<File Id="200678232"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{188BFD1D-C797-4505-B227-FB36ADCA2A25}">
+							<Media>
+								<File Id="493954556"/>
+								<File Id="483299258"/>
+								<File Id="22228747"/>
+								<File Id="702034421"/>
+								<File Id="683782887"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F083C469-4AFB-422A-94B2-E318D27ABC46}">
+							<Media>
+								<File Id="61333154"/>
+								<File Id="379985502"/>
+								<File Id="876065015"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CC24EDF9-6F86-4240-B48C-D21D99988495}">
+							<Media>
+								<File Id="549763350"/>
+								<File Id="253341458"/>
+								<File Id="23080013"/>
+								<File Id="236581530"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9B468365-FCB2-4039-902A-B347B2599F88}">
+							<Media>
+								<File Id="207326859"/>
+								<File Id="1061033831"/>
+								<File Id="134421624"/>
+								<File Id="730790305"/>
+								<File Id="828972344"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="4694457" Language="SFX">
@@ -55,7 +895,7 @@
 				</File>
 				<File Id="14640781" Language="SFX">
 					<ShortName>Pasos_duck-003.wav</ShortName>
-					<Path>SFX\Pasos_duck-003_10C4C929.wem</Path>
+					<Path>SFX\Pasos_duck-003_976B4F8E.wem</Path>
 				</File>
 				<File Id="18438146" Language="SFX">
 					<ShortName>Recieve_duck-003.wav</ShortName>
@@ -73,9 +913,13 @@
 					<ShortName>sfx_guadana_1.wav</ShortName>
 					<Path>SFX\sfx_guadana_1_4FB67330.wem</Path>
 				</File>
+				<File Id="59236057" Language="SFX">
+					<ShortName>Pasos_frog-002.wav</ShortName>
+					<Path>SFX\Pasos_frog-002_7E176CFC.wem</Path>
+				</File>
 				<File Id="60517405" Language="SFX">
 					<ShortName>Pasos_duck-001.wav</ShortName>
-					<Path>SFX\Pasos_duck-001_10C4C929.wem</Path>
+					<Path>SFX\Pasos_duck-001_A2B556E8.wem</Path>
 				</File>
 				<File Id="61333154" Language="SFX">
 					<ShortName>sfx_rastmet_5.wav</ShortName>
@@ -83,7 +927,15 @@
 				</File>
 				<File Id="69213025" Language="SFX">
 					<ShortName>Clik_exit.wav</ShortName>
-					<Path>SFX\Clik_exit_47A5DC89.wem</Path>
+					<Path>SFX\Clik_exit_FA6A89D9.wem</Path>
+				</File>
+				<File Id="80653923" Language="SFX">
+					<ShortName>mapa.wav</ShortName>
+					<Path>SFX\mapa_F79DE569.wem</Path>
+				</File>
+				<File Id="105275312" Language="SFX">
+					<ShortName>arboles viento.wav</ShortName>
+					<Path>SFX\arboles viento_835714D9.wem</Path>
 				</File>
 				<File Id="111804297" Language="SFX">
 					<ShortName>sfx_pala_03.wav</ShortName>
@@ -107,7 +959,11 @@
 				</File>
 				<File Id="138927013" Language="SFX">
 					<ShortName>inicia_menu2.wav</ShortName>
-					<Path>SFX\inicia_menu2_10C4C929.wem</Path>
+					<Path>SFX\inicia_menu2_835714D9.wem</Path>
+				</File>
+				<File Id="148408425" Language="SFX">
+					<ShortName>Pasos_duck-001.wav</ShortName>
+					<Path>SFX\Pasos_duck-001_ECDF2814.wem</Path>
 				</File>
 				<File Id="150970931" Language="SFX">
 					<ShortName>sfx_cactus_1.wav</ShortName>
@@ -123,7 +979,7 @@
 				</File>
 				<File Id="178409436" Language="SFX">
 					<ShortName>hovermouse.wav</ShortName>
-					<Path>SFX\hovermouse_8B7B03D4.wem</Path>
+					<Path>SFX\hovermouse_24370524.wem</Path>
 				</File>
 				<File Id="200678232" Language="SFX">
 					<ShortName>sfx_hit_4.wav</ShortName>
@@ -133,9 +989,17 @@
 					<ShortName>sfx_regadera_1.wav</ShortName>
 					<Path>SFX\sfx_regadera_1_2F127C54.wem</Path>
 				</File>
+				<File Id="216005068" Language="SFX">
+					<ShortName>farm_amb-001.wav</ShortName>
+					<Path>SFX\farm_amb-001_835714D9.wem</Path>
+				</File>
 				<File Id="219183506" Language="SFX">
 					<ShortName>Amb_random-008.wav</ShortName>
-					<Path>SFX\Amb_random-008_10C4C929.wem</Path>
+					<Path>SFX\Amb_random-008_835714D9.wem</Path>
+				</File>
+				<File Id="226024866" Language="SFX">
+					<ShortName>02_Menu.wav</ShortName>
+					<Path>SFX\02_Menu_179463A7.wem</Path>
 				</File>
 				<File Id="230164706" Language="SFX">
 					<ShortName>sfx_whoosh_110.wav</ShortName>
@@ -157,9 +1021,13 @@
 					<ShortName>tune_gallo.wav</ShortName>
 					<Path>SFX\tune_gallo_10C4C929.wem</Path>
 				</File>
-				<File Id="287724760" Language="SFX">
-					<ShortName>Pelea de granero.wav</ShortName>
-					<Path>SFX\Pelea de granero_D79FB2B7.wem</Path>
+				<File Id="264037589" Language="SFX">
+					<ShortName>05_Menu.wav</ShortName>
+					<Path>SFX\05_Menu_179463A7.wem</Path>
+				</File>
+				<File Id="282627336" Language="SFX">
+					<ShortName>walk_duck-002.wav</ShortName>
+					<Path>SFX\walk_duck-002_F4484CD0.wem</Path>
 				</File>
 				<File Id="305649421" Language="SFX">
 					<ShortName>Pasos_frog_talk-001.wav</ShortName>
@@ -167,11 +1035,11 @@
 				</File>
 				<File Id="309688148" Language="SFX">
 					<ShortName>walk_duck-002.wav</ShortName>
-					<Path>SFX\walk_duck-002_10C4C929.wem</Path>
+					<Path>SFX\walk_duck-002_41B365CC.wem</Path>
 				</File>
 				<File Id="335799120" Language="SFX">
 					<ShortName>Click_ui.wav</ShortName>
-					<Path>SFX\Click_ui_5926E117.wem</Path>
+					<Path>SFX\Click_ui_B5E74C47.wem</Path>
 				</File>
 				<File Id="347619649" Language="SFX">
 					<ShortName>sfx_hit_3.wav</ShortName>
@@ -180,6 +1048,14 @@
 				<File Id="358698009" Language="SFX">
 					<ShortName>Pasos_frog_talk-003.wav</ShortName>
 					<Path>SFX\Pasos_frog_talk-003_10C4C929.wem</Path>
+				</File>
+				<File Id="372930892" Language="SFX">
+					<ShortName>03_Menu.wav</ShortName>
+					<Path>SFX\03_Menu_179463A7.wem</Path>
+				</File>
+				<File Id="379943163" Language="SFX">
+					<ShortName>01_Menu.wav</ShortName>
+					<Path>SFX\01_Menu_179463A7.wem</Path>
 				</File>
 				<File Id="379985502" Language="SFX">
 					<ShortName>sfx_rastmet_12.wav</ShortName>
@@ -196,6 +1072,14 @@
 				<File Id="444550990" Language="SFX">
 					<ShortName>sfx_regadera_5.wav</ShortName>
 					<Path>SFX\sfx_regadera_5_9BEFC8C4.wem</Path>
+				</File>
+				<File Id="454771366" Language="SFX">
+					<ShortName>farm_amb-003.wav</ShortName>
+					<Path>SFX\farm_amb-003_D86D9B96.wem</Path>
+				</File>
+				<File Id="466738841" Language="SFX">
+					<ShortName>Barn_test.wav</ShortName>
+					<Path>SFX\Barn_test_939974F9.wem</Path>
 				</File>
 				<File Id="474171986" Language="SFX">
 					<ShortName>sfx_grab_1.wav</ShortName>
@@ -227,7 +1111,7 @@
 				</File>
 				<File Id="562611697" Language="SFX">
 					<ShortName>Amb_random-010.wav</ShortName>
-					<Path>SFX\Amb_random-010_10C4C929.wem</Path>
+					<Path>SFX\Amb_random-010_835714D9.wem</Path>
 				</File>
 				<File Id="595120389" Language="SFX">
 					<ShortName>sfx_hit_1.wav</ShortName>
@@ -245,17 +1129,25 @@
 					<ShortName>sfx_bate_2-001.wav</ShortName>
 					<Path>SFX\sfx_bate_2-001_0EF2FFBB.wem</Path>
 				</File>
+				<File Id="651536663" Language="SFX">
+					<ShortName>mapa.wav</ShortName>
+					<Path>SFX\mapa_33779FEF.wem</Path>
+				</File>
 				<File Id="657065678" Language="SFX">
 					<ShortName>Fin de batalla.wav</ShortName>
-					<Path>SFX\Fin de batalla_D79FB2B7.wem</Path>
+					<Path>SFX\Fin de batalla_179463A7.wem</Path>
 				</File>
 				<File Id="658457319" Language="SFX">
 					<ShortName>sfx_grab_2.wav</ShortName>
 					<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
 				</File>
+				<File Id="665288200" Language="SFX">
+					<ShortName>Pelea de granja 1.wav</ShortName>
+					<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
+				</File>
 				<File Id="671726831" Language="SFX">
 					<ShortName>Recieve_duck-001.wav</ShortName>
-					<Path>SFX\Recieve_duck-001_10C4C929.wem</Path>
+					<Path>SFX\Recieve_duck-001_4D0E7FBE.wem</Path>
 				</File>
 				<File Id="683782887" Language="SFX">
 					<ShortName>sfx_rama_5.wav</ShortName>
@@ -263,7 +1155,7 @@
 				</File>
 				<File Id="692360340" Language="SFX">
 					<ShortName>Victoria_granja.wav</ShortName>
-					<Path>SFX\Victoria_granja_D79FB2B7.wem</Path>
+					<Path>SFX\Victoria_granja_179463A7.wem</Path>
 				</File>
 				<File Id="702034421" Language="SFX">
 					<ShortName>sfx_rama_4.wav</ShortName>
@@ -271,7 +1163,7 @@
 				</File>
 				<File Id="713421893" Language="SFX">
 					<ShortName>Amb_random-007.wav</ShortName>
-					<Path>SFX\Amb_random-007_10C4C929.wem</Path>
+					<Path>SFX\Amb_random-007_835714D9.wem</Path>
 				</File>
 				<File Id="730790305" Language="SFX">
 					<ShortName>sfx_regadera_4.wav</ShortName>
@@ -279,23 +1171,27 @@
 				</File>
 				<File Id="730963272" Language="SFX">
 					<ShortName>Amb_random-009.wav</ShortName>
-					<Path>SFX\Amb_random-009_10C4C929.wem</Path>
+					<Path>SFX\Amb_random-009_835714D9.wem</Path>
 				</File>
 				<File Id="743310020" Language="SFX">
 					<ShortName>Amb_random-006.wav</ShortName>
-					<Path>SFX\Amb_random-006_10C4C929.wem</Path>
+					<Path>SFX\Amb_random-006_835714D9.wem</Path>
 				</File>
-				<File Id="765914910" Language="SFX">
-					<ShortName>Pasos_frog-001.wav</ShortName>
-					<Path>SFX\Pasos_frog-001_10C4C929.wem</Path>
+				<File Id="758307942" Language="SFX">
+					<ShortName>crowd - copia.wav</ShortName>
+					<Path>SFX\crowd - copia_179463A7.wem</Path>
 				</File>
 				<File Id="771194761" Language="SFX">
 					<ShortName>Pasos_frog-002.wav</ShortName>
-					<Path>SFX\Pasos_frog-002_10C4C929.wem</Path>
+					<Path>SFX\Pasos_frog-002_BEB17E5F.wem</Path>
 				</File>
 				<File Id="776475720" Language="SFX">
 					<ShortName>Recieve_frog-004.wav</ShortName>
 					<Path>SFX\Recieve_frog-004_7766AE48.wem</Path>
+				</File>
+				<File Id="792234434" Language="SFX">
+					<ShortName>Pasos_frog-001.wav</ShortName>
+					<Path>SFX\Pasos_frog-001_4776ADC0.wem</Path>
 				</File>
 				<File Id="809594907" Language="SFX">
 					<ShortName>sfx_whoosh_111.wav</ShortName>
@@ -311,15 +1207,23 @@
 				</File>
 				<File Id="828927273" Language="SFX">
 					<ShortName>walk_duck-001.wav</ShortName>
-					<Path>SFX\walk_duck-001_10C4C929.wem</Path>
+					<Path>SFX\walk_duck-001_00DB3C8C.wem</Path>
 				</File>
 				<File Id="828972344" Language="SFX">
 					<ShortName>sfx_regadera_5.wav</ShortName>
 					<Path>SFX\sfx_regadera_5_25020FD2.wem</Path>
 				</File>
+				<File Id="833910238" Language="SFX">
+					<ShortName>Pasos_duck-003.wav</ShortName>
+					<Path>SFX\Pasos_duck-003_D9A4EDA0.wem</Path>
+				</File>
 				<File Id="851261987" Language="SFX">
 					<ShortName>jump_duck.wav</ShortName>
 					<Path>SFX\jump_duck_10C4C929.wem</Path>
+				</File>
+				<File Id="875904796" Language="SFX">
+					<ShortName>crowd.wav</ShortName>
+					<Path>SFX\crowd_835714D9.wem</Path>
 				</File>
 				<File Id="876065015" Language="SFX">
 					<ShortName>sfx_rastmet_11.wav</ShortName>
@@ -327,11 +1231,15 @@
 				</File>
 				<File Id="876107825" Language="SFX">
 					<ShortName>Amb_bosque_loop.wav</ShortName>
-					<Path>SFX\Amb_bosque_loop_D79FB2B7.wem</Path>
+					<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
 				</File>
 				<File Id="905061693" Language="SFX">
 					<ShortName>sfx_guadana_1.wav</ShortName>
 					<Path>SFX\sfx_guadana_1_5CBA3840.wem</Path>
+				</File>
+				<File Id="906127461" Language="SFX">
+					<ShortName>Barn_test.wav</ShortName>
+					<Path>SFX\Barn_test_01472649.wem</Path>
 				</File>
 				<File Id="915837611" Language="SFX">
 					<ShortName>sfx_cactus_3.wav</ShortName>
@@ -353,9 +1261,33 @@
 					<ShortName>tune_gallo_2.wav</ShortName>
 					<Path>SFX\tune_gallo_2_10C4C929.wem</Path>
 				</File>
+				<File Id="960583685" Language="SFX">
+					<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
+					<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
+				</File>
 				<File Id="970034130" Language="SFX">
 					<ShortName>sfx_guadana_2.wav</ShortName>
 					<Path>SFX\sfx_guadana_2_EEBE2455.wem</Path>
+				</File>
+				<File Id="994417837" Language="SFX">
+					<ShortName>Farm Barn Exterior.wav</ShortName>
+					<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+				</File>
+				<File Id="1012422412" Language="SFX">
+					<ShortName>walk_duck-001.wav</ShortName>
+					<Path>SFX\walk_duck-001_7ED10882.wem</Path>
+				</File>
+				<File Id="1012928397" Language="SFX">
+					<ShortName>farm_amb-004.wav</ShortName>
+					<Path>SFX\farm_amb-004_E2DBB469.wem</Path>
+				</File>
+				<File Id="1015971685" Language="SFX">
+					<ShortName>04_Menu.wav</ShortName>
+					<Path>SFX\04_Menu_179463A7.wem</Path>
+				</File>
+				<File Id="1033605920" Language="SFX">
+					<ShortName>Pelea de granja 2.wav</ShortName>
+					<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
 				</File>
 				<File Id="1059471286" Language="SFX">
 					<ShortName>Recieve_frog-003.wav</ShortName>
@@ -367,11 +1299,26 @@
 				</File>
 				<File Id="1073255104" Language="SFX">
 					<ShortName>Select_personaje.wav</ShortName>
-					<Path>SFX\Select_personaje_10C4C929.wem</Path>
+					<Path>SFX\Select_personaje_835714D9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<StateGroups>
 				<StateGroup Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Estados\None">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="956887760" Name="Creditos" ObjectPath="\States\Default Work Unit\Estados\Creditos">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Estados\Menu">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa">
 					<States/>
 				</StateGroup>
 				<StateGroup Id="4197210578" Name="Estados" ObjectPath="\States\Default Work Unit\Estados">
@@ -400,6 +1347,13 @@
 						<Switch Id="1575522544" Name="Rast_met" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_met"/>
 						<Switch Id="650333658" Name="Rast_plast" ObjectPath="\Switches\Default Work Unit\Arma_selector\Rast_plast"/>
 						<Switch Id="3310464400" Name="Regadera" ObjectPath="\Switches\Default Work Unit\Arma_selector\Regadera"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3441103852" Name="Escenario" ObjectPath="\Switches\Default Work Unit\Escenario">
+					<Switches>
+						<Switch Id="1767728952" Name="Granja" ObjectPath="\Switches\Default Work Unit\Escenario\Granja"/>
+						<Switch Id="1641284458" Name="Bosque" ObjectPath="\Switches\Default Work Unit\Escenario\Bosque"/>
+						<Switch Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\Escenario\Menu"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
