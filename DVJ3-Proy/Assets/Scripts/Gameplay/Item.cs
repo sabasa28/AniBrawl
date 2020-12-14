@@ -27,7 +27,10 @@ public class Item : MonoBehaviour
         maceta,
         regadera,
         rastrillo,
-        herradura
+        herradura,
+        hoz,
+        balde,
+        tijera
     }
     public ItemKind itemKind;
     string itemSwitchName;
@@ -79,6 +82,15 @@ public class Item : MonoBehaviour
                 break;
             case ItemKind.herradura:
                 AkSoundEngine.SetSwitch("Arma_selector", "Rast_met", gameObject);
+                break;
+            case ItemKind.hoz:
+                AkSoundEngine.SetSwitch("Arma_selector", "Oz", gameObject);
+                break;
+            case ItemKind.balde:
+                AkSoundEngine.SetSwitch("Arma_selector", "Balde", gameObject);
+                break;
+            case ItemKind.tijera:
+                AkSoundEngine.SetSwitch("Arma_selector", "Guadana", gameObject);
                 break;
             default:
                 AkSoundEngine.SetSwitch("Arma_selector", "Pala", gameObject);
@@ -137,6 +149,7 @@ public class Item : MonoBehaviour
             if (!collision.gameObject.CompareTag("Player"))
             {
                 SetAsGrabbable();
+                AkSoundEngine.PostEvent("Weapon_hit", gameObject);
             }
         }
     }
