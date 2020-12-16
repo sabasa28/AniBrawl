@@ -11,7 +11,7 @@ public class GameplayController : MonoBehaviour
     public int winnerPlayerNumber = 0;
     [SerializeField] List<PlayerController> players = new List<PlayerController>();
     public int forceWinByDeath = 0;
-    [SerializeField] Transform[] spawner = null;
+    
     [SerializeField] GrabbingZone[] grabbingZones = null;
     [SerializeField] CameraController cameraController = null;
     [SerializeField] PostProcessManager ppManager = null;
@@ -22,6 +22,23 @@ public class GameplayController : MonoBehaviour
     [SerializeField] GameObject[] level = null;
     int activeLevel = 1;
 
+    [Header("General Stage")]
+    [SerializeField] Transform[] playerSpawner = null;
+    [SerializeField] GameObject firePref = null;
+    [SerializeField] FallingObstController foc = null;
+
+    [Header("Stage1")]
+    [SerializeField] GameObject staticObstaclePrefStg1 = null;
+    [SerializeField] Transform[] staticObstSpawnStg1 = null;
+    [SerializeField] Transform[] fireSpawnStg1 = null;
+    [SerializeField] GameObject fallingObstaclePrefStg1 = null;
+
+    [Header("Stage2")]
+    [SerializeField] GameObject staticObstaclePrefStg2 = null;
+    [SerializeField] Transform[] staticObstSpawnStg2 = null;
+    [SerializeField] Transform[] fireSpawnStg2 = null;
+    [SerializeField] GameObject fallingObstaclePrefStg2 = null;
+
     [Serializable]
     public struct PlayerVars
     {
@@ -30,6 +47,7 @@ public class GameplayController : MonoBehaviour
         public float rotSpeed;
         public int HP;
     }
+    [Space]
     public PlayerVars commonPlayerVars;
 
     int maxRounds = 5;
@@ -164,21 +182,23 @@ public class GameplayController : MonoBehaviour
         {
             case 0:
                 AkSoundEngine.PostEvent("Inicia_bosque", gameObject);
+                SpawnStaticObstacles(staticObstaclePrefStg1,staticObstSpawnStg1);
+                foc.StartSpawning(fallingObstaclePrefStg1);
                 break;
             case 1:
-                AkSoundEngine.PostEvent("Inicia_granja", gameObject);
-                break;
             default:
                 AkSoundEngine.PostEvent("Inicia_granja", gameObject);
+                SpawnStaticObstacles(staticObstaclePrefStg2,staticObstSpawnStg2);
+                foc.StartSpawning(fallingObstaclePrefStg2);
                 break;
         }
         ppManager.StartRemovingCAberration();
-        PlayerController P1 = Instantiate(playerPrefab, spawner[0].position, Quaternion.identity); // se puede hacer un for
+        PlayerController P1 = Instantiate(playerPrefab, playerSpawner[0].position, playerSpawner[0].rotation); // se puede hacer un for
         P1.playerNumber = 1;
         P1.modelIndex = playerCharacter[0];
         grabbingZones[0].player = P1;
         players.Add(P1);
-        PlayerController P2 = Instantiate(playerPrefab, spawner[1].position, Quaternion.identity);
+        PlayerController P2 = Instantiate(playerPrefab, playerSpawner[1].position, playerSpawner[1].rotation);
         P2.playerNumber = 2;
         grabbingZones[1].player = P2;
         P2.modelIndex = playerCharacter[1];
@@ -198,6 +218,15 @@ public class GameplayController : MonoBehaviour
         if (activateTester) tester.gameObject.SetActive(true);
     }
 
+    void SpawnStaticObstacles(GameObject staticObjPref,Transform[] spawner)
+    {
+        int rand = UnityEngine.Random.Range(0, spawner.Length);
+        Instantiate(staticObjPref, spawner[rand].position, Quaternion.identity);
+        rand++;
+        if (rand >= spawner.Length) rand = 0;
+        Instantiate(staticObjPref, spawner[rand].position, Quaternion.identity);
+    }
+
     IEnumerator DisplayIntroAndPlay()
     {
         uiGameplay.DisplayIntro();
@@ -205,6 +234,7 @@ public class GameplayController : MonoBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             players[i].ableToMove = true;
+            
         }
         AkSoundEngine.PostEvent("Play_fight", gameObject);
     }

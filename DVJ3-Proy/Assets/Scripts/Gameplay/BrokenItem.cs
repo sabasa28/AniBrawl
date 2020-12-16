@@ -6,10 +6,10 @@ public class BrokenItem : MonoBehaviour
 {
     [SerializeField] GameObject bottomPiece = null;
     [SerializeField] GameObject topPiece = null;
-    Rigidbody bottomPieceRb;
-    Rigidbody topPieceRb;
-    Collider bottomPieceCol;
-    Collider topPieceCol;
+    public Rigidbody bottomPieceRb;
+    public Rigidbody topPieceRb;
+    public Collider bottomPieceCol;
+    public Collider topPieceCol;
     [SerializeField] float forceToSeparate = 0.0f;
 
     private void OnEnable()

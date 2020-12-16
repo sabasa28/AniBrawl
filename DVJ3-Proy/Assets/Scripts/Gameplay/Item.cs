@@ -149,7 +149,7 @@ public class Item : MonoBehaviour
             if (!collision.gameObject.CompareTag("Player"))
             {
                 SetAsGrabbable();
-                AkSoundEngine.PostEvent("Weapon_hit", gameObject);
+                itemHitSound();
             }
         }
     }

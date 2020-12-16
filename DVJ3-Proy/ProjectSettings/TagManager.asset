@@ -11,6 +11,8 @@ TagManager:
   - Fire
   - GameplayCamera
   - StaticObstacle
+  - Floor
+  - FallingObstacle
   layers:
   - Default
   - TransparentFX
@@ -34,8 +36,8 @@ TagManager:
   - BrokenObj
   - IgnoreObj
   - StaticObstacle
-  - 
-  - 
+  - FallingObstacle
+  - IgnorePlayer
   - 
   - 
   - 

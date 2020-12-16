@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, Quaternion.identity ,transform);
+        GameObject modelGo = Instantiate(availableModels[modelIndex], transform.position, transform.rotation, transform);
         PlayerGFX model = modelGo.GetComponent<PlayerGFX>();
         if (modelIndex <= 1)
         {
@@ -152,7 +152,6 @@ public class PlayerController : MonoBehaviour
         if (currentGravity > 0)
         {
             velocity += (new Vector3(0.0f, -currentGravity));
-            //ableToMove 
         }
         cController.Move(velocity * Time.fixedDeltaTime);
         if (ableToMove && dir != Vector3.zero)
@@ -199,9 +198,27 @@ public class PlayerController : MonoBehaviour
 
     public void OnStaticObstacleCollision(StaticObstacle hitBy)
     {
-        Vector3 funElevation = new Vector3(0.0f, 1f);
+        float funElevation = 0.5f;
         Vector3 dir = transform.position - hitBy.transform.position;
-        pushedCor = StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.pushForce));
+        pushedCor = StartCoroutine(Pushed(new Vector3(dir.normalized.x, funElevation, dir.normalized.z) * hitBy.pushForce));
+        hp -= (int)hitBy.damage;
+        if (hp <= 0)
+        {
+            hp = 0;
+            OnDeath(this);
+        }
+        UpdateUI();
+        AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+        AkSoundEngine.PostEvent("Weapon_hit", gameObject);
+        StartCoroutine(ImmunityTime());
+    }
+
+    public void OnFallingObstacleCollision(FallingObstacle hitBy)
+    {
+        if (immune) return;
+        Vector3 dir = transform.position - hitBy.transform.position;
+        dir.y = 0.0f;
+        pushedCor = StartCoroutine(Pushed(dir.normalized * hitBy.pushForce));
         hp -= (int)hitBy.damage;
         if (hp <= 0)
         {
@@ -216,40 +233,40 @@ public class PlayerController : MonoBehaviour
 
     public void OnItemCollision(Item hitBy)
     {
-        if (!immune)
-            if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+        if (immune) return;
+        if (hitBy.playerGrabbing && hitBy.playerGrabbing != this)
+        {
+            Vector3 dir;
+            Vector3 horizontalDir;
+            bool meleeHit = false;
+            if (hitBy.itemState == Item.State.midAir)
             {
-                Vector3 dir;
-                Vector3 horizontalDir;
-                bool meleeHit = false;
-                if (hitBy.itemState == Item.State.midAir)
-                {
-                    dir = transform.position - hitBy.transform.position;
-                    Debug.Log("Golpeado a distancia");
-                }
-                else 
-                {
-                    dir = transform.position - hitBy.playerGrabbing.transform.position;
-                    Debug.Log("Golpeado a melee");
-                    meleeHit = true;
-                }
-                hitBy.GetDamaged();
-                if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
-                horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-                pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
-                Debug.Log("hit");
-                hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
-                if (!meleeHit) hitBy.SetAsGrabbable();
-                if (hp <= 0)
-                {
-                    hp = 0;
-                    OnDeath(this);
-                }
-                UpdateUI();
-                AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
-                hitBy.itemHitSound();
-                StartCoroutine(ImmunityTime());
+                dir = transform.position - hitBy.transform.position;
+                Debug.Log("Golpeado a distancia");
             }
+            else 
+            {
+                dir = transform.position - hitBy.playerGrabbing.transform.position;
+                Debug.Log("Golpeado a melee");
+                meleeHit = true;
+            }
+            hitBy.GetDamaged();
+            if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
+            horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
+            pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
+            Debug.Log("hit");
+            hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
+            if (!meleeHit) hitBy.SetAsGrabbable();
+            if (hp <= 0)
+            {
+                hp = 0;
+                OnDeath(this);
+            }
+            UpdateUI();
+            AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+            hitBy.itemHitSound();
+            StartCoroutine(ImmunityTime());
+        }
     }
 
     public void RemoveItemFromAvailable(Item item)
