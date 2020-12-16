@@ -242,12 +242,10 @@ public class PlayerController : MonoBehaviour
             if (hitBy.itemState == Item.State.midAir)
             {
                 dir = transform.position - hitBy.transform.position;
-                Debug.Log("Golpeado a distancia");
             }
             else 
             {
                 dir = transform.position - hitBy.playerGrabbing.transform.position;
-                Debug.Log("Golpeado a melee");
                 meleeHit = true;
             }
             hitBy.GetDamaged();

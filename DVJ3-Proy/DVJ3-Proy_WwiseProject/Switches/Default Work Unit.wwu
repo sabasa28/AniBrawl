@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{5C407BE7-9216-4ADC-849D-21942F991DAF}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="Arma_selector" ID="{EA51E4B0-0E84-473F-ADFB-B3C3548B6DB2}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="25"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Balde" ID="{78F8B7EF-EDA3-479F-96BE-766EA3F7941D}"/>
 						<Switch Name="Bate" ID="{6A88B1BD-2F2A-4A3B-A23E-C9DB1D8AB1BD}"/>

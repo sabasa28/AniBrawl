@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="62647287">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1813956682">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -25,11 +25,12 @@
 						<State Id="2658298240" Name="Inicio" ObjectPath="\States\Default Work Unit\Estados\Inicio"/>
 						<State Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
 						<State Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
+						<State Id="3127139597" Name="Silencio" ObjectPath="\States\Default Work Unit\Estados\Silencio"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="302894005">
+		<SoundBank Id="3161908922" Language="SFX" Hash="458980952">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -47,11 +48,11 @@
 						<ActionSetStateEntry Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.589740" DurationMax="0.589740">
+				<Event Id="3049547158" Name="Exit_game" ObjectPath="\Events\Default Work Unit\Exit_game" DurationType="OneShot" DurationMin="0.560321" DurationMax="0.560321">
 					<IncludedMemoryFiles>
 						<File Id="69213025" Language="SFX">
 							<ShortName>Clik_exit.wav</ShortName>
-							<Path>SFX\Clik_exit_FA6A89D9.wem</Path>
+							<Path>SFX\Clik_exit_A2574AF0.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -101,6 +102,10 @@
 							<ShortName>inicia_menu2.wav</ShortName>
 							<Path>SFX\inicia_menu2_835714D9.wem</Path>
 						</File>
+						<File Id="140409444" Language="SFX">
+							<ShortName>Pelea granero 02.wav</ShortName>
+							<Path>SFX\Pelea granero 02_179463A7.wem</Path>
+						</File>
 						<File Id="216005068" Language="SFX">
 							<ShortName>farm_amb-001.wav</ShortName>
 							<Path>SFX\farm_amb-001_835714D9.wem</Path>
@@ -141,10 +146,6 @@
 							<ShortName>Fin de batalla.wav</ShortName>
 							<Path>SFX\Fin de batalla_179463A7.wem</Path>
 						</File>
-						<File Id="665288200" Language="SFX">
-							<ShortName>Pelea de granja 1.wav</ShortName>
-							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
-						</File>
 						<File Id="692360340" Language="SFX">
 							<ShortName>Victoria_granja.wav</ShortName>
 							<Path>SFX\Victoria_granja_179463A7.wem</Path>
@@ -173,6 +174,10 @@
 							<ShortName>Barn_test.wav</ShortName>
 							<Path>SFX\Barn_test_01472649.wem</Path>
 						</File>
+						<File Id="946210250" Language="SFX">
+							<ShortName>Pelea granero 01.wav</ShortName>
+							<Path>SFX\Pelea granero 01_179463A7.wem</Path>
+						</File>
 						<File Id="960583685" Language="SFX">
 							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
 							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
@@ -189,17 +194,13 @@
 							<ShortName>04_Menu.wav</ShortName>
 							<Path>SFX\04_Menu_179463A7.wem</Path>
 						</File>
-						<File Id="1033605920" Language="SFX">
-							<ShortName>Pelea de granja 2.wav</ShortName>
-							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
-						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{E4EEC127-2763-4870-AF5E-E5EB50F7954A}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
 							<Media>
-								<File Id="665288200"/>
-								<File Id="1033605920"/>
+								<File Id="946210250"/>
+								<File Id="140409444"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
@@ -267,6 +268,10 @@
 							<ShortName>arboles viento.wav</ShortName>
 							<Path>SFX\arboles viento_835714D9.wem</Path>
 						</File>
+						<File Id="140409444" Language="SFX">
+							<ShortName>Pelea granero 02.wav</ShortName>
+							<Path>SFX\Pelea granero 02_179463A7.wem</Path>
+						</File>
 						<File Id="216005068" Language="SFX">
 							<ShortName>farm_amb-001.wav</ShortName>
 							<Path>SFX\farm_amb-001_835714D9.wem</Path>
@@ -307,10 +312,6 @@
 							<ShortName>Fin de batalla.wav</ShortName>
 							<Path>SFX\Fin de batalla_179463A7.wem</Path>
 						</File>
-						<File Id="665288200" Language="SFX">
-							<ShortName>Pelea de granja 1.wav</ShortName>
-							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
-						</File>
 						<File Id="692360340" Language="SFX">
 							<ShortName>Victoria_granja.wav</ShortName>
 							<Path>SFX\Victoria_granja_179463A7.wem</Path>
@@ -339,6 +340,10 @@
 							<ShortName>Barn_test.wav</ShortName>
 							<Path>SFX\Barn_test_01472649.wem</Path>
 						</File>
+						<File Id="946210250" Language="SFX">
+							<ShortName>Pelea granero 01.wav</ShortName>
+							<Path>SFX\Pelea granero 01_179463A7.wem</Path>
+						</File>
 						<File Id="960583685" Language="SFX">
 							<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
 							<Path>SFX\grave_amb_iniciamenu o pausa_43F82FFB.wem</Path>
@@ -355,17 +360,13 @@
 							<ShortName>04_Menu.wav</ShortName>
 							<Path>SFX\04_Menu_179463A7.wem</Path>
 						</File>
-						<File Id="1033605920" Language="SFX">
-							<ShortName>Pelea de granja 2.wav</ShortName>
-							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
-						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{E4EEC127-2763-4870-AF5E-E5EB50F7954A}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
 							<Media>
-								<File Id="665288200"/>
-								<File Id="1033605920"/>
+								<File Id="946210250"/>
+								<File Id="140409444"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
@@ -463,11 +464,11 @@
 					<IncludedMemoryFiles>
 						<File Id="59236057" Language="SFX">
 							<ShortName>Pasos_frog-002.wav</ShortName>
-							<Path>SFX\Pasos_frog-002_7E176CFC.wem</Path>
+							<Path>SFX\Pasos_frog-002_590D252A.wem</Path>
 						</File>
 						<File Id="119786416" Language="SFX">
 							<ShortName>Pasos_frog-003.wav</ShortName>
-							<Path>SFX\Pasos_frog-003_10C4C929.wem</Path>
+							<Path>SFX\Pasos_frog-003_403E865C.wem</Path>
 						</File>
 						<File Id="305649421" Language="SFX">
 							<ShortName>Pasos_frog_talk-001.wav</ShortName>
@@ -479,11 +480,11 @@
 						</File>
 						<File Id="771194761" Language="SFX">
 							<ShortName>Pasos_frog-002.wav</ShortName>
-							<Path>SFX\Pasos_frog-002_BEB17E5F.wem</Path>
+							<Path>SFX\Pasos_frog-002_0D234015.wem</Path>
 						</File>
 						<File Id="792234434" Language="SFX">
 							<ShortName>Pasos_frog-001.wav</ShortName>
-							<Path>SFX\Pasos_frog-001_4776ADC0.wem</Path>
+							<Path>SFX\Pasos_frog-001_4FC5E428.wem</Path>
 						</File>
 						<File Id="812749690" Language="SFX">
 							<ShortName>Pasos_frog_talk-002.wav</ShortName>
@@ -493,26 +494,27 @@
 				</Event>
 				<Event Id="3437014341" Name="Pause_in" ObjectPath="\Events\Default Work Unit\Pause_in" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3648253772" Name="Pause_out" ObjectPath="\Events\Default Work Unit\Pause_out" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.390478" DurationMax="0.653898">
+				<Event Id="2162635622" Name="Pick" ObjectPath="\Events\Default Work Unit\Pick" DurationType="OneShot" DurationMin="0.119341" DurationMax="0.186479">
 					<IncludedMemoryFiles>
 						<File Id="4694457" Language="SFX">
 							<ShortName>sfx_grab_1-001.wav</ShortName>
-							<Path>SFX\sfx_grab_1-001_0067426C.wem</Path>
+							<Path>SFX\sfx_grab_1-001_7726F907.wem</Path>
 						</File>
 						<File Id="474171986" Language="SFX">
 							<ShortName>sfx_grab_1.wav</ShortName>
-							<Path>SFX\sfx_grab_1_32D138D0.wem</Path>
+							<Path>SFX\sfx_grab_1_BD424747.wem</Path>
 						</File>
 						<File Id="514235917" Language="SFX">
 							<ShortName>sfx_grab_1 (2).wav</ShortName>
-							<Path>SFX\sfx_grab_1 (2)_A8AA7D1A.wem</Path>
+							<Path>SFX\sfx_grab_1 (2)_8BBD3D2D.wem</Path>
 						</File>
 						<File Id="658457319" Language="SFX">
 							<ShortName>sfx_grab_2.wav</ShortName>
-							<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
+							<Path>SFX\sfx_grab_2_AA33AF9D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1035755672" Name="Play_arbusto" ObjectPath="\Events\Default Work Unit\Play_arbusto" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="639442169" Name="Play_crowd" ObjectPath="\Events\Default Work Unit\Play_crowd" DurationType="OneShot" DurationMin="20.839819" DurationMax="20.839819">
 					<IncludedMemoryFiles>
 						<File Id="875904796" Language="SFX">
@@ -523,6 +525,10 @@
 				</Event>
 				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="140409444" Language="SFX">
+							<ShortName>Pelea granero 02.wav</ShortName>
+							<Path>SFX\Pelea granero 02_179463A7.wem</Path>
+						</File>
 						<File Id="226024866" Language="SFX">
 							<ShortName>02_Menu.wav</ShortName>
 							<Path>SFX\02_Menu_179463A7.wem</Path>
@@ -551,10 +557,6 @@
 							<ShortName>Fin de batalla.wav</ShortName>
 							<Path>SFX\Fin de batalla_179463A7.wem</Path>
 						</File>
-						<File Id="665288200" Language="SFX">
-							<ShortName>Pelea de granja 1.wav</ShortName>
-							<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
-						</File>
 						<File Id="692360340" Language="SFX">
 							<ShortName>Victoria_granja.wav</ShortName>
 							<Path>SFX\Victoria_granja_179463A7.wem</Path>
@@ -567,20 +569,20 @@
 							<ShortName>tune_gallo_2.wav</ShortName>
 							<Path>SFX\tune_gallo_2_10C4C929.wem</Path>
 						</File>
+						<File Id="946210250" Language="SFX">
+							<ShortName>Pelea granero 01.wav</ShortName>
+							<Path>SFX\Pelea granero 01_179463A7.wem</Path>
+						</File>
 						<File Id="1015971685" Language="SFX">
 							<ShortName>04_Menu.wav</ShortName>
 							<Path>SFX\04_Menu_179463A7.wem</Path>
-						</File>
-						<File Id="1033605920" Language="SFX">
-							<ShortName>Pelea de granja 2.wav</ShortName>
-							<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
 							<Media>
-								<File Id="665288200"/>
-								<File Id="1033605920"/>
+								<File Id="946210250"/>
+								<File Id="140409444"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
@@ -609,6 +611,9 @@
 						<ActionSetStateEntry Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="3563657877" Name="Play_huevo" ObjectPath="\Events\Default Work Unit\Play_huevo" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1551074650" Name="Play_madera" ObjectPath="\Events\Default Work Unit\Play_madera" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1718898710" Name="Play_manzana" ObjectPath="\Events\Default Work Unit\Play_manzana" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2397106107" Name="Play_salto_duck" ObjectPath="\Events\Default Work Unit\Play_salto_duck" DurationType="OneShot" DurationMin="0.465669" DurationMax="0.465669">
 					<IncludedMemoryFiles>
 						<File Id="851261987" Language="SFX">
@@ -633,23 +638,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1411634684" Name="Recieve_duck" ObjectPath="\Events\Default Work Unit\Recieve_duck" DurationType="OneShot" DurationMin="0.284412" DurationMax="1.528279">
+				<Event Id="1411634684" Name="Recieve_duck" ObjectPath="\Events\Default Work Unit\Recieve_duck" DurationType="OneShot" DurationMin="0.284412" DurationMax="1.107651">
 					<IncludedMemoryFiles>
 						<File Id="8788778" Language="SFX">
 							<ShortName>Recieve_duck-002.wav</ShortName>
-							<Path>SFX\Recieve_duck-002_10C4C929.wem</Path>
+							<Path>SFX\Recieve_duck-002_0E2587B8.wem</Path>
 						</File>
 						<File Id="18438146" Language="SFX">
 							<ShortName>Recieve_duck-003.wav</ShortName>
-							<Path>SFX\Recieve_duck-003_10C4C929.wem</Path>
+							<Path>SFX\Recieve_duck-003_07FA1F32.wem</Path>
 						</File>
 						<File Id="154204994" Language="SFX">
 							<ShortName>Recieve_duck-004.wav</ShortName>
-							<Path>SFX\Recieve_duck-004_39524D17.wem</Path>
+							<Path>SFX\Recieve_duck-004_0DA88CD4.wem</Path>
+						</File>
+						<File Id="284307902" Language="SFX">
+							<ShortName>Recieve_duck-003.wav</ShortName>
+							<Path>SFX\Recieve_duck-003_FCD675AE.wem</Path>
 						</File>
 						<File Id="671726831" Language="SFX">
 							<ShortName>Recieve_duck-001.wav</ShortName>
-							<Path>SFX\Recieve_duck-001_4D0E7FBE.wem</Path>
+							<Path>SFX\Recieve_duck-001_F64DEB22.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -702,151 +711,167 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2156697475" Name="Unmute" ObjectPath="\Events\Default Work Unit\Unmute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3972774391" Name="Weapon_hit" ObjectPath="\Events\Default Work Unit\Weapon_hit" DurationType="OneShot" DurationMin="0.183337" DurationMax="1.756858">
+				<Event Id="3972774391" Name="Weapon_hit" ObjectPath="\Events\Default Work Unit\Weapon_hit" DurationType="OneShot" DurationMin="0.158003" DurationMax="0.946731">
 					<IncludedMemoryFiles>
 						<File Id="22228747" Language="SFX">
 							<ShortName>sfx_rama_3.wav</ShortName>
-							<Path>SFX\sfx_rama_3_10C4C929.wem</Path>
+							<Path>SFX\sfx_rama_3_835714D9.wem</Path>
 						</File>
 						<File Id="23080013" Language="SFX">
 							<ShortName>sfx_rastplastt_08.wav</ShortName>
-							<Path>SFX\sfx_rastplastt_08_3FA78333.wem</Path>
+							<Path>SFX\sfx_rastplastt_08_78557BC3.wem</Path>
+						</File>
+						<File Id="26050500" Language="SFX">
+							<ShortName>sfx_guadana_03.wav</ShortName>
+							<Path>SFX\sfx_guadana_03_74DE5B24.wem</Path>
 						</File>
 						<File Id="37178360" Language="SFX">
 							<ShortName>sfx_guadana_1.wav</ShortName>
-							<Path>SFX\sfx_guadana_1_4FB67330.wem</Path>
-						</File>
-						<File Id="61333154" Language="SFX">
-							<ShortName>sfx_rastmet_5.wav</ShortName>
-							<Path>SFX\sfx_rastmet_5_5E09FE5D.wem</Path>
+							<Path>SFX\sfx_guadana_1_117C8659.wem</Path>
 						</File>
 						<File Id="111804297" Language="SFX">
 							<ShortName>sfx_pala_03.wav</ShortName>
-							<Path>SFX\sfx_pala_03_A382D609.wem</Path>
+							<Path>SFX\sfx_pala_03_5C3D878B.wem</Path>
 						</File>
 						<File Id="117746009" Language="SFX">
 							<ShortName>sfx_pala_4.wav</ShortName>
-							<Path>SFX\sfx_pala_4_A0798E52.wem</Path>
+							<Path>SFX\sfx_pala_4_9EB37BA2.wem</Path>
 						</File>
 						<File Id="126528663" Language="SFX">
 							<ShortName>sfx_guadana_03.wav</ShortName>
-							<Path>SFX\sfx_guadana_03_8DFE84AE.wem</Path>
+							<Path>SFX\sfx_guadana_03_1F402EAF.wem</Path>
 						</File>
 						<File Id="134421624" Language="SFX">
 							<ShortName>sfx_regadera_3.wav</ShortName>
-							<Path>SFX\sfx_regadera_3_771A66C9.wem</Path>
+							<Path>SFX\sfx_regadera_3_6FA4BF99.wem</Path>
 						</File>
 						<File Id="150970931" Language="SFX">
 							<ShortName>sfx_cactus_1.wav</ShortName>
-							<Path>SFX\sfx_cactus_1_AB7ADEA3.wem</Path>
+							<Path>SFX\sfx_cactus_1_134112D3.wem</Path>
 						</File>
 						<File Id="200678232" Language="SFX">
 							<ShortName>sfx_hit_4.wav</ShortName>
-							<Path>SFX\sfx_hit_4_7713F3F2.wem</Path>
+							<Path>SFX\sfx_hit_4_5472E882.wem</Path>
 						</File>
 						<File Id="207326859" Language="SFX">
 							<ShortName>sfx_regadera_1.wav</ShortName>
-							<Path>SFX\sfx_regadera_1_2F127C54.wem</Path>
+							<Path>SFX\sfx_regadera_1_28E2BFA4.wem</Path>
 						</File>
 						<File Id="236581530" Language="SFX">
 							<ShortName>sfx_rastplastt_11.wav</ShortName>
-							<Path>SFX\sfx_rastplastt_11_2B5D1ACB.wem</Path>
+							<Path>SFX\sfx_rastplastt_11_D886ACBB.wem</Path>
 						</File>
 						<File Id="253341458" Language="SFX">
 							<ShortName>sfx_rastplastt_07.wav</ShortName>
-							<Path>SFX\sfx_rastplastt_07_7473D318.wem</Path>
+							<Path>SFX\sfx_rastplastt_07_11386CC8.wem</Path>
 						</File>
 						<File Id="347619649" Language="SFX">
 							<ShortName>sfx_hit_3.wav</ShortName>
-							<Path>SFX\sfx_hit_3_8F0134E0.wem</Path>
+							<Path>SFX\sfx_hit_3_F36C22D0.wem</Path>
 						</File>
-						<File Id="379985502" Language="SFX">
-							<ShortName>sfx_rastmet_12.wav</ShortName>
-							<Path>SFX\sfx_rastmet_12_D6E317A4.wem</Path>
+						<File Id="380949400" Language="SFX">
+							<ShortName>sfx_herradura_04.wav</ShortName>
+							<Path>SFX\sfx_herradura_04_835714D9.wem</Path>
 						</File>
 						<File Id="441226983" Language="SFX">
 							<ShortName>sfx_pala_07.wav</ShortName>
-							<Path>SFX\sfx_pala_07_7C054A4A.wem</Path>
+							<Path>SFX\sfx_pala_07_4696F815.wem</Path>
 						</File>
 						<File Id="444550990" Language="SFX">
 							<ShortName>sfx_regadera_5.wav</ShortName>
-							<Path>SFX\sfx_regadera_5_9BEFC8C4.wem</Path>
+							<Path>SFX\sfx_regadera_5_72304E54.wem</Path>
 						</File>
 						<File Id="483299258" Language="SFX">
 							<ShortName>sfx_rama_2.wav</ShortName>
-							<Path>SFX\sfx_rama_2_10C4C929.wem</Path>
+							<Path>SFX\sfx_rama_2_835714D9.wem</Path>
+						</File>
+						<File Id="488154065" Language="SFX">
+							<ShortName>sfx_herradura_03.wav</ShortName>
+							<Path>SFX\sfx_herradura_03_835714D9.wem</Path>
 						</File>
 						<File Id="493954556" Language="SFX">
 							<ShortName>sfx_rama_1.wav</ShortName>
-							<Path>SFX\sfx_rama_1_10C4C929.wem</Path>
+							<Path>SFX\sfx_rama_1_835714D9.wem</Path>
 						</File>
 						<File Id="532797474" Language="SFX">
 							<ShortName>sfx_bate_3-001.wav</ShortName>
-							<Path>SFX\sfx_bate_3-001_0E21EBAB.wem</Path>
+							<Path>SFX\sfx_bate_3-001_B8B373BB.wem</Path>
 						</File>
 						<File Id="549763350" Language="SFX">
 							<ShortName>sfx_rastplastt_03.wav</ShortName>
-							<Path>SFX\sfx_rastplastt_03_DF630D00.wem</Path>
+							<Path>SFX\sfx_rastplastt_03_CC94DFF0.wem</Path>
 						</File>
 						<File Id="595120389" Language="SFX">
 							<ShortName>sfx_hit_1.wav</ShortName>
-							<Path>SFX\sfx_hit_1_A207F14D.wem</Path>
+							<Path>SFX\sfx_hit_1_B3BA857D.wem</Path>
 						</File>
 						<File Id="603927543" Language="SFX">
 							<ShortName>sfx_cactus_2.wav</ShortName>
-							<Path>SFX\sfx_cactus_2_7BD343FD.wem</Path>
+							<Path>SFX\sfx_cactus_2_BEC73A4D.wem</Path>
 						</File>
 						<File Id="613037995" Language="SFX">
 							<ShortName>sfx_bate_2-001.wav</ShortName>
-							<Path>SFX\sfx_bate_2-001_0EF2FFBB.wem</Path>
+							<Path>SFX\sfx_bate_2-001_FE2C27EB.wem</Path>
 						</File>
 						<File Id="683782887" Language="SFX">
 							<ShortName>sfx_rama_5.wav</ShortName>
-							<Path>SFX\sfx_rama_5_10C4C929.wem</Path>
+							<Path>SFX\sfx_rama_5_835714D9.wem</Path>
 						</File>
 						<File Id="702034421" Language="SFX">
 							<ShortName>sfx_rama_4.wav</ShortName>
-							<Path>SFX\sfx_rama_4_10C4C929.wem</Path>
+							<Path>SFX\sfx_rama_4_835714D9.wem</Path>
 						</File>
 						<File Id="730790305" Language="SFX">
 							<ShortName>sfx_regadera_4.wav</ShortName>
-							<Path>SFX\sfx_regadera_4_327CF06B.wem</Path>
+							<Path>SFX\sfx_regadera_4_BEF55F5B.wem</Path>
+						</File>
+						<File Id="747142089" Language="SFX">
+							<ShortName>sfx_guadana_2.wav</ShortName>
+							<Path>SFX\sfx_guadana_2_9FE0BDBF.wem</Path>
+						</File>
+						<File Id="773225763" Language="SFX">
+							<ShortName>sfx_herradura_02.wav</ShortName>
+							<Path>SFX\sfx_herradura_02_835714D9.wem</Path>
+						</File>
+						<File Id="796326975" Language="SFX">
+							<ShortName>sfx_herradura_05.wav</ShortName>
+							<Path>SFX\sfx_herradura_05_835714D9.wem</Path>
 						</File>
 						<File Id="828972344" Language="SFX">
 							<ShortName>sfx_regadera_5.wav</ShortName>
-							<Path>SFX\sfx_regadera_5_25020FD2.wem</Path>
-						</File>
-						<File Id="876065015" Language="SFX">
-							<ShortName>sfx_rastmet_11.wav</ShortName>
-							<Path>SFX\sfx_rastmet_11_46F49B85.wem</Path>
+							<Path>SFX\sfx_regadera_5_D1F0A902.wem</Path>
 						</File>
 						<File Id="905061693" Language="SFX">
 							<ShortName>sfx_guadana_1.wav</ShortName>
-							<Path>SFX\sfx_guadana_1_5CBA3840.wem</Path>
+							<Path>SFX\sfx_guadana_1_B4B84BAD.wem</Path>
 						</File>
 						<File Id="915837611" Language="SFX">
 							<ShortName>sfx_cactus_3.wav</ShortName>
-							<Path>SFX\sfx_cactus_3_C3EA1345.wem</Path>
+							<Path>SFX\sfx_cactus_3_E022B8D5.wem</Path>
 						</File>
 						<File Id="935131799" Language="SFX">
 							<ShortName>sfx_bate_4-001.wav</ShortName>
-							<Path>SFX\sfx_bate_4-001_815B3F7F.wem</Path>
+							<Path>SFX\sfx_bate_4-001_0F941C8F.wem</Path>
 						</File>
 						<File Id="938457295" Language="SFX">
 							<ShortName>sfx_hit_2.wav</ShortName>
-							<Path>SFX\sfx_hit_2_570452FA.wem</Path>
+							<Path>SFX\sfx_hit_2_8CB819CA.wem</Path>
 						</File>
 						<File Id="939387135" Language="SFX">
 							<ShortName>sfx_pala_02.wav</ShortName>
-							<Path>SFX\sfx_pala_02_6FA4F7B5.wem</Path>
+							<Path>SFX\sfx_pala_02_8357AB26.wem</Path>
 						</File>
 						<File Id="970034130" Language="SFX">
 							<ShortName>sfx_guadana_2.wav</ShortName>
-							<Path>SFX\sfx_guadana_2_EEBE2455.wem</Path>
+							<Path>SFX\sfx_guadana_2_1AFBF97F.wem</Path>
+						</File>
+						<File Id="1009320327" Language="SFX">
+							<ShortName>sfx_herradura_01.wav</ShortName>
+							<Path>SFX\sfx_herradura_01_835714D9.wem</Path>
 						</File>
 						<File Id="1061033831" Language="SFX">
 							<ShortName>sfx_regadera_2.wav</ShortName>
-							<Path>SFX\sfx_regadera_2_BC5FF30D.wem</Path>
+							<Path>SFX\sfx_regadera_2_720B5B7D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{05790DBF-AD35-4FA1-9B06-C68C42897C5C}</DefaultSwitchValue>
@@ -877,8 +902,8 @@
 						<SwitchContainer SwitchValue="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}">
 							<Media>
 								<File Id="905061693"/>
-								<File Id="970034130"/>
-								<File Id="126528663"/>
+								<File Id="747142089"/>
+								<File Id="26050500"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{36CD1517-5346-4062-9D39-B982415886E1}">
@@ -915,9 +940,11 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{F083C469-4AFB-422A-94B2-E318D27ABC46}">
 							<Media>
-								<File Id="61333154"/>
-								<File Id="379985502"/>
-								<File Id="876065015"/>
+								<File Id="1009320327"/>
+								<File Id="773225763"/>
+								<File Id="488154065"/>
+								<File Id="380949400"/>
+								<File Id="796326975"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{CC24EDF9-6F86-4240-B48C-D21D99988495}">
@@ -943,11 +970,11 @@
 			<IncludedMemoryFiles>
 				<File Id="4694457" Language="SFX">
 					<ShortName>sfx_grab_1-001.wav</ShortName>
-					<Path>SFX\sfx_grab_1-001_0067426C.wem</Path>
+					<Path>SFX\sfx_grab_1-001_7726F907.wem</Path>
 				</File>
 				<File Id="8788778" Language="SFX">
 					<ShortName>Recieve_duck-002.wav</ShortName>
-					<Path>SFX\Recieve_duck-002_10C4C929.wem</Path>
+					<Path>SFX\Recieve_duck-002_0E2587B8.wem</Path>
 				</File>
 				<File Id="14640781" Language="SFX">
 					<ShortName>Pasos_duck-003.wav</ShortName>
@@ -955,35 +982,35 @@
 				</File>
 				<File Id="18438146" Language="SFX">
 					<ShortName>Recieve_duck-003.wav</ShortName>
-					<Path>SFX\Recieve_duck-003_10C4C929.wem</Path>
+					<Path>SFX\Recieve_duck-003_07FA1F32.wem</Path>
 				</File>
 				<File Id="22228747" Language="SFX">
 					<ShortName>sfx_rama_3.wav</ShortName>
-					<Path>SFX\sfx_rama_3_10C4C929.wem</Path>
+					<Path>SFX\sfx_rama_3_835714D9.wem</Path>
 				</File>
 				<File Id="23080013" Language="SFX">
 					<ShortName>sfx_rastplastt_08.wav</ShortName>
-					<Path>SFX\sfx_rastplastt_08_3FA78333.wem</Path>
+					<Path>SFX\sfx_rastplastt_08_78557BC3.wem</Path>
+				</File>
+				<File Id="26050500" Language="SFX">
+					<ShortName>sfx_guadana_03.wav</ShortName>
+					<Path>SFX\sfx_guadana_03_74DE5B24.wem</Path>
 				</File>
 				<File Id="37178360" Language="SFX">
 					<ShortName>sfx_guadana_1.wav</ShortName>
-					<Path>SFX\sfx_guadana_1_4FB67330.wem</Path>
+					<Path>SFX\sfx_guadana_1_117C8659.wem</Path>
 				</File>
 				<File Id="59236057" Language="SFX">
 					<ShortName>Pasos_frog-002.wav</ShortName>
-					<Path>SFX\Pasos_frog-002_7E176CFC.wem</Path>
+					<Path>SFX\Pasos_frog-002_590D252A.wem</Path>
 				</File>
 				<File Id="60517405" Language="SFX">
 					<ShortName>Pasos_duck-001.wav</ShortName>
 					<Path>SFX\Pasos_duck-001_A2B556E8.wem</Path>
 				</File>
-				<File Id="61333154" Language="SFX">
-					<ShortName>sfx_rastmet_5.wav</ShortName>
-					<Path>SFX\sfx_rastmet_5_5E09FE5D.wem</Path>
-				</File>
 				<File Id="69213025" Language="SFX">
 					<ShortName>Clik_exit.wav</ShortName>
-					<Path>SFX\Clik_exit_FA6A89D9.wem</Path>
+					<Path>SFX\Clik_exit_A2574AF0.wem</Path>
 				</File>
 				<File Id="80653923" Language="SFX">
 					<ShortName>mapa.wav</ShortName>
@@ -995,27 +1022,31 @@
 				</File>
 				<File Id="111804297" Language="SFX">
 					<ShortName>sfx_pala_03.wav</ShortName>
-					<Path>SFX\sfx_pala_03_A382D609.wem</Path>
+					<Path>SFX\sfx_pala_03_5C3D878B.wem</Path>
 				</File>
 				<File Id="117746009" Language="SFX">
 					<ShortName>sfx_pala_4.wav</ShortName>
-					<Path>SFX\sfx_pala_4_A0798E52.wem</Path>
+					<Path>SFX\sfx_pala_4_9EB37BA2.wem</Path>
 				</File>
 				<File Id="119786416" Language="SFX">
 					<ShortName>Pasos_frog-003.wav</ShortName>
-					<Path>SFX\Pasos_frog-003_10C4C929.wem</Path>
+					<Path>SFX\Pasos_frog-003_403E865C.wem</Path>
 				</File>
 				<File Id="126528663" Language="SFX">
 					<ShortName>sfx_guadana_03.wav</ShortName>
-					<Path>SFX\sfx_guadana_03_8DFE84AE.wem</Path>
+					<Path>SFX\sfx_guadana_03_1F402EAF.wem</Path>
 				</File>
 				<File Id="134421624" Language="SFX">
 					<ShortName>sfx_regadera_3.wav</ShortName>
-					<Path>SFX\sfx_regadera_3_771A66C9.wem</Path>
+					<Path>SFX\sfx_regadera_3_6FA4BF99.wem</Path>
 				</File>
 				<File Id="138927013" Language="SFX">
 					<ShortName>inicia_menu2.wav</ShortName>
 					<Path>SFX\inicia_menu2_835714D9.wem</Path>
+				</File>
+				<File Id="140409444" Language="SFX">
+					<ShortName>Pelea granero 02.wav</ShortName>
+					<Path>SFX\Pelea granero 02_179463A7.wem</Path>
 				</File>
 				<File Id="148408425" Language="SFX">
 					<ShortName>Pasos_duck-001.wav</ShortName>
@@ -1023,11 +1054,11 @@
 				</File>
 				<File Id="150970931" Language="SFX">
 					<ShortName>sfx_cactus_1.wav</ShortName>
-					<Path>SFX\sfx_cactus_1_AB7ADEA3.wem</Path>
+					<Path>SFX\sfx_cactus_1_134112D3.wem</Path>
 				</File>
 				<File Id="154204994" Language="SFX">
 					<ShortName>Recieve_duck-004.wav</ShortName>
-					<Path>SFX\Recieve_duck-004_39524D17.wem</Path>
+					<Path>SFX\Recieve_duck-004_0DA88CD4.wem</Path>
 				</File>
 				<File Id="168623129" Language="SFX">
 					<ShortName>Recieve_frog-001.wav</ShortName>
@@ -1039,11 +1070,11 @@
 				</File>
 				<File Id="200678232" Language="SFX">
 					<ShortName>sfx_hit_4.wav</ShortName>
-					<Path>SFX\sfx_hit_4_7713F3F2.wem</Path>
+					<Path>SFX\sfx_hit_4_5472E882.wem</Path>
 				</File>
 				<File Id="207326859" Language="SFX">
 					<ShortName>sfx_regadera_1.wav</ShortName>
-					<Path>SFX\sfx_regadera_1_2F127C54.wem</Path>
+					<Path>SFX\sfx_regadera_1_28E2BFA4.wem</Path>
 				</File>
 				<File Id="216005068" Language="SFX">
 					<ShortName>farm_amb-001.wav</ShortName>
@@ -1063,7 +1094,7 @@
 				</File>
 				<File Id="236581530" Language="SFX">
 					<ShortName>sfx_rastplastt_11.wav</ShortName>
-					<Path>SFX\sfx_rastplastt_11_2B5D1ACB.wem</Path>
+					<Path>SFX\sfx_rastplastt_11_D886ACBB.wem</Path>
 				</File>
 				<File Id="247197488" Language="SFX">
 					<ShortName>sfx_whoosh_108.wav</ShortName>
@@ -1071,7 +1102,7 @@
 				</File>
 				<File Id="253341458" Language="SFX">
 					<ShortName>sfx_rastplastt_07.wav</ShortName>
-					<Path>SFX\sfx_rastplastt_07_7473D318.wem</Path>
+					<Path>SFX\sfx_rastplastt_07_11386CC8.wem</Path>
 				</File>
 				<File Id="263033695" Language="SFX">
 					<ShortName>tune_gallo.wav</ShortName>
@@ -1084,6 +1115,10 @@
 				<File Id="282627336" Language="SFX">
 					<ShortName>walk_duck-002.wav</ShortName>
 					<Path>SFX\walk_duck-002_F4484CD0.wem</Path>
+				</File>
+				<File Id="284307902" Language="SFX">
+					<ShortName>Recieve_duck-003.wav</ShortName>
+					<Path>SFX\Recieve_duck-003_FCD675AE.wem</Path>
 				</File>
 				<File Id="305649421" Language="SFX">
 					<ShortName>Pasos_frog_talk-001.wav</ShortName>
@@ -1099,7 +1134,7 @@
 				</File>
 				<File Id="347619649" Language="SFX">
 					<ShortName>sfx_hit_3.wav</ShortName>
-					<Path>SFX\sfx_hit_3_8F0134E0.wem</Path>
+					<Path>SFX\sfx_hit_3_F36C22D0.wem</Path>
 				</File>
 				<File Id="358698009" Language="SFX">
 					<ShortName>Pasos_frog_talk-003.wav</ShortName>
@@ -1113,9 +1148,9 @@
 					<ShortName>01_Menu.wav</ShortName>
 					<Path>SFX\01_Menu_179463A7.wem</Path>
 				</File>
-				<File Id="379985502" Language="SFX">
-					<ShortName>sfx_rastmet_12.wav</ShortName>
-					<Path>SFX\sfx_rastmet_12_D6E317A4.wem</Path>
+				<File Id="380949400" Language="SFX">
+					<ShortName>sfx_herradura_04.wav</ShortName>
+					<Path>SFX\sfx_herradura_04_835714D9.wem</Path>
 				</File>
 				<File Id="414046758" Language="SFX">
 					<ShortName>sfx_whoosh_109.wav</ShortName>
@@ -1123,11 +1158,11 @@
 				</File>
 				<File Id="441226983" Language="SFX">
 					<ShortName>sfx_pala_07.wav</ShortName>
-					<Path>SFX\sfx_pala_07_7C054A4A.wem</Path>
+					<Path>SFX\sfx_pala_07_4696F815.wem</Path>
 				</File>
 				<File Id="444550990" Language="SFX">
 					<ShortName>sfx_regadera_5.wav</ShortName>
-					<Path>SFX\sfx_regadera_5_9BEFC8C4.wem</Path>
+					<Path>SFX\sfx_regadera_5_72304E54.wem</Path>
 				</File>
 				<File Id="454771366" Language="SFX">
 					<ShortName>farm_amb-003.wav</ShortName>
@@ -1139,15 +1174,19 @@
 				</File>
 				<File Id="474171986" Language="SFX">
 					<ShortName>sfx_grab_1.wav</ShortName>
-					<Path>SFX\sfx_grab_1_32D138D0.wem</Path>
+					<Path>SFX\sfx_grab_1_BD424747.wem</Path>
 				</File>
 				<File Id="483299258" Language="SFX">
 					<ShortName>sfx_rama_2.wav</ShortName>
-					<Path>SFX\sfx_rama_2_10C4C929.wem</Path>
+					<Path>SFX\sfx_rama_2_835714D9.wem</Path>
+				</File>
+				<File Id="488154065" Language="SFX">
+					<ShortName>sfx_herradura_03.wav</ShortName>
+					<Path>SFX\sfx_herradura_03_835714D9.wem</Path>
 				</File>
 				<File Id="493954556" Language="SFX">
 					<ShortName>sfx_rama_1.wav</ShortName>
-					<Path>SFX\sfx_rama_1_10C4C929.wem</Path>
+					<Path>SFX\sfx_rama_1_835714D9.wem</Path>
 				</File>
 				<File Id="500647901" Language="SFX">
 					<ShortName>Recieve_frog-002.wav</ShortName>
@@ -1155,15 +1194,15 @@
 				</File>
 				<File Id="514235917" Language="SFX">
 					<ShortName>sfx_grab_1 (2).wav</ShortName>
-					<Path>SFX\sfx_grab_1 (2)_A8AA7D1A.wem</Path>
+					<Path>SFX\sfx_grab_1 (2)_8BBD3D2D.wem</Path>
 				</File>
 				<File Id="532797474" Language="SFX">
 					<ShortName>sfx_bate_3-001.wav</ShortName>
-					<Path>SFX\sfx_bate_3-001_0E21EBAB.wem</Path>
+					<Path>SFX\sfx_bate_3-001_B8B373BB.wem</Path>
 				</File>
 				<File Id="549763350" Language="SFX">
 					<ShortName>sfx_rastplastt_03.wav</ShortName>
-					<Path>SFX\sfx_rastplastt_03_DF630D00.wem</Path>
+					<Path>SFX\sfx_rastplastt_03_CC94DFF0.wem</Path>
 				</File>
 				<File Id="562611697" Language="SFX">
 					<ShortName>Amb_random-010.wav</ShortName>
@@ -1171,11 +1210,11 @@
 				</File>
 				<File Id="595120389" Language="SFX">
 					<ShortName>sfx_hit_1.wav</ShortName>
-					<Path>SFX\sfx_hit_1_A207F14D.wem</Path>
+					<Path>SFX\sfx_hit_1_B3BA857D.wem</Path>
 				</File>
 				<File Id="603927543" Language="SFX">
 					<ShortName>sfx_cactus_2.wav</ShortName>
-					<Path>SFX\sfx_cactus_2_7BD343FD.wem</Path>
+					<Path>SFX\sfx_cactus_2_BEC73A4D.wem</Path>
 				</File>
 				<File Id="608540775" Language="SFX">
 					<ShortName>tune_gallo_3.wav</ShortName>
@@ -1183,7 +1222,7 @@
 				</File>
 				<File Id="613037995" Language="SFX">
 					<ShortName>sfx_bate_2-001.wav</ShortName>
-					<Path>SFX\sfx_bate_2-001_0EF2FFBB.wem</Path>
+					<Path>SFX\sfx_bate_2-001_FE2C27EB.wem</Path>
 				</File>
 				<File Id="651536663" Language="SFX">
 					<ShortName>mapa.wav</ShortName>
@@ -1195,19 +1234,15 @@
 				</File>
 				<File Id="658457319" Language="SFX">
 					<ShortName>sfx_grab_2.wav</ShortName>
-					<Path>SFX\sfx_grab_2_6E24754A.wem</Path>
-				</File>
-				<File Id="665288200" Language="SFX">
-					<ShortName>Pelea de granja 1.wav</ShortName>
-					<Path>SFX\Pelea de granja 1_179463A7.wem</Path>
+					<Path>SFX\sfx_grab_2_AA33AF9D.wem</Path>
 				</File>
 				<File Id="671726831" Language="SFX">
 					<ShortName>Recieve_duck-001.wav</ShortName>
-					<Path>SFX\Recieve_duck-001_4D0E7FBE.wem</Path>
+					<Path>SFX\Recieve_duck-001_F64DEB22.wem</Path>
 				</File>
 				<File Id="683782887" Language="SFX">
 					<ShortName>sfx_rama_5.wav</ShortName>
-					<Path>SFX\sfx_rama_5_10C4C929.wem</Path>
+					<Path>SFX\sfx_rama_5_835714D9.wem</Path>
 				</File>
 				<File Id="692360340" Language="SFX">
 					<ShortName>Victoria_granja.wav</ShortName>
@@ -1215,7 +1250,7 @@
 				</File>
 				<File Id="702034421" Language="SFX">
 					<ShortName>sfx_rama_4.wav</ShortName>
-					<Path>SFX\sfx_rama_4_10C4C929.wem</Path>
+					<Path>SFX\sfx_rama_4_835714D9.wem</Path>
 				</File>
 				<File Id="713421893" Language="SFX">
 					<ShortName>Amb_random-007.wav</ShortName>
@@ -1223,7 +1258,7 @@
 				</File>
 				<File Id="730790305" Language="SFX">
 					<ShortName>sfx_regadera_4.wav</ShortName>
-					<Path>SFX\sfx_regadera_4_327CF06B.wem</Path>
+					<Path>SFX\sfx_regadera_4_BEF55F5B.wem</Path>
 				</File>
 				<File Id="730963272" Language="SFX">
 					<ShortName>Amb_random-009.wav</ShortName>
@@ -1233,13 +1268,21 @@
 					<ShortName>Amb_random-006.wav</ShortName>
 					<Path>SFX\Amb_random-006_835714D9.wem</Path>
 				</File>
+				<File Id="747142089" Language="SFX">
+					<ShortName>sfx_guadana_2.wav</ShortName>
+					<Path>SFX\sfx_guadana_2_9FE0BDBF.wem</Path>
+				</File>
 				<File Id="758307942" Language="SFX">
 					<ShortName>crowd - copia.wav</ShortName>
 					<Path>SFX\crowd - copia_179463A7.wem</Path>
 				</File>
 				<File Id="771194761" Language="SFX">
 					<ShortName>Pasos_frog-002.wav</ShortName>
-					<Path>SFX\Pasos_frog-002_BEB17E5F.wem</Path>
+					<Path>SFX\Pasos_frog-002_0D234015.wem</Path>
+				</File>
+				<File Id="773225763" Language="SFX">
+					<ShortName>sfx_herradura_02.wav</ShortName>
+					<Path>SFX\sfx_herradura_02_835714D9.wem</Path>
 				</File>
 				<File Id="776475720" Language="SFX">
 					<ShortName>Recieve_frog-004.wav</ShortName>
@@ -1247,7 +1290,11 @@
 				</File>
 				<File Id="792234434" Language="SFX">
 					<ShortName>Pasos_frog-001.wav</ShortName>
-					<Path>SFX\Pasos_frog-001_4776ADC0.wem</Path>
+					<Path>SFX\Pasos_frog-001_4FC5E428.wem</Path>
+				</File>
+				<File Id="796326975" Language="SFX">
+					<ShortName>sfx_herradura_05.wav</ShortName>
+					<Path>SFX\sfx_herradura_05_835714D9.wem</Path>
 				</File>
 				<File Id="809594907" Language="SFX">
 					<ShortName>sfx_whoosh_111.wav</ShortName>
@@ -1267,7 +1314,7 @@
 				</File>
 				<File Id="828972344" Language="SFX">
 					<ShortName>sfx_regadera_5.wav</ShortName>
-					<Path>SFX\sfx_regadera_5_25020FD2.wem</Path>
+					<Path>SFX\sfx_regadera_5_D1F0A902.wem</Path>
 				</File>
 				<File Id="833910238" Language="SFX">
 					<ShortName>Pasos_duck-003.wav</ShortName>
@@ -1281,17 +1328,13 @@
 					<ShortName>crowd.wav</ShortName>
 					<Path>SFX\crowd_835714D9.wem</Path>
 				</File>
-				<File Id="876065015" Language="SFX">
-					<ShortName>sfx_rastmet_11.wav</ShortName>
-					<Path>SFX\sfx_rastmet_11_46F49B85.wem</Path>
-				</File>
 				<File Id="876107825" Language="SFX">
 					<ShortName>Amb_bosque_loop.wav</ShortName>
 					<Path>SFX\Amb_bosque_loop_179463A7.wem</Path>
 				</File>
 				<File Id="905061693" Language="SFX">
 					<ShortName>sfx_guadana_1.wav</ShortName>
-					<Path>SFX\sfx_guadana_1_5CBA3840.wem</Path>
+					<Path>SFX\sfx_guadana_1_B4B84BAD.wem</Path>
 				</File>
 				<File Id="906127461" Language="SFX">
 					<ShortName>Barn_test.wav</ShortName>
@@ -1299,23 +1342,27 @@
 				</File>
 				<File Id="915837611" Language="SFX">
 					<ShortName>sfx_cactus_3.wav</ShortName>
-					<Path>SFX\sfx_cactus_3_C3EA1345.wem</Path>
+					<Path>SFX\sfx_cactus_3_E022B8D5.wem</Path>
 				</File>
 				<File Id="935131799" Language="SFX">
 					<ShortName>sfx_bate_4-001.wav</ShortName>
-					<Path>SFX\sfx_bate_4-001_815B3F7F.wem</Path>
+					<Path>SFX\sfx_bate_4-001_0F941C8F.wem</Path>
 				</File>
 				<File Id="938457295" Language="SFX">
 					<ShortName>sfx_hit_2.wav</ShortName>
-					<Path>SFX\sfx_hit_2_570452FA.wem</Path>
+					<Path>SFX\sfx_hit_2_8CB819CA.wem</Path>
 				</File>
 				<File Id="939387135" Language="SFX">
 					<ShortName>sfx_pala_02.wav</ShortName>
-					<Path>SFX\sfx_pala_02_6FA4F7B5.wem</Path>
+					<Path>SFX\sfx_pala_02_8357AB26.wem</Path>
 				</File>
 				<File Id="940399666" Language="SFX">
 					<ShortName>tune_gallo_2.wav</ShortName>
 					<Path>SFX\tune_gallo_2_10C4C929.wem</Path>
+				</File>
+				<File Id="946210250" Language="SFX">
+					<ShortName>Pelea granero 01.wav</ShortName>
+					<Path>SFX\Pelea granero 01_179463A7.wem</Path>
 				</File>
 				<File Id="960583685" Language="SFX">
 					<ShortName>grave_amb_iniciamenu o pausa.wav</ShortName>
@@ -1323,11 +1370,15 @@
 				</File>
 				<File Id="970034130" Language="SFX">
 					<ShortName>sfx_guadana_2.wav</ShortName>
-					<Path>SFX\sfx_guadana_2_EEBE2455.wem</Path>
+					<Path>SFX\sfx_guadana_2_1AFBF97F.wem</Path>
 				</File>
 				<File Id="994417837" Language="SFX">
 					<ShortName>Farm Barn Exterior.wav</ShortName>
 					<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+				</File>
+				<File Id="1009320327" Language="SFX">
+					<ShortName>sfx_herradura_01.wav</ShortName>
+					<Path>SFX\sfx_herradura_01_835714D9.wem</Path>
 				</File>
 				<File Id="1012422412" Language="SFX">
 					<ShortName>walk_duck-001.wav</ShortName>
@@ -1341,17 +1392,13 @@
 					<ShortName>04_Menu.wav</ShortName>
 					<Path>SFX\04_Menu_179463A7.wem</Path>
 				</File>
-				<File Id="1033605920" Language="SFX">
-					<ShortName>Pelea de granja 2.wav</ShortName>
-					<Path>SFX\Pelea de granja 2_179463A7.wem</Path>
-				</File>
 				<File Id="1059471286" Language="SFX">
 					<ShortName>Recieve_frog-003.wav</ShortName>
 					<Path>SFX\Recieve_frog-003_5BB299F5.wem</Path>
 				</File>
 				<File Id="1061033831" Language="SFX">
 					<ShortName>sfx_regadera_2.wav</ShortName>
-					<Path>SFX\sfx_regadera_2_BC5FF30D.wem</Path>
+					<Path>SFX\sfx_regadera_2_720B5B7D.wem</Path>
 				</File>
 				<File Id="1073255104" Language="SFX">
 					<ShortName>Select_personaje.wav</ShortName>
@@ -1397,6 +1444,7 @@
 						<State Id="2658298240" Name="Inicio" ObjectPath="\States\Default Work Unit\Estados\Inicio"/>
 						<State Id="3092587489" Name="Pausa" ObjectPath="\States\Default Work Unit\Estados\Pausa"/>
 						<State Id="845003552" Name="Fin_de_batalla" ObjectPath="\States\Default Work Unit\Estados\Fin_de_batalla"/>
+						<State Id="3127139597" Name="Silencio" ObjectPath="\States\Default Work Unit\Estados\Silencio"/>
 					</States>
 				</StateGroup>
 			</StateGroups>

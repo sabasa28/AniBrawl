@@ -10,6 +10,7 @@ public class FallingObstController : MonoBehaviour
     [SerializeField] GameObject visualWarning;
     [SerializeField] float timeAfterWarning;
     GameObject prefabToSpawn;
+
     bool spawning = false;
     public void StartSpawning(GameObject prefab)
     {

@@ -227,6 +227,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Pick" ID="{331BE671-4A1C-4F50-BA57-F80BBD814B3B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{3B8F44B2-40D1-4E91-B8DE-55149327EA09}" ShortID="680092298">
 							<ReferenceList>
@@ -238,6 +242,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Throw" ID="{09A6F262-49B2-405A-9DDB-BAF24477CF8E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{A12D4F37-8D30-48A7-A2BD-32689CDC2566}" ShortID="601108736">
 							<ReferenceList>
@@ -366,6 +374,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Weapon_hit" ID="{BDDE8731-4F27-44DE-91E2-3226303C7E3E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="25"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{3E68749F-2CF3-4E75-8F84-2D500C31FA1D}" ShortID="918764745">
 							<ReferenceList>
@@ -399,6 +411,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Recieve_frog" ID="{09D25878-E030-43F4-B48A-832375D8D570}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{0332E243-7074-4477-A348-8152BB9E5473}" ShortID="460324475">
 							<ReferenceList>
@@ -410,6 +426,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Recieve_duck" ID="{A584A1FE-B72B-4DCF-BF6A-2B44A619D455}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{3F10CC15-2140-433B-BC5F-E57EC7B76A7A}" ShortID="822066126">
 							<ReferenceList>
@@ -466,6 +486,26 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_manzana" ID="{E0CBC121-9188-48BD-9C62-6A3189273AE5}">
+					<ChildrenList>
+						<Action Name="" ID="{1F500B12-6C07-4158-9D2F-2916BBADCF61}" ShortID="50451850"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_arbusto" ID="{3F1449D3-0199-49F6-A6F9-B6B293190D26}">
+					<ChildrenList>
+						<Action Name="" ID="{44DFEB08-4EDA-4466-9D08-65843DD5C3A5}" ShortID="478367894"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_huevo" ID="{BE7C7793-CB24-42BA-B1BE-B668B3C58A53}">
+					<ChildrenList>
+						<Action Name="" ID="{4FA28402-0942-484C-8883-094FA2D43683}" ShortID="20071287"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_madera" ID="{329B433B-CCEC-4412-9460-8D733DF720B4}">
+					<ChildrenList>
+						<Action Name="" ID="{B33FF29C-0F3C-4BA1-8BE9-A431F1E91C3C}" ShortID="746848855"/>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

@@ -30,8 +30,12 @@ namespace AK
         static const AkUniqueID PAUSE_IN = 3437014341U;
         static const AkUniqueID PAUSE_OUT = 3648253772U;
         static const AkUniqueID PICK = 2162635622U;
+        static const AkUniqueID PLAY_ARBUSTO = 1035755672U;
         static const AkUniqueID PLAY_CROWD = 639442169U;
         static const AkUniqueID PLAY_FIGHT = 860858016U;
+        static const AkUniqueID PLAY_HUEVO = 3563657877U;
+        static const AkUniqueID PLAY_MADERA = 1551074650U;
+        static const AkUniqueID PLAY_MANZANA = 1718898710U;
         static const AkUniqueID PLAY_SALTO_DUCK = 2397106107U;
         static const AkUniqueID PLAY_SALTO_FROG = 1988902290U;
         static const AkUniqueID PLAYER_SELECT = 282749073U;
@@ -71,6 +75,7 @@ namespace AK
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSA = 3092587489U;
+                static const AkUniqueID SILENCIO = 3127139597U;
             } // namespace STATE
         } // namespace ESTADOS
 

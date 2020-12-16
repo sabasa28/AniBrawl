@@ -99,6 +99,7 @@ MonoBehaviour:
   fallenPositionY: 0.5
   pushForce: 20
   damage: 20
+  objectKind: 1
 --- !u!65 &6548808826821975722
 BoxCollider:
   m_ObjectHideFlags: 0

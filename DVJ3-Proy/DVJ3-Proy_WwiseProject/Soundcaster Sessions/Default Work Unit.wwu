@@ -45,13 +45,26 @@
 							<ObjectRef Name="Pause_out" ID="{4C16DCCD-DC52-4EBC-A869-B9612EDEEC81}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Weapon_hit" ID="{BDDE8731-4F27-44DE-91E2-3226303C7E3E}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Recieve_duck" ID="{A584A1FE-B72B-4DCF-BF6A-2B44A619D455}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Recieve_frog" ID="{09D25878-E030-43F4-B48A-832375D8D570}" WorkUnitID="{323904E6-123A-4412-84AC-9FF25C6828FE}"/>
+							<Position X="3" Y="3"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
+						<CurrentStateRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
+						<CurrentStateRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Guadana" ID="{2905171D-1A23-4F6C-8C14-909F4FE7CE00}"/>
+						<CurrentSwitchRef Name="Bate" ID="{6A88B1BD-2F2A-4A3B-A23E-C9DB1D8AB1BD}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Prueba estados" ID="{6B016F63-87DA-433A-AF1F-8F77A9CBA9F6}">
@@ -87,7 +100,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
+						<CurrentStateRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
 						<CurrentStateRef Name="Menu" ID="{2A5815C7-EAE1-488C-823E-8CD545EF79F5}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">

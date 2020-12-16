@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" ShortID="250507805">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-4</Value>
@@ -26,7 +28,7 @@
 								<Property Name="Tempo" Type="Real64" Value="140"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -39,9 +41,15 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="Pelea de granja 1" ID="{E8CD4B4A-D288-414F-9C73-7A0E65856C88}" ShortID="682389707">
+								<MusicSegment Name="Pelea_granero_midi01" ID="{2FBBE3F3-8C88-482E-8B2B-DB3CDD002ECA}" ShortID="893336556">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="18857.1428571429"/>
+										<Property Name="EndPosition" Type="Real64" Value="39174.5539177657"/>
+										<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -52,23 +60,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Pelea de granja 1" ID="{63F59F93-B0BE-4EEA-88F6-40C02F4781E7}" ShortID="768321551">
+										<MusicTrack Name="Pelea granero 01" ID="{364C9799-2D6E-47A2-977C-351A71DB8C43}" ShortID="80547051">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Pelea de granja 1" ID="{915EEB87-DA24-47D6-A5CD-EC54799B9D9A}">
+												<AudioFileSource Name="Pelea granero 01" ID="{B87920F5-3A0B-4025-AE07-8ABF11B05149}">
 													<Language>SFX</Language>
-													<AudioFile>Pelea de granja 1.wav</AudioFile>
+													<AudioFile>Pelea granero 01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="665288200"/>
+														<MediaID ID="946210250"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{076A3C98-75A0-4128-8C22-947CDCEC7F02}">
+												<MusicTransition Name="Root" ID="{DC350B43-6CDF-4689-BCF0-F064B44CFC93}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -76,15 +84,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{59AB66CC-BDE1-4B88-A6EC-0F8232F8183D}">
+												<MusicTrackSequence Name="" ID="{A53EEAC8-9A07-4C88-A52F-23FBDD85DC81}">
 													<ClipList>
-														<MusicClip Name="Pelea de granja 1" ID="{D0BFF9D0-AF49-4111-9B4C-DCD3E5F45FAE}">
+														<MusicClip Name="Pelea granero 01" ID="{120C7FC2-632D-40DA-9077-A08A3A64944E}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="18857.1428571429"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Pelea de granja 1" ID="{915EEB87-DA24-47D6-A5CD-EC54799B9D9A}"/>
+															<AudioSourceRef Name="Pelea granero 01" ID="{B87920F5-3A0B-4025-AE07-8ABF11B05149}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -92,8 +100,8 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{E19FBA8D-EC27-451C-90C0-1DCE5E962CEF}"/>
-										<MusicCue Name="Exit Cue" ID="{745ABC3E-84B4-46BA-9D2B-E9BA81B01210}">
+										<MusicCue Name="Entry Cue" ID="{1DDD03FA-4EC7-4698-85A3-BFFDD0EBBE81}"/>
+										<MusicCue Name="Exit Cue" ID="{074E776F-3233-42E1-9247-78BECE68933F}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
 												<Property Name="TimeMs" Type="Real64" Value="18857.1428571429"/>
@@ -101,9 +109,14 @@
 										</MusicCue>
 									</CueList>
 								</MusicSegment>
-								<MusicSegment Name="Pelea de granja 2" ID="{6DB68D64-E0D5-4EC6-9CD9-AE0E9BD1A1B5}" ShortID="970153884">
+								<MusicSegment Name="Pelea_granero_midi02" ID="{96FAEE85-BF27-4360-B120-FDEBCAA10EDC}" ShortID="393490530">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="42857.1428571429"/>
+										<Property Name="EndPosition" Type="Real64" Value="50000"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -114,23 +127,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Pelea de granja 2" ID="{C52208CE-C321-4542-B42B-43D934CB677A}" ShortID="214119460">
+										<MusicTrack Name="Pelea granero 02" ID="{EAB87D96-9294-4136-8160-A9EC464C0367}" ShortID="20017415">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Pelea de granja 2" ID="{F0591B82-0706-4F7A-9B76-1ECD96163A8B}">
+												<AudioFileSource Name="Pelea granero 02" ID="{1D5CC2A4-9E19-408F-BA32-FDA19D7A50BE}">
 													<Language>SFX</Language>
-													<AudioFile>Pelea de granja 2.wav</AudioFile>
+													<AudioFile>Pelea granero 02.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="1033605920"/>
+														<MediaID ID="140409444"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{0BB2694C-CD1D-4671-9CF7-072FFFC1FA46}">
+												<MusicTransition Name="Root" ID="{B5C050E0-AE06-4AA3-B9F0-A9A04A096E68}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -138,15 +151,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{54A70ABB-B54E-4407-B192-7B4D3AF0DBF4}">
+												<MusicTrackSequence Name="" ID="{219F61E4-B22B-4381-BC06-2330F74DBF82}">
 													<ClipList>
-														<MusicClip Name="Pelea de granja 2" ID="{51B334E3-0D3E-417B-B523-EA1B55BBF272}">
+														<MusicClip Name="Pelea granero 02" ID="{9E52F5D2-E2BF-48C6-99AE-52CC7659E38D}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="42857.1428571429"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Pelea de granja 2" ID="{F0591B82-0706-4F7A-9B76-1ECD96163A8B}"/>
+															<AudioSourceRef Name="Pelea granero 02" ID="{1D5CC2A4-9E19-408F-BA32-FDA19D7A50BE}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -154,8 +167,8 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{32EBBD86-9048-4C85-89FA-453460AEB374}"/>
-										<MusicCue Name="Exit Cue" ID="{D521B20D-DBE5-42DE-9209-082F8BA24AC8}">
+										<MusicCue Name="Entry Cue" ID="{A4D0185B-B159-4354-AA70-DF41507B713E}"/>
+										<MusicCue Name="Exit Cue" ID="{C628CF2F-7634-4582-ABB3-B1F8119866CD}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
 												<Property Name="TimeMs" Type="Real64" Value="42857.1428571429"/>
@@ -188,6 +201,10 @@
 										<CustomState Name="" ID="{670B5F9C-8A72-4C6A-9C9F-E33B85CF5430}" ShortID="371727437"/>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
+										<CustomState Name="" ID="{401BF466-5EBA-4E87-AE42-078DABDF9327}" ShortID="154316293"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
 										<CustomState Name="" ID="{23546F02-A535-4334-8550-08FD1B164134}" ShortID="217181342">
 											<PropertyList>
@@ -218,25 +235,22 @@
 								<MusicPlaylistItem Name="" ID="{FC491315-E9E6-4CB3-8342-C12787596928}" ShortID="118948591">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
-										<Property Name="PlayMode" Type="int16" Value="1"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{85E23080-7B73-4C15-B22C-D5A261901CA4}" ShortID="560934955">
+										<MusicPlaylistItem Name="" ID="{A1D9E1AF-AD4C-427C-815D-31B5823FC1AF}" ShortID="61516661">
 											<PropertyList>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
-											<SegmentRef Name="Pelea de granja 1" ID="{E8CD4B4A-D288-414F-9C73-7A0E65856C88}"/>
+											<SegmentRef Name="Pelea_granero_midi01" ID="{2FBBE3F3-8C88-482E-8B2B-DB3CDD002ECA}"/>
 										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{360D0F2D-2812-45E7-912A-C8D1D32E3FE4}" ShortID="516478930">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-											</PropertyList>
+										<MusicPlaylistItem Name="" ID="{CB7352F7-7367-429F-BC4C-B29A68275B23}" ShortID="1008905600">
 											<ChildrenList>
-												<MusicPlaylistItem Name="" ID="{2395DF2B-C21E-4313-8EDB-12B609F41B91}" ShortID="180321826">
+												<MusicPlaylistItem Name="" ID="{3D28E624-5A60-4218-8B70-86045DED6947}" ShortID="866718813">
 													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
-													<SegmentRef Name="Pelea de granja 2" ID="{6DB68D64-E0D5-4EC6-9CD9-AE0E9BD1A1B5}"/>
+													<SegmentRef Name="Pelea_granero_midi02" ID="{96FAEE85-BF27-4360-B120-FDEBCAA10EDC}"/>
 												</MusicPlaylistItem>
 											</ChildrenList>
 										</MusicPlaylistItem>
@@ -676,6 +690,10 @@
 									<CustomState>
 										<StateRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}"/>
 										<CustomState Name="" ID="{6C16EBE2-35EC-4803-9CDF-D65A52DDC6CE}" ShortID="625221115"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
+										<CustomState Name="" ID="{571AD77D-E18F-4A03-9AEA-D4059EBB64DF}" ShortID="19184713"/>
 									</CustomState>
 									<CustomState>
 										<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
@@ -1289,7 +1307,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2D598428-A0CB-419F-8509-7F9024628F5D}"/>
+											<ObjectRef Name="musci conversion" ID="{D47962AD-6BE1-4F04-8B23-619BF8BB4F96}" WorkUnitID="{2D598428-A0CB-419F-8509-7F9024628F5D}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}"/>
@@ -1674,6 +1692,10 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
+										<CustomState Name="" ID="{44799F31-D134-4916-98D2-8D45F04A258C}" ShortID="621652172"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
 										<CustomState Name="" ID="{5D757CFF-692B-4E01-8810-BDAC915397B2}" ShortID="183794133"/>
 									</CustomState>
@@ -1700,7 +1722,6 @@
 								<MusicPlaylistItem Name="" ID="{70457F6E-234C-40A8-B8D7-D1B8548349F2}" ShortID="717496757">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
-										<Property Name="PlayMode" Type="int16" Value="1"/>
 									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{E9B4308F-3B7B-4B8D-A1A8-E8B7B99F1485}" ShortID="901430353">
@@ -1749,11 +1770,20 @@
 						<CustomStateList>
 							<CustomState>
 								<StateRef Name="Batalla" ID="{0A61A948-5D17-40DD-90BE-28D010383AF9}"/>
-								<CustomState Name="" ID="{6D211A2E-6687-4E26-914F-3EE7DA08033A}" ShortID="510740311"/>
+								<CustomState Name="" ID="{6D211A2E-6687-4E26-914F-3EE7DA08033A}" ShortID="510740311">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64" Value="-1"/>
+										<Property Name="Volume" Type="Real64" Value="-4"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Menu" ID="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}"/>
-								<CustomState Name="" ID="{415DEF38-E8EE-4493-AEC8-34F695DBB865}" ShortID="799989351"/>
+								<CustomState Name="" ID="{415DEF38-E8EE-4493-AEC8-34F695DBB865}" ShortID="799989351">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-3"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
@@ -1763,14 +1793,20 @@
 								<StateRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}"/>
 								<CustomState Name="" ID="{7DC7D47C-3E80-44C0-8960-75D4C5061C94}" ShortID="109915412">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="40"/>
+										<Property Name="Highpass" Type="int16" Value="3"/>
+										<Property Name="Lowpass" Type="int16" Value="38"/>
 									</PropertyList>
 								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
+								<CustomState Name="" ID="{A935DC69-8B28-4D72-8593-00CD33427A00}" ShortID="724963485"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
 								<CustomState Name="" ID="{C722C04F-5152-402A-9755-E5DDE8180434}" ShortID="831153207">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="7"/>
 										<Property Name="Lowpass" Type="int16" Value="40"/>
 										<Property Name="MakeUpGain" Type="Real64" Value="-8"/>
 									</PropertyList>
@@ -1801,6 +1837,7 @@
 								<MusicTransition Name="Transition" ID="{B35EF8E6-AEC7-45D3-8CD2-570E43E14E5E}">
 									<PropertyList>
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>

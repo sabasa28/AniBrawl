@@ -32,7 +32,6 @@ public class ImpactCollider : MonoBehaviour
         }
         if (other.gameObject.CompareTag("FallingObstacle"))
         {
-            Debug.Log("Impact falling");
             FallingObstacle hitBy = other.gameObject.GetComponent<FallingObstacle>();
             pController.OnFallingObstacleCollision(hitBy);
         }

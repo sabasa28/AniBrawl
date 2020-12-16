@@ -12,8 +12,26 @@ public class FallingObstacle : MonoBehaviour
     Rigidbody rb;
     Collider coll;
     MeshRenderer mr;
+
+    public enum KindOfObj
+    {
+        manzana,
+        huevo
+    }
+    public KindOfObj objectKind;
+    string sound;
+
     void Start()
     {
+        switch (objectKind)
+        {
+            case KindOfObj.manzana:
+                sound = "Play_manzana";
+                break;
+            case KindOfObj.huevo:
+                sound = "Play_huevo";
+                break;
+        }
         mr = GetComponent<MeshRenderer>();
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
@@ -24,7 +42,6 @@ public class FallingObstacle : MonoBehaviour
         if (canDamage && other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(SetAsNotFalling());
-            Debug.Log("hit player falling obj");
         }
         if (other.gameObject.CompareTag("Floor"))
         {
@@ -35,6 +52,7 @@ public class FallingObstacle : MonoBehaviour
             mr.enabled = false;
             brokenModel.SetActive(true);
             canDamage = false;
+            AkSoundEngine.PostEvent(sound, gameObject);
         }
     }
 

@@ -31,6 +31,7 @@
 						<Property Name="Threshold" Type="Real32" Value="-51.2"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="gallo" ID="{34C42D2B-3595-4A0A-8582-EAF18E86FAF8}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d2592da4be17ac4a88c17b9395af6e67
     GuidInternal: 
-    m_lastTime: -8585951759567454688
+    m_lastTime: -8585937030937626460
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585937902481525833
+    m_lastTime: -8585936377432704481
     List:
     - name: Click_ui
       guid: 4125f9f60a2d9b4687a116b4bfd7f945
@@ -104,8 +104,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Exit_game
       maxAttenuation: 0
-      maxDuration: 589740
-      minDuration: 589740
+      maxDuration: 560321
+      minDuration: 560321
     - name: Hover_ui
       guid: 9b000f352f7acb4e8d8e8908c2e0134d
       id: 3424433926
@@ -272,8 +272,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Pick
       maxAttenuation: 0
-      maxDuration: 653898
-      minDuration: 390478
+      maxDuration: 186479
+      minDuration: 119341
+    - name: Play_arbusto
+      guid: d349143f9901f649a6f9b6b293190d26
+      id: 1035755672
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_arbusto
+        ObjectType: 3
+      Path: Default Work Unit\Play_arbusto
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_crowd
       guid: ce562a39c96e0a41906d7f2325d6de1d
       id: 639442169
@@ -298,6 +310,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_huevo
+      guid: 93777cbe24cbba42b1beb668b3c58a53
+      id: 3563657877
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_huevo
+        ObjectType: 3
+      Path: Default Work Unit\Play_huevo
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_madera
+      guid: 3b439b32eccc124494608d733df720b4
+      id: 1551074650
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_madera
+        ObjectType: 3
+      Path: Default Work Unit\Play_madera
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_manzana
+      guid: 21c1cbe08891bd489c626a3189273ae5
+      id: 1718898710
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_manzana
+        ObjectType: 3
+      Path: Default Work Unit\Play_manzana
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_salto_duck
       guid: 1335f0113d9ebb42a5d02f48fb25bbee
       id: 2397106107
@@ -344,7 +392,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Recieve_duck
       maxAttenuation: 0
-      maxDuration: 1528279
+      maxDuration: 1107651
       minDuration: 284412
     - name: Recieve_frog
       guid: 7858d20930e0f443b48a832375d8d570
@@ -404,8 +452,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Weapon_hit
       maxAttenuation: 0
-      maxDuration: 1756858
-      minDuration: 183337
+      maxDuration: 946731
+      minDuration: 158003
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -424,7 +472,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a74c2bfad3b5e341957e13912887cd9f
     GuidInternal: 
-    m_lastTime: -8585937911558353350
+    m_lastTime: -8585937030934255498
     List:
     - name: Escenarios
       guid: 77373780db8ea74faeff019147d8518a
@@ -515,6 +563,12 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Pausa
           ObjectType: 8
+      - name: Silencio
+        guid: d197c506bfa5d2429b11320217194ba8
+        id: 3127139597
+        PathAndIcons:
+        - ElementName: Silencio
+          ObjectType: 8
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -526,7 +580,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e77b405c1692dc4a849d21942f991daf
     GuidInternal: 
-    m_lastTime: -8585937911558472977
+    m_lastTime: -8585937030934245524
     List:
     - name: Arma_selector
       guid: b0e451ea840e3f47adfbb3c3548b6db2

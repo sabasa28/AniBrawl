@@ -12,6 +12,7 @@
 						<State Name="Inicio" ID="{3F941E20-825B-4D9B-B70F-6849AED9B753}"/>
 						<State Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>
 						<State Name="Fin_de_batalla" ID="{C1417998-C7F0-4190-94AF-A6F447407E8F}"/>
+						<State Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Escenarios" ID="{80373777-8EDB-4FA7-AEFF-019147D8518A}">

@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{A42D59D2-17BE-4AAC-88C1-7B9395AF6E67}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{CF633BD1-6099-4AE8-85C0-C18C835D3BCE}" WorkUnitID="{F74D9A55-8E04-49C2-85AA-97E0994A9D09}"/>
@@ -37,6 +41,10 @@
 							<CustomState>
 								<StateRef Name="Creditos" ID="{BCC852CB-622D-420A-8E30-2B6E01DC89C6}"/>
 								<CustomState Name="" ID="{66CFFF21-2547-4061-A86A-9E921DA7EE7F}" ShortID="66940144"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Silencio" ID="{06C597D1-A5BF-42D2-9B11-320217194BA8}"/>
+								<CustomState Name="" ID="{9629B992-0D23-4E53-997C-27F2CB4D9143}" ShortID="941575021"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Pausa" ID="{6F3CC03B-299F-4530-8045-9D1EDC97886B}"/>

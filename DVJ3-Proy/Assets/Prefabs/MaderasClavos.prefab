@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushForce: 25
   damage: 15
+  objectKind: 1
 --- !u!54 &1181117079749409253
 Rigidbody:
   m_ObjectHideFlags: 0
