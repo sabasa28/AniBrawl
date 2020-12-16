@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6984132579773591405, guid: 1e35d0cb1f8f08445a0ea34688db35ae, type: 3}
+  - {fileID: 2100000, guid: 1703f320b09f5cc44af24836ff6cfe50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,6 +151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bottomPiece: {fileID: 7606981134393992027}
   topPiece: {fileID: 2764426603829782624}
+  bottomPieceRb: {fileID: 0}
+  topPieceRb: {fileID: 0}
+  bottomPieceCol: {fileID: 0}
+  topPieceCol: {fileID: 0}
   forceToSeparate: 250
 --- !u!54 &994630522063742587
 Rigidbody:
@@ -358,6 +362,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: -856951497676612171, guid: 76b92e787653453408a0a34d25b95860,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c55214e744064b74e93141f26d4dd87e, type: 2}
+    - target: {fileID: 651082400483690837, guid: 76b92e787653453408a0a34d25b95860,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c55214e744064b74e93141f26d4dd87e, type: 2}
     - target: {fileID: 919132149155446097, guid: 76b92e787653453408a0a34d25b95860,
         type: 3}
       propertyPath: m_Name

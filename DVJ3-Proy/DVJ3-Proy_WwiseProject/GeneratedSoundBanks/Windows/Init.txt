@@ -20,9 +20,13 @@ Custom State	ID	Name	State Group	Owner		Notes
 	311907688	Pausa	Estados	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3837303311	MAster_COMP	Wwise Compressor			
 

@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_ARBUSTO = 1035755672U;
         static const AkUniqueID PLAY_CROWD = 639442169U;
         static const AkUniqueID PLAY_FIGHT = 860858016U;
+        static const AkUniqueID PLAY_FUEGO = 2554009252U;
         static const AkUniqueID PLAY_HUEVO = 3563657877U;
         static const AkUniqueID PLAY_MADERA = 1551074650U;
         static const AkUniqueID PLAY_MANZANA = 1718898710U;
@@ -114,6 +115,9 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

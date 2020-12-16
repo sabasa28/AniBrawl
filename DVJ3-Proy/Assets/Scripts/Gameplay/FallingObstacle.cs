@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingObstacle : MonoBehaviour
+public class FallingObstacle : FadeAndDestroy
 {
     [SerializeField] GameObject brokenModel;
     [SerializeField] float fallenPositionY;
@@ -52,6 +52,7 @@ public class FallingObstacle : MonoBehaviour
             mr.enabled = false;
             brokenModel.SetActive(true);
             canDamage = false;
+            StartFadeAndDestroy();
             AkSoundEngine.PostEvent(sound, gameObject);
         }
     }

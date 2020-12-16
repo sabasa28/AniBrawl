@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d2592da4be17ac4a88c17b9395af6e67
     GuidInternal: 
-    m_lastTime: -8585937030937626460
+    m_lastTime: -8585935122478623203
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,39 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 9f24d127a9a3314280de03eaa2d45950
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 0d56f2301df9db42925f2ef6bcf42af2
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SFX
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SFX
+    - name: UI
+      guid: 04ee60ee529ba64d9c799b6856b45d78
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: UI
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -68,7 +101,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e60439323a12124484ac9ff25c6828fe
     GuidInternal: 
-    m_lastTime: -8585936377432704481
+    m_lastTime: -8585934761570301250
     List:
     - name: Click_ui
       guid: 4125f9f60a2d9b4687a116b4bfd7f945
@@ -284,8 +317,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_arbusto
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 468892
+      minDuration: 393328
     - name: Play_crowd
       guid: ce562a39c96e0a41906d7f2325d6de1d
       id: 639442169
@@ -308,8 +341,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_fight
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2582812
+      minDuration: 2128095
+    - name: Play_fuego
+      guid: b7395c1b3380d047b5cac6067c3c8b79
+      id: 2554009252
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_fuego
+        ObjectType: 3
+      Path: Default Work Unit\Play_fuego
+      maxAttenuation: 0
+      maxDuration: 7538591
+      minDuration: 7231753
     - name: Play_huevo
       guid: 93777cbe24cbba42b1beb668b3c58a53
       id: 3563657877
@@ -320,8 +365,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_huevo
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 311341
+      minDuration: 129747
     - name: Play_madera
       guid: 3b439b32eccc124494608d733df720b4
       id: 1551074650
@@ -332,8 +377,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_madera
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 813019
+      minDuration: 609997
     - name: Play_manzana
       guid: 21c1cbe08891bd489c626a3189273ae5
       id: 1718898710
@@ -344,8 +389,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_manzana
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1292318
+      minDuration: 631627
     - name: Play_salto_duck
       guid: 1335f0113d9ebb42a5d02f48fb25bbee
       id: 2397106107

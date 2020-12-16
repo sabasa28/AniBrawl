@@ -26,7 +26,7 @@ public class FallingObstController : MonoBehaviour
 
     IEnumerator SpawnFallingObstacles()
     {
-        while (true)
+        while (spawning)
         {
             yield return new WaitForSeconds(timeBetweenSpawn);
             StartCoroutine(SpawnSingleFallingObst());

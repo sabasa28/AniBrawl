@@ -97,7 +97,7 @@ MonoBehaviour:
   gravityAcceleration: 50
   currentGravity: 0
   immunityTime: 0.5
-  immune: 0
+  fireImmunityTime: 0.25
   modelIndex: 0
   availableModels:
   - {fileID: 2770859752774303485, guid: 76489b261caf5994e9b9a72bd78526be, type: 3}

@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1813956682">
+		<SoundBank Id="1355168291" Language="SFX" Hash="228514853">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -30,7 +30,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="458980952">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2401825663">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -514,7 +514,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1035755672" Name="Play_arbusto" ObjectPath="\Events\Default Work Unit\Play_arbusto" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1035755672" Name="Play_arbusto" ObjectPath="\Events\Default Work Unit\Play_arbusto" DurationType="OneShot" DurationMin="0.393328" DurationMax="0.468892">
+					<IncludedMemoryFiles>
+						<File Id="37331516" Language="SFX">
+							<ShortName>Arbusto-004.wav</ShortName>
+							<Path>SFX\Arbusto-004_023E4383.wem</Path>
+						</File>
+						<File Id="205863370" Language="SFX">
+							<ShortName>Arbusto-002.wav</ShortName>
+							<Path>SFX\Arbusto-002_AB346290.wem</Path>
+						</File>
+						<File Id="716404452" Language="SFX">
+							<ShortName>Arbusto-003.wav</ShortName>
+							<Path>SFX\Arbusto-003_086F759F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="639442169" Name="Play_crowd" ObjectPath="\Events\Default Work Unit\Play_crowd" DurationType="OneShot" DurationMin="20.839819" DurationMax="20.839819">
 					<IncludedMemoryFiles>
 						<File Id="875904796" Language="SFX">
@@ -523,97 +538,105 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="Infinite">
+				<Event Id="860858016" Name="Play_fight" ObjectPath="\Events\Default Work Unit\Play_fight" DurationType="OneShot" DurationMin="2.128095" DurationMax="2.582812">
 					<IncludedMemoryFiles>
-						<File Id="140409444" Language="SFX">
-							<ShortName>Pelea granero 02.wav</ShortName>
-							<Path>SFX\Pelea granero 02_179463A7.wem</Path>
-						</File>
-						<File Id="226024866" Language="SFX">
-							<ShortName>02_Menu.wav</ShortName>
-							<Path>SFX\02_Menu_179463A7.wem</Path>
-						</File>
 						<File Id="263033695" Language="SFX">
 							<ShortName>tune_gallo.wav</ShortName>
 							<Path>SFX\tune_gallo_10C4C929.wem</Path>
-						</File>
-						<File Id="264037589" Language="SFX">
-							<ShortName>05_Menu.wav</ShortName>
-							<Path>SFX\05_Menu_179463A7.wem</Path>
-						</File>
-						<File Id="372930892" Language="SFX">
-							<ShortName>03_Menu.wav</ShortName>
-							<Path>SFX\03_Menu_179463A7.wem</Path>
-						</File>
-						<File Id="379943163" Language="SFX">
-							<ShortName>01_Menu.wav</ShortName>
-							<Path>SFX\01_Menu_179463A7.wem</Path>
 						</File>
 						<File Id="608540775" Language="SFX">
 							<ShortName>tune_gallo_3.wav</ShortName>
 							<Path>SFX\tune_gallo_3_10C4C929.wem</Path>
 						</File>
-						<File Id="657065678" Language="SFX">
-							<ShortName>Fin de batalla.wav</ShortName>
-							<Path>SFX\Fin de batalla_179463A7.wem</Path>
-						</File>
-						<File Id="692360340" Language="SFX">
-							<ShortName>Victoria_granja.wav</ShortName>
-							<Path>SFX\Victoria_granja_179463A7.wem</Path>
-						</File>
-						<File Id="758307942" Language="SFX">
-							<ShortName>crowd - copia.wav</ShortName>
-							<Path>SFX\crowd - copia_179463A7.wem</Path>
-						</File>
 						<File Id="940399666" Language="SFX">
 							<ShortName>tune_gallo_2.wav</ShortName>
 							<Path>SFX\tune_gallo_2_10C4C929.wem</Path>
 						</File>
-						<File Id="946210250" Language="SFX">
-							<ShortName>Pelea granero 01.wav</ShortName>
-							<Path>SFX\Pelea granero 01_179463A7.wem</Path>
-						</File>
-						<File Id="1015971685" Language="SFX">
-							<ShortName>04_Menu.wav</ShortName>
-							<Path>SFX\04_Menu_179463A7.wem</Path>
-						</File>
 					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{0A61A948-5D17-40DD-90BE-28D010383AF9}">
-							<Media>
-								<File Id="946210250"/>
-								<File Id="140409444"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{C1417998-C7F0-4190-94AF-A6F447407E8F}">
-							<Media>
-								<File Id="657065678"/>
-								<File Id="692360340"/>
-								<File Id="657065678"/>
-								<File Id="758307942"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{CE2E1ED0-7C60-4172-9980-F476CFB51AEC}">
-							<Media>
-								<File Id="379943163"/>
-								<File Id="264037589"/>
-								<File Id="379943163"/>
-								<File Id="264037589"/>
-								<File Id="372930892"/>
-								<File Id="1015971685"/>
-								<File Id="372930892"/>
-								<File Id="226024866"/>
-								<File Id="379943163"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="675784008" Name="Batalla" ObjectPath="\States\Default Work Unit\Estados\Batalla"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3563657877" Name="Play_huevo" ObjectPath="\Events\Default Work Unit\Play_huevo" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1551074650" Name="Play_madera" ObjectPath="\Events\Default Work Unit\Play_madera" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1718898710" Name="Play_manzana" ObjectPath="\Events\Default Work Unit\Play_manzana" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2554009252" Name="Play_fuego" ObjectPath="\Events\Default Work Unit\Play_fuego" DurationType="OneShot" DurationMin="7.231753" DurationMax="7.538591">
+					<IncludedMemoryFiles>
+						<File Id="519540157" Language="SFX">
+							<ShortName>Fuego entero-002.wav</ShortName>
+							<Path>SFX\Fuego entero-002_45090D31.wem</Path>
+						</File>
+						<File Id="991321568" Language="SFX">
+							<ShortName>Fuego entero-001.wav</ShortName>
+							<Path>SFX\Fuego entero-001_E931397E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3563657877" Name="Play_huevo" ObjectPath="\Events\Default Work Unit\Play_huevo" DurationType="OneShot" DurationMin="0.129747" DurationMax="0.311341">
+					<IncludedMemoryFiles>
+						<File Id="124380312" Language="SFX">
+							<ShortName>sfx_huevo_04.wav</ShortName>
+							<Path>SFX\sfx_huevo_04_A46A20DA.wem</Path>
+						</File>
+						<File Id="231384857" Language="SFX">
+							<ShortName>sfx_huevo_03.wav</ShortName>
+							<Path>SFX\sfx_huevo_03_33C79494.wem</Path>
+						</File>
+						<File Id="428300335" Language="SFX">
+							<ShortName>sfx_huevo_02.wav</ShortName>
+							<Path>SFX\sfx_huevo_02_6201C05A.wem</Path>
+						</File>
+						<File Id="518310817" Language="SFX">
+							<ShortName>sfx_huevo_05.wav</ShortName>
+							<Path>SFX\sfx_huevo_05_4801F315.wem</Path>
+						</File>
+						<File Id="809786742" Language="SFX">
+							<ShortName>sfx_huevo_01.wav</ShortName>
+							<Path>SFX\sfx_huevo_01_DF42C1BF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1551074650" Name="Play_madera" ObjectPath="\Events\Default Work Unit\Play_madera" DurationType="OneShot" DurationMin="0.609997" DurationMax="0.813019">
+					<IncludedMemoryFiles>
+						<File Id="105256799" Language="SFX">
+							<ShortName>Madera-003.wav</ShortName>
+							<Path>SFX\Madera-003_FDE7D87D.wem</Path>
+						</File>
+						<File Id="233259260" Language="SFX">
+							<ShortName>Madera-006.wav</ShortName>
+							<Path>SFX\Madera-006_ECEFA117.wem</Path>
+						</File>
+						<File Id="368601370" Language="SFX">
+							<ShortName>Madera-004.wav</ShortName>
+							<Path>SFX\Madera-004_16E41C27.wem</Path>
+						</File>
+						<File Id="388774300" Language="SFX">
+							<ShortName>Madera-005.wav</ShortName>
+							<Path>SFX\Madera-005_5A519002.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1718898710" Name="Play_manzana" ObjectPath="\Events\Default Work Unit\Play_manzana" DurationType="OneShot" DurationMin="0.631627" DurationMax="1.292318">
+					<IncludedMemoryFiles>
+						<File Id="53941189" Language="SFX">
+							<ShortName>sfx_manzana_01.wav</ShortName>
+							<Path>SFX\sfx_manzana_01_2C49A5DD.wem</Path>
+						</File>
+						<File Id="185270915" Language="SFX">
+							<ShortName>sfx_manzana_05.wav</ShortName>
+							<Path>SFX\sfx_manzana_05_A0A540A4.wem</Path>
+						</File>
+						<File Id="519508857" Language="SFX">
+							<ShortName>sfx_manzana_02.wav</ShortName>
+							<Path>SFX\sfx_manzana_02_835714D9.wem</Path>
+						</File>
+						<File Id="868764042" Language="SFX">
+							<ShortName>sfx_manzana_04.wav</ShortName>
+							<Path>SFX\sfx_manzana_04_8CEE5377.wem</Path>
+						</File>
+						<File Id="1007999415" Language="SFX">
+							<ShortName>sfx_manzana_03.wav</ShortName>
+							<Path>SFX\sfx_manzana_03_F312F250.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2397106107" Name="Play_salto_duck" ObjectPath="\Events\Default Work Unit\Play_salto_duck" DurationType="OneShot" DurationMin="0.465669" DurationMax="0.465669">
 					<IncludedMemoryFiles>
 						<File Id="851261987" Language="SFX">
@@ -1000,6 +1023,14 @@
 					<ShortName>sfx_guadana_1.wav</ShortName>
 					<Path>SFX\sfx_guadana_1_117C8659.wem</Path>
 				</File>
+				<File Id="37331516" Language="SFX">
+					<ShortName>Arbusto-004.wav</ShortName>
+					<Path>SFX\Arbusto-004_023E4383.wem</Path>
+				</File>
+				<File Id="53941189" Language="SFX">
+					<ShortName>sfx_manzana_01.wav</ShortName>
+					<Path>SFX\sfx_manzana_01_2C49A5DD.wem</Path>
+				</File>
 				<File Id="59236057" Language="SFX">
 					<ShortName>Pasos_frog-002.wav</ShortName>
 					<Path>SFX\Pasos_frog-002_590D252A.wem</Path>
@@ -1016,6 +1047,10 @@
 					<ShortName>mapa.wav</ShortName>
 					<Path>SFX\mapa_F79DE569.wem</Path>
 				</File>
+				<File Id="105256799" Language="SFX">
+					<ShortName>Madera-003.wav</ShortName>
+					<Path>SFX\Madera-003_FDE7D87D.wem</Path>
+				</File>
 				<File Id="105275312" Language="SFX">
 					<ShortName>arboles viento.wav</ShortName>
 					<Path>SFX\arboles viento_835714D9.wem</Path>
@@ -1031,6 +1066,10 @@
 				<File Id="119786416" Language="SFX">
 					<ShortName>Pasos_frog-003.wav</ShortName>
 					<Path>SFX\Pasos_frog-003_403E865C.wem</Path>
+				</File>
+				<File Id="124380312" Language="SFX">
+					<ShortName>sfx_huevo_04.wav</ShortName>
+					<Path>SFX\sfx_huevo_04_A46A20DA.wem</Path>
 				</File>
 				<File Id="126528663" Language="SFX">
 					<ShortName>sfx_guadana_03.wav</ShortName>
@@ -1068,9 +1107,17 @@
 					<ShortName>hovermouse.wav</ShortName>
 					<Path>SFX\hovermouse_24370524.wem</Path>
 				</File>
+				<File Id="185270915" Language="SFX">
+					<ShortName>sfx_manzana_05.wav</ShortName>
+					<Path>SFX\sfx_manzana_05_A0A540A4.wem</Path>
+				</File>
 				<File Id="200678232" Language="SFX">
 					<ShortName>sfx_hit_4.wav</ShortName>
 					<Path>SFX\sfx_hit_4_5472E882.wem</Path>
+				</File>
+				<File Id="205863370" Language="SFX">
+					<ShortName>Arbusto-002.wav</ShortName>
+					<Path>SFX\Arbusto-002_AB346290.wem</Path>
 				</File>
 				<File Id="207326859" Language="SFX">
 					<ShortName>sfx_regadera_1.wav</ShortName>
@@ -1091,6 +1138,14 @@
 				<File Id="230164706" Language="SFX">
 					<ShortName>sfx_whoosh_110.wav</ShortName>
 					<Path>SFX\sfx_whoosh_110_10C4C929.wem</Path>
+				</File>
+				<File Id="231384857" Language="SFX">
+					<ShortName>sfx_huevo_03.wav</ShortName>
+					<Path>SFX\sfx_huevo_03_33C79494.wem</Path>
+				</File>
+				<File Id="233259260" Language="SFX">
+					<ShortName>Madera-006.wav</ShortName>
+					<Path>SFX\Madera-006_ECEFA117.wem</Path>
 				</File>
 				<File Id="236581530" Language="SFX">
 					<ShortName>sfx_rastplastt_11.wav</ShortName>
@@ -1140,6 +1195,10 @@
 					<ShortName>Pasos_frog_talk-003.wav</ShortName>
 					<Path>SFX\Pasos_frog_talk-003_10C4C929.wem</Path>
 				</File>
+				<File Id="368601370" Language="SFX">
+					<ShortName>Madera-004.wav</ShortName>
+					<Path>SFX\Madera-004_16E41C27.wem</Path>
+				</File>
 				<File Id="372930892" Language="SFX">
 					<ShortName>03_Menu.wav</ShortName>
 					<Path>SFX\03_Menu_179463A7.wem</Path>
@@ -1152,9 +1211,17 @@
 					<ShortName>sfx_herradura_04.wav</ShortName>
 					<Path>SFX\sfx_herradura_04_835714D9.wem</Path>
 				</File>
+				<File Id="388774300" Language="SFX">
+					<ShortName>Madera-005.wav</ShortName>
+					<Path>SFX\Madera-005_5A519002.wem</Path>
+				</File>
 				<File Id="414046758" Language="SFX">
 					<ShortName>sfx_whoosh_109.wav</ShortName>
 					<Path>SFX\sfx_whoosh_109_10C4C929.wem</Path>
+				</File>
+				<File Id="428300335" Language="SFX">
+					<ShortName>sfx_huevo_02.wav</ShortName>
+					<Path>SFX\sfx_huevo_02_6201C05A.wem</Path>
 				</File>
 				<File Id="441226983" Language="SFX">
 					<ShortName>sfx_pala_07.wav</ShortName>
@@ -1195,6 +1262,18 @@
 				<File Id="514235917" Language="SFX">
 					<ShortName>sfx_grab_1 (2).wav</ShortName>
 					<Path>SFX\sfx_grab_1 (2)_8BBD3D2D.wem</Path>
+				</File>
+				<File Id="518310817" Language="SFX">
+					<ShortName>sfx_huevo_05.wav</ShortName>
+					<Path>SFX\sfx_huevo_05_4801F315.wem</Path>
+				</File>
+				<File Id="519508857" Language="SFX">
+					<ShortName>sfx_manzana_02.wav</ShortName>
+					<Path>SFX\sfx_manzana_02_835714D9.wem</Path>
+				</File>
+				<File Id="519540157" Language="SFX">
+					<ShortName>Fuego entero-002.wav</ShortName>
+					<Path>SFX\Fuego entero-002_45090D31.wem</Path>
 				</File>
 				<File Id="532797474" Language="SFX">
 					<ShortName>sfx_bate_3-001.wav</ShortName>
@@ -1256,6 +1335,10 @@
 					<ShortName>Amb_random-007.wav</ShortName>
 					<Path>SFX\Amb_random-007_835714D9.wem</Path>
 				</File>
+				<File Id="716404452" Language="SFX">
+					<ShortName>Arbusto-003.wav</ShortName>
+					<Path>SFX\Arbusto-003_086F759F.wem</Path>
+				</File>
 				<File Id="730790305" Language="SFX">
 					<ShortName>sfx_regadera_4.wav</ShortName>
 					<Path>SFX\sfx_regadera_4_BEF55F5B.wem</Path>
@@ -1300,6 +1383,10 @@
 					<ShortName>sfx_whoosh_111.wav</ShortName>
 					<Path>SFX\sfx_whoosh_111_10C4C929.wem</Path>
 				</File>
+				<File Id="809786742" Language="SFX">
+					<ShortName>sfx_huevo_01.wav</ShortName>
+					<Path>SFX\sfx_huevo_01_DF42C1BF.wem</Path>
+				</File>
 				<File Id="810715951" Language="SFX">
 					<ShortName>jump_frog.wav</ShortName>
 					<Path>SFX\jump_frog_10C4C929.wem</Path>
@@ -1323,6 +1410,10 @@
 				<File Id="851261987" Language="SFX">
 					<ShortName>jump_duck.wav</ShortName>
 					<Path>SFX\jump_duck_10C4C929.wem</Path>
+				</File>
+				<File Id="868764042" Language="SFX">
+					<ShortName>sfx_manzana_04.wav</ShortName>
+					<Path>SFX\sfx_manzana_04_8CEE5377.wem</Path>
 				</File>
 				<File Id="875904796" Language="SFX">
 					<ShortName>crowd.wav</ShortName>
@@ -1372,9 +1463,17 @@
 					<ShortName>sfx_guadana_2.wav</ShortName>
 					<Path>SFX\sfx_guadana_2_1AFBF97F.wem</Path>
 				</File>
+				<File Id="991321568" Language="SFX">
+					<ShortName>Fuego entero-001.wav</ShortName>
+					<Path>SFX\Fuego entero-001_E931397E.wem</Path>
+				</File>
 				<File Id="994417837" Language="SFX">
 					<ShortName>Farm Barn Exterior.wav</ShortName>
 					<Path>SFX\Farm Barn Exterior_835714D9.wem</Path>
+				</File>
+				<File Id="1007999415" Language="SFX">
+					<ShortName>sfx_manzana_03.wav</ShortName>
+					<Path>SFX\sfx_manzana_03_F312F250.wem</Path>
 				</File>
 				<File Id="1009320327" Language="SFX">
 					<ShortName>sfx_herradura_01.wav</ShortName>

@@ -32,7 +32,6 @@ public class StaticObstacle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             AkSoundEngine.PostEvent(sound, gameObject);
-            Debug.Log("static sound");
         }
     }
 }

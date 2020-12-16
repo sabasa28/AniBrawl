@@ -217,13 +217,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{47A40201-A78D-4A33-BBD9-79F582DBE425}" ShortID="920461422">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Musica" ID="{CB99D452-D3BB-4990-A203-EE72E2D6649B}" WorkUnitID="{65DB41B3-014A-4B0B-8B32-76ECFCC32CC2}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Pick" ID="{331BE671-4A1C-4F50-BA57-F80BBD814B3B}">
@@ -490,22 +483,57 @@
 				</Event>
 				<Event Name="Play_manzana" ID="{E0CBC121-9188-48BD-9C62-6A3189273AE5}">
 					<ChildrenList>
-						<Action Name="" ID="{1F500B12-6C07-4158-9D2F-2916BBADCF61}" ShortID="50451850"/>
+						<Action Name="" ID="{1F500B12-6C07-4158-9D2F-2916BBADCF61}" ShortID="50451850">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Manzana" ID="{7D6B32B6-F280-4AC7-B6D9-2E718DC2718B}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_arbusto" ID="{3F1449D3-0199-49F6-A6F9-B6B293190D26}">
 					<ChildrenList>
-						<Action Name="" ID="{44DFEB08-4EDA-4466-9D08-65843DD5C3A5}" ShortID="478367894"/>
+						<Action Name="" ID="{44DFEB08-4EDA-4466-9D08-65843DD5C3A5}" ShortID="478367894">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arbusto" ID="{FFC30800-5A08-4921-AB15-ACE6231CFA3E}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_huevo" ID="{BE7C7793-CB24-42BA-B1BE-B668B3C58A53}">
 					<ChildrenList>
-						<Action Name="" ID="{4FA28402-0942-484C-8883-094FA2D43683}" ShortID="20071287"/>
+						<Action Name="" ID="{4FA28402-0942-484C-8883-094FA2D43683}" ShortID="20071287">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Huevo" ID="{497BD3FB-1C5F-4189-BC9C-20031CEA902A}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_madera" ID="{329B433B-CCEC-4412-9460-8D733DF720B4}">
 					<ChildrenList>
-						<Action Name="" ID="{B33FF29C-0F3C-4BA1-8BE9-A431F1E91C3C}" ShortID="746848855"/>
+						<Action Name="" ID="{B33FF29C-0F3C-4BA1-8BE9-A431F1E91C3C}" ShortID="746848855">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Madera" ID="{F0540D8E-A8D7-4B7A-9FEC-57D71CDB5029}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fuego" ID="{1B5C39B7-8033-47D0-B5CA-C6067C3C8B79}">
+					<ChildrenList>
+						<Action Name="" ID="{7C5736FE-F2B5-4EAC-A953-06236E84282E}" ShortID="502572678">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fuego1" ID="{1F86F7D8-6BD2-49A6-9829-4C247DCCB28B}" WorkUnitID="{688552C3-DE35-46A5-8570-43B944EC7768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

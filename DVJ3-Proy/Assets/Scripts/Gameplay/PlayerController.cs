@@ -41,7 +41,9 @@ public class PlayerController : MonoBehaviour
     float punchTime;
     float swingTime;
     [SerializeField] float immunityTime = 0;
-    [SerializeField] bool immune = false;
+    [SerializeField] float fireImmunityTime = 0;
+    bool immune = false;
+    bool fireImmune = false;
     Coroutine pushedCor;
     public Action UpdateUI;
     public int modelIndex = 0;
@@ -194,6 +196,25 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(ImmunityTime());
             }
         }
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (fireImmune) return;
+        if (other.gameObject.CompareTag("Fire"))
+        { 
+            float damageTaken = other.GetComponent<FireHazzard>().damagePerHit;
+            hp -= (int)damageTaken;
+            if (hp <= 0)
+            {
+                hp = 0;
+                OnDeath(this);
+            }
+            UpdateUI();
+            AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+            StartCoroutine(FireImmunityTime());
+        }
     }
 
     public void OnStaticObstacleCollision(StaticObstacle hitBy)
@@ -314,6 +335,12 @@ public class PlayerController : MonoBehaviour
         immune = true;
         yield return new WaitForSeconds(immunityTime);
         immune = false;
+    }
+    IEnumerator FireImmunityTime()
+    {
+        fireImmune = true;
+        yield return new WaitForSeconds(fireImmunityTime);
+        fireImmune = false;
     }
 
     Item GetClosestAvaiableItem()

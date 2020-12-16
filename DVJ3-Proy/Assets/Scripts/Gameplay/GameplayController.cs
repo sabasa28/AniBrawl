@@ -24,19 +24,17 @@ public class GameplayController : MonoBehaviour
 
     [Header("General Stage")]
     [SerializeField] Transform[] playerSpawner = null;
-    [SerializeField] GameObject firePref = null;
-    [SerializeField] FallingObstController foc = null;
+    [SerializeField] FallingObstController fallingOC = null;
+    [SerializeField] FireController fireC = null;
 
     [Header("Stage1")]
     [SerializeField] GameObject staticObstaclePrefStg1 = null;
     [SerializeField] Transform[] staticObstSpawnStg1 = null;
-    [SerializeField] Transform[] fireSpawnStg1 = null;
     [SerializeField] GameObject fallingObstaclePrefStg1 = null;
 
     [Header("Stage2")]
     [SerializeField] GameObject staticObstaclePrefStg2 = null;
     [SerializeField] Transform[] staticObstSpawnStg2 = null;
-    [SerializeField] Transform[] fireSpawnStg2 = null;
     [SerializeField] GameObject fallingObstaclePrefStg2 = null;
 
     [Serializable]
@@ -146,6 +144,8 @@ public class GameplayController : MonoBehaviour
     
     void OnGameOver()
     {
+        fallingOC.StopSpawning();
+        fireC.StopSpawning();
         for (int i = 0; i < players.Count; i++)
         {
             players[i].ableToMove = false;
@@ -183,15 +183,16 @@ public class GameplayController : MonoBehaviour
             case 0:
                 AkSoundEngine.PostEvent("Inicia_bosque", gameObject);
                 SpawnStaticObstacles(staticObstaclePrefStg1,staticObstSpawnStg1);
-                foc.StartSpawning(fallingObstaclePrefStg1);
+                fallingOC.StartSpawning(fallingObstaclePrefStg1);
                 break;
             case 1:
             default:
                 AkSoundEngine.PostEvent("Inicia_granja", gameObject);
                 SpawnStaticObstacles(staticObstaclePrefStg2,staticObstSpawnStg2);
-                foc.StartSpawning(fallingObstaclePrefStg2);
+                fallingOC.StartSpawning(fallingObstaclePrefStg2);
                 break;
         }
+        fireC.StartSpawning();
         ppManager.StartRemovingCAberration();
         PlayerController P1 = Instantiate(playerPrefab, playerSpawner[0].position, playerSpawner[0].rotation); // se puede hacer un for
         P1.playerNumber = 1;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : FadeAndDestroy
 {
     public Vector3 rotationGrabbed;
     public Vector3 positionGrabbed;
@@ -33,7 +33,6 @@ public class Item : MonoBehaviour
         tijera
     }
     public ItemKind itemKind;
-    string itemSwitchName;
     public enum DirWhenThrown
     {
         forwardUp,
@@ -198,6 +197,7 @@ public class Item : MonoBehaviour
         rb.isKinematic = true;
         itemState = State.broken;
         brokenModel.gameObject.SetActive(true);
+        StartFadeAndDestroy();
     }
 
     public void itemHitSound()
