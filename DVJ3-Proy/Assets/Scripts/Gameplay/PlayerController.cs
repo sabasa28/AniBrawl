@@ -245,8 +245,8 @@ public class PlayerController : MonoBehaviour
             if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
             horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
             pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
-            if (!meleeHit) hitBy.SetAsGrabbable();
             Hurt(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
+            if (!meleeHit) hitBy.SetAsGrabbable();
             hitBy.itemHitSound();
             StartCoroutine(ImmunityTime());
         }
