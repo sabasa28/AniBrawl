@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         currentState = State.idle;
         groundLayer = LayerMask.GetMask("Ground");
         currentGravity = baseGravity;
-        GetAnimationTimes(); //se reemplaza por animation events mmmm o no
+        GetAnimationTimes();
         AkSoundEngine.SetSwitch("Arma_selector", "Punch", gameObject);
     }
 
@@ -162,7 +162,6 @@ public class PlayerController : MonoBehaviour
             cController.Move(Vector3.ClampMagnitude(dir, 1) * speed * Time.fixedDeltaTime);
             if (rot != Vector3.zero) transform.forward = dir.normalized;
             animator.SetFloat("walkingSpeed", dir.magnitude);
-            // transform.forward = Vector3.Lerp(transform.forward,rot,Time.deltaTime * rotSpeed).normalized; //poner axis raw y un lerp en la rotacion en vez de esta wea y mover hacia dir en vez de forward
         }
         else
         {
@@ -185,14 +184,7 @@ public class PlayerController : MonoBehaviour
                 PlayerController hitBy = other.transform.parent.parent.parent.parent.parent.gameObject.GetComponent<PlayerController>(); //desde el "Punch" busco al PlayerController
                 Vector3 dir = transform.position - hitBy.transform.position;
                 pushedCor = StartCoroutine(Pushed((dir.normalized + funElevation) * hitBy.force));
-                hp -= (int)hitBy.force;
-                if (hp <= 0)
-                {
-                    hp = 0;
-                    OnDeath(this);
-                }
-                UpdateUI();
-                AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+                Hurt(hitBy.force);
                 AkSoundEngine.PostEvent("Weapon_hit", gameObject);
                 StartCoroutine(ImmunityTime());
             }
@@ -206,14 +198,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Fire"))
         { 
             float damageTaken = other.GetComponent<FireHazzard>().damagePerHit;
-            hp -= (int)damageTaken;
-            if (hp <= 0)
-            {
-                hp = 0;
-                OnDeath(this);
-            }
-            UpdateUI();
-            AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+            Hurt(damageTaken);
             StartCoroutine(FireImmunityTime());
         }
     }
@@ -223,14 +208,7 @@ public class PlayerController : MonoBehaviour
         float funElevation = 0.5f;
         Vector3 dir = transform.position - hitBy.transform.position;
         pushedCor = StartCoroutine(Pushed(new Vector3(dir.normalized.x, funElevation, dir.normalized.z) * hitBy.pushForce));
-        hp -= (int)hitBy.damage;
-        if (hp <= 0)
-        {
-            hp = 0;
-            OnDeath(this);
-        }
-        UpdateUI();
-        AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+        Hurt(hitBy.damage);
         AkSoundEngine.PostEvent("Weapon_hit", gameObject);
         StartCoroutine(ImmunityTime());
     }
@@ -241,14 +219,7 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = transform.position - hitBy.transform.position;
         dir.y = 0.0f;
         pushedCor = StartCoroutine(Pushed(dir.normalized * hitBy.pushForce));
-        hp -= (int)hitBy.damage;
-        if (hp <= 0)
-        {
-            hp = 0;
-            OnDeath(this);
-        }
-        UpdateUI();
-        AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+        Hurt(hitBy.damage);
         AkSoundEngine.PostEvent("Weapon_hit", gameObject);
         StartCoroutine(ImmunityTime());
     }
@@ -274,15 +245,8 @@ public class PlayerController : MonoBehaviour
             if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
             horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
             pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
-            hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
             if (!meleeHit) hitBy.SetAsGrabbable();
-            if (hp <= 0)
-            {
-                hp = 0;
-                OnDeath(this);
-            }
-            UpdateUI();
-            AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+            Hurt(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
             hitBy.itemHitSound();
             StartCoroutine(ImmunityTime());
         }
@@ -292,6 +256,19 @@ public class PlayerController : MonoBehaviour
     {
         itemsInRange.Remove(item);
     }
+
+    void Hurt(float damageTaken)
+    {
+        hp -= (int)damageTaken;
+        if (hp <= 0)
+        {
+            hp = 0;
+            OnDeath(this);
+        }
+        UpdateUI();
+        AkSoundEngine.PostEvent(damageRecieveSound, gameObject);
+    }
+
 
     IEnumerator Pushed(Vector3 initImpulse)
     {
