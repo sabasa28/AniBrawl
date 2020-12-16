@@ -11,24 +11,21 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     }
     GameplayController gc;
 
-    public GameState gameState; // ver si esto es necesario
-
-    public void SetGameplayController(GameplayController newGc)
-    {
-        gc = newGc;
-    }
+    public GameState gameState;
 
     public void SetLevel(int lvlNum)
     {
-        if (gc)
-        {
-            gc.SetLevel(lvlNum);
-        }
+        GetGc().SetLevel(lvlNum);
     }
 
     public void StartGamePlay(int[] playerChar)
     {
         gameState = GameState.playing;
-        gc.OnGameplaySceneStart(playerChar);
+        GetGc().OnGameplaySceneStart(playerChar);
+    }
+    GameplayController GetGc()
+    {
+        if (!gc) gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameplayController>();
+        return gc;
     }
 }

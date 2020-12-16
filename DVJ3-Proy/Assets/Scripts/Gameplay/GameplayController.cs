@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEngine.SceneManagement;
-
+#endif
 //hacer SINGLETON
 public class GameplayController : MonoBehaviour
 {
@@ -16,9 +17,6 @@ public class GameplayController : MonoBehaviour
     [SerializeField] CameraController cameraController = null;
     [SerializeField] PostProcessManager ppManager = null;
     public bool introDisplayed = false;
-    [SerializeField] TesterTool tester = null;
-    [SerializeField] GameObject testerActivatedText = null;
-    static bool activateTester = false;
     [SerializeField] GameObject[] level = null;
     int activeLevel = 1;
 
@@ -36,6 +34,8 @@ public class GameplayController : MonoBehaviour
     [SerializeField] GameObject staticObstaclePrefStg2 = null;
     [SerializeField] Transform[] staticObstSpawnStg2 = null;
     [SerializeField] GameObject fallingObstaclePrefStg2 = null;
+
+    Coroutine winRoundCor = null;
 
     [Serializable]
     public struct PlayerVars
@@ -55,43 +55,37 @@ public class GameplayController : MonoBehaviour
 
     [SerializeField] PlayerController playerPrefab = null;
 
-    string cheat ="AEZAKMI";
-    int cheatPos = 0;
-
     void Start()
     {
         Time.timeScale = 1.0f;
         uiGameplay = FindObjectOfType<UIGameplay>();
-        GameManager.Get().SetGameplayController(this);
-
+#if UNITY_EDITOR
         if (SceneManager.sceneCount < 2)
             OnGameplaySceneStart(new int[] {0, 0});
+#endif
     }
 
     private void Update()
     {
-        if (GameManager.Get().gameState==GameManager.GameState.inMenus && !activateTester && (Input.inputString == cheat[cheatPos].ToString() || Input.inputString == (cheat[cheatPos].ToString().ToLower())))
-        {
-            Debug.Log(cheat[cheatPos]);
-            cheatPos++;
-            if (cheatPos >= cheat.Length)
-            {
-                cheatPos = 0;
-                testerActivatedText.SetActive(true);
-                activateTester = true;
-            }
-        }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused)
             {
                 paused = false;
+                for (int i = 0; i < players.Count; i++)
+                {
+                    players[i].ableToMove = true;
+                }
                 Time.timeScale = 1;
                 uiGameplay.SetPauseActiveState(paused);
             }
             else
             {
                 paused = true;
+                for (int i = 0; i < players.Count; i++)
+                {
+                    players[i].ableToMove = false;
+                }
                 Time.timeScale = 0;
                 uiGameplay.SetPauseActiveState(paused);
             }
@@ -113,7 +107,7 @@ public class GameplayController : MonoBehaviour
 
     void OnPlayerDead(PlayerController player)
     {
-        StartCoroutine(NewRound(player));
+        if (winRoundCor == null) winRoundCor = StartCoroutine(NewRound(player));
     }
 
     IEnumerator NewRound(PlayerController player)
@@ -140,6 +134,7 @@ public class GameplayController : MonoBehaviour
         {
             OnGameOver();
         }
+        winRoundCor = null;
     }
     
     void OnGameOver()
@@ -156,21 +151,8 @@ public class GameplayController : MonoBehaviour
             winnerPlayerNumber = 1;
         uiGameplay.SetWinner(winnerPlayerNumber);
         AkSoundEngine.PostEvent("End_fight", gameObject);
-        StartCoroutine(EndscreenInput());
     }
 
-    IEnumerator EndscreenInput()
-    {
-        while (true)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                SceneManager.LoadScene(1);
-                GameManager.Get().gameState = GameManager.GameState.inMenus;
-            }
-            yield return null;
-        }
-    }
     public void OnGameplaySceneStart(int[] playerCharacter)
     {
         SetGameplay(playerCharacter);
@@ -194,7 +176,7 @@ public class GameplayController : MonoBehaviour
         }
         fireC.StartSpawning();
         ppManager.StartRemovingCAberration();
-        PlayerController P1 = Instantiate(playerPrefab, playerSpawner[0].position, playerSpawner[0].rotation); // se puede hacer un for
+        PlayerController P1 = Instantiate(playerPrefab, playerSpawner[0].position, playerSpawner[0].rotation);
         P1.playerNumber = 1;
         P1.modelIndex = playerCharacter[0];
         grabbingZones[0].player = P1;
@@ -216,7 +198,6 @@ public class GameplayController : MonoBehaviour
         }
         uiGameplay.SetPlayers(players.ToArray());
         cameraController.OnGameplayStart(players);
-        if (activateTester) tester.gameObject.SetActive(true);
     }
 
     void SpawnStaticObstacles(GameObject staticObjPref,Transform[] spawner)

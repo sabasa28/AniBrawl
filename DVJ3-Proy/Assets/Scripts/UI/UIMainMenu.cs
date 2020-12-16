@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 using System;
 
@@ -12,7 +11,6 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] GameObject controls = null;
     [SerializeField] GameObject stageSelec = null;
     [SerializeField] GameObject charSelec = null;
-    [SerializeField] GameObject loadingScreen = null;
     [SerializeField] GameObject creditsScreen = null;
     [SerializeField] GameObject creditsTxt = null;
     Vector3 minPosCredits = Vector3.zero;
@@ -47,12 +45,13 @@ public class UIMainMenu : MonoBehaviour
         versionText.text = "v" + Application.version;
         UpdateCharacterDisplayed(0);
         UpdateCharacterDisplayed(1);
-        StartCoroutine(Preload(2));
+        LoadManager.Get().StartCoroutine(LoadManager.Get().Preload(2,transform));
     }
     public void StartGameplayScene()
     {
         AkSoundEngine.PostEvent("Click_ui", gameObject);
-        StartCoroutine(UnloadMenu());
+        charSelec.SetActive(false);
+        LoadManager.Get().StartCoroutine(LoadManager.Get().UnloadMenu(generalBackground));
         GameManager.Get().StartGamePlay(chosenChar);
     }
     public void ShowControls()
@@ -170,56 +169,5 @@ public class UIMainMenu : MonoBehaviour
                 yield return new WaitForFixedUpdate();
             }
         }
-    }
-
-    IEnumerator Preload(int scene)
-    {
-        float loadingProgress;
-        float timeLoading = 0;
-        yield return null;
-        if (!SceneManager.GetSceneByBuildIndex(scene).isLoaded)
-        { 
-            AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-            ao.allowSceneActivation = false;
-            
-            while (!ao.isDone)
-            {
-                timeLoading += Time.deltaTime;
-                loadingProgress = ao.progress + 0.1f;
-                loadingProgress = loadingProgress * timeLoading / minTimeToLoad;
-
-                // Loading completed
-                if (loadingProgress >= 1)
-                {
-                    ao.allowSceneActivation = true;
-                }
-                yield return null;
-            }
-        }
-        loadingScreen.SetActive(false);
-        AkSoundEngine.PostEvent("Inicia_menu", gameObject);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(2));
-    }
-
-    IEnumerator UnloadMenu()
-    {
-        charSelec.SetActive(false);
-        float t = 0;
-        float fadeInTime = 3.0f;
-        Color backgroundVisible = generalBackground.color;
-        Color backgroundNotVisible = new Color(generalBackground.color.r, generalBackground.color.g, generalBackground.color.b, 0);
-        while (t < 1)
-        {
-            t += Time.deltaTime / fadeInTime;
-            generalBackground.color = Color.Lerp(backgroundVisible, backgroundNotVisible, t);
-            yield return null;
-        }
-        AsyncOperation ao = SceneManager.UnloadSceneAsync(1);
-        ao.allowSceneActivation = false;
-        while (!ao.isDone)
-        {
-            yield return null;
-        }
-        ao.allowSceneActivation = true;
     }
 }

@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         ver = Input.GetAxis(playerAxisY);
         rot = new Vector3(Input.GetAxis(playerAxisX), 0, Input.GetAxis(playerAxisY));
         dir = new Vector3(hor, 0, ver);
+        if (!ableToMove) return;
         if (Input.GetButtonDown(playerAxisHit) && currentState != State.punching)
         {
             if (currentState == State.carrying)
@@ -272,8 +273,7 @@ public class PlayerController : MonoBehaviour
             hitBy.GetDamaged();
             if(hitBy.itemState == Item.State.broken) RemoveItemFromAvailable(hitBy);
             horizontalDir = Vector3.Project(dir, new Vector3(dir.x, 0, dir.z));
-            pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));//rb.AddForce(horizontalDir.normalized * hitBy.playerGrabbing.force);
-            Debug.Log("hit");
+            pushedCor = StartCoroutine(Pushed(horizontalDir.normalized * hitBy.playerGrabbing.force));
             hp -= (int)(hitBy.playerGrabbing.force * hitBy.damageMultiplier);
             if (!meleeHit) hitBy.SetAsGrabbable();
             if (hp <= 0)
